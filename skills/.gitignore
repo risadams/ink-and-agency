@@ -1,0 +1,18 @@
+# Ignore local settings for Claude
+.claude/settings.local.json
+
+issue-estimate-sp/REFERENCE_DATA.md
+
+# Private skills -- linked from _private/
+_private/
+cpf/
+issue-backlog-prioritize/
+issue-create/
+mr-draft/
+mr-gatekeep/
+mr-review/
+setup-adtool/
+setup-atlassian/
+setup-elm/
+
+.claude/settings.json

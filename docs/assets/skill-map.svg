@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140" role="img" aria-label="Claude Skills Pack — skill categories: Writing, Analysis, Collaboration, Planning, Workspace">
+  <defs>
+    <filter id="sm-wc" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4"/>
+      <feGaussianBlur stdDeviation="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="140" fill="#faf8f5" rx="6"/>
+
+  <!-- ── Card 1: Writing (rose) ─────────────────────── x=1 -->
+  <rect x="1"   y="8" width="150" height="124" rx="6" fill="#CB0162" fill-opacity="0.07"/>
+  <rect x="1"   y="8" width="4"   height="124" fill="#CB0162" rx="2" filter="url(#sm-wc)"/>
+  <text x="15"  y="30" font-family="Georgia,'Times New Roman',serif" font-size="13" font-weight="700" fill="#CB0162">Writing &amp; Messaging</text>
+  <line x1="14" y1="36" x2="144" y2="36" stroke="#CB0162" stroke-width="0.75" stroke-opacity="0.3"/>
+  <g font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#444">
+    <text x="14" y="54">writing-humanize</text>
+    <text x="14" y="68">writing-draft-article</text>
+    <text x="14" y="82">writing-shape</text>
+    <text x="14" y="96">writing-beats</text>
+    <text x="14" y="110">writing-fragments</text>
+  </g>
+
+  <!-- ── Card 2: Analysis (teal) ─────────────────────── x=163 -->
+  <rect x="163" y="8" width="150" height="124" rx="6" fill="#1a5b6e" fill-opacity="0.07"/>
+  <rect x="163" y="8" width="4"   height="124" fill="#1a5b6e" rx="2" filter="url(#sm-wc)"/>
+  <text x="177" y="30" font-family="Georgia,'Times New Roman',serif" font-size="13" font-weight="700" fill="#1a5b6e">Analysis</text>
+  <line x1="176" y1="36" x2="306" y2="36" stroke="#1a5b6e" stroke-width="0.75" stroke-opacity="0.3"/>
+  <g font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#444">
+    <text x="176" y="54">break-it-down</text>
+    <text x="176" y="68">codebase-explain</text>
+    <text x="176" y="82">codebase-churn</text>
+    <text x="176" y="96">issue-triage</text>
+    <text x="176" y="110">issue-dup-find</text>
+  </g>
+
+  <!-- ── Card 3: Collaboration (rose) ───────────────── x=325 -->
+  <rect x="325" y="8" width="150" height="124" rx="6" fill="#CB0162" fill-opacity="0.07"/>
+  <rect x="325" y="8" width="4"   height="124" fill="#CB0162" rx="2" filter="url(#sm-wc)"/>
+  <text x="339" y="30" font-family="Georgia,'Times New Roman',serif" font-size="13" font-weight="700" fill="#CB0162">Collaboration</text>
+  <line x1="338" y1="36" x2="468" y2="36" stroke="#CB0162" stroke-width="0.75" stroke-opacity="0.3"/>
+  <g font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#444">
+    <text x="338" y="54">clarity-council</text>
+    <text x="338" y="68">grill-me</text>
+    <text x="338" y="82">grill-with-docs</text>
+    <text x="338" y="96">issue-estimate-sp</text>
+    <text x="338" y="110">issue-feature-*</text>
+  </g>
+
+  <!-- ── Card 4: Planning (teal) ────────────────────── x=487 -->
+  <rect x="487" y="8" width="150" height="124" rx="6" fill="#1a5b6e" fill-opacity="0.07"/>
+  <rect x="487" y="8" width="4"   height="124" fill="#1a5b6e" rx="2" filter="url(#sm-wc)"/>
+  <text x="501" y="30" font-family="Georgia,'Times New Roman',serif" font-size="13" font-weight="700" fill="#1a5b6e">Planning</text>
+  <line x1="500" y1="36" x2="630" y2="36" stroke="#1a5b6e" stroke-width="0.75" stroke-opacity="0.3"/>
+  <g font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#444">
+    <text x="500" y="54">sprint-plan</text>
+    <text x="500" y="68">sprint-review</text>
+    <text x="500" y="82">sprint-snapshot</text>
+    <text x="500" y="96">daily-briefing</text>
+    <text x="500" y="110">daily-standup-prep</text>
+  </g>
+
+  <!-- ── Card 5: Workspace (rose) ──────────────────── x=649 -->
+  <rect x="649" y="8" width="150" height="124" rx="6" fill="#CB0162" fill-opacity="0.07"/>
+  <rect x="649" y="8" width="4"   height="124" fill="#CB0162" rx="2" filter="url(#sm-wc)"/>
+  <text x="663" y="30" font-family="Georgia,'Times New Roman',serif" font-size="13" font-weight="700" fill="#CB0162">Workspace</text>
+  <line x1="662" y1="36" x2="792" y2="36" stroke="#CB0162" stroke-width="0.75" stroke-opacity="0.3"/>
+  <g font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#444">
+    <text x="662" y="54">obsidian-vault</text>
+    <text x="662" y="68">obsidian-canvas</text>
+    <text x="662" y="82">obsidian-markdown</text>
+    <text x="662" y="96">obsidian-bases</text>
+    <text x="662" y="110">obsidian-cli</text>
+  </g>
+</svg>
