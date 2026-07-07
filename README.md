@@ -12,7 +12,11 @@ Formerly two repositories: [risadams/skills](https://github.com/risadams/skills)
 ```
 ink-and-agency/
 ├── .claude-plugin/
-│   └── plugin.json              # Claude Code plugin manifest
+│   ├── plugin.json              # Claude Code plugin manifest
+│   └── marketplace.json         # Claude Code marketplace catalog
+├── .agents/
+│   └── plugins/
+│       └── marketplace.json     # Codex marketplace catalog
 ├── plugin.json                  # Codex plugin manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Instructions for coding agents working in this repo
 ├── skills/                      # 51 skills, one folder per skill (shared by both hosts)
@@ -58,15 +62,21 @@ claude --plugin-dir /path/to/ink-and-agency
 ### OpenAI Codex
 
 ```
-codex marketplace add risadams/ink-and-agency
+codex plugin marketplace add risadams/ink-and-agency
+codex plugin install ink-and-agency
 ```
 
-If your Codex version predates plugin marketplaces, install the pieces directly:
+The plugin bundles the skills. Codex plugins don't carry subagents, so install the agent TOMLs separately (personal scope), or just work inside a clone of this repo — `.codex/agents/` is picked up project-scoped:
 
 ```
 git clone https://github.com/risadams/ink-and-agency
-cp -r ink-and-agency/skills/* ~/.agents/skills/          # skills (Agent Skills format)
-cp ink-and-agency/.codex/agents/*.toml ~/.codex/agents/  # subagents
+cp ink-and-agency/.codex/agents/*.toml ~/.codex/agents/
+```
+
+If your Codex version predates plugin marketplaces, copy the skills directly too:
+
+```
+cp -r ink-and-agency/skills/* ~/.agents/skills/
 ```
 
 Skills are invoked with `$skill-name` (or picked up automatically when a task matches a skill's description). Subagents are spawned on request or via `/agent`.

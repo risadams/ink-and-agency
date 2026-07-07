@@ -102,27 +102,33 @@ Get-ChildItem -Path $outDir -Filter '*.toml' | Where-Object { $_.Name -notin $ge
     Remove-Item $_.FullName -Confirm:$false
 }
 
-# Skills = every skills/ subfolder containing a SKILL.md
-$skillPaths = Get-ChildItem -Path $skillsDir -Directory |
-    Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') } |
-    Sort-Object Name |
-    ForEach-Object { "skills/$($_.Name)" }
+# Count skills (informational): every skills/ subfolder containing a SKILL.md
+$skillCount = @(Get-ChildItem -Path $skillsDir -Directory |
+    Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') }).Count
 
-$agentPaths = $generated | Sort-Object | ForEach-Object { ".codex/agents/$_" }
-
+# Codex plugin manifest (root plugin.json). Official schema: plugins bundle
+# skills / apps / MCP servers via directory-path fields; agents are NOT plugin
+# components (they install to ~/.codex/agents/ or work project-scoped from
+# .codex/agents/). Metadata mirrors .claude-plugin/plugin.json.
 $claudeManifest = Get-Content (Join-Path $RepoRoot '.claude-plugin/plugin.json') -Raw | ConvertFrom-Json
 
 $manifestObj = [ordered]@{
     name        = $claudeManifest.name
     version     = $claudeManifest.version
     description = $claudeManifest.description
-    homepage    = $claudeManifest.homepage
-    license     = $claudeManifest.license
-    components  = [ordered]@{
-        skills = @($skillPaths)
-        agents = @($agentPaths)
+    author      = [ordered]@{
+        name = $claudeManifest.author.name
+        url  = $claudeManifest.author.url
     }
-    install_policy = 'AVAILABLE'
+    homepage    = $claudeManifest.homepage
+    repository  = $claudeManifest.repository
+    license     = $claudeManifest.license
+    keywords    = @($claudeManifest.keywords)
+    skills      = './skills/'
+    interface   = [ordered]@{
+        displayName      = 'Ink and Agency'
+        shortDescription = 'Writing, sprint, and decision-support skills plus a persona council.'
+    }
 }
 # Normalize to LF so output is byte-identical on Windows and Linux (CI sync check)
 $json = ($manifestObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
@@ -130,7 +136,7 @@ $json = ($manifestObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
 
 Write-Host ""
 Write-Host "Generated $($generated.Count) agent TOMLs in .codex/agents/" -ForegroundColor Green
-Write-Host "Manifest plugin.json lists $($skillPaths.Count) skills and $($agentPaths.Count) agents" -ForegroundColor Green
+Write-Host "Manifest plugin.json written ($skillCount skills bundled via ./skills/)" -ForegroundColor Green
 
 if ($errors.Count -gt 0) {
     Write-Host ""

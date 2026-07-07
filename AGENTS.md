@@ -13,8 +13,10 @@ This is a dual-host **agent plugin**: a pack of prompt-based skills and subagent
 | `skills/<name>/SKILL.md` | Canonical skill definitions (open Agent Skills format — shared by both hosts as-is) |
 | `agents/<category>/<name>.md` | Canonical agent definitions (Claude Code markdown frontmatter format) |
 | `.codex/agents/*.toml` | **Generated** — Codex custom-agent files derived from `agents/**/*.md` |
-| `plugin.json` (root) | **Generated** — Codex plugin manifest listing all skills and agent TOMLs |
+| `plugin.json` (root) | **Generated** — Codex plugin manifest (bundles `./skills/`; Codex plugins cannot carry agents) |
 | `.claude-plugin/plugin.json` | Claude Code plugin manifest (hand-maintained) |
+| `.claude-plugin/marketplace.json` | Claude Code marketplace catalog (hand-maintained; required by `/plugin marketplace add`) |
+| `.agents/plugins/marketplace.json` | Codex marketplace catalog (hand-maintained; required by `codex plugin marketplace add`) |
 
 **Never edit `.codex/agents/*.toml` or the root `plugin.json` by hand.** Edit the markdown source, then regenerate:
 
