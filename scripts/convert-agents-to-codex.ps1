@@ -124,7 +124,8 @@ $manifestObj = [ordered]@{
     }
     install_policy = 'AVAILABLE'
 }
-$json = $manifestObj | ConvertTo-Json -Depth 5
+# Normalize to LF so output is byte-identical on Windows and Linux (CI sync check)
+$json = ($manifestObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
 [IO.File]::WriteAllText($manifest, $json + "`n", [Text.UTF8Encoding]::new($false))
 
 Write-Host ""
