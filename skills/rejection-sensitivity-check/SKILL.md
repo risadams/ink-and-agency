@@ -9,7 +9,7 @@ description: >
   /rejection-sensitivity-check.
 version: 1.0.0
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - Read
   - AskUserQuestion
@@ -96,3 +96,4 @@ One-sentence rationale.
 - Do not assume the sender is neurotypical or has emotional fluency
 - Do not recommend a response that requires emotional labor the user can't afford right now
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

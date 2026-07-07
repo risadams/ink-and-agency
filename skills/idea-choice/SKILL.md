@@ -9,6 +9,7 @@ related-skills:
   - idea-generate
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Idea Choice
@@ -98,3 +99,4 @@ For multiple ideas, append:
 - **Flag any con with weight ≥ 16.** These are deal-breakers in disguise. Even a "Go" recommendation should call them out.
 - **Don't recommend "Needs more analysis" as a cop-out.** Only use it when the totals truly are inside ±10 *and* no single item is heavy enough to tip the call. If one idea has a 20-weight con and the net is +5, that's "Go with caveats," not "Needs more analysis."
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

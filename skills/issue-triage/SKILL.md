@@ -38,6 +38,7 @@ related-skills:
   - clarity-council
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Issue Triage
@@ -239,3 +240,4 @@ If the comment fails to post (permissions, network, etc.), surface the error and
 - If the input is ambiguous (no Jira key and no clear description), ask once for clarification — do not invent an issue to triage.
 - Time-box signal gathering. Five recent commits beats fifty; one close sibling ticket beats ten weak matches.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

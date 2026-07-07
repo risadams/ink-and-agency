@@ -21,6 +21,7 @@ related-agents:
   - mcp__atlassian__jira_get_issue
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Issue Duplicate Finder
@@ -143,3 +144,4 @@ After the report is delivered (and any user-requested file write is confirmed co
 - Cap reported pairs per anchor at 5. If more candidates score High, list the top 5 and add a footnote: `_+N additional medium/low matches suppressed._`
 - The default project key is read from memory (`reference_jira_default_project.md`). Always confirm the resolved project key in the report header so the user can verify scope.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

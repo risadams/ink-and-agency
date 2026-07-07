@@ -8,6 +8,7 @@ related-skills:
   - obsidian-canvas
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Obsidian Vault
@@ -132,3 +133,4 @@ Review the low-count tags against the high-count list. Tags used only once or tw
 grep -rn '#suspicioustag' "$VAULT" --include="*.md"
 ```
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

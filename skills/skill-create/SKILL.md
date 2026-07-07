@@ -5,6 +5,7 @@ related-agents:
   - documentation-engineer
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Skill Create
@@ -120,3 +121,4 @@ After drafting, verify:
 - [ ] Concrete examples included
 - [ ] References one level deep
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

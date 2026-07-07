@@ -34,6 +34,7 @@ related-skills:
   - clarity-council
   - writing-humanize
 loop-eligible: false
+compatibility: claude-code codex opencode
 ---
 
 # Issue — Draft Release Notes
@@ -142,3 +143,5 @@ If a write fails (permissions, network), surface the error and offer to retry or
 - **No icons or emoji** in the release note body or headline.
 - Do not write files to disk unless the user explicitly asks to save the note.
 - If no MRs are found and the ticket context is too thin to describe a user-visible change, stop and tell the user — a release note needs something concrete to describe.
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

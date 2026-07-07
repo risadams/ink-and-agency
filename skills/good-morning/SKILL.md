@@ -17,6 +17,7 @@ allowed-tools:
   - Read
   - Edit
   - Glob
+compatibility: claude-code codex opencode
 ---
 
 # Good Morning
@@ -177,3 +178,5 @@ Append the persona's `## Next actions` block to the Phase 4 console output. This
 - **Team-calendar ICS missing or unreachable** — skip Phase 1.5 with a `⚠` line in the Phase 4 summary; the other phases run unchanged. Add/repair the URL in `reference_team_calendar_ics.md`.
 - **`--skip-calendar`** — skip Phase 1.5 explicitly (e.g. the feed is down and the user doesn't want the warning noise). The wrapper consumes this flag alongside `--skip-snapshot` / `--skip-standup` / `--skip-briefing`.
 - **OOO summary looks wrong by one day** — almost always the exclusive-`DTEND` rule; the last day out is `DTEND − 1`.
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

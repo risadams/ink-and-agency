@@ -14,6 +14,7 @@ related-skills:
   - clarity-council
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Feature Breakdown
@@ -103,3 +104,4 @@ Iterate until the user approves.
 - Do not create files on disk unless the user explicitly asks to save the breakdown.
 - If the Jira ticket key cannot be found, stop and ask the user to provide a valid key.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

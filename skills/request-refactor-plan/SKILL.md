@@ -9,6 +9,7 @@ related-skills:
   - codebase-improve-architecture
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.
@@ -75,3 +76,4 @@ Any further notes about the refactor.
 
 </refactor-plan-template>
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

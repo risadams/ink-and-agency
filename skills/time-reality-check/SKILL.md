@@ -11,7 +11,7 @@ license: MIT
 related-agents:
   - project-manager
   - scrum-master
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - Read
   - AskUserQuestion
@@ -97,3 +97,4 @@ If the user only reads one line, this is it: a flat declarative sentence with th
 - Do not skip the gut estimate question — you need their number to calibrate against
 - Do not lecture about time blindness; the user knows
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

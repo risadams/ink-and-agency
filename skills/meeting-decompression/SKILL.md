@@ -11,7 +11,7 @@ version: 1.0.0
 related-agents:
   - project-manager
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - Read
   - AskUserQuestion
@@ -93,3 +93,4 @@ One paragraph. Acknowledge the cognitive load of the meeting. Name what the user
 - Do not lecture about masking or burnout — the user is decompressing, not learning
 - Do not add new action items the user didn't actually commit to
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

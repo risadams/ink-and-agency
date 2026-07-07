@@ -38,7 +38,7 @@ Time: 30–60 minutes (3–5 turns)
 ├── council-single-persona.md     # Single expert perspective
 ├── council-multi-persona.md      # Multi-expert synthesis
 ├── council-iterative.md          # Multi-turn iteration
-├── ${CLAUDE_PLUGIN_ROOT}/references/council-personas/
+├── <plugin-root>/references/council-personas/
 │   ├── PERSONAS.md               # Full persona index
 │   ├── GROUPS.md                 # Pre-made persona panels
 │   ├── senior-architect.md       # Persona contracts
@@ -79,7 +79,7 @@ Use these to quickly convene a focused council:
 
 Invocation: `council-multi-persona`, say: "Convene a council using the 'product-delivery-core' group."
 
-See **${CLAUDE_PLUGIN_ROOT}/references/council-personas/GROUPS.md** for the full list.
+See **<plugin-root>/references/council-personas/GROUPS.md** for the full list.
 
 ---
 
@@ -97,7 +97,7 @@ See **${CLAUDE_PLUGIN_ROOT}/references/council-personas/GROUPS.md** for the full
 
 **Cross-cutting**: devils-advocate, psychologist, personal-assistant, culture-lead
 
-See **${CLAUDE_PLUGIN_ROOT}/references/council-personas/PERSONAS.md** for the full index and contracts.
+See **<plugin-root>/references/council-personas/PERSONAS.md** for the full index and contracts.
 
 ---
 
@@ -262,7 +262,7 @@ Turn 3 (Agent): "Decision locked in: 6 autonomous teams, shared CI/CD layer. Nex
 
 ### Add a Custom Persona
 
-Create `${CLAUDE_PLUGIN_ROOT}/references/council-personas/my-persona.md`:
+Create `<plugin-root>/references/council-personas/my-persona.md`:
 
 ```markdown
 # Persona: [Name]
@@ -308,9 +308,9 @@ Then invoke: `council-multi-persona` → "Convene a council with my-persona, sen
 - **INDEX.md** — This file (quick navigation)
 
 ### Personas
-- **${CLAUDE_PLUGIN_ROOT}/references/council-personas/PERSONAS.md** — Full persona index (35+ personas)
-- **${CLAUDE_PLUGIN_ROOT}/references/council-personas/GROUPS.md** — Pre-made persona panels
-- **${CLAUDE_PLUGIN_ROOT}/references/council-personas/[persona-name].md** — Individual persona contracts
+- **<plugin-root>/references/council-personas/PERSONAS.md** — Full persona index (35+ personas)
+- **<plugin-root>/references/council-personas/GROUPS.md** — Pre-made persona panels
+- **<plugin-root>/references/council-personas/[persona-name].md** — Individual persona contracts
 
 ---
 

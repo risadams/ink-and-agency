@@ -12,7 +12,7 @@ related-agents:
   - content-quality-editor
   - content-marketer
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion
   - Skill
@@ -81,3 +81,5 @@ If the conversation goes sideways (pushback, guilt-trip, unexpected escalation),
 - Do not include fake warmth ("I hope you're well!") unless it's the user's normal register
 - Do not assume the recipient will react badly — predict neutrally
 - Do not write more than three phrasings — more options = more paralysis
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

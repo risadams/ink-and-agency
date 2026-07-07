@@ -20,6 +20,7 @@ allowed-tools:
   - Skill
   - mcp__atlassian__jira_search
   - mcp__atlassian__jira_get_issue
+compatibility: claude-code codex opencode
 ---
 
 # Sprint Snapshot
@@ -305,3 +306,5 @@ This skill writes into the user's Obsidian vault and reads from Jira. Delegate t
 | `issue-feature-breakdown` | Pattern reference for Jira context-gathering depth and read-only discipline. |
 | `issue-suggest-component` | Pattern reference for memory-driven default Jira project + bulk pacing if the snapshot ever expands to multi-team. |
 | `clarity-council` | Future extension: stand up a "sprint health council" persona session that reviews the latest JSONL trend log and flags risks. Out of scope for v1. When that lands, the council pull-list is **`statistics-expert + scrum-master + infographics-expert`** — statistics-expert reads the trend with uncertainty rendering, infographics-expert chooses the chart format (sparklines per metric? small-multiple per team?) and produces the SVG/Mermaid output that embeds back into the canvas or companion markdown. |
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

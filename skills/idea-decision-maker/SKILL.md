@@ -12,7 +12,7 @@ description: >
   "convergent / pick one" end of the family.
 version: 2.0.0
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion
   - Skill
@@ -96,3 +96,4 @@ Until that trigger fires, the decision is closed.
 - Do not encourage the user to "trust their gut" — their gut sent them here
 - Do not introduce a third option unless it's obviously dominant — that adds paralysis
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

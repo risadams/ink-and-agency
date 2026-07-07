@@ -8,6 +8,7 @@ related-skills:
   - obsidian-charts
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Obsidian Bases Skill
@@ -503,3 +504,4 @@ formulas:
 - [Formulas](https://help.obsidian.md/formulas)
 - [Complete Functions Reference](references/FUNCTIONS_REFERENCE.md)
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

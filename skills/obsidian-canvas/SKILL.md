@@ -8,6 +8,7 @@ related-skills:
   - obsidian-bases
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Obsidian Canvas Skill
@@ -250,3 +251,4 @@ See [references/EXAMPLES.md](references/EXAMPLES.md) for full canvas examples in
 - [JSON Canvas Spec 1.0](https://jsoncanvas.org/spec/1.0/)
 - [JSON Canvas GitHub](https://github.com/obsidianmd/jsoncanvas)
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

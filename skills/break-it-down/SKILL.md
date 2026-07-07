@@ -8,7 +8,7 @@ description: >
   /break-it-down.
 version: 1.0.0
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - Read
   - AskUserQuestion
@@ -161,3 +161,4 @@ Include:
 - Do not skip sections, even if a section would be brief
 - Do not add emojis
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

@@ -11,6 +11,7 @@ related-skills:
   - clarity-council
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Draft Article — From Idea to Publishable
@@ -246,3 +247,4 @@ Recommended naming:
 
 The final file should be publication-ready — no placeholders, no "[TBD]", no "[add citation]". Everything that needs to be there, is.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

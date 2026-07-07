@@ -7,6 +7,7 @@ related-skills:
   - obsidian-bases
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Obsidian Charts Skill
@@ -128,3 +129,4 @@ See [REFERENCE.md](REFERENCE.md) for the full parameter list, `renderChart` API,
 - **`renderChart` undefined** — the Charts plugin isn't enabled, or the codeblock isn't `dataviewjs` (it must be — `dataview` won't work for JS).
 - **Series with mismatched lengths** — every `data` array must match `labels.length` (pad with `null` for missing points).
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

@@ -8,6 +8,7 @@ related-skills:
   - writing-beats
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 <what-to-do>
@@ -70,3 +71,4 @@ Append to the article file as each block is agreed. Re-read the file from disk b
 
 </supporting-info>
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

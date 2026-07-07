@@ -27,6 +27,7 @@ related-skills:
   - clarity-council
 loop-eligible: true
 
+compatibility: claude-code codex opencode
 ---
 
 # Daily Standup Prep
@@ -313,3 +314,4 @@ This skill writes into and reads from the user's Obsidian vault. When any vault-
 | `obsidian-bases` | Use when the user wants a dashboard `.base` file (e.g. "show me all standups for Pyrite this sprint", "which team members had no activity in the last 5 standups"). Don't hand-author `.base` YAML. |
 | `obsidian-canvas` | Use if the user wants a visual board summarizing the standup (e.g. a sprint-overview canvas with linked standup notes as nodes). |
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

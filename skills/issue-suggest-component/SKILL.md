@@ -34,6 +34,7 @@ related-agents:
   - mcp__gitlab-mcp__search_project_code
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Issue Suggest Component
@@ -220,3 +221,4 @@ If the run aborted with an error, **always keep** the scratch folder and surface
 
 When in doubt, suggest nothing. The cost of an over-tagged ticket is higher than an under-tagged one because it pollutes filters and reports.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

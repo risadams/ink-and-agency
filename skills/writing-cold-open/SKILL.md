@@ -11,7 +11,7 @@ license: MIT
 related-agents:
   - content-quality-editor
   - content-marketer
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion
   - Skill
@@ -84,3 +84,5 @@ That's the whole output. Do not offer to write the rest. Do not write subject li
 - Do not include a sign-off — the user only needs the opener
 - Do not ask "are you sure?" after generating — they came here to be unstuck
 - Do not editorialize about how the message should go — just produce the openers
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

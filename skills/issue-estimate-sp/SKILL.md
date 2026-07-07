@@ -22,6 +22,7 @@ related-skills:
   - clarity-council
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Estimate
@@ -157,3 +158,4 @@ comparable ticket from REFERENCE_DATA.md if one exists.}
 > It has not been written to the ticket. Discuss with your team before committing.
 ```
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

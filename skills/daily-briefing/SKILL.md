@@ -24,6 +24,7 @@ related-skills:
   - energy-budget
 loop-eligible: true
 
+compatibility: claude-code codex opencode
 ---
 
 # Daily Briefing
@@ -387,3 +388,5 @@ Present the returned proposal table to the user, then ask via `AskUserQuestion` 
 ## Optional deep-dive
 
 If the user asks for more detail on a specific thread, use `outlook_get_conversation(message_id=...)` to pull the full thread.
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

@@ -7,6 +7,7 @@ related-agents:
   - refactoring-specialist
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # codebase-churn
@@ -63,3 +64,4 @@ Open `churn-treemap.svg` in a browser. Hover any tile for path, commit count, li
 - Binary files are skipped (git reports `-` for their numstat).
 - Squarified treemap layout (Bruls/Huijing/van Wijk) keeps tile aspect ratios near 1.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

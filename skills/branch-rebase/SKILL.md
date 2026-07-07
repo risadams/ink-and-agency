@@ -12,6 +12,7 @@ related-skills:
   - branch-resolve-conflicts
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Branch Rebase
@@ -232,3 +233,4 @@ List any files that were auto-resolved during conflict resolution so the user ca
 - If anything unexpected happens (network errors, lock files, hook failures), stop and report rather than retrying destructively.
 - Prefer `git rebase --abort` over leaving the repo in a broken state.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

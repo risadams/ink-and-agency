@@ -11,7 +11,7 @@ version: 1.0.0
 related-agents:
   - project-manager
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - Read
   - AskUserQuestion
@@ -132,3 +132,4 @@ If the day is tight or over even after suggested defers, one sentence on **what 
 - Do not produce a daily plan — that's not what this skill is for
 - Do not tell them to meditate
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

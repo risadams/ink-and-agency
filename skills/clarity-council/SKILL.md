@@ -10,11 +10,12 @@ related-skills:
   - idea-generate
 loop-eligible: false
 recurrence-hint: on-demand
+compatibility: claude-code codex opencode
 ---
 
 # Clarity Council: Agent-Based System
 
-This skill routes to three specialized agents in the `${CLAUDE_PLUGIN_ROOT}/agents/00-council/` folder. Use the appropriate agent based on your decision-making need.
+This skill routes to three specialized agents that ship with this plugin, in the `agents/00-council/` folder under the plugin root. Paths below are written relative to this skill's folder (`../../` is the plugin root; on Claude Code this is `${CLAUDE_PLUGIN_ROOT}`). Use the appropriate agent based on your decision-making need.
 
 ## When to use
 
@@ -58,7 +59,7 @@ Simply invoke the appropriate agent directly:
   Run a council on payment processor selection. I'll iterate.
 ```
 
-See the full documentation at `${CLAUDE_PLUGIN_ROOT}/docs/agents/00-council.md` and `${CLAUDE_PLUGIN_ROOT}/docs/agents/00-council-index.md`.
+See the full documentation at `../../docs/agents/00-council.md` and `../../docs/agents/00-council-index.md`.
 
 ## Output templates
 
@@ -124,16 +125,16 @@ state:
 ## Reference Files
 
 Agent documentation:
-- `${CLAUDE_PLUGIN_ROOT}/docs/agents/00-council.md` — Comprehensive guide to all agents
-- `${CLAUDE_PLUGIN_ROOT}/docs/agents/00-council-index.md` — Quick navigation and decision tree
-- `${CLAUDE_PLUGIN_ROOT}/agents/00-council/council-single-persona.md` — Single expert agent
-- `${CLAUDE_PLUGIN_ROOT}/agents/00-council/council-multi-persona.md` — Multi-expert synthesis agent
-- `${CLAUDE_PLUGIN_ROOT}/agents/00-council/council-iterative.md` — Iterative decision agent
+- `../../docs/agents/00-council.md` — Comprehensive guide to all agents
+- `../../docs/agents/00-council-index.md` — Quick navigation and decision tree
+- `../../agents/00-council/council-single-persona.md` — Single expert agent
+- `../../agents/00-council/council-multi-persona.md` — Multi-expert synthesis agent
+- `../../agents/00-council/council-iterative.md` — Iterative decision agent
 
 Persona library:
-- [${CLAUDE_PLUGIN_ROOT}/references/council-personas/PERSONAS.md](${CLAUDE_PLUGIN_ROOT}/references/council-personas/PERSONAS.md) — Full persona index
-- [${CLAUDE_PLUGIN_ROOT}/references/council-personas/GROUPS.md](${CLAUDE_PLUGIN_ROOT}/references/council-personas/GROUPS.md) — Pre-made persona panels
-- [${CLAUDE_PLUGIN_ROOT}/references/council-personas/*.md](${CLAUDE_PLUGIN_ROOT}/references/council-personas/) — Individual persona contracts (35+ total)
+- [../../references/council-personas/PERSONAS.md](../../references/council-personas/PERSONAS.md) — Full persona index
+- [../../references/council-personas/GROUPS.md](../../references/council-personas/GROUPS.md) — Pre-made persona panels
+- [../../references/council-personas/*.md](../../references/council-personas/) — Individual persona contracts (35+ total)
 
 ## Quality checks
 
@@ -142,4 +143,6 @@ Before finalizing a response:
 - separate assumptions from facts
 - include at least one concrete next step
 - include at least one explicit risk or tradeoff for non-trivial decisions
-- keep terminology consistent with persona names in [${CLAUDE_PLUGIN_ROOT}/references/council-personas/PERSONAS.md](${CLAUDE_PLUGIN_ROOT}/references/council-personas/PERSONAS.md)
+- keep terminology consistent with persona names in [../../references/council-personas/PERSONAS.md](../../references/council-personas/PERSONAS.md)
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

@@ -59,7 +59,7 @@ Run a multi-turn session where clarifications refine the recommendation over sev
 
 ## Persona Library
 
-All agents reference the same persona library (`${CLAUDE_PLUGIN_ROOT}/references/council-personas/` folder):
+All agents reference the same persona library (`<plugin-root>/references/council-personas/` folder):
 
 - **Technical personas**: senior-architect, senior-developer, tech-lead, qa-engineer, devops-engineer, security-expert
 - **Product personas**: product-owner, product-manager, customer-advocate, ux-designer
@@ -257,7 +257,7 @@ Agent (council-iterative): [Turn 2, updated with beta approach]
 
 ### Custom Personas
 
-Want a persona that doesn't exist? Define it and add to `${CLAUDE_PLUGIN_ROOT}/references/council-personas/` folder:
+Want a persona that doesn't exist? Define it and add to `<plugin-root>/references/council-personas/` folder:
 
 ```markdown
 # Persona: [Name]
@@ -303,9 +303,9 @@ Then reference it in prompts: "Convene a council with personas: senior-architect
 - **council-single-persona.md** — Single expert perspective agent
 - **council-multi-persona.md** — Multi-persona synthesis agent
 - **council-iterative.md** — Multi-turn iterative decision agent
-- **${CLAUDE_PLUGIN_ROOT}/references/council-personas/** — Persona contract library
+- **<plugin-root>/references/council-personas/** — Persona contract library
 - **README.md** — This file
-- **PERSONAS.md** — Full persona index (in ${CLAUDE_PLUGIN_ROOT}/references/council-personas/ folder)
+- **PERSONAS.md** — Full persona index (in <plugin-root>/references/council-personas/ folder)
 
 ---
 

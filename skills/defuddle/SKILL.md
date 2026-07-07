@@ -6,6 +6,7 @@ related-agents:
   - documentation-engineer
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Defuddle
@@ -45,3 +46,4 @@ defuddle parse <url> -p domain
 | (none) | HTML |
 | `-p <name>` | Specific metadata property |
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

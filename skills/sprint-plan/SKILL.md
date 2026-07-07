@@ -17,6 +17,7 @@ allowed-tools:
   - Bash
   - AskUserQuestion
   - Skill
+compatibility: claude-code codex opencode
 ---
 
 # Sprint Plan Report
@@ -320,3 +321,5 @@ If this is the second run today: `Saved: refreshed sprint-plan-2026-04-01.md (si
 | `obsidian-markdown` | Use when extending the report template with callouts, dataview, embeds. |
 | `obsidian-vault` | Use for batch wikilink verification (>15 names). |
 | `obsidian-bases` | Use when the user wants a `.base` aggregating sprint plans across an INC (e.g. "show committed vs avg velocity for every Aurora sprint in INC 28"). |
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

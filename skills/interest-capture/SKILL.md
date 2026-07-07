@@ -11,7 +11,7 @@ version: 1.0.0
 related-agents:
   - project-manager
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - Read
   - Write
@@ -112,3 +112,4 @@ That's it. No "great idea!", no expansion, no follow-up questions. Send them bac
 - Do not produce a summary back to the user — the note *is* the summary
 - Do not invoke `clarity-council` — latency kills the use case
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

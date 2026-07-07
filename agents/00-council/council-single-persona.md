@@ -8,11 +8,11 @@ tags:
   - consultation
   - decision-making
   - persona-based
+  - single-expert
 tools: Read, Write, Edit, Glob, Grep
 related-skills: [clarity-council, grill-me]
 related-agents: [council-multi-persona, council-iterative]
 loop-eligible: false
-  - single-expert
 ---
 
 # Council: Single Persona
@@ -180,7 +180,7 @@ If the user then asks for:
 
 ## Resources
 
-Persona contracts are stored in `00-council/${CLAUDE_PLUGIN_ROOT}/references/council-personas/` and follow a standard template with:
+Persona contracts are stored in the plugin's `references/council-personas/` folder (resolve against the plugin install root — on Claude Code, `${CLAUDE_PLUGIN_ROOT}/references/council-personas/`) and follow a standard template with:
 - **Soul**: one-sentence identity
 - **Voice**: tone and communication style
 - **Decision Lens**: how they evaluate options

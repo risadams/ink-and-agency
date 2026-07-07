@@ -8,6 +8,7 @@ related-skills:
   - obsidian-vault
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Obsidian CLI
@@ -112,3 +113,4 @@ obsidian dev:mobile on
 
 Run `obsidian help` to see additional developer commands including CDP and debugger controls.
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

@@ -10,7 +10,7 @@ version: 1.0.0
 license: MIT
 related-agents:
   - project-manager
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion
 loop-eligible: false
@@ -76,3 +76,4 @@ When the user comes back and says "done":
 - Do not ask "are you sure?" — they came here to be unstuck, not interrogated
 - Do not write a breakdown — that's a different skill
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

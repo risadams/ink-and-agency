@@ -9,6 +9,7 @@ related-skills:
   - grill-me
 loop-eligible: false
 recurrence-hint: on-demand
+compatibility: claude-code codex opencode
 ---
 
 # Idea Generate
@@ -49,3 +50,5 @@ Turn raw ideas into robust plans by attempting to break them.
 - **Start Simple**: Don't over-engineer the first batch of ideas. Focus on "hooks" and concepts.
 - **Avoid Consensus Too Early**: Encourage the council members to disagree during Phase 1.
 - **Embrace Friction**: Use `grill-me` not to discourage, but to harden the idea.
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

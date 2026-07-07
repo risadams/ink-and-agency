@@ -9,6 +9,7 @@ related-skills:
   - obsidian-canvas
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Obsidian Flavored Markdown Skill
@@ -203,3 +204,4 @@ Reviewed in [[Meeting Notes 2024-01-10#Decisions]].
 - [Callouts](https://help.obsidian.md/callouts)
 - [Properties](https://help.obsidian.md/properties)
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

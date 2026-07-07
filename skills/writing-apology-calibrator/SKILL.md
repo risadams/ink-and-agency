@@ -12,7 +12,7 @@ related-agents:
   - content-quality-editor
   - customer-success-manager
 license: MIT
-compatibility: claude-code opencode
+compatibility: claude-code codex opencode
 allowed-tools:
   - Read
   - AskUserQuestion
@@ -87,3 +87,5 @@ A few sentences explaining the *pattern* (not the specific lines) — what refle
 - Do not lecture about over-apologizing as a pattern (one sentence in "Why the cuts" is enough)
 - Do not produce a robotic "I take responsibility for X. Going forward I will Y." — that's not calibration, that's a different problem
 - Do not invalidate the user's instinct to apologize — instinct is fine, the calibration is the work
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

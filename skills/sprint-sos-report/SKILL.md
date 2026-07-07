@@ -17,6 +17,7 @@ related-skills:
   - sprint-plan
 loop-eligible: false
 
+compatibility: claude-code codex opencode
 ---
 
 # Sprint Scrum-of-Scrums Report
@@ -240,3 +241,4 @@ Saved:        [sos-week 2.md](Scrum Teams/Aurora/Scrum 📅/INC 28/Sprint 2/repo
 | `obsidian-bases` | Use when the user wants a `.base` aggregating SoS reports across sprints — e.g. "show wedge consumption + scope-creep verdicts per sprint for Aurora this PI". |
 | `daily-standup-prep` | Pattern parent for vault-write conventions and identity matching. |
 
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
