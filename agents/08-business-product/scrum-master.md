@@ -11,8 +11,6 @@ related-skills:
   - sprint-sos-report
   - daily-standup-prep
   - issue-estimate-sp
-related-agents:
-  - scrum-master
 loop-eligible: false
 ---
 

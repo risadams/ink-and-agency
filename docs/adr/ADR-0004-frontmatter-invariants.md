@@ -36,7 +36,7 @@ tools: Read, Write, Edit, ...       # Required; comma-separated valid tools
 | Field | Format | Rules | Example |
 |-------|--------|-------|---------|
 | `name` | kebab-case | Unique within collection; no spaces/underscores; matches filename | `backend-developer` |
-| `description` | String | Action-oriented ("Use when…"); ≥10 words; ≤150 chars | `"Use when building server-side APIs…"` |
+| `description` | String | Action-oriented ("Use when…"); ≥10 chars; ≤500 chars (amended 2026-07: was ≤150, but rich trigger text improves agent selection and existing agents run to ~420) | `"Use when building server-side APIs…"` |
 | `tools` | Comma-list | Space-separated valid tools (see ADR-0003) | `Read, Write, Edit, Bash, Glob, Grep` |
 | `model` | Enum | Optional; defaults to `sonnet`; valid: `haiku`, `sonnet`, `opus` | `sonnet` |
 

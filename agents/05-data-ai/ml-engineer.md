@@ -5,8 +5,6 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
   - clarity-council
-related-agents:
-  - ml-engineer
 loop-eligible: false
 ---
 

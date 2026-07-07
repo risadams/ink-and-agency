@@ -1,0 +1,52 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'agents/**'
+      - 'skills/**'
+      - 'scripts/**'
+      - '.codex/**'
+      - 'plugin.json'
+      - '.claude-plugin/**'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'agents/**'
+      - 'skills/**'
+      - 'scripts/**'
+      - '.codex/**'
+      - 'plugin.json'
+      - '.claude-plugin/**'
+      - '.github/workflows/validate.yml'
+  workflow_dispatch:
+
+jobs:
+  lint-agents:
+    name: Lint agent frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run agent linting
+        run: pwsh ./scripts/lint-agents.ps1 -AgentPath ./agents
+
+  codex-sync:
+    name: Codex artifacts in sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate Codex agents and manifest
+        run: pwsh ./scripts/convert-agents-to-codex.ps1
+
+      - name: Fail if generated files drifted from source
+        run: |
+          if ! git diff --exit-code -- .codex plugin.json; then
+            echo ""
+            echo "::error::.codex/agents/ or plugin.json is out of sync with agents/ and skills/."
+            echo "::error::Run 'pwsh ./scripts/convert-agents-to-codex.ps1' locally and commit the result."
+            exit 1
+          fi

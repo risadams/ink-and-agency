@@ -5,8 +5,6 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
   - request-refactor-plan
-related-agents:
-  - terraform-engineer
 loop-eligible: false
 ---
 

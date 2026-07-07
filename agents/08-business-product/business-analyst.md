@@ -5,10 +5,10 @@ tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: sonnet
 related-skills:
   - clarity-council
-  - assumption-mapping
   - issue-feature-breakdown
   - idea-choice
 related-agents:
+  - assumption-mapping
   - scrum-master
 loop-eligible: false
 ---

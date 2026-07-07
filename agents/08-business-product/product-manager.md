@@ -5,12 +5,12 @@ tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: haiku
 related-skills:
   - clarity-council
-  - assumption-mapping
   - idea-generate
   - idea-choice
   - idea-decision-maker
   - sprint-plan
 related-agents:
+  - assumption-mapping
   - scrum-master
 loop-eligible: false
 ---
