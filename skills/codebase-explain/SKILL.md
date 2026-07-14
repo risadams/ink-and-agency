@@ -2,11 +2,10 @@
 name: codebase-explain
 description: Tell the agent to explain code with broader context and a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.
 disable-model-invocation: true
-related-agents:
-  - architect-reviewer
-  - code-reviewer
 related-skills:
   - codebase-plan-refactor
+  - architect-reviewer
+  - code-reviewer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

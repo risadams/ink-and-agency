@@ -1,0 +1,4 @@
+# Generated from skills/qa-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Qa Expert"
+  short_description: "Use when you need comprehensive quality assurance strategy, test planning across the en..."

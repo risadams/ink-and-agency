@@ -1,0 +1,4 @@
+# Generated from skills/legacy-modernizer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Legacy Modernizer"
+  short_description: "Use when modernizing legacy systems that need incremental migration strategies, technic..."

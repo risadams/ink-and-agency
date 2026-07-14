@@ -10,12 +10,11 @@ allowed-tools:
   - Bash
   - Grep
   - Glob
-related-agents:
+related-skills:
+  - branch-rebase
   - code-reviewer
   - git-workflow-manager
   - refactoring-specialist
-related-skills:
-  - branch-rebase
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -32,7 +31,6 @@ compatibility: claude-code codex opencode
 4. Discover the project's **automated checks** and run them — typically typecheck, then tests, then format. Fix anything the merge broke.
 
 5. **Finish the merge/rebase.** Stage everything and commit. If rebasing, continue the rebase process until all commits are rebased.
-
 ---
 
 ## See also

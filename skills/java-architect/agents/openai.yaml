@@ -1,0 +1,4 @@
+# Generated from skills/java-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Java Architect"
+  short_description: "Use when designing enterprise Java architectures, migrating Spring Boot applications, o..."

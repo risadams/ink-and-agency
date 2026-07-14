@@ -8,8 +8,6 @@ description: >
   "hyperfixation dump", "interest capture", "stash this", "don't let me
   forget", or invokes /interest-capture.
 version: 1.0.0
-related-agents:
-  - project-manager
 license: MIT
 compatibility: claude-code codex opencode
 allowed-tools:
@@ -19,8 +17,8 @@ allowed-tools:
   - Bash
 related-skills:
   - task-initiation
+  - project-manager
 loop-eligible: false
-
 ---
 
 # Interest Capture

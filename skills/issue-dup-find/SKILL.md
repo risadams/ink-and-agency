@@ -16,7 +16,7 @@ allowed-tools:
   - AskUserQuestion
   - mcp__atlassian__jira_search
   - mcp__atlassian__jira_get_issue
-related-agents:
+related-skills:
   - project-manager
   - scrum-master
 loop-eligible: false
@@ -109,7 +109,6 @@ Render in this exact format:
 | Possible duplicate | Probability | Reason |
 | --- | --- | --- |
 | [{KEY-E}]({jira-base}/browse/{KEY-E}) — {short summary} | High (87%) | {reason} |
-
 ---
 
 ## Notes

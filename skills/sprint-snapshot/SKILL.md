@@ -1,13 +1,12 @@
 ---
 name: sprint-snapshot
 description: Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and render it into the Obsidian vault as (1) an Obsidian Canvas with sprint overview, team workload, kanban columns, and issue cards, (2) a companion markdown summary, and (3) an append-only JSONL trend log. Auto-detects sprint phase (start / week 1 / week 2 / week 3 / end) from today's date. Supports `--as-of <date>` for historical snapshots. Reuses obsidian-canvas / obsidian-vault / obsidian-markdown for vault writes and follows the issue-* skills' Jira context-gathering patterns. Use when user says "sprint snapshot", "snapshot the sprint", "capture sprint state", "sprint planner", "scrum board snapshot", or invokes /sprint-snapshot.
-related-agents:
-  - scrum-master
-  - project-manager
 related-skills:
   - sprint-plan
   - sprint-review
   - daily-standup-prep
+  - scrum-master
+  - project-manager
 loop-eligible: true
 recurrence-hint: weekly
 allowed-tools:

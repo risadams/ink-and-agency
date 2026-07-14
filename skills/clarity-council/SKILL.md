@@ -57,7 +57,6 @@ I'll iterate" (iterative).
 Load each named persona's contract from [`skills/personas/`](skills/personas/) and apply its
 **Decision Lens**, **Preferred Frameworks**, and **Blind Spots**. Keep terminology consistent with
 the names in [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md).
-
 ---
 
 ## Mode: single

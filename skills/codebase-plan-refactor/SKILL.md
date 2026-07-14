@@ -1,12 +1,11 @@
 ---
 name: codebase-plan-refactor
 description: Create a detailed refactor plan with tiny commits via user interview, then file it as an issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.
-related-agents:
+related-skills:
+  - codebase-improve-architecture
   - refactoring-specialist
   - legacy-modernizer
   - architect-reviewer
-related-skills:
-  - codebase-improve-architecture
 loop-eligible: false
 
 compatibility: claude-code codex opencode

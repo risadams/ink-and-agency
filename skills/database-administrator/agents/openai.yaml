@@ -1,0 +1,4 @@
+# Generated from skills/database-administrator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Database Administrator"
+  short_description: "Use when optimizing database performance, implementing high-availability architectures,..."

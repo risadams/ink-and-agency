@@ -5,11 +5,10 @@ description: >
   Auto-resolves simple merge conflicts (version bumps, changelogs). Prompts for complex ones.
   Use when user says "rebase", "rebase branch", "rebase onto main", "update my branch",
   "sync with baseline", "catch up with main", or invokes /branch-rebase.
-related-agents:
-  - devops-engineer
-  - git-workflow-manager
 related-skills:
   - branch-resolve-conflicts
+  - devops-engineer
+  - git-workflow-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode

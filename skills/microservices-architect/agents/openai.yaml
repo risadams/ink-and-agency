@@ -1,0 +1,4 @@
+# Generated from skills/microservices-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Microservices Architect"
+  short_description: "Use when designing distributed system architecture, decomposing monolithic applications..."

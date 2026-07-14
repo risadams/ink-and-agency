@@ -1,12 +1,11 @@
 ---
 name: obsidian-markdown
 description: Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.
-related-agents:
-  - documentation-engineer
-  - technical-writer
 related-skills:
   - obsidian-vault
   - obsidian-canvas
+  - documentation-engineer
+  - technical-writer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

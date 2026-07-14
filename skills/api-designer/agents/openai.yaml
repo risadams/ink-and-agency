@@ -1,0 +1,4 @@
+# Generated from skills/api-designer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Api Designer"
+  short_description: "Use when designing new APIs, creating API specifications, or refactoring existing API a..."

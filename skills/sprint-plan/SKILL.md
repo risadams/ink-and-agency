@@ -1,12 +1,11 @@
 ---
 name: sprint-plan
 description: Convert the start-of-sprint canvas into a planning markdown report — sprint goal summary, committed scope, capacity vs commitment (split into carry-over from previous sprint vs new commit), key observations, and risks. Assumes all unclosed items from the previous sprint's end snapshot are carried into this sprint and surfaces them as a dedicated section with WIP-saturation risk. Reuses sprint-snapshot's `_sprint.md`, `_team-rules.md`, current `start.canvas`, and previous sprint's `end.canvas`. Auto-runs a clarity-council session (statistics-expert + scrum-master + product-owner) for the observations/risks block. Output is date-stamped (`sprint-plan-YYYY-MM-DD.md`) — same-day re-runs silently refresh today's file, prior days are preserved as historical record; a `sprint-plan-latest.md` pointer always wikilinks the newest. Use when user says "sprint plan", "sprint planning report", "convert sprint plan to markdown", or invokes /sprint-plan.
-related-agents:
-  - scrum-master
-  - product-manager
 related-skills:
   - sprint-snapshot
   - clarity-council
+  - scrum-master
+  - product-manager
 loop-eligible: false
 recurrence-hint: on-demand
 allowed-tools:

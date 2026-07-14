@@ -1,0 +1,4 @@
+# Generated from skills/terraform-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Terraform Engineer"
+  short_description: "Use when building, refactoring, or scaling infrastructure as code using Terraform with..."

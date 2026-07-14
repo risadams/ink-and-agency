@@ -1,0 +1,4 @@
+# Generated from skills/frontend-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Frontend Developer"
+  short_description: "Use when building complete frontend applications across React, Vue, and Angular framewo..."

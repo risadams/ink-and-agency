@@ -1,9 +1,6 @@
 ---
 name: sprint-sos-report
 description: End-of-week scrum-of-scrums report comparing two sprint snapshots and surfacing key findings, observations, trouble areas, and trends. Auto-detects which two snapshots to compare (most-recent two by snapshot_at) with `--from`/`--to` overrides for re-planning churn comparisons (e.g. compare `week 1` vs a mid-week `week 1.5`). Applies team-specific overhead, wedge-balancing, and in-review overhead rules from `_team-rules.md`. Auto-runs a clarity-council session (statistics-expert + scrum-master + product-owner). Use when user says "scrum of scrums", "sos report", "weekly sprint report", "sprint progress report", or invokes /sprint-sos-report.
-related-agents:
-  - scrum-master
-  - project-manager
 allowed-tools:
   - Read
   - Write
@@ -15,6 +12,8 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - sprint-plan
+  - scrum-master
+  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode

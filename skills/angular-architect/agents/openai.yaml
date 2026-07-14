@@ -1,0 +1,4 @@
+# Generated from skills/angular-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Angular Architect"
+  short_description: "Use when architecting enterprise Angular 15+ applications with complex state management..."

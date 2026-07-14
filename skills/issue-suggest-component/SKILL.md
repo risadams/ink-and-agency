@@ -28,7 +28,7 @@ allowed-tools:
   - mcp__gitlab-mcp__get_merge_request
   - mcp__gitlab-mcp__list_commits
   - mcp__gitlab-mcp__search_project_code
-related-agents:
+related-skills:
   - architect-reviewer
   - backend-developer
   - frontend-developer

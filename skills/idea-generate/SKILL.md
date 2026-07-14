@@ -1,12 +1,11 @@
 ---
 name: idea-generate
 description: Helps users generate, refine, and stress-test ideas from loose topics. Use when user asks to brainstorm, find new ideas, or needs creative inspiration for a topic.
-related-agents:
-  - product-manager
-  - business-analyst
 related-skills:
   - clarity-council
   - grill-me
+  - product-manager
+  - business-analyst
 loop-eligible: false
 recurrence-hint: on-demand
 compatibility: claude-code codex opencode

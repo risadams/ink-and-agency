@@ -8,9 +8,6 @@ description: >
   realistic", or invokes /time-reality-check.
 version: 1.0.0
 license: MIT
-related-agents:
-  - project-manager
-  - scrum-master
 compatibility: claude-code codex opencode
 allowed-tools:
   - Read
@@ -18,8 +15,9 @@ allowed-tools:
   - Skill
 related-skills:
   - clarity-council
+  - project-manager
+  - scrum-master
 loop-eligible: false
-
 ---
 
 # Time Reality Check

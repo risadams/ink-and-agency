@@ -1,17 +1,14 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Generate the Codex-facing artifacts (agent TOMLs, per-skill metadata,
-    plugin manifest, and the CLAUDE.md maintainer mirror) from the canonical
-    markdown sources.
+    Generate the Codex-facing artifacts (per-skill metadata, plugin manifest,
+    and the CLAUDE.md maintainer mirror) from the canonical markdown sources.
 
 .DESCRIPTION
-    The markdown files under agents/ and skills/ are the single source of
-    truth (Claude Code reads them directly). This script derives everything
-    Codex needs, so a skill/agent is authored once and works on both hosts:
+    The pack is skills-only: every capability lives under skills/ as a SKILL.md,
+    which Claude Code reads directly. This script derives everything Codex needs,
+    so a skill is authored once and works on both hosts:
 
-      .codex/agents/<name>.toml        one per agent: name, description,
-                                       developer_instructions (= markdown body)
       skills/<name>/agents/openai.yaml one per skill: Codex picker metadata
                                        (interface.display_name +
                                        interface.short_description) and, for
@@ -26,13 +23,16 @@
                                        (avoids a git symlink, which breaks on
                                        Windows checkouts)
 
-    Claude-only frontmatter (tools, model, related-*, loop-eligible) is
+    Claude-only frontmatter (allowed-tools, related-skills, loop-eligible) is
     intentionally dropped: Codex governs capability via sandbox_mode and
-    session config, and model choice should follow the user's session.
+    session config, and model choice follows the user's session.
 
-    Re-run after adding, renaming, or editing any agent or skill, or after
-    editing AGENTS.md. Stale TOML files for removed agents are deleted; stale
-    openai.yaml files for removed skills are deleted.
+    Re-run after adding, renaming, or editing any skill, or after editing
+    AGENTS.md. Stale openai.yaml files for removed skills are deleted.
+
+    (Historical: the pack once shipped subagents under agents/ that were
+    compiled to .codex/agents/*.toml here. Those were folded into skills; see
+    docs/adr/ADR-0006.)
 
 .PARAMETER RepoRoot
     Path to the repository root (default: parent of this script's folder)
@@ -47,20 +47,10 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$agentsDir = Join-Path $RepoRoot 'agents'
 $skillsDir = Join-Path $RepoRoot 'skills'
-$outDir = Join-Path $RepoRoot '.codex/agents'
 $manifest = Join-Path $RepoRoot 'plugin.json'
 
-if (-not (Test-Path $agentsDir)) { throw "agents/ not found under $RepoRoot" }
-New-Item -ItemType Directory -Force $outDir | Out-Null
-
-function ConvertTo-TomlBasicString {
-    param([string]$s)
-    $s = $s -replace '\\', '\\'
-    $s = $s -replace '"', '\"'
-    return $s
-}
+if (-not (Test-Path $skillsDir)) { throw "skills/ not found under $RepoRoot" }
 
 function ConvertTo-YamlBasicString {
     param([string]$s)
@@ -125,59 +115,7 @@ function Get-ShortDescription {
     return $d
 }
 
-$generated = @()
 $errors = @()
-
-$agentFiles = Get-ChildItem -Path $agentsDir -Recurse -Filter '*.md' |
-Where-Object { $_.Name -ne 'README.md' -and $_.FullName -notmatch '[\\/]\.github[\\/]' } |
-Sort-Object FullName
-
-foreach ($file in $agentFiles) {
-    $raw = Get-Content -Path $file.FullName -Raw
-
-    if ($raw -notmatch '(?s)^---\s*\r?\n(.*?)\r?\n---\s*\r?\n(.*)$') {
-        $errors += "$($file.FullName): no frontmatter block"
-        continue
-    }
-    $frontmatter = $Matches[1]
-    $body = $Matches[2].Trim()
-
-    $name = $null
-    $description = $null
-    foreach ($line in ($frontmatter -split '\r?\n')) {
-        if ($line -match '^name:\s*(.+)$') { $name = $Matches[1].Trim().Trim('"') }
-        elseif ($line -match '^description:\s*(.+)$') { $description = $Matches[1].Trim().Trim('"') }
-    }
-
-    if (-not $name -or -not $description) {
-        $errors += "$($file.FullName): missing name or description"
-        continue
-    }
-    if ($body -match "'''") {
-        $errors += "$($file.FullName): body contains ''' which breaks TOML literal strings"
-        continue
-    }
-
-    $relPath = [IO.Path]::GetRelativePath($RepoRoot, $file.FullName) -replace '\\', '/'
-    $toml = @(
-        "# Generated from $relPath by scripts/convert-agents-to-codex.ps1 -- do not edit by hand."
-        "name = `"$(ConvertTo-TomlBasicString $name)`""
-        "description = `"$(ConvertTo-TomlBasicString $description)`""
-        "developer_instructions = '''"
-        $body
-        "'''"
-    ) -join "`n"
-
-    $outFile = Join-Path $outDir "$name.toml"
-    [IO.File]::WriteAllText($outFile, $toml + "`n", [Text.UTF8Encoding]::new($false))
-    $generated += "$name.toml"
-}
-
-# Remove TOMLs for agents that no longer exist
-Get-ChildItem -Path $outDir -Filter '*.toml' | Where-Object { $_.Name -notin $generated } | ForEach-Object {
-    Write-Host "Removing stale $($_.Name)" -ForegroundColor Yellow
-    Remove-Item $_.FullName -Confirm:$false
-}
 
 # --- Per-skill Codex metadata: skills/<name>/agents/openai.yaml -----------
 # Hand-authored SKILL.md is the source of truth; this derives the Codex picker
@@ -262,9 +200,8 @@ else {
 $skillCount = @($skillFolders).Count
 
 # Codex plugin manifest (root plugin.json). Official schema: plugins bundle
-# skills / apps / MCP servers via directory-path fields; agents are NOT plugin
-# components (they install to ~/.codex/agents/ or work project-scoped from
-# .codex/agents/). Metadata mirrors .claude-plugin/plugin.json.
+# skills / apps / MCP servers via directory-path fields. This pack is skills-only,
+# so it bundles ./skills/. Metadata mirrors .claude-plugin/plugin.json.
 $claudeManifest = Get-Content (Join-Path $RepoRoot '.claude-plugin/plugin.json') -Raw | ConvertFrom-Json
 
 $manifestObj = [ordered]@{
@@ -290,7 +227,6 @@ $json = ($manifestObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
 [IO.File]::WriteAllText($manifest, $json + "`n", [Text.UTF8Encoding]::new($false))
 
 Write-Host ""
-Write-Host "Generated $($generated.Count) agent TOMLs in .codex/agents/" -ForegroundColor Green
 Write-Host "Generated $skillYamlCount skill openai.yaml files in skills/*/agents/" -ForegroundColor Green
 Write-Host "Mirrored AGENTS.md -> CLAUDE.md" -ForegroundColor Green
 Write-Host "Manifest plugin.json written ($skillCount skills bundled via ./skills/)" -ForegroundColor Green

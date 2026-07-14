@@ -4,24 +4,22 @@ Guidance for coding agents (Codex, Claude Code, or others) working in this repos
 
 ## Nature of this repo
 
-This is a dual-host **agent plugin**: a pack of prompt-based skills and subagent definitions installable into both Claude Code and OpenAI Codex. There is no build system or test runner; the only automation is the PowerShell scripts under `scripts/`.
+This is a dual-host **skills plugin**: a single-primitive pack of prompt-based skills installable into both Claude Code and OpenAI Codex. Everything is a skill (`skills/<name>/SKILL.md`) — the pack once shipped a separate library of subagents under `agents/`, but those were folded into the skills namespace so the whole pack ships in the one bundle both hosts read (Codex plugins bundle only `./skills/` — they cannot carry agents). See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md). There is no build system or test runner; the only automation is the PowerShell scripts under `scripts/`.
 
 ## Source of truth
 
 | Artifact | Role |
 | :--- | :--- |
 | `skills/<name>/SKILL.md` | Canonical skill definitions (open Agent Skills format — shared by both hosts as-is) |
-| `agents/<category>/<name>.md` | Canonical agent definitions (Claude Code markdown frontmatter format) |
 | `AGENTS.md` | Canonical maintainer guidance (this file — Codex auto-loads it) |
-| `.codex/agents/*.toml` | **Generated** — Codex custom-agent files derived from `agents/**/*.md` |
 | `skills/<name>/agents/openai.yaml` | **Generated** — Codex per-skill picker metadata derived from each `SKILL.md` frontmatter |
-| `plugin.json` (root) | **Generated** — Codex plugin manifest (bundles `./skills/`; Codex plugins cannot carry agents) |
+| `plugin.json` (root) | **Generated** — Codex plugin manifest (bundles `./skills/`) |
 | `CLAUDE.md` (root) | **Generated** — mirror of `AGENTS.md` so Claude Code maintainers auto-load the same guidance |
 | `.claude-plugin/plugin.json` | Claude Code plugin manifest (hand-maintained) |
 | `.claude-plugin/marketplace.json` | Claude Code marketplace catalog (hand-maintained; required by `/plugin marketplace add`) |
 | `.agents/plugins/marketplace.json` | Codex marketplace catalog (hand-maintained; required by `codex plugin marketplace add`) |
 
-**Never edit generated files by hand** — `.codex/agents/*.toml`, `skills/*/agents/openai.yaml`, the root `plugin.json`, or the root `CLAUDE.md`. Edit the markdown source (the skill/agent `.md`, or `AGENTS.md`), then regenerate:
+**Never edit generated files by hand** — `skills/*/agents/openai.yaml`, the root `plugin.json`, or the root `CLAUDE.md`. Edit the markdown source (a `SKILL.md`, or `AGENTS.md`), then regenerate:
 
 ```
 pwsh ./scripts/convert-agents-to-codex.ps1
@@ -31,10 +29,11 @@ pwsh ./scripts/convert-agents-to-codex.ps1
 
 - Skill entry point is `SKILL.md` at the skill folder root; never move it. Supporting docs stay in the same folder and are referenced by paths relative to the skill folder (no host-specific variables like `${CLAUDE_PLUGIN_ROOT}` in new content).
 - Skills must stay host-portable: describe intent ("ask the user", "consult the psychologist persona via the `clarity-council` skill in single mode") rather than naming host-specific tools. Host-specific behavior goes in a clearly marked note.
-- Agent frontmatter requires `name` (kebab-case, matches filename), `description`, and `tools`; see `scripts/lint-agents.ps1` for the full ruleset (categories, model values, alphabetical ordering).
-- Council personas are reference documents bundled inside the `clarity-council` skill, not agents. New personas go in `skills/clarity-council/skills/personas/`, not `agents/`. The council itself is a skill (three inline modes: single / multi / iterative), not a set of subagents — see [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
-- Folder and agent names are stable once published — do not rename.
-- After changing any agent or adding/removing a skill, re-run `convert-agents-to-codex.ps1` and commit the regenerated files alongside the source change.
+- Skill frontmatter requires `name` (kebab-case, matches the folder) and `description`; `allowed-tools`, `related-skills`, `loop-eligible`/`recurrence-hint`, `compatibility`, and `disable-model-invocation` are optional. See `scripts/lint-skills.ps1` for the full ruleset. There is no `related-agents` field — the pack is skills-only; cross-references go in `related-skills`.
+- Council personas are reference documents bundled inside the `clarity-council` skill. New personas go in `skills/clarity-council/skills/personas/`. The council itself is a skill (three inline modes: single / multi / iterative) — see [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
+- Many skills are former specialist subagents (persona experts like `python-pro`, `security-auditor`). They run inline like any skill — Claude Code no longer spawns them as isolated parallel subagents. See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md).
+- Folder and skill names are stable once published — do not rename.
+- After adding/removing/editing a skill, re-run `convert-agents-to-codex.ps1` and commit the regenerated files alongside the source change.
 
 ## Skill invocation across hosts
 
@@ -50,8 +49,8 @@ Because the Codex side is **generated from the Claude-side frontmatter**, the tw
 ## Validation
 
 ```sh
-pwsh ./scripts/lint-agents.ps1 -AgentPath ./agents    # frontmatter + taxonomy rules
-pwsh ./scripts/convert-agents-to-codex.ps1            # must exit 0 with no errors
+pwsh ./scripts/lint-skills.ps1              # SKILL.md frontmatter + referential integrity
+pwsh ./scripts/convert-agents-to-codex.ps1 # must exit 0 with no errors
 ```
 
 ## Releasing
@@ -62,7 +61,7 @@ triggered manually from the Actions tab with a `bump` level (`patch` / `minor` /
 
 1. Regenerates Codex artifacts and **fails if the tree is out of sync** (same
    guard as `validate.yml`) — always commit generated files before releasing.
-2. Lints agent frontmatter.
+2. Lints skill frontmatter.
 3. Bumps the version in `.claude-plugin/plugin.json` (the single source of truth)
    and re-runs `convert-agents-to-codex.ps1`, so the root `plugin.json` and every
    Codex artifact pick up the new version — **the Claude Code and Codex plugin
@@ -85,4 +84,4 @@ git checkout -- .                                          # revert the dry run
 
 - `skills/CLAUDE.md` — full skill format spec (frontmatter fields, Loop Method, quality loops) and the skills inventory table
 - `README.md` — repo layout and install instructions for both hosts
-- `docs/adr/` — architecture decision records governing taxonomy, models, and tool permissions
+- `docs/adr/` — architecture decision records (note: ADR-0001–0004 governed the retired `agents/` taxonomy and are historical; ADR-0005/0006 record the fold to a skills-only pack)

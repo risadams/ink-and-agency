@@ -1,11 +1,10 @@
 ---
 name: obsidian-canvas
 description: Create and edit Obsidian Canvas files (.canvas) following the JSON Canvas spec — nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, or flowcharts in Obsidian.
-related-agents:
-  - documentation-engineer
 related-skills:
   - obsidian-markdown
   - obsidian-bases
+  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

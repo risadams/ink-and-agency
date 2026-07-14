@@ -37,13 +37,13 @@ jobs:
     - name: Verify Codex artifacts are in sync
       run: |
         pwsh ./scripts/convert-agents-to-codex.ps1
-        if ! git diff --exit-code -- .codex plugin.json 'skills/**/agents/openai.yaml' CLAUDE.md; then
+        if ! git diff --exit-code -- plugin.json 'skills/**/agents/openai.yaml' CLAUDE.md; then
           echo "::error::Generated Codex artifacts are out of sync. Run 'pwsh ./scripts/convert-agents-to-codex.ps1' and commit before releasing."
           exit 1
         fi
 
-    - name: Lint agent frontmatter
-      run: pwsh ./scripts/lint-agents.ps1 -AgentPath ./agents
+    - name: Lint skill frontmatter
+      run: pwsh ./scripts/lint-skills.ps1
 
     - name: Bump version and regenerate artifacts
       id: bump
@@ -62,7 +62,7 @@ jobs:
       run: |
         git config user.name  "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add .claude-plugin/plugin.json plugin.json .codex CLAUDE.md CHANGELOG.md skills
+        git add .claude-plugin/plugin.json plugin.json CLAUDE.md CHANGELOG.md skills
         git commit -m "chore(release): v${VERSION} [skip ci]"
         git tag -a "v${VERSION}" -m "Release v${VERSION}"
         git push origin HEAD:main

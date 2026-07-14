@@ -1,12 +1,11 @@
 ---
 name: idea-choice
 description: Weigh one or more ideas/concepts with a structured pros-and-cons analysis. Runs a clarity-council pass to surface arguments on both sides, optionally grills the user to expose hidden assumptions, scores each point on Impact × Confidence, and renders a markdown table per idea plus an overall recommendation (Go / Go with caveats / Don't / Needs more analysis). Use when the user wants to evaluate an idea before committing, compare two or more options on the merits, build a pros/cons list, score tradeoffs, justify a decision in writing, or asks "should I do X" / "is X worth it" / "weigh the tradeoffs" / "pros and cons of X". Differs from idea-decision-maker (which forces a fast binary pick) and idea-generate (which generates new options) — this skill deliberates on options the user already has.
-related-agents:
-  - product-manager
-  - business-analyst
 related-skills:
   - clarity-council
   - idea-generate
+  - product-manager
+  - business-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode

@@ -4,7 +4,7 @@ An opinionated library of reusable prompt skills for Claude and compatible agent
 
 The pack is built to work well with Claude-compatible skill loading, but most of the content is deliberately plain Markdown and easy to adapt to other prompt-driven agents. Each folder is a self-contained skill, so you can browse the pack like a catalog instead of reading a giant manual.
 
-**Part of the Ink and Agency ecosystem:** These skills work alongside the **[Ink and Agency Agents Collection](../agents/README.md)** for focused capabilities and deep domain expertise.
+**Part of the Ink and Agency ecosystem:** a single skills library spanning quick workflow techniques and deep domain specialists (see [INTEGRATION.md](INTEGRATION.md)).
 
 ![Ink and Agency Skill Pack](../docs/assets/skills-banner.svg)
 
@@ -62,60 +62,38 @@ In Claude, skills are triggered in chat by asking for the behavior you want. A f
 
 In other agents, the same prompts often still work, but you may need to wire the skill files into that agent's own prompt, skill, or tool-loading system.
 
-## Skills + Agents: Working Together
+## How skills compose
 
-This skill pack is part of the **[Ink and Agency ecosystem](https://risadams.com/blog/2026/05/18/introducing-ink-and-agency-an-ai-skill-pack-for-humans-and-claude)** and integrates with the companion **[Agents Collection](https://github.com/risadams/claude-subagent)**.
+This pack is **skills-only** — one primitive covering both quick workflow techniques and deep domain
+specialists (the latter, like `backend-developer` and `security-auditor`, were formerly subagents; see
+[ADR-0006](../docs/adr/ADR-0006-agents-folded-into-skills.md)).
 
-### What's the Difference?
+### Two kinds of skill
 
-| | Skill | Agent |
+| | Workflow skill | Specialist skill |
 | --- | --- | --- |
-| **Scope** | Focused capability | Deep domain specialist |
-| **Lifetime** | One-off or repetitive | Long-running, persistent |
-| **Examples** | code-review, writing-humanize | backend-developer, security-auditor |
-| **Use when** | You need a quick, structured technique | You need complete ownership of a domain |
+| **Shape** | A triggered procedure | A persona expert |
+| **Examples** | `code-review`, `writing-humanize`, `sprint-plan` | `backend-developer`, `security-auditor`, `python-pro` |
+| **Use when** | You want a structured technique | You want domain judgment |
 
-### Common Patterns
+### Common patterns
 
-**Pattern 1: Skill + Agent Enhancement**  
-A skill augments an agent's output during workflow:
+**Pattern 1: workflow skill invokes a specialist**
 
 ```text
-Backend developer agent 
-  → implements API 
-  → code-review skill → validated schema
+implement skill
+  → writes the API
+  → code-review skill → validated diff
 ```
 
-**Pattern 2: Skill → Agent Escalation**  
-A skill recognizes deeper work is needed and recommends an agent:
+**Pattern 2: a flow chains skills**
 
 ```text
-Writing-humanize skill 
-  → AI patterns removed 
-  → suggests content-quality-editor agent
+grill → work-plan → plan-to-spec → plan-to-tickets → implement (tdd + code-review)
 ```
 
-**Pattern 3: Composition**  
-Complex workflows chain multiple skills and agents:
-
-```text
-Planning + Skills + Agents
-  → sprint-plan skill 
-  → project-manager agent 
-  → backlog-grooming skill
-```
-
-### Finding Related Agents
-
-Each skill can declare related agents in its frontmatter. Look for the `related-agents` field:
-
-```yaml
-related-agents:
-  - code-reviewer
-  - security-auditor
-```
-
-For complete integration details, see **[INTEGRATION.md](INTEGRATION.md)**.
+Skills declare workflow neighbours in the `related-skills` frontmatter field. For the full model, see
+**[INTEGRATION.md](INTEGRATION.md)**; for named end-to-end flows, see **[FLOWS.md](FLOWS.md)**.
 
 ---
 

@@ -1,0 +1,4 @@
+# Generated from skills/content-quality-editor/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Content Quality Editor"
+  short_description: "Use this skill before publishing any AI-generated content — blog posts, READMEs, releas..."

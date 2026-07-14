@@ -27,12 +27,11 @@ allowed-tools:
   - mcp__gitlab-mcp__get_merge_request
   - mcp__gitlab-mcp__get_merge_request_diffs
   - mcp__gitlab-mcp__list_merge_request_changed_files
-related-agents:
-  - technical-writer
-  - product-manager
 related-skills:
   - clarity-council
   - writing-humanize
+  - technical-writer
+  - product-manager
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

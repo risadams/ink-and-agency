@@ -1,14 +1,13 @@
 ---
 name: writing-draft-article
 description: Guide the user from raw idea, topic, or draft to a finished, polished article through relentless questioning and iterative writing. Supports blog posts, social media posts, and long-form prose. Delegates to sibling skills (writing-humanize, writing-shape, writing-beats, writing-fragments) when appropriate. Use when the user wants to write something from scratch and have it completed.
-related-agents:
-  - content-quality-editor
-  - technical-writer
-  - documentation-engineer
 related-skills:
   - writing-shape
   - writing-beats
   - clarity-council
+  - content-quality-editor
+  - technical-writer
+  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

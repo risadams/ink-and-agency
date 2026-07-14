@@ -1,0 +1,4 @@
+# Generated from skills/project-manager/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Project Manager"
+  short_description: "Use when you need to establish project plans, track execution progress, manage risks, c..."

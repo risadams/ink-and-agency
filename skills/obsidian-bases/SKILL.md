@@ -1,11 +1,10 @@
 ---
 name: obsidian-bases
 description: Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.
-related-agents:
-  - data-analyst
 related-skills:
   - obsidian-canvas
   - obsidian-charts
+  - data-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode

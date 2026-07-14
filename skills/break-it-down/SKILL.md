@@ -14,7 +14,6 @@ allowed-tools:
   - AskUserQuestion
   - Skill
 loop-eligible: false
-
 ---
 
 # Break It Down

@@ -1,0 +1,4 @@
+# Generated from skills/data-scientist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Data Scientist"
+  short_description: "Use when you need to analyze data patterns, build predictive models, or extract statist..."

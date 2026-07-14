@@ -1,9 +1,6 @@
 ---
 name: daily-standup-prep
 description: Generate a per-team standup markdown report by gathering activity over the last N days from Jira, GitLab, Confluence, and a local Git repo. Maps activity to team members from a roster CSV, renders a Mermaid kanban + randomized talking order, captures a `daily`-tagged sprint snapshot, and runs a clarity-council (infographics-expert burndown chart + statistics-expert forecast + scrum-master suggestions) for sprint pulse. Writes one file per team into the Obsidian vault. Use when the user says "daily standup prep", "standup report", "generate standup", "scrum prep", or invokes /daily-standup-prep.
-related-agents:
-  - scrum-master
-  - project-manager
 allowed-tools:
   - Read
   - Write
@@ -25,6 +22,8 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - clarity-council
+  - scrum-master
+  - project-manager
 loop-eligible: true
 recurrence-hint: daily
 

@@ -4,10 +4,8 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'agents/**'
     - 'skills/**'
     - 'scripts/**'
-    - '.codex/**'
     - 'plugin.json'
     - '.claude-plugin/**'
     - 'AGENTS.md'
@@ -16,10 +14,8 @@ on:
   pull_request:
     branches: [ main ]
     paths:
-    - 'agents/**'
     - 'skills/**'
     - 'scripts/**'
-    - '.codex/**'
     - 'plugin.json'
     - '.claude-plugin/**'
     - 'AGENTS.md'
@@ -29,14 +25,14 @@ on:
 
 
 jobs:
-  lint-agents:
-    name: Lint agent frontmatter
+  lint-skills:
+    name: Lint skill frontmatter
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v5
 
-    - name: Run agent linting
-      run: pwsh ./scripts/lint-agents.ps1 -AgentPath ./agents
+    - name: Run skill linting
+      run: pwsh ./scripts/lint-skills.ps1
 
   codex-sync:
     name: Codex artifacts in sync
@@ -44,15 +40,15 @@ jobs:
     steps:
     - uses: actions/checkout@v5
 
-    - name: Regenerate Codex agents and manifest
+    - name: Regenerate Codex artifacts and manifest
       run: pwsh ./scripts/convert-agents-to-codex.ps1
 
     - name: Fail if generated files drifted from source
       run: |
-        if ! git diff --exit-code -- .codex plugin.json 'skills/**/agents/openai.yaml' CLAUDE.md; then
+        if ! git diff --exit-code -- plugin.json 'skills/**/agents/openai.yaml' CLAUDE.md; then
           echo ""
-          echo "::error::Generated Codex artifacts are out of sync with agents/, skills/, or AGENTS.md."
-          echo "::error::Affected: .codex/agents/, plugin.json, skills/*/agents/openai.yaml, CLAUDE.md."
+          echo "::error::Generated Codex artifacts are out of sync with skills/ or AGENTS.md."
+          echo "::error::Affected: plugin.json, skills/*/agents/openai.yaml, CLAUDE.md."
           echo "::error::Run 'pwsh ./scripts/convert-agents-to-codex.ps1' locally and commit the result."
           exit 1
         fi

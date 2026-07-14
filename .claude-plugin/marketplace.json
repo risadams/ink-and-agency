@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "ink-and-agency",
-  "description": "Marketplace for the Ink and Agency plugin: writing, sprint, and decision-support skills plus a specialist subagent library.",
+  "description": "Marketplace for the Ink and Agency plugin: writing, sprint, and decision-support skills plus a specialist skill library.",
   "owner": {
     "name": "Ris Adams",
     "url": "https://github.com/risadams"
@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "ink-and-agency",
-      "description": "Skills for writing, sprint work, and neurodivergent-friendly workflows (ink), plus a library of specialist subagents and a persona council for multi-perspective decisions (agency).",
+      "description": "Skills for writing, sprint work, and neurodivergent-friendly workflows (ink), plus a library of specialist skills and a persona council for multi-perspective decisions (agency).",
       "source": "./",
       "category": "productivity"
     }

@@ -1,0 +1,4 @@
+# Generated from skills/swift-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Swift Expert"
+  short_description: "Use when building native iOS, macOS, or server-side Swift applications requiring advanc..."

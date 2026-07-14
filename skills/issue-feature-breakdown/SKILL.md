@@ -6,12 +6,11 @@ description: >
   and ambiguities. Produces an actionable breakdown plan. All actions are
   read-only. Use when user says "break down this feature", "analyze this
   ticket", "feature breakdown", or provides a Jira ticket key for analysis.
-related-agents:
+related-skills:
+  - clarity-council
   - product-manager
   - scrum-master
   - business-analyst
-related-skills:
-  - clarity-council
 loop-eligible: false
 
 compatibility: claude-code codex opencode

@@ -8,8 +8,6 @@ description: >
   or invokes /writing-tone-check.
 version: 1.0.0
 license: MIT
-related-agents:
-  - content-quality-editor
 compatibility: claude-code codex opencode
 allowed-tools:
   - Read
@@ -17,8 +15,8 @@ allowed-tools:
   - Skill
 related-skills:
   - writing-humanize
+  - content-quality-editor
 loop-eligible: false
-
 ---
 
 # Tone Check

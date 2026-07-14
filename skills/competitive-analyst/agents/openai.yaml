@@ -1,0 +1,4 @@
+# Generated from skills/competitive-analyst/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Competitive Analyst"
+  short_description: "Use when you need to analyze direct and indirect competitors, benchmark against market..."

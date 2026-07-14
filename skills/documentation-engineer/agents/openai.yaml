@@ -1,0 +1,4 @@
+# Generated from skills/documentation-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Documentation Engineer"
+  short_description: "Use when you need to create, architect, or overhaul comprehensive documentation systems..."

@@ -1,11 +1,10 @@
 ---
 name: obsidian-vault
 description: Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.
-related-agents:
-  - documentation-engineer
 related-skills:
   - obsidian-markdown
   - obsidian-canvas
+  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

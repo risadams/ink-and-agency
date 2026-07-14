@@ -15,11 +15,10 @@ allowed-tools:
   - mcp__atlassian__confluence_search
   - mcp__atlassian__confluence_get_page
   - mcp__atlassian__jira_get_epic_issues
-related-agents:
-  - scrum-master
-  - project-manager
 related-skills:
   - clarity-council
+  - scrum-master
+  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode

@@ -8,9 +8,6 @@ description: >
   "first sentence", or invokes /writing-cold-open.
 version: 1.0.0
 license: MIT
-related-agents:
-  - content-quality-editor
-  - content-marketer
 compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion

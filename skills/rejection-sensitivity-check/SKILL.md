@@ -17,7 +17,6 @@ allowed-tools:
 related-skills:
   - clarity-council
 loop-eligible: false
-
 ---
 
 # Rejection Sensitivity Check

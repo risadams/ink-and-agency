@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**Part of the Ink and Agency ecosystem:** See **[INTEGRATION.md](INTEGRATION.md)** for how skills work with agents.
+**Part of the Ink and Agency ecosystem:** See **[INTEGRATION.md](INTEGRATION.md)** for how skills compose with each other.
 
 ## Nature of this repo
 
@@ -33,10 +33,7 @@ compatibility: claude-code opencode    # optional
 allowed-tools:                         # optional
   - Read
   - Write
-related-agents:                        # optional — agents that can use this skill
-  - agent-name
-  - another-agent
-related-skills:                        # optional — other skills this skill uses
+related-skills:                        # optional — other skills this skill works with
   - skill-a
   - skill-b
 loop-eligible: true                    # optional — true if can run via /loop
@@ -45,7 +42,7 @@ disable-model-invocation: true         # optional — user-invoked only (see bel
 codex-short-description: "…"           # optional — override for the Codex picker label
 ```
 
-**Note:** The `related-agents` and `related-skills` fields should only include items that actually exist and have clear workflow connections to this skill. See **[INTEGRATION.md](INTEGRATION.md)** for guidance.
+**Note:** The pack is skills-only — there is no `related-agents` field. `related-skills` entries should name skills that actually exist and have a clear workflow connection. See **[INTEGRATION.md](INTEGRATION.md)** for guidance.
 
 ### Cross-host invocation (Claude Code + Codex)
 
@@ -98,7 +95,7 @@ Add an optional "Delegation Map" section to your SKILL.md (at end of file):
 | User Need | Delegate Via | Parameters |
 |-----------|---|---|
 | [Use case] | Invoke `[skill]` with ... | [params] |
-| [Use case] | Agent `[agent]` for... | [context] |
+| [Use case] | Invoke `[specialist-skill]` for... | [context] |
 
 **Loop eligibility:** [true/false]  
 **Recurrence:** [daily/weekly/on-demand]  
@@ -113,7 +110,6 @@ Add an optional "Delegation Map" section to your SKILL.md (at end of file):
 ---
 name: good-morning
 related-skills: [sprint-snapshot, daily-standup-prep, daily-briefing]
-related-agents: [scrum-master, project-manager]
 loop-eligible: false  # Orchestrator doesn't recur alone; components do
 ---
 ```
@@ -123,8 +119,7 @@ loop-eligible: false  # Orchestrator doesn't recur alone; components do
 ```yaml
 ---
 name: sprint-snapshot
-related-skills: [sprint-plan, sprint-review, daily-standup-prep]
-related-agents: [scrum-master, project-manager]
+related-skills: [sprint-plan, sprint-review, daily-standup-prep, scrum-master, project-manager]
 loop-eligible: true
 recurrence-hint: weekly  # Usually run once per sprint, or on-demand
 ---
@@ -132,17 +127,19 @@ recurrence-hint: weekly  # Usually run once per sprint, or on-demand
 
 ### Validation Rules
 
-- **Existence check:** related-skills and related-agents must be real
+- **Existence check:** related-skills entries must resolve to real skills
 - **No self-reference**
 - **No circular chains:** A→B→C→A rejected
-- **Type correctness:** Skill names only in related-skills; agent names only in related-agents
+- **Type correctness:** only skill names in related-skills (no tool or MCP names)
 - **Recurrence consistency:** loop-eligible=true requires recurrence-hint
 
-Validation is performed by the agents linting script when the ecosystem is synchronized.
+Validation is performed by `scripts/lint-skills.ps1`.
 
 ## Skills inventory
 
 > **Public skills only.** Private skills live in `_private/` and surface as junctions in the root (e.g. `cpf`, `mr-*`, `setup-*`). They are gitignored and **must not** be listed here. To check what's private: `cmd //c "dir /AL"` lists junctions, and `.gitignore` is the canonical list.
+>
+> **Scope of this table.** The rows below are the *workflow* skills (the "Ink" set). The ~154 **specialist** skills (former subagents — language/framework experts, infra, data/AI, security, product, etc.; e.g. `python-pro`, `security-auditor`, `terraform-engineer`) are not enumerated here — they are discovered by their trigger `description`. Browse `skills/` for the full set.
 
 | Skill | Purpose |
 | :--- | :--- |
@@ -223,5 +220,5 @@ Validation is performed by the agents linting script when the ecosystem is synch
 - The `SKILL.md` at the folder root is the entry point. Never move it.
 - Supporting files (formats, deep-dive modules, persona contracts) stay in the same folder.
 - Update the skill's README if the workflow or reference files change.
-- **Loop Method:** If you add related-skills, related-agents, or a Delegation Map, update the frontmatter + add the section to SKILL.md.
+- **Loop Method:** If you add related-skills or a Delegation Map, update the frontmatter + add the section to SKILL.md.
 - If the skill can now run recurring, add `loop-eligible: true` and `recurrence-hint: [frequency]`.

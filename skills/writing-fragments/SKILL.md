@@ -1,10 +1,9 @@
 ---
 name: writing-fragments
 description: Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions "fragments", "ideate", or "raw material" for writing.
-related-agents:
-  - content-quality-editor
 related-skills:
   - writing-shape
+  - content-quality-editor
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -62,7 +61,6 @@ A first fragment lives here.
 
 It can be multiple paragraphs. It can include lists, code, quotes — whatever
 shape the fragment naturally takes.
-
 ---
 
 A second fragment.

@@ -8,8 +8,6 @@ description: >
   meeting", "what just happened", "decompress", "after meeting",
   or invokes /meeting-decompression.
 version: 1.0.0
-related-agents:
-  - project-manager
 license: MIT
 compatibility: claude-code codex opencode
 allowed-tools:
@@ -18,8 +16,8 @@ allowed-tools:
   - Skill
 related-skills:
   - clarity-council
+  - project-manager
 loop-eligible: false
-
 ---
 
 # Meeting Decompression

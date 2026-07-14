@@ -8,13 +8,12 @@ description: >
   or invokes /task-initiation.
 version: 1.0.0
 license: MIT
-related-agents:
-  - project-manager
 compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion
+related-skills:
+  - project-manager
 loop-eligible: false
-
 ---
 
 # Task Initiation

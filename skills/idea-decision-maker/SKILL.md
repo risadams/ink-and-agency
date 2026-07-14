@@ -16,13 +16,11 @@ compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion
   - Skill
-related-agents:
-  - product-manager
-  - business-analyst
 related-skills:
   - clarity-council
+  - product-manager
+  - business-analyst
 loop-eligible: false
-
 ---
 
 # Idea Decision Maker
