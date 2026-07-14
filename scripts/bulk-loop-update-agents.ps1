@@ -37,7 +37,7 @@ param(
 
 # Pattern definitions by category
 $patterns = @{
-    '01-core-development' = @{
+    '01-core-development'     = @{
         'related-skills' = @('codebase-explain', 'request-refactor-plan')
         'related-agents' = @('code-reviewer')
     }
@@ -45,15 +45,15 @@ $patterns = @{
         'related-skills' = @('codebase-explain', 'request-refactor-plan')
         'related-agents' = @('code-reviewer')
     }
-    '03-infrastructure' = @{
+    '03-infrastructure'       = @{
         'related-skills' = @('request-refactor-plan')
         'related-agents' = @('terraform-engineer')
     }
-    '04-quality-security' = @{
+    '04-quality-security'     = @{
         'related-skills' = @('clarity-council')
         'related-agents' = @('code-reviewer')
     }
-    '05-data-ai' = @{
+    '05-data-ai'              = @{
         'related-skills' = @('clarity-council')
         'related-agents' = @('ml-engineer')
     }
@@ -61,15 +61,15 @@ $patterns = @{
         'related-skills' = @('request-refactor-plan')
         'related-agents' = @('refactoring-specialist')
     }
-    '07-specialized-domains' = @{
+    '07-specialized-domains'  = @{
         'related-skills' = @()
         'related-agents' = @()
     }
-    '08-business-product' = @{
+    '08-business-product'     = @{
         'related-skills' = @('sprint-snapshot', 'clarity-council')
         'related-agents' = @('scrum-master')
     }
-    '10-research-analysis' = @{
+    '10-research-analysis'    = @{
         'related-skills' = @('idea-generate', 'clarity-council')
         'related-agents' = @()
     }
@@ -138,7 +138,8 @@ foreach ($category in $categoriesToProcess) {
 
             if ($DryRun) {
                 Write-Host "  [DRY RUN] Would update: $($file.Name)" -ForegroundColor Green
-            } else {
+            }
+            else {
                 Set-Content -Path $file.FullName -Value $newContent
                 Write-Host "  ✓ Updated: $($file.Name)" -ForegroundColor Green
                 $updated++
