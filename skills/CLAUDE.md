@@ -41,9 +41,17 @@ related-skills:                        # optional — other skills this skill us
   - skill-b
 loop-eligible: true                    # optional — true if can run via /loop
 recurrence-hint: daily                 # optional — daily/weekly/on-demand (if loop-eligible=true)
+disable-model-invocation: true         # optional — user-invoked only (see below)
+codex-short-description: "…"           # optional — override for the Codex picker label
 ```
 
 **Note:** The `related-agents` and `related-skills` fields should only include items that actually exist and have clear workflow connections to this skill. See **[INTEGRATION.md](INTEGRATION.md)** for guidance.
+
+### Cross-host invocation (Claude Code + Codex)
+
+`disable-model-invocation: true` marks a skill **user-invoked only** — the model won't auto-trigger it; the human invokes it by name. This one frontmatter flag drives both hosts: the generator (`scripts/convert-agents-to-codex.ps1`) projects it into the skill's `agents/openai.yaml` as `policy.allow_implicit_invocation: false` (the Codex analog). Because the Codex side is generated, the two can't drift — **never hand-edit `agents/openai.yaml`.**
+
+The generated `openai.yaml` also carries the Codex picker label: `interface.display_name` (from `name`) and `interface.short_description` (first sentence of `description`, ~90 chars). When that first sentence reads badly or truncates, add `codex-short-description:` and the generator uses it verbatim. Full model: [AGENTS.md](../AGENTS.md#skill-invocation-across-hosts).
 
 ## Extended Skill Format: Loop Method
 
