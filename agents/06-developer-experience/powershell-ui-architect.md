@@ -4,7 +4,7 @@ description: "Use when designing or building desktop graphical interfaces (WinFo
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - refactoring-specialist
 loop-eligible: false

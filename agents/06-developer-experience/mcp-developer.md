@@ -4,7 +4,7 @@ description: "Use this agent when you need to build, debug, or optimize Model Co
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - refactoring-specialist
 loop-eligible: false

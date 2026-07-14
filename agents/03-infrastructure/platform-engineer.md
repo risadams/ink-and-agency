@@ -4,7 +4,7 @@ description: "Use when building or improving internal developer platforms (IDPs)
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - terraform-engineer
 loop-eligible: false

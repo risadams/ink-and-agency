@@ -4,7 +4,7 @@ description: "Use this agent when you need to build, optimize, or secure Docker 
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - terraform-engineer
 loop-eligible: false

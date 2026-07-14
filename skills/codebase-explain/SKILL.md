@@ -6,7 +6,7 @@ related-agents:
   - architect-reviewer
   - code-reviewer
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 loop-eligible: false
 
 compatibility: claude-code codex opencode

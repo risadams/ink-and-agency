@@ -5,7 +5,7 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 related-skills:
   - codebase-explain
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - code-reviewer
 loop-eligible: false

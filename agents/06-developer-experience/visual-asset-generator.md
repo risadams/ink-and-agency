@@ -4,7 +4,7 @@ description: "Use this agent when you need to generate production-ready visual a
 tools: Read, Write, Bash, mcp__prompt-to-asset
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - refactoring-specialist
 loop-eligible: false

@@ -4,7 +4,7 @@ description: "Use when building, refactoring, or scaling infrastructure as code 
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 loop-eligible: false
 ---
 

@@ -4,7 +4,7 @@ description: "Use this agent when you need to design, establish, or optimize Git
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: haiku
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - refactoring-specialist
 loop-eligible: false

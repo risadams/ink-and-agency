@@ -194,7 +194,7 @@ A: Not built in. For preview, use `git fetch && git log --oneline HEAD..origin/m
 
 ## Related skills
 
-- **[request-refactor-plan](../request-refactor-plan/)** — for refactor work, plan the small commits first; the rebase skill keeps them clean against main as you go.
+- **[codebase-plan-refactor](../codebase-plan-refactor/)** — for refactor work, plan the small commits first; the rebase skill keeps them clean against main as you go.
 
 ## Files
 

@@ -32,7 +32,7 @@ When the user says any of:
 - "I don't know where to begin"
 - "I've been staring at this for an hour"
 
-Do **not** activate when they want a plan or breakdown — route to `request-refactor-plan`, `grill-me`, or `clarity-council` instead.
+Do **not** activate when they want a plan or breakdown — route to `codebase-plan-refactor`, `grill-me`, or `clarity-council` instead.
 
 ## Why no council
 
