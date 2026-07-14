@@ -55,7 +55,7 @@ Skill: Wrote tasks.md (T001–T004, dependency order). Staged — ready for
        /implement. (Say "push to Jira" to create tickets.)
 
 You: push to Jira
-Skill: Project SC2, issue type Task — confirm?   [you: yes]
+Skill: Project PRJ, issue type Task — confirm?   [you: yes]
        Created PRJ-1490..1493 blockers-first, wired Blocks links, recorded
        the T00N→KEY mapping in tasks.md. Frontier: PRJ-1490.
 ```

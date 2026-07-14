@@ -65,10 +65,8 @@ JIRA base, Confluence base, GitLab base + group, vault root, and template path a
 | Placeholder | Memory file | Default content / how to populate |
 | :--- | :--- | :--- |
 | `{{vault_root}}` | `reference_obsidian_vault.md` (`**Vault root:**` line) | `C:\Users\chris.adams\dev\gd-pkms\` — already populated |
-| `{{jira_project}}` | `reference_jira_default_project.md` (`**Default Jira project key:**` line) | `SC2` — already populated |
+| `{{jira_project}}` | `reference_jira_default_project.md` (`**Default Jira project key:**` line) | `PRJ` — already populated |
 | `{{confluence_space}}` | `reference_confluence_default_space.md` | `PP` — already populated |
-| `{{gitlab_base_url}}` | `reference_gitlab_config.md` (`**GitLab base URL:**` line) | If `<unset>`, prompt and persist `https://gdgitlab01.gd-ms.us` (the PS-script default) |
-| `{{gitlab.bessemer}}` | same memory, `Common project paths` table | If absent, prompt and add a row: `bessemer` → `bessemer` (group path) |
 | `{{template_path}}` | derived | `{{vault_root}}\🗃Templates\Standup.md` (no separate memory) |
 | `{{rosters_dir}}` | derived | `{{vault_root}}\Scrum Teams\_rosters\` |
 | `{{output_root}}` | derived | `{{vault_root}}\Scrum Teams\` (per-team subfolder appended later) |
@@ -125,7 +123,7 @@ Issue these MCP/Bash calls in a single response when section toggles allow:
 - **Jira issues** (`IncludeJiraIssues` or `IncludeKanbanDiagram`): `jira_search(jql=<jql>, fields="summary,status,assignee,issuetype,updated")` with pagination to a sane cap. For each result, follow up with `jira_get_changelog` and `jira_get_comments` only when the issue's `updated` is within the window — skip the fetch otherwise to save tokens.
 - **Jira kanban** (`IncludeKanbanDiagram` only): second `jira_search` with `project = {{jira_project}} AND sprint in openSprints() AND labels in ({lowercase team names})`. Capture `key, summary, status, assignee.displayName, issuetype.name`.
 - **GitLab MRs + discussions** (`IncludeGitLabActivity`):
-  1. `list_group_projects(group_id="{{gitlab.bessemer}}")` to get all project IDs in the group (subgroups included).
+  1. `list_group_projects(group_id="{{gitlab.XXXX}}")` to get all project IDs in the group (subgroups included).
   2. For each project: `list_merge_requests(project_id, updated_after=<since_iso>, per_page=100)`.
   3. For each MR: `mr_discussions(project_id, merge_request_iid)` capped at 100 notes.
 - **GitLab pipelines** (`IncludeGitLabActivity`): for each project, `list_pipelines(project_id, updated_after=<since_iso>, per_page=100)`. For each, `get_pipeline(project_id, pipeline_id)` to read the triggering user.
@@ -291,7 +289,7 @@ Saved: <markdown link>
 - **Vault `🤼 Team` folder doesn't have a `@First Last.md` note for a roster member** — render plain `First Last` instead of a wikilink in `{{talking_order}}` and `{{git_updates}}`.
 - **Git repo not present at `{{git_repo}}`** — skip git commit collection silently; render an empty `{{git_updates}}` section.
 - **Jira sprint label missing** for the team (kanban query returns 0) — render `_No <Team> items found in current sprint._` for `{{jira_state}}`.
-- **GitLab `bessemer` group returns 0 projects** — surface a warning; the user may have lost group membership. Render `_No GitLab activity found in the specified time period._`.
+- **GitLab group returns 0 projects** — surface a warning; the user may have lost group membership. Render `_No GitLab activity found in the specified time period._`.
 - **Re-run on the same day** — same overwrite/append/skip prompt as `daily-briefing`.
 - **Multi-team run, partial failure** — generate reports for the teams that succeeded; surface per-team status in the final summary block.
 - **Sprint pulse with no prior snapshots** — first daily run of a sprint will only have one trend row after Step 1 writes it. Render the burndown as a single point with a one-line caption (e.g. `_First daily snapshot of Sprint N — trend will fill in over coming days._`) and let the statistics-expert flag the data as too sparse to forecast.

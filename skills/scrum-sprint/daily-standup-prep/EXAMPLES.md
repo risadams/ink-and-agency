@@ -67,11 +67,11 @@ Generates two files (one per team). Talking-order lines include ` (Onyx)` / ` (P
 ## Custom JQL
 
 ```powershell
-.\Get-Standup-Report.ps1 -JQL "project = SC2 AND assignee = currentUser() AND updated >= -3d"
+.\Get-Standup-Report.ps1 -JQL "project = PRJ AND assignee = currentUser() AND updated >= -3d"
 ```
 
 ```text
-/daily-standup-prep --jql "project = SC2 AND assignee = currentUser() AND updated >= -3d"
+/daily-standup-prep --jql "project = PRJ AND assignee = currentUser() AND updated >= -3d"
 ```
 
 When `--jql` is provided, it overrides the auto-built JQL but `DaysToLookBack` still drives the Git, GitLab, and Confluence cutoffs.
@@ -90,8 +90,7 @@ When `--jql` is provided, it overrides the auto-built JQL but `DaysToLookBack` s
 
 The first time you run the skill it will prompt for any missing memory values:
 
-1. **GitLab base URL** — recommended `https://gdgitlab01.gd-ms.us` (the PS-script default). Saved to `reference_gitlab_config.md`.
-2. **GitLab `bessemer` group key** — recommended `bessemer`. Saved as a row in the same memory.
-3. **Roster CSVs** — for each team you ask for that has no roster at `{{vault_root}}\Scrum Teams\_rosters\<Team>.csv`, the skill offers to copy from `D:\powershell-scripting\src\bin\Teams\<Team>.csv`. Accept once, then maintain the CSV from the vault going forward.
+1. **GitLab base URL** Saved to `reference_gitlab_config.md`.
+2. **Roster CSVs** — for each team you ask for that has no roster at `{{vault_root}}\Scrum Teams\_rosters\<Team>.csv`, the skill offers to copy from `D:\powershell-scripting\src\bin\Teams\<Team>.csv`. Accept once, then maintain the CSV from the vault going forward.
 
 After the first run, subsequent invocations skip every prompt and run silently.

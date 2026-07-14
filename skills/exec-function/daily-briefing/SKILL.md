@@ -122,7 +122,7 @@ The body or subject must contain an actionable verb directed at the user: *reply
 
 - ✅ User is in `To:` and named in the ask, OR user is the sole recipient, OR user is explicitly @mentioned in body
 - ❌ User is on `Cc:` with no name-call ("CC'd for awareness")
-- ❌ Email is to a distribution list (`pyrite-team@`, `bessemer-all@`) with no per-user ask
+- ❌ Email is to a distribution list (`pyrite-team@`, `dev-all@`) with no per-user ask
 - ❌ Automated notification (Jira `DoNotReply`, GitLab pipeline, Outlook calendar response) with no human ask layered on top
 
 **Auto-demote to FYI (do NOT render as Action required):**
@@ -178,7 +178,7 @@ Use [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md). Lead with the executive summary (3
 
 **Carryover rule (Open Action Items):** when populating the `Carrying over (still open)` subsection from the prior daily note (`last_run_date`), `Read` that note's `### ✅ Open Action Items` section and copy **only `- [ ]` lines**. Every `- [x]` line is already done — drop it. This rule applies to both subsections of the prior note (`Carrying over` and `New / from window`); merge the surviving `- [ ]` items into today's `Carrying over (still open)`. If the prior note has zero remaining `- [ ]` items, omit the subsection entirely rather than render an empty header.
 
-**Mandatory: every surviving `- [ ]` item from `last_run_date` MUST be run through the phantom-carryover guard (below) BEFORE being rendered in today's note.** The carryover rule produces a *candidate list*; the phantom guard is the *filter* that decides which candidates survive. Skipping the phantom guard is the #1 cause of stale items re-spawning across weeks (see [[feedback_patel_sc2_23240_resolved]] for a 9-note phantom). Do not render any `- [ ]` carryover bullet that has not been age-scored and signal-checked.
+**Mandatory: every surviving `- [ ]` item from `last_run_date` MUST be run through the phantom-carryover guard (below) BEFORE being rendered in today's note.** The carryover rule produces a *candidate list*; the phantom guard is the *filter* that decides which candidates survive. Skipping the phantom guard is the #1 cause of stale items re-spawning across weeks. Do not render any `- [ ]` carryover bullet that has not been age-scored and signal-checked.
 
 **Recently-closed dedup rule (applies to `New / from window`):** before adding a `- [ ]` bullet to today's `New / from window` subsection, check whether the same actionable item was completed in any of the last **7 daily notes**. This catches the case where the underlying state (an unanswered email, an open Outlook flag, a stale Jira watcher) still looks "open" to Outlook but the user actually closed the loop offline and marked the vault `[x]` — without this check the briefing keeps re-spawning the same item with louder emojis (see [[feedback_briefing_stale_action_dedup]]).
 
@@ -240,7 +240,7 @@ If none of the above are true, **fresh signal is absent**. Do not stretch — th
 
 **Non-interactive fallback:** if `AskUserQuestion` is unavailable, default to `Close as cancelled` for `age ≥ 5 + no fresh signal` (the strongest phantom signal), and to `Keep` for `age 3-4 + no fresh signal` (weaker signal — favor false-positive carryover over silent suppression). Always surface the auto-decision in the executive summary so the user can reverse it.
 
-**Memory write on close.** When the user picks `Close as done` or `Close as cancelled`, write a `feedback` memory in the format of `feedback_patel_sc2_23240_resolved.md` so the next briefing has a hard suppression backstop even if the original Outlook signal that spawned the item re-fires. Memory name pattern: `feedback_<kebab-case-normalized-signature>_resolved.md`.
+**Memory write on close.** When the user picks `Close as done` or `Close as cancelled`, write a `feedback` memory in the format of `feedback_PRJ_12345_resolved.md` so the next briefing has a hard suppression backstop even if the original Outlook signal that spawned the item re-fires. Memory name pattern: `feedback_<kebab-case-normalized-signature>_resolved.md`.
 
 **Stale carryover rule (applies to `Carrying over (still open)`):** for each `- [ ]` item being carried over that **survived the phantom-carryover guard** (i.e., was not closed in Phase C), apply the age band logic below. Re-use the `age` value computed in Phase A — do not re-scan.
 

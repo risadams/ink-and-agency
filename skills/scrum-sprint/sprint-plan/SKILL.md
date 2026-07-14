@@ -151,7 +151,7 @@ Unless `--no-council`, invoke `clarity-council` via `Skill` with the personas li
 
 #### Charts required (`## Infographics` section) {#charts-required-section}
 
-The `infographics-expert` persona must produce **at minimum** these Mermaid charts, each with a one-line caption. See [feedback memory: always-add-charts](../../../../projects/D--bessemer/memory/feedback_always_add_charts.md) for the rationale (don't ship reports as numbers-only narratives when a chart would land it faster).
+The `infographics-expert` persona must produce **at minimum** these Mermaid charts, each with a one-line caption. (don't ship reports as numbers-only narratives when a chart would land it faster).
 
 | # | Chart | Type | Series |
 | --- | --- | --- | --- |
@@ -290,8 +290,8 @@ If this is the second run today: `Saved: refreshed sprint-plan-2026-04-01.md (si
 - **The `sprint-plan-latest.md` pointer is the canonical wikilink target** for dashboards and bases. Always update it on every run.
 - **Prefer the JSONL row over re-counting from the canvas** for headline totals — it's the canonical record. Use canvas parsing only for the per-issue table.
 - **Wikilink team members only when the vault note exists.** Same `Glob("{{vault_root}}/🤼 Team/**/@*.md")` rule as sprint-snapshot.
-- **Charts are mandatory.** Every sprint-plan report MUST contain the `## Infographics` section with the Mermaid charts spec'd in [Charts required](#charts-required-section). This applies whether the council ran or not. Numbers-only narratives are a regression — see the [always-add-charts feedback memory](../../../../projects/D--bessemer/memory/feedback_always_add_charts.md).
-- **`_team-rules.md` lookup search order**: (1) `{{output_root}}/_team-rules.md` (sprint-level override, rare), (2) `{{output_root}}/../_team-rules.md` (INC-level, also rare), (3) **`{{vault_root}}/Scrum Teams/<Team>/_team-rules.md`** (canonical team-root location, where Pyrite's lives). Do not declare team-rules missing without searching all three. See [reference memory](../../../../projects/D--bessemer/memory/reference_team_rules_location.md).
+- **Charts are mandatory.** Every sprint-plan report MUST contain the `## Infographics` section with the Mermaid charts spec'd in [Charts required](#charts-required-section). This applies whether the council ran or not. Numbers-only narratives are a regression.
+- **`_team-rules.md` lookup search order**: (1) `{{output_root}}/_team-rules.md` (sprint-level override, rare), (2) `{{output_root}}/../_team-rules.md` (INC-level, also rare), (3) **`{{vault_root}}/Scrum Teams/<Team>/_team-rules.md`** (canonical team-root location, where Pyrite's lives). Do not declare team-rules missing without searching all three.
 
 ## Edge cases
 

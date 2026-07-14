@@ -74,7 +74,7 @@ Spec — exact reproduction of `Format-JiraKanbanForMermaid`:
 flowchart
 
     subgraph Blocked ["Blocked"]
-        SC2_1234["PRJ-1234<br/>Truncated summary…<br/>👤 Alex Rivera"]
+        PRJ_1234["PRJ-1234<br/>Truncated summary…<br/>👤 Alex Rivera"]
     end
 
     subgraph Ready ["Ready"]
@@ -83,8 +83,8 @@ flowchart
 
     ...
 
-    classDef SC2_1234Style fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-    class SC2_1234 SC2_1234Style
+    classDef PRJ_1234Style fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    class PRJ_1234 PRJ_1234Style
 ```
 
 Column ordering and status mapping:
