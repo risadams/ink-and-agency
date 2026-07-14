@@ -47,7 +47,10 @@ Voices that exist only for council use — no standalone specialist skill:
 
 ## Specialist skills used as lenses (resolve to a top-level skill)
 
-These names have no local file — the council adopts the matching specialist skill's expertise:
+These names have no local file — the council adopts the matching specialist skill's expertise. Each
+of these skills carries a **## Council Persona Lens** section (Decision Lens, Preferred Frameworks,
+Blind Spots, Failure Modes, Escalation Conditions) that is the persona contract to read; the rest of
+the skill is implementation guidance.
 
 - `data-engineer` → [`skills/data-ai/data-engineer/`](../data-ai/data-engineer/)
 - `devops-engineer` → [`skills/infrastructure/devops-engineer/`](../infrastructure/devops-engineer/)

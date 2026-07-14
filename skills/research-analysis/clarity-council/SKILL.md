@@ -56,8 +56,9 @@ I'll iterate" (iterative).
 **Resolving a persona name** (two steps, see [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md)):
 first look for `skills/persona/<name>.md` and use its **Decision Lens**, **Preferred Frameworks**,
 and **Blind Spots**; if there's no such file, adopt the top-level specialist skill of that name
-(`skills/<name>/SKILL.md`, e.g. `scrum-master`, `product-manager`) as the persona's lens. Keep
-terminology consistent with the names in [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md).
+(e.g. `scrum-master`, `product-manager`) — read its **## Council Persona Lens** section, which is the
+persona contract (the rest of that skill is implementation guidance). Keep terminology consistent
+with the names in [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md).
 
 ---
 
