@@ -2,14 +2,14 @@
 
 An agent plugin for **Claude Code and OpenAI Codex**, merging two libraries into one installable unit:
 
-- **Ink** — 51 skills covering writing, sprint/Scrum workflows, issue management, Obsidian tooling, codebase analysis, and neurodivergent-friendly executive-function support (`skills/`)
+- **Ink** — 55 skills covering writing, sprint/Scrum workflows, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, and neurodivergent-friendly executive-function support (`skills/`)
 - **Agency** — 160 specialist subagents organized by domain, plus a persona-council system for multi-perspective decision making (`agents/`)
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
 
 ## Structure
 
-```
+```text
 ink-and-agency/
 ├── .claude-plugin/
 │   ├── plugin.json              # Claude Code plugin manifest
@@ -19,7 +19,7 @@ ink-and-agency/
 │       └── marketplace.json     # Codex marketplace catalog
 ├── plugin.json                  # Codex plugin manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Instructions for coding agents working in this repo
-├── skills/                      # 51 skills, one folder per skill (shared by both hosts)
+├── skills/                      # 55 skills, one folder per skill (shared by both hosts)
 │   ├── <skill-name>/SKILL.md
 │   └── PORTABILITY.md           # How to interpret Claude tool names on other hosts
 ├── agents/                      # Subagents, grouped by category (canonical markdown)
@@ -48,34 +48,34 @@ ink-and-agency/
 
 ### Claude Code
 
-```
+```sh
 /plugin marketplace add risadams/ink-and-agency
 /plugin install ink-and-agency
 ```
 
 Or load locally for development:
 
-```
+```sh
 claude --plugin-dir /path/to/ink-and-agency
 ```
 
 ### OpenAI Codex
 
-```
+```sh
 codex plugin marketplace add risadams/ink-and-agency
 codex plugin install ink-and-agency
 ```
 
 The plugin bundles the skills. Codex plugins don't carry subagents, so install the agent TOMLs separately (personal scope), or just work inside a clone of this repo — `.codex/agents/` is picked up project-scoped:
 
-```
+```sh
 git clone https://github.com/risadams/ink-and-agency
 cp ink-and-agency/.codex/agents/*.toml ~/.codex/agents/
 ```
 
 If your Codex version predates plugin marketplaces, copy the skills directly too:
 
-```
+```sh
 cp -r ink-and-agency/skills/* ~/.agents/skills/
 ```
 
