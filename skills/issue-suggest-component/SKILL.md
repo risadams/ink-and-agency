@@ -13,10 +13,6 @@ allowed-tools:
   - Read
   - Write
   - Bash
-related-agents:
-  - architect-reviewer
-  - backend-developer
-  - frontend-developer
   - AskUserQuestion
   - mcp__atlassian__discover_tools
   - mcp__atlassian__jira_get_issue
@@ -32,6 +28,10 @@ related-agents:
   - mcp__gitlab-mcp__get_merge_request
   - mcp__gitlab-mcp__list_commits
   - mcp__gitlab-mcp__search_project_code
+related-agents:
+  - architect-reviewer
+  - backend-developer
+  - frontend-developer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

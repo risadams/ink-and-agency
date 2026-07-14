@@ -41,7 +41,7 @@ pwsh ./scripts/convert-agents-to-codex.ps1
 Every skill is reachable one of two ways, and the axis is **who can invoke it**. This is a single decision in the canonical `SKILL.md` frontmatter; the generator projects it onto both hosts.
 
 - **Model-invoked** (default) — reachable by the model *or* the user. Omit `disable-model-invocation`. Keep the rich trigger phrasing in `description` ("Use when the user says…, mentions…") so auto-invocation fires. The generated `openai.yaml` carries only the `interface` block.
-- **User-invoked** — reachable *only* when the human types the skill name. Set `disable-model-invocation: true` in the frontmatter. The generator then adds `policy.allow_implicit_invocation: false` to that skill's `openai.yaml` — the Codex analog — so neither host lets the model reach it. There are currently four: `codebase-explain`, `handoff`, `teach`, `work-plan`.
+- **User-invoked** — reachable *only* when the human types the skill name. Set `disable-model-invocation: true` in the frontmatter. The generator then adds `policy.allow_implicit_invocation: false` to that skill's `openai.yaml` — the Codex analog — so neither host lets the model reach it. There are currently eight: `codebase-explain`, `handoff`, `implement`, `plan-to-spec`, `plan-to-tickets`, `teach`, `which-skill`, `work-plan`.
 
 Because the Codex side is **generated from the Claude-side frontmatter**, the two can't drift: a skill is user-invoked in both harnesses or neither. Do not hand-edit `openai.yaml` to change invocation — flip `disable-model-invocation` in `SKILL.md` and regenerate.
 

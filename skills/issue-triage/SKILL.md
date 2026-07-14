@@ -13,10 +13,6 @@ allowed-tools:
   - Read
   - Glob
   - Grep
-related-agents:
-  - project-manager
-  - scrum-master
-  - debugger
   - Bash
   - Agent
   - Skill
@@ -33,6 +29,10 @@ related-agents:
   - mcp__gitlab-mcp__list_merge_requests
   - mcp__gitlab-mcp__get_merge_request
   - mcp__gitlab-mcp__search_project_code
+related-agents:
+  - project-manager
+  - scrum-master
+  - debugger
 related-skills:
   - codebase-explain
   - clarity-council

@@ -26,6 +26,7 @@ related-skills:
   - sprint-snapshot
   - clarity-council
 loop-eligible: true
+recurrence-hint: daily
 
 compatibility: claude-code codex opencode
 ---

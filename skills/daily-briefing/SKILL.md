@@ -23,6 +23,7 @@ allowed-tools:
 related-skills:
   - energy-budget
 loop-eligible: true
+recurrence-hint: daily
 
 compatibility: claude-code codex opencode
 ---

@@ -1,6 +1,6 @@
 # Which Skill
 
-A **router** over the pack. Tell it your situation and it names the one skill (or flow) that fits, why, and the exact command — without running anything. It's the cure for the cognitive load of a 55-skill pack: one skill to remember instead of fifty-five.
+A **router** over the pack. Tell it your situation and it names the one skill (or flow) that fits, why, and the exact command — without running anything. It's the cure for the cognitive load of a 61-skill pack: one skill to remember instead of sixty-one.
 
 ## Why this exists
 
@@ -58,7 +58,7 @@ Skill: Flow: plan-a-big-effort.
 ## Anti-patterns
 
 - ❌ **Running the target skill for you.** It points and steps out; you invoke. (It can't fire user-invoked skills anyway — nothing can but the human.)
-- ❌ **Listing all 55 skills.** It names the *one* that fits, plus at most one sibling — a menu dump defeats the purpose.
+- ❌ **Listing all 61 skills.** It names the *one* that fits, plus at most one sibling — a menu dump defeats the purpose.
 - ❌ **Guessing when nothing fits.** If no skill matches, it says so and suggests `/skill-create`.
 
 ## Related skills

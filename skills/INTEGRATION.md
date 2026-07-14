@@ -58,12 +58,12 @@ A complex workflow chains multiple skills and agents:
 
 ```
 Planning Workflow
+├─ [Invokes: sprint-snapshot skill]
+├─ Capture the board
 ├─ [Invokes: sprint-plan skill]
-├─ Organize work
+├─ Plan scope vs capacity
 ├─ [Delegates to: project-manager agent]
 ├─ For comprehensive oversight
-├─ [Invokes: backlog-grooming skill]
-├─ Prepare validated items
 └─ Ready for team coordination
 ```
 
@@ -151,13 +151,13 @@ name: fullstack-developer
 description: "Build complete features end-to-end"
 related-skills:
   - code-review
-  - architecture-review
+  - codebase-explain
 ---
 
 ## Implementation Pattern
 
 1. **Backend layer** — Use backend-developer agent
-2. **Validation** — Invoke architecture-review skill
+2. **Context map** — Invoke codebase-explain skill
 3. **Frontend layer** — Use frontend-developer agent
 4. **Polish** — Invoke code-review skill
 5. **Documentation** — Invoke writing-humanize skill
@@ -180,10 +180,9 @@ grep -A 5 "related-skills:" agents/08-business-product/content-quality-editor.md
 ```
 
 ### Cross-Reference Documentation
-Both integration guides should be referenced:
-
-- **From Skills:** Link to [Agents INTEGRATION.md](../agents/INTEGRATION.md)
-- **From Agents:** Link to [Skills INTEGRATION.md](../skills/INTEGRATION.md)
+Skills declare related agents (and vice versa) in frontmatter; the canonical
+agent catalog is the `agents/` tree grouped by numbered category. This document
+(`skills/INTEGRATION.md`) is the single integration guide for both directions.
 
 ## Governance Rules
 
@@ -255,9 +254,9 @@ For **security-focused audits**, see the **[security-auditor agent](../agents/04
 
 ## See Also
 
-- **[Agents INTEGRATION.md](../agents/INTEGRATION.md)** — Agent perspective on integration
-- **[Agents README.md](../agents/README.md)** — Agent discovery and selection
 - **[Skills README.md](README.md)** — Skill discovery and usage
+- **[FLOWS.md](FLOWS.md)** — How skills chain into end-to-end flows
+- **[CLAUDE.md](CLAUDE.md)** — Skill format spec and inventory
 
 ---
 

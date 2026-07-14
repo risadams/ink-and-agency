@@ -13,11 +13,11 @@ allowed-tools:
   - mcp__atlassian__jira_get_changelog
   - mcp__atlassian__jira_search
   - mcp__atlassian__confluence_search
+  - mcp__atlassian__confluence_get_page
+  - mcp__atlassian__jira_get_epic_issues
 related-agents:
   - scrum-master
   - project-manager
-  - mcp__atlassian__confluence_get_page
-  - mcp__atlassian__jira_get_epic_issues
 related-skills:
   - clarity-council
 loop-eligible: false
