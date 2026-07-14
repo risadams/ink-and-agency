@@ -51,12 +51,14 @@ ink-and-agency/
 
 ### Claude Code
 
+Add the marketplace once, then install the plugin:
+
 ```sh
 /plugin marketplace add risadams/ink-and-agency
 /plugin install ink-and-agency
 ```
 
-Or load locally for development:
+This installs both the 61 skills and the 160 subagents. Or load locally for development (no marketplace, picks up your working copy):
 
 ```sh
 claude --plugin-dir /path/to/ink-and-agency
@@ -64,25 +66,76 @@ claude --plugin-dir /path/to/ink-and-agency
 
 ### OpenAI Codex
 
+Add the marketplace once, then install the plugin:
+
 ```sh
 codex plugin marketplace add risadams/ink-and-agency
 codex plugin install ink-and-agency
 ```
 
-The plugin bundles the skills. Codex plugins don't carry subagents, so install the agent TOMLs separately (personal scope), or just work inside a clone of this repo — `.codex/agents/` is picked up project-scoped:
+The plugin bundles the **skills**. Codex plugins can't carry subagents, so install the agent TOMLs separately (personal scope):
 
 ```sh
 git clone https://github.com/risadams/ink-and-agency
 cp ink-and-agency/.codex/agents/*.toml ~/.codex/agents/
 ```
 
-If your Codex version predates plugin marketplaces, copy the skills directly too:
+Alternatively, work inside a clone of this repo and the agents are picked up **project-scoped** from `.codex/agents/` — no copy needed. If your Codex version predates plugin marketplaces, copy the skills directly too:
 
 ```sh
 cp -r ink-and-agency/skills/* ~/.agents/skills/
 ```
 
-Skills are invoked with `$skill-name` (or picked up automatically when a task matches a skill's description). Subagents are spawned on request or via `/agent`.
+## Update
+
+Releases are cut with [semantic versioning](https://semver.org/) and published as GitHub Releases (see [CHANGELOG.md](CHANGELOG.md)). To move to the latest version:
+
+### Updating on Claude Code
+
+```sh
+/plugin marketplace update ink-and-agency   # refresh the catalog
+/plugin update ink-and-agency               # pull the new version
+```
+
+For a local dev checkout, just `git pull` — `--plugin-dir` always reflects the working tree.
+
+### Updating on OpenAI Codex
+
+```sh
+codex plugin marketplace update ink-and-agency
+codex plugin update ink-and-agency
+```
+
+If you installed the agent TOMLs by hand, re-copy them after updating so the subagents match the new release:
+
+```sh
+cd ink-and-agency && git pull
+cp .codex/agents/*.toml ~/.codex/agents/
+```
+
+## Invoking skills and agents
+
+The plugin ships two kinds of component. **Skills** are prompt-driven workflows; **agents** (subagents) are specialist personas you delegate a task to. How you reach each differs by host.
+
+### Invoking on Claude Code
+
+| Component | How to invoke |
+| :--- | :--- |
+| **Skill** (explicit) | Type `/ink-and-agency:<skill-name>` — e.g. `/ink-and-agency:which-skill`. Names are namespaced by the plugin at install time, so they never collide with your project's own skills. |
+| **Skill** (automatic) | Most skills auto-fire when your request matches their `description`. The exceptions are user-invoked-only skills (`which-skill`, `handoff`, `teach`, `work-plan`, `codebase-explain`, `implement`, `plan-to-spec`, `plan-to-tickets`) — reach those by typing the name. |
+| **Subagent** | Ask for it in natural language ("use the *iterative council* agent…") or spawn it with the `/agent` picker. |
+
+Not sure which skill fits? Run `/ink-and-agency:which-skill` — it routes over the whole pack and hands you the exact invocation.
+
+### Invoking on OpenAI Codex
+
+| Component | How to invoke |
+| :--- | :--- |
+| **Skill** (explicit) | Type `$<skill-name>` — e.g. `$which-skill`. |
+| **Skill** (automatic) | Skills auto-fire on a matching task, *except* those marked user-invoked (same list as above), which Codex keeps out of automatic reach via `policy.allow_implicit_invocation: false`. |
+| **Subagent** | Select it from Codex's custom-agent picker (the TOMLs you installed to `~/.codex/agents/`, or the project-scoped `.codex/agents/`). |
+
+A skill's invocation mode is identical on both hosts — it's authored once in `SKILL.md` frontmatter and projected to each host, so a skill that's user-invoked in Claude Code is user-invoked in Codex too.
 
 ## Conventions
 
