@@ -3,16 +3,17 @@
 The council resolves a persona name in two steps:
 
 1. **Local lens file** — if `<name>.md` exists in this folder, use it (Soul / Voice / Decision Lens).
-2. **Top-level specialist skill** — otherwise, if `skills/<name>/SKILL.md` exists, adopt that
-   skill's expertise as the persona's lens.
+2. **Top-level specialist skill** — otherwise, if a `skills/<category>/<name>/SKILL.md` exists with a
+   **## Council Persona Lens** section, adopt that as the persona's lens.
 
-This keeps every capability single-sourced: names that are also full specialist skills (e.g.
-`scrum-master`, `product-manager`) live **once**, as the skill — the council borrows them as voices
-rather than duplicating a contract here.
+Advisory roles — the ones you *consult for judgment* rather than *run to produce an artifact* — live
+here as local lens files. A handful of names are **both** a persona and a hands-on skill
+(`data-engineer`, `devops-engineer`, `technical-writer`): those carry their lens inside the skill and
+are resolved via step 2.
 
 ## Council-only lenses (local files)
 
-Voices that exist only for council use — no standalone specialist skill:
+Advisory voices — consulted for judgment, they produce no artifact of their own:
 
 - [Growth Strategist](growth-strategist.md)
 - [Financial Officer](financial-officer.md)
@@ -21,15 +22,22 @@ Voices that exist only for council use — no standalone specialist skill:
 - [Customer Advocate](customer-advocate.md)
 - [Culture Lead](culture-lead.md)
 - [Product Owner](product-owner.md)
+- [Product Manager](product-manager.md)
 - [Senior Developer](senior-developer.md)
 - [Senior Architect](senior-architect.md)
 - [Security Expert](security-expert.md)
+- [Security Auditor](security-auditor.md)
 - [QA Engineer](qa-engineer.md)
+- [QA Expert](qa-expert.md)
+- [Code Reviewer](code-reviewer.md)
+- [Architect Reviewer](architect-reviewer.md)
 - [Tech Lead](tech-lead.md)
 - [Junior Developer](junior-developer.md)
 - [UI/UX Designer](ux-designer.md)
+- [UX Researcher](ux-researcher.md)
 - [Graphic Designer](graphic-designer.md)
 - [Release Train Engineer](release-train-engineer.md)
+- [Scrum Master](scrum-master.md)
 - [Statistics Expert](statistics-expert.md)
 - [Infographics Expert](infographics-expert.md)
 - [Accessibility Expert](accessibility-expert.md)
@@ -39,24 +47,30 @@ Voices that exist only for council use — no standalone specialist skill:
 - [Knowledge Manager](knowledge-manager.md)
 - [Compliance Officer](compliance-officer.md)
 - [Business Owner](business-owner.md)
+- [Customer Success Manager](customer-success-manager.md)
+- [Risk Manager](risk-manager.md)
 - [Social Media Marketer](social-media-marketer.md)
 - [Content Creator](content-creator.md)
+- [SEO Specialist](seo-specialist.md)
+- [Market Researcher](market-researcher.md)
+- [Competitive Analyst](competitive-analyst.md)
+- [Trend Analyst](trend-analyst.md)
+- [Research Analyst](research-analyst.md)
+- [Scientific Literature Researcher](scientific-literature-researcher.md)
+- [Project Idea Validator](project-idea-validator.md)
 - [Psychologist](psychologist.md)
 - [Researcher](researcher.md)
 - [Personal Assistant](personal-assistant.md)
 
 ## Specialist skills used as lenses (resolve to a top-level skill)
 
-These names have no local file — the council adopts the matching specialist skill's expertise. Each
-of these skills carries a **## Council Persona Lens** section (Decision Lens, Preferred Frameworks,
-Blind Spots, Failure Modes, Escalation Conditions) that is the persona contract to read; the rest of
-the skill is implementation guidance.
+These names have no local file — they are **hands-on skills that also serve as a council voice**. Each
+carries a **## Council Persona Lens** section (Decision Lens, Preferred Frameworks, Blind Spots,
+Failure Modes, Escalation Conditions) that is the persona contract to read; the rest of the skill is
+implementation guidance.
 
 - `data-engineer` → [`skills/data-ai/data-engineer/`](../data-ai/data-engineer/)
 - `devops-engineer` → [`skills/infrastructure/devops-engineer/`](../infrastructure/devops-engineer/)
-- `product-manager` → [`skills/business-product/product-manager/`](../business-product/product-manager/)
-- `risk-manager` → [`skills/specialized-domains/risk-manager/`](../specialized-domains/risk-manager/)
-- `scrum-master` → [`skills/business-product/scrum-master/`](../business-product/scrum-master/)
 - `technical-writer` → [`skills/business-product/technical-writer/`](../business-product/technical-writer/)
 
 ## Adding a Persona

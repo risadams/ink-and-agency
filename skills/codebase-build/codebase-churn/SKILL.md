@@ -2,7 +2,6 @@
 name: codebase-churn
 description: Analyze a git repository's history and produce an SVG treemap of file churn — area = lines changed, color = commit frequency. Use when user wants to find unstable areas of a codebase, predict bug-prone files, see "where do we change the most", spot refactor candidates, or invokes /codebase-churn.
 related-skills:
-  - code-reviewer
   - performance-engineer
   - refactoring-specialist
 loop-eligible: false

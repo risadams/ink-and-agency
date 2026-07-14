@@ -1,4 +1,0 @@
-# Generated from skills/business-product/scrum-master/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Scrum Master"
-  short_description: "Use when teams need facilitation, process optimization, velocity improvement, or agile..."

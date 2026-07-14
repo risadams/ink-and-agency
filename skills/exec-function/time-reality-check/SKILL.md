@@ -16,7 +16,6 @@ allowed-tools:
 related-skills:
   - clarity-council
   - project-manager
-  - scrum-master
 loop-eligible: false
 ---
 

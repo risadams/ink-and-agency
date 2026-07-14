@@ -4,7 +4,6 @@ description: Weigh one or more ideas/concepts with a structured pros-and-cons an
 related-skills:
   - clarity-council
   - idea-generate
-  - product-manager
   - business-analyst
 loop-eligible: false
 

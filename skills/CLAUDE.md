@@ -147,7 +147,7 @@ Validation is performed by `scripts/lint-skills.ps1`.
 
 > **Public skills only.** Private skills live in `_private/` and surface as junctions in the root (e.g. `cpf`, `mr-*`, `setup-*`). They are gitignored and **must not** be listed here. To check what's private: `cmd //c "dir /AL"` lists junctions, and `.gitignore` is the canonical list.
 >
-> **Scope of this table.** The rows below are the *workflow* skills (the "Ink" set). The ~154 **specialist** skills (former subagents — language/framework experts, infra, data/AI, security, product, etc.; e.g. `python-pro`, `security-auditor`, `terraform-engineer`) are not enumerated here — they are discovered by their trigger `description`. Browse `skills/` for the full set.
+> **Scope of this table.** The rows below are the *workflow* skills (the "Ink" set). The ~138 **specialist** skills (former subagents — language/framework experts, infra, data/AI, security, product, etc.; e.g. `python-pro`, `security-auditor`, `terraform-engineer`) are not enumerated here — they are discovered by their trigger `description`. Browse `skills/` for the full set.
 
 | Skill | Purpose |
 | :--- | :--- |

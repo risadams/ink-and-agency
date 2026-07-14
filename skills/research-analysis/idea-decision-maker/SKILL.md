@@ -18,7 +18,6 @@ allowed-tools:
   - Skill
 related-skills:
   - clarity-council
-  - product-manager
   - business-analyst
 loop-eligible: false
 ---

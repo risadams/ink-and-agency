@@ -4,8 +4,6 @@ description: Tell the agent to explain code with broader context and a higher-le
 disable-model-invocation: true
 related-skills:
   - codebase-plan-refactor
-  - architect-reviewer
-  - code-reviewer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

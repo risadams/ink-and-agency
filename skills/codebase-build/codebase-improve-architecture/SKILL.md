@@ -4,7 +4,6 @@ description: Find deepening opportunities in a codebase, informed by the domain 
 related-skills:
   - codebase-plan-refactor
   - grill-with-docs
-  - architect-reviewer
   - refactoring-specialist
   - legacy-modernizer
 loop-eligible: false

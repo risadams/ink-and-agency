@@ -4,7 +4,6 @@ description: Grilling session that challenges your plan against the existing dom
 related-skills:
   - grill-me
   - clarity-council
-  - architect-reviewer
   - documentation-engineer
 loop-eligible: false
 

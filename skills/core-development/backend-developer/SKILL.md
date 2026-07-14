@@ -11,7 +11,6 @@ allowed-tools:
 related-skills:
   - code-review
   - codebase-explain
-  - code-reviewer
   - database-optimizer
 loop-eligible: false
 compatibility: claude-code codex opencode

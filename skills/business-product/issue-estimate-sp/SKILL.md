@@ -17,7 +17,6 @@ allowed-tools:
   - mcp__atlassian__jira_get_epic_issues
 related-skills:
   - clarity-council
-  - scrum-master
   - project-manager
 loop-eligible: false
 

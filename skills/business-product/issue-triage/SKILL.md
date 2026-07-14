@@ -33,7 +33,6 @@ related-skills:
   - codebase-explain
   - clarity-council
   - project-manager
-  - scrum-master
   - debugger
 loop-eligible: false
 

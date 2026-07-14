@@ -4,8 +4,6 @@ description: Convert the start-of-sprint canvas into a planning markdown report 
 related-skills:
   - sprint-snapshot
   - clarity-council
-  - scrum-master
-  - product-manager
 loop-eligible: false
 recurrence-hint: on-demand
 allowed-tools:

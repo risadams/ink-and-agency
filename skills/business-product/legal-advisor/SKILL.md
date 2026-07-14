@@ -11,7 +11,6 @@ allowed-tools:
   - WebSearch
 related-skills:
   - clarity-council
-  - scrum-master
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

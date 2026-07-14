@@ -22,7 +22,6 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - clarity-council
-  - scrum-master
   - project-manager
 loop-eligible: true
 recurrence-hint: daily

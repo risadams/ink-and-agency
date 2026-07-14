@@ -11,7 +11,6 @@ allowed-tools:
 related-skills:
   - codebase-explain
   - codebase-plan-refactor
-  - code-reviewer
   - security-engineer
 loop-eligible: false
 compatibility: claude-code codex opencode

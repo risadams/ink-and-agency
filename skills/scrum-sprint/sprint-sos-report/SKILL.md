@@ -12,7 +12,6 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - sprint-plan
-  - scrum-master
   - project-manager
 loop-eligible: false
 

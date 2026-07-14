@@ -12,7 +12,6 @@ allowed-tools:
   - Glob
 related-skills:
   - branch-rebase
-  - code-reviewer
   - git-workflow-manager
   - refactoring-specialist
 loop-eligible: false

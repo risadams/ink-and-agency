@@ -3,9 +3,9 @@
 A **skills plugin** for **Claude Code and OpenAI Codex** — one installable unit, one primitive (skills):
 
 - **Ink** — workflow skills: writing, sprint/Scrum, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all.
-- **Agency** — ~154 specialist skills (language/framework experts, infra, data/AI, security, product, and more — formerly subagents), plus the `clarity-council` skill: a persona-council for multi-perspective decisions (single / multi / iterative modes).
+- **Agency** — ~138 specialist skills (language/framework experts, infra, data/AI, security, product, and more — formerly subagents), plus the `clarity-council` skill and its library of 46 advisory personas for multi-perspective decisions (single / multi / iterative modes).
 
-**215 skills total.** Everything lives under `skills/` and ships in the one bundle both hosts read. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so Codex — which can't bundle agents — gets the full library. See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md).)
+**199 skills total.** Everything lives under `skills/` and ships in the one bundle both hosts read. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so Codex — which can't bundle agents — gets the full library. See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md).)
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
 
@@ -22,7 +22,7 @@ ink-and-agency/
 ├── plugin.json                  # Codex plugin manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
 ├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
-├── skills/                      # 215 skills in 15 category folders (shared by both hosts)
+├── skills/                      # 199 skills in 15 category folders (shared by both hosts)
 │   ├── <category>/<name>/SKILL.md         # canonical skill (discovery is recursive)
 │   ├── <category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
 │   ├── language-specialists/    #   e.g. python-pro, rust-engineer, typescript-pro
@@ -52,7 +52,7 @@ Add the marketplace once, then install the plugin:
 /plugin install ink-and-agency
 ```
 
-This installs all 215 skills. Or load locally for development (no marketplace, picks up your working copy):
+This installs all 199 skills. Or load locally for development (no marketplace, picks up your working copy):
 
 ```sh
 claude --plugin-dir /path/to/ink-and-agency

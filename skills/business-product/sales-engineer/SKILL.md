@@ -12,7 +12,6 @@ allowed-tools:
 related-skills:
   - clarity-council
   - grill-me
-  - scrum-master
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

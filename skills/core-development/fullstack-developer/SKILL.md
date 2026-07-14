@@ -14,7 +14,6 @@ related-skills:
   - codebase-improve-architecture
   - backend-developer
   - frontend-developer
-  - code-reviewer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

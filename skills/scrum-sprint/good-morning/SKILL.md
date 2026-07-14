@@ -5,7 +5,6 @@ related-skills:
   - sprint-snapshot
   - daily-standup-prep
   - daily-briefing
-  - scrum-master
   - project-manager
 loop-eligible: false
 recurrence-hint: daily

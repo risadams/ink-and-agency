@@ -4,7 +4,6 @@ description: Helps users generate, refine, and stress-test ideas from loose topi
 related-skills:
   - clarity-council
   - grill-me
-  - product-manager
   - business-analyst
 loop-eligible: false
 recurrence-hint: on-demand

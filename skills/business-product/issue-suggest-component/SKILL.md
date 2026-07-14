@@ -29,7 +29,6 @@ allowed-tools:
   - mcp__gitlab-mcp__list_commits
   - mcp__gitlab-mcp__search_project_code
 related-skills:
-  - architect-reviewer
   - backend-developer
   - frontend-developer
 loop-eligible: false

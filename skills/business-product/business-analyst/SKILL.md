@@ -14,7 +14,6 @@ related-skills:
   - issue-feature-breakdown
   - idea-choice
   - assumption-mapping
-  - scrum-master
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

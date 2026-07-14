@@ -12,8 +12,6 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - clarity-council
-  - scrum-master
-  - product-manager
 loop-eligible: true
 recurrence-hint: on-demand
 

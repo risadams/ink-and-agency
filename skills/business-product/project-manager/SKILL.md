@@ -16,7 +16,6 @@ related-skills:
   - time-reality-check
   - task-initiation
   - energy-budget
-  - scrum-master
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

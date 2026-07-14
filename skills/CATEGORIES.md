@@ -4,22 +4,21 @@ All skills live under `skills/<category>/<name>/SKILL.md`. Categories are folder
 browsability only — a skill's invocation name is its leaf folder and is independent of
 category (see [ADR-0007](../docs/adr/ADR-0007-skill-categories.md)). Discovery is recursive.
 
-**215 skills across 15 categories.**
+**199 skills across 15 categories.**
 
-> **Not a category:** `skills/persona/` holds the 30 council persona contracts — shared reference
+> **Not a category:** `skills/persona/` holds the 46 council persona contracts — shared reference
 > documents (no `SKILL.md`), read by the [`clarity-council`](research-analysis/clarity-council/)
-> skill. They're not invokable skills, so they don't appear below.
+> skill. They're advisory voices you consult, not invokable skills, so they don't appear below.
 
-## Business & Product &nbsp;`business-product` (22)
+## Business & Product &nbsp;`business-product` (18)
 
-Product, project, delivery, issue management, and go-to-market.
+Product delivery, issue management, and go-to-market.
 
 - [`assumption-mapping`](business-product/assumption-mapping/) — Use when the user needs to identify and prioritize risky assumptions in a product idea, feature, or strategy.
 - [`backlog-grooming`](business-product/backlog-grooming/) — Use when the user needs to groom, refine, or clean up a product backlog.
 - [`business-analyst`](business-product/business-analyst/) — Use when analyzing business processes, gathering requirements from stakeholders, or identifying process improvement opportunities to drive o
 - [`content-marketer`](business-product/content-marketer/) — Use when you need to develop comprehensive content strategies, create SEO-optimized marketing content, or execute multi-channel content camp
 - [`content-quality-editor`](business-product/content-quality-editor/) — Use this skill before publishing any AI-generated content — blog posts, READMEs, release notes, commit messages, PR descriptions, documentat
-- [`customer-success-manager`](business-product/customer-success-manager/) — Use when you need to assess customer health, develop retention strategies, identify upsell opportunities, or maximize customer lifetime valu
 - [`growth-loops`](business-product/growth-loops/) — Use when the user wants to design a growth loop, understand PLG mechanics, or build sustainable acquisition.
 - [`issue-draft-release-notes`](business-product/issue-draft-release-notes/) — Draft a customer-facing release note for a Jira ticket by gathering the ticket context (summary, description, type, fix version, comments) a
 - [`issue-dup-find`](business-product/issue-dup-find/) — Scan all open issues in a Jira project and identify likely duplicates using semantic comparison.
@@ -29,12 +28,9 @@ Product, project, delivery, issue management, and go-to-market.
 - [`issue-triage`](business-product/issue-triage/) — Triage a bug or issue by gathering context (Jira ticket or free-form description), mapping the suspected code area via codebase-explain, hyp
 - [`legal-advisor`](business-product/legal-advisor/) — Use when you need to draft contracts, review compliance requirements, develop IP protection strategies, or assess legal risks for technology
 - [`license-engineer`](business-product/license-engineer/) — Use when architecting, implementing, or optimizing end-to-end legal licensing systems—from OSI standard selection and dependency compliance 
-- [`product-manager`](business-product/product-manager/) — Use when you need to make product strategy decisions, prioritize features, or define roadmap plans based on user needs and business goals.
 - [`project-manager`](business-product/project-manager/) — Use when you need to establish project plans, track execution progress, manage risks, control budget/schedule, and coordinate stakeholders a
 - [`sales-engineer`](business-product/sales-engineer/) — Use when you need to conduct technical pre-sales activities including solution architecture, proof-of-concept development, and technical dem
-- [`scrum-master`](business-product/scrum-master/) — Use when teams need facilitation, process optimization, velocity improvement, or agile ceremony management—especially for sprint planning, r
 - [`technical-writer`](business-product/technical-writer/) — Use when you need to create, improve, or maintain technical documentation including API references, user guides, SDK documentation, and gett
-- [`ux-researcher`](business-product/ux-researcher/) — Use when you need to conduct user research, analyze user behavior, or generate actionable insights to validate design decisions and uncover 
 - [`wordpress-master`](business-product/wordpress-master/) — Use when you need to architect, optimize, or troubleshoot WordPress implementations ranging from custom theme/plugin development to enterpri
 
 ## Codebase & Build &nbsp;`codebase-build` (8)
@@ -212,16 +208,14 @@ Read/write and structure an Obsidian vault.
 - [`obsidian-markdown`](obsidian/obsidian-markdown/) — Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax.
 - [`obsidian-vault`](obsidian/obsidian-vault/) — Search, create, and manage notes in the Obsidian vault with wikilinks and index notes.
 
-## Quality & Security &nbsp;`quality-security` (17)
+## Quality & Security &nbsp;`quality-security` (13)
 
-Testing, code review, security auditing, compliance, and performance.
+Testing, security auditing, compliance, and performance.
 
 - [`accessibility-tester`](quality-security/accessibility-tester/) — Use when you need comprehensive accessibility testing, WCAG compliance verification, or assessment of assistive technology support.
 - [`ad-security-reviewer`](quality-security/ad-security-reviewer/) — Use when you need to audit Active Directory security posture, evaluate privilege escalation risks, review identity delegation patterns, or a
 - [`ai-writing-auditor`](quality-security/ai-writing-auditor/) — Use when you need to audit content for AI writing patterns and rewrite text to remove them.
-- [`architect-reviewer`](quality-security/architect-reviewer/) — Use when you need to evaluate system design decisions, architectural patterns, and technology choices at the macro level.
 - [`chaos-engineer`](quality-security/chaos-engineer/) — Use when you need to design and execute controlled failure experiments, validate system resilience before incidents occur, or conduct game d
-- [`code-reviewer`](quality-security/code-reviewer/) — Use when you need to conduct comprehensive code reviews focusing on code quality, security vulnerabilities, and best practices.
 - [`compliance-auditor`](quality-security/compliance-auditor/) — Use when you need to achieve regulatory compliance, implement compliance controls, or prepare for audits across frameworks like GDPR, HIPAA,
 - [`debugger`](quality-security/debugger/) — Use when you need to diagnose and fix bugs, identify root causes of failures, or analyze error logs and stack traces to resolve issues.
 - [`error-detective`](quality-security/error-detective/) — Use when you need to diagnose why errors are occurring in your system, correlate errors across services, identify root causes, and prevent f
@@ -229,19 +223,16 @@ Testing, code review, security auditing, compliance, and performance.
 - [`penetration-tester`](quality-security/penetration-tester/) — Use when you need to conduct authorized security penetration tests to identify real vulnerabilities through active exploitation and validati
 - [`performance-engineer`](quality-security/performance-engineer/) — Use when you need to identify and eliminate performance bottlenecks in applications, databases, or infrastructure systems, and when baseline
 - [`powershell-security-hardening`](quality-security/powershell-security-hardening/) — Use when you need to harden PowerShell automation, secure remoting configuration, enforce least-privilege design, or align scripts with ente
-- [`qa-expert`](quality-security/qa-expert/) — Use when you need comprehensive quality assurance strategy, test planning across the entire development cycle, or quality metrics analysis t
-- [`security-auditor`](quality-security/security-auditor/) — Use when conducting comprehensive security audits, compliance assessments, or risk evaluations across systems, infrastructure, and processes
 - [`test-automator`](quality-security/test-automator/) — Use when you need to build, implement, or enhance automated test frameworks, create test scripts, or integrate testing into CI/CD pipelines.
 - [`ui-ux-tester`](quality-security/ui-ux-tester/) — Use when you need exhaustive UI and UX functionality testing driven by documented user flows, with browser or desktop interaction tooling an
 
-## Research & Analysis &nbsp;`research-analysis` (18)
+## Research & Analysis &nbsp;`research-analysis` (12)
 
 Research, decision support, idea work, and the clarity-council.
 
 - [`ab-test-analysis`](research-analysis/ab-test-analysis/) — Use when the user wants to analyze A/B test results, interpret p-values, determine statistical significance, or make a ship/no-ship decision
 - [`clarity-council`](research-analysis/clarity-council/) — Facilitates structured single-persona or multi-persona consultation for strategy, product, engineering, operations, and risk decisions.
 - [`cohort-analysis`](research-analysis/cohort-analysis/) — Use when the user wants to analyze retention, cohort behavior, engagement trends, or understand how different user groups perform over time.
-- [`competitive-analyst`](research-analysis/competitive-analyst/) — Use when you need to analyze direct and indirect competitors, benchmark against market leaders, or develop strategies to strengthen competit
 - [`data-researcher`](research-analysis/data-researcher/) — Use when you need to discover, collect, and validate data from multiple sources to fuel analysis and decision-making.
 - [`first-principles-thinking`](research-analysis/first-principles-thinking/) — Use when the user wants to challenge assumptions, break down a complex problem from scratch, or approach something with first principles rea
 - [`grill-me`](research-analysis/grill-me/) — Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree.
@@ -249,12 +240,7 @@ Research, decision support, idea work, and the clarity-council.
 - [`idea-choice`](research-analysis/idea-choice/) — Weigh one or more ideas/concepts with a structured pros-and-cons analysis.
 - [`idea-decision-maker`](research-analysis/idea-decision-maker/) — Stuck between options.
 - [`idea-generate`](research-analysis/idea-generate/) — Helps users generate, refine, and stress-test ideas from loose topics.
-- [`market-researcher`](research-analysis/market-researcher/) — Use when you need to analyze markets, understand consumer behavior, assess competitive landscapes, and size opportunities to inform business
-- [`project-idea-validator`](research-analysis/project-idea-validator/) — Use when you need an idea pressure-tested with brutal honesty, competitor teardown, market validation, and clear go/no-go guidance before bu
-- [`research-analyst`](research-analysis/research-analyst/) — Use when you need comprehensive research across multiple sources with synthesis of findings into actionable insights, trend identification, 
-- [`scientific-literature-researcher`](research-analysis/scientific-literature-researcher/) — Use when you need to search scientific literature and retrieve structured experimental data from published studies.
 - [`search-specialist`](research-analysis/search-specialist/) — Use when you need to find specific information across multiple sources using advanced search strategies, query optimization, and targeted in
-- [`trend-analyst`](research-analysis/trend-analyst/) — Use when analyzing emerging patterns, predicting industry shifts, or developing future scenarios to inform strategic planning and competitiv
 - [`which-skill`](research-analysis/which-skill/) — Router over this pack's skills and flows.
 
 ## Scrum & Sprint &nbsp;`scrum-sprint` (6)
@@ -268,7 +254,7 @@ The Scrum ceremony chain — snapshot, plan, standup, review.
 - [`sprint-snapshot`](scrum-sprint/sprint-snapshot/) — Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and render it into the Obsidian vault as (1) an Obsidian C
 - [`sprint-sos-report`](scrum-sprint/sprint-sos-report/) — End-of-week scrum-of-scrums report comparing two sprint snapshots and surfacing key findings, observations, trouble areas, and trends.
 
-## Specialized Domains &nbsp;`specialized-domains` (13)
+## Specialized Domains &nbsp;`specialized-domains` (11)
 
 Vertical expertise — blockchain, IoT, fintech, gaming, healthcare, and more.
 
@@ -283,8 +269,6 @@ Vertical expertise — blockchain, IoT, fintech, gaming, healthcare, and more.
 - [`m365-admin`](specialized-domains/m365-admin/) — Use when automating Microsoft 365 administrative tasks including Exchange Online mailbox provisioning, Teams collaboration management, Share
 - [`payment-integration`](specialized-domains/payment-integration/) — Use when implementing payment systems, integrating payment gateways, or handling financial transactions that require PCI compliance, fraud p
 - [`quant-analyst`](specialized-domains/quant-analyst/) — Use when you need to develop quantitative trading strategies, build financial models with rigorous mathematical foundations, or conduct adva
-- [`risk-manager`](specialized-domains/risk-manager/) — Use when you need to identify, quantify, and mitigate enterprise-level risks across financial, operational, regulatory, and strategic domain
-- [`seo-specialist`](specialized-domains/seo-specialist/) — Use when you need comprehensive SEO optimization encompassing technical audits, keyword strategy, content optimization, and search rankings 
 
 ## Writing &nbsp;`writing` (9)
 

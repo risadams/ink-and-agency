@@ -20,7 +20,6 @@ related-skills:
   - codebase-improve-architecture
   - error-coordinator
   - context-manager
-  - code-reviewer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

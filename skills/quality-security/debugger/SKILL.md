@@ -10,7 +10,6 @@ allowed-tools:
   - Grep
 related-skills:
   - codebase-explain
-  - code-reviewer
   - error-detective
 loop-eligible: false
 compatibility: claude-code codex opencode

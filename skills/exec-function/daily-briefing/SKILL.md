@@ -20,7 +20,6 @@ allowed-tools:
 related-skills:
   - energy-budget
   - project-manager
-  - customer-success-manager
 loop-eligible: true
 recurrence-hint: daily
 

@@ -13,7 +13,6 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - clarity-council
-  - scrum-master
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

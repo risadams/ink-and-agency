@@ -8,8 +8,6 @@ description: >
   ticket", "feature breakdown", or provides a Jira ticket key for analysis.
 related-skills:
   - clarity-council
-  - product-manager
-  - scrum-master
   - business-analyst
 loop-eligible: false
 

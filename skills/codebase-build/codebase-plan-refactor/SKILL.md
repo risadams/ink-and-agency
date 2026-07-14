@@ -5,7 +5,6 @@ related-skills:
   - codebase-improve-architecture
   - refactoring-specialist
   - legacy-modernizer
-  - architect-reviewer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

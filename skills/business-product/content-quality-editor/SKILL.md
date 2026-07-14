@@ -12,7 +12,6 @@ related-skills:
   - writing-shape
   - writing-beats
   - writing-fragments
-  - scrum-master
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

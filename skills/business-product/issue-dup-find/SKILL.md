@@ -18,7 +18,6 @@ allowed-tools:
   - mcp__atlassian__jira_get_issue
 related-skills:
   - project-manager
-  - scrum-master
 loop-eligible: false
 
 compatibility: claude-code codex opencode

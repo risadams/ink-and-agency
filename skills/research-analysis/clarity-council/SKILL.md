@@ -55,10 +55,11 @@ I'll iterate" (iterative).
 
 **Resolving a persona name** (two steps, see [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md)):
 first look for `skills/persona/<name>.md` and use its **Decision Lens**, **Preferred Frameworks**,
-and **Blind Spots**; if there's no such file, adopt the top-level specialist skill of that name
-(e.g. `scrum-master`, `product-manager`) — read its **## Council Persona Lens** section, which is the
-persona contract (the rest of that skill is implementation guidance). Keep terminology consistent
-with the names in [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md).
+and **Blind Spots** (most personas live here). If there's no such file, the name is a hands-on
+specialist skill that doubles as a voice (`data-engineer`, `devops-engineer`, `technical-writer`) —
+read its **## Council Persona Lens** section, which is the persona contract (the rest of that skill is
+implementation guidance). Keep terminology consistent with the names in
+[`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md).
 
 ---
 

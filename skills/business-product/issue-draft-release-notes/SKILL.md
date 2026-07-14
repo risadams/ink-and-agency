@@ -31,7 +31,6 @@ related-skills:
   - clarity-council
   - writing-humanize
   - technical-writer
-  - product-manager
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

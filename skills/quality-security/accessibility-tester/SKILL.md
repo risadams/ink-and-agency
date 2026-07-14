@@ -8,7 +8,6 @@ allowed-tools:
   - Bash
 related-skills:
   - clarity-council
-  - code-reviewer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
