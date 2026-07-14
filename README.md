@@ -18,9 +18,11 @@ ink-and-agency/
 │   └── plugins/
 │       └── marketplace.json     # Codex marketplace catalog
 ├── plugin.json                  # Codex plugin manifest (GENERATED — do not edit)
-├── AGENTS.md                    # Instructions for coding agents working in this repo
+├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
+├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
 ├── skills/                      # 55 skills, one folder per skill (shared by both hosts)
-│   ├── <skill-name>/SKILL.md
+│   ├── <skill-name>/SKILL.md    #   canonical skill (both hosts read this)
+│   ├── <skill-name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
 │   └── PORTABILITY.md           # How to interpret Claude tool names on other hosts
 ├── agents/                      # Subagents, grouped by category (canonical markdown)
 │   ├── 00-council/              # Council orchestration agents
@@ -37,7 +39,7 @@ ink-and-agency/
 ├── scripts/
 │   ├── bulk-loop-update-skills.ps1
 │   ├── bulk-loop-update-agents.ps1
-│   ├── convert-agents-to-codex.ps1  # Regenerates .codex/agents/ + root plugin.json
+│   ├── convert-agents-to-codex.ps1  # Regenerates all GENERATED artifacts (below)
 │   └── lint-agents.ps1
 └── docs/
     ├── adr/                     # Architecture decision records
@@ -86,7 +88,8 @@ Skills are invoked with `$skill-name` (or picked up automatically when a task ma
 - Skills and agents cross-reference each other via `related-skills` / `related-agents` frontmatter.
 - Cross-component file paths are written relative to the referencing file (or described as "under the plugin root"), so they resolve on any host. Claude Code additionally exposes the plugin root as `${CLAUDE_PLUGIN_ROOT}`.
 - Skill bodies use Claude Code tool vocabulary; [skills/PORTABILITY.md](skills/PORTABILITY.md) defines how other hosts map those names by intent.
-- The markdown files under `agents/` are the single source of truth. `.codex/agents/*.toml` and the root `plugin.json` are generated — after editing agents or adding/removing skills, re-run `pwsh ./scripts/convert-agents-to-codex.ps1` and commit the output.
+- The markdown under `agents/` and `skills/`, plus `AGENTS.md`, are the single source of truth. Everything Codex-facing is **generated** from them by `pwsh ./scripts/convert-agents-to-codex.ps1`: `.codex/agents/*.toml`, `skills/*/agents/openai.yaml` (per-skill Codex picker metadata + invocation policy), the root `plugin.json`, and the root `CLAUDE.md` (mirror of `AGENTS.md`). After editing any source, re-run the script and commit the output; CI fails if they drift.
+- One skill, both hosts: a skill's invocation mode lives once in its `SKILL.md` frontmatter (`disable-model-invocation: true` = user-invoked only) and is projected to Codex as `policy.allow_implicit_invocation: false`. Never hand-edit `openai.yaml`. See [AGENTS.md](AGENTS.md#skill-invocation-across-hosts).
 - Council personas are reference documents, not agents. New personas go in `references/council-personas/`, not `agents/`.
 - On Claude Code, skill names are namespaced by the plugin at install time (`ink-and-agency:skill-name`), so local project skills won't collide.
 
