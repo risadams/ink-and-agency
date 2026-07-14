@@ -49,7 +49,7 @@ Because the Codex side is **generated from the Claude-side frontmatter**, the tw
 
 ## Validation
 
-```
+```sh
 pwsh ./scripts/lint-agents.ps1 -AgentPath ./agents    # frontmatter + taxonomy rules
 pwsh ./scripts/convert-agents-to-codex.ps1            # must exit 0 with no errors
 ```
