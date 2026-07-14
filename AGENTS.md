@@ -54,6 +54,33 @@ pwsh ./scripts/lint-agents.ps1 -AgentPath ./agents    # frontmatter + taxonomy r
 pwsh ./scripts/convert-agents-to-codex.ps1            # must exit 0 with no errors
 ```
 
+## Releasing
+
+Releases are cut by the **Release** workflow (`.github/workflows/release.yml`),
+triggered manually from the Actions tab with a `bump` level (`patch` / `minor` /
+`major`, default `minor`). The workflow:
+
+1. Regenerates Codex artifacts and **fails if the tree is out of sync** (same
+   guard as `validate.yml`) — always commit generated files before releasing.
+2. Lints agent frontmatter.
+3. Bumps the version in `.claude-plugin/plugin.json` (the single source of truth)
+   and re-runs `convert-agents-to-codex.ps1`, so the root `plugin.json` and every
+   Codex artifact pick up the new version — **the Claude Code and Codex plugin
+   versions can never diverge**.
+4. Prepends a Keep a Changelog section to `CHANGELOG.md` from commit messages
+   since the last tag (conventional-commit prefixes map to Added / Fixed /
+   Changed / …).
+5. Commits with `[skip ci]`, creates the annotated tag `v<version>`, pushes both
+   to `main`, and publishes a GitHub Release with the generated notes.
+
+The two helper scripts run locally for a dry run before releasing:
+
+```sh
+pwsh ./scripts/bump-version.ps1 -Bump minor -SkipConvert   # preview version, source manifest only
+pwsh ./scripts/generate-changelog.ps1 -Version 1.1.0       # preview the changelog section
+git checkout -- .                                          # revert the dry run
+```
+
 ## Deeper guidance
 
 - `skills/CLAUDE.md` — full skill format spec (frontmatter fields, Loop Method, quality loops) and the skills inventory table

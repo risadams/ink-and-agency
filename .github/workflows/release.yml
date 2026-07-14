@@ -1,0 +1,76 @@
+name: Release
+
+# Manually cut a new version: bump the source manifest, regenerate all Codex
+# artifacts (keeping the Claude Code and Codex plugins in lockstep), update the
+# changelog, commit, tag, and publish a GitHub Release.
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Version bump level'
+        type: choice
+        required: true
+        default: minor
+        options:
+        - patch
+        - minor
+        - major
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Cut and publish release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout (full history + tags)
+      uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+        fetch-tags: true
+
+    - name: Verify Codex artifacts are in sync
+      run: |
+        pwsh ./scripts/convert-agents-to-codex.ps1
+        if ! git diff --exit-code -- .codex plugin.json 'skills/**/agents/openai.yaml' CLAUDE.md; then
+          echo "::error::Generated Codex artifacts are out of sync. Run 'pwsh ./scripts/convert-agents-to-codex.ps1' and commit before releasing."
+          exit 1
+        fi
+
+    - name: Lint agent frontmatter
+      run: pwsh ./scripts/lint-agents.ps1 -AgentPath ./agents
+
+    - name: Bump version and regenerate artifacts
+      id: bump
+      run: pwsh ./scripts/bump-version.ps1 -Bump "${{ inputs.bump }}"
+
+    - name: Generate changelog section
+      id: changelog
+      run: |
+        pwsh ./scripts/generate-changelog.ps1 -Version "${{ steps.bump.outputs.new_version }}" > release-notes.md
+        echo "Release notes for v${{ steps.bump.outputs.new_version }}:"
+        cat release-notes.md
+
+    - name: Commit, tag, and push
+      env:
+        VERSION: ${{ steps.bump.outputs.new_version }}
+      run: |
+        git config user.name  "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add .claude-plugin/plugin.json plugin.json .codex CLAUDE.md CHANGELOG.md skills
+        git commit -m "chore(release): v${VERSION} [skip ci]"
+        git tag -a "v${VERSION}" -m "Release v${VERSION}"
+        git push origin HEAD:main
+        git push origin "v${VERSION}"
+
+    - name: Publish GitHub Release
+      uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
+      with:
+        tag_name: v${{ steps.bump.outputs.new_version }}
+        name: v${{ steps.bump.outputs.new_version }}
+        body_path: release-notes.md
