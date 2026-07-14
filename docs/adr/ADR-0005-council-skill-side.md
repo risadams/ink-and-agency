@@ -29,8 +29,10 @@ That structure had three concrete problems:
 ## Decision
 
 **The council is a skill, not a set of agents.** `clarity-council` absorbs all three behaviors as
-inline **modes** — `single`, `multi`, `iterative` — in one `SKILL.md`. The persona library lives
-inside the skill at `skills/clarity-council/skills/personas/` as its single canonical home.
+inline **modes** — `single`, `multi`, `iterative` — in one `SKILL.md`. The persona library is its
+single canonical home. (Originally the personas were bundled inside the skill folder; they were later
+promoted to the shared `skills/persona/` category — still under `./skills/`, so they ship on both
+hosts — see [ADR-0007](ADR-0007-skill-categories.md).)
 
 Consequences of the decision:
 
@@ -59,7 +61,7 @@ Consequences of the decision:
 
 ## Compliance
 
-- Do **not** reintroduce `agents/00-council/` or an `agents/`-side council. New personas go in
-  `skills/clarity-council/skills/personas/` (enforced by convention; see AGENTS.md editing rules).
+- Do **not** reintroduce `agents/00-council/` or an `agents/`-side council. New personas go in the
+  shared `skills/persona/` category (enforced by convention; see AGENTS.md editing rules).
 - If a future host *can* bundle agents and a subagent council is desired there, generate it from the
   skill — do not fork a hand-maintained agent copy.

@@ -17,8 +17,9 @@ depth is a skill). See [CATEGORIES.md](CATEGORIES.md) for the 15 categories and 
 <category>/<name>/SKILL.md        # Skill entry point (YAML frontmatter + instructions)
 <category>/<name>/*.md            # Supporting docs, formats, or deep-dive modules
 <category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED)
-research-analysis/clarity-council/                 # the clarity-council skill
-research-analysis/clarity-council/skills/personas/ # bundled persona contracts
+research-analysis/clarity-council/  # the clarity-council skill (reads persona/)
+persona/                          # shared council persona contracts (reference docs, not skills)
+persona/PERSONAS.md               #   persona index; persona/GROUPS.md = pre-made panels
 ```
 
 The skill **name** (invocation id) is the leaf folder and is independent of its category — moving a

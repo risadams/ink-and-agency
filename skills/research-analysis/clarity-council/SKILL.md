@@ -11,14 +11,13 @@ compatibility: claude-code codex opencode
 
 # Clarity Council
 
-Structured persona-based consultation for decisions that benefit from expert perspectives. This
-skill is **self-contained** — it carries its own persona library and runs entirely inline, in one
-of three **modes**. Nothing here depends on a separate subagent, so it behaves identically on every
-host.
+Structured persona-based consultation for decisions that benefit from expert perspectives. The
+council runs entirely inline in one of three **modes** — nothing depends on a separate subagent, so
+it behaves identically on every host.
 
-Persona contracts live alongside this skill in [`skills/personas/`](skills/personas/) — the index is
-[`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md) and pre-made panels are in
-[`skills/personas/GROUPS.md`](skills/personas/GROUPS.md). Paths below are relative to this skill's
+Persona contracts live in the shared [`skills/persona/`](../../persona/) category — the index is
+[`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md) and pre-made panels are in
+[`skills/persona/GROUPS.md`](../../persona/GROUPS.md). Links below are relative to this skill's
 folder.
 
 ## When to use
@@ -49,16 +48,16 @@ I'll iterate" (iterative).
 
 - **Decision/problem** — required.
 - **Personas** — optional; which experts to consult (defaults apply per mode).
-- **Persona groups** — optional; pre-made panels from [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md).
+- **Persona groups** — optional; pre-made panels from [`skills/persona/GROUPS.md`](../../persona/GROUPS.md).
 - **Depth** — optional: `brief` / `standard` / `deep`.
 - **Context / constraints / desired outcome** — optional but strongly recommended.
 - **Iterative state** — for multi-turn sessions (sessionId, turn, history).
 
-**Resolving a persona name** (two steps, see [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md)):
-first look for `skills/personas/<name>.md` and use its **Decision Lens**, **Preferred Frameworks**,
+**Resolving a persona name** (two steps, see [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md)):
+first look for `skills/persona/<name>.md` and use its **Decision Lens**, **Preferred Frameworks**,
 and **Blind Spots**; if there's no such file, adopt the top-level specialist skill of that name
 (`skills/<name>/SKILL.md`, e.g. `scrum-master`, `product-manager`) as the persona's lens. Keep
-terminology consistent with the names in [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md).
+terminology consistent with the names in [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md).
 
 ---
 
@@ -114,7 +113,7 @@ do not just list opinions.
 - **Financial/business** — financial-officer, product-owner, business-owner, devops-engineer, devils-advocate
 - **Estimation** — scrum-master, tech-lead, senior-developer, qa-engineer
 
-Pre-made groups also live in [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md) — domain panels
+Pre-made groups also live in [`skills/persona/GROUPS.md`](../../persona/GROUPS.md) — domain panels
 (`product-delivery-core`, `platform-and-reliability`, `investigation-and-diagnosis`,
 `stakeholder-reporting`, …) plus convenience archetypes (`technical-focus`, `stakeholder-focus`,
 `full-council`, `quick-pulse`, `estimation`). Reference a group by its slug; expand it into its listed
@@ -227,13 +226,13 @@ Before finalizing:
 - assumptions separated from facts
 - at least one concrete next step
 - at least one explicit risk or tradeoff for non-trivial decisions
-- terminology consistent with the persona names in [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md)
+- terminology consistent with the persona names in [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md)
 
 ## Reference files
 
-- [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md) — full persona index
-- [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md) — pre-made persona panels
-- [`skills/personas/`](skills/personas/) — individual persona contracts (36 total)
+- [`skills/persona/PERSONAS.md`](../../persona/PERSONAS.md) — full persona index
+- [`skills/persona/GROUPS.md`](../../persona/GROUPS.md) — pre-made persona panels
+- [`skills/persona/`](../../persona/) — individual persona contracts (30 total)
 - [EXAMPLES.md](EXAMPLES.md) — worked invocations for all three modes
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts

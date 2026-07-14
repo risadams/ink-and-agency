@@ -27,7 +27,7 @@ Keep the structure stable so the skills remain easy to discover.
 - Keep `SKILL.md` at the root of each skill folder.
 - Include a `README.md` for each skill whenever practical, especially for non-trivial workflows.
 - Keep nested docs inside the skill folder when they add useful examples or reference material.
-- Place persona contracts, helper modules, and runbooks under the owning skill subtree (for example `clarity-council/skills/personas/`).
+- Place helper modules and runbooks under the owning skill subtree. Council persona contracts are shared reference docs (no `SKILL.md`) and live in the `skills/persona/` category.
 - Avoid adding new top-level folders that are not skills or shared metadata folders.
 
 ## Consistency checks before publishing

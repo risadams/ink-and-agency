@@ -6,6 +6,10 @@ category (see [ADR-0007](../docs/adr/ADR-0007-skill-categories.md)). Discovery i
 
 **215 skills across 15 categories.**
 
+> **Not a category:** `skills/persona/` holds the 30 council persona contracts — shared reference
+> documents (no `SKILL.md`), read by the [`clarity-council`](research-analysis/clarity-council/)
+> skill. They're not invokable skills, so they don't appear below.
+
 ## Business & Product &nbsp;`business-product` (22)
 
 Product, project, delivery, issue management, and go-to-market.

@@ -49,12 +49,12 @@ Voices that exist only for council use — no standalone specialist skill:
 
 These names have no local file — the council adopts the matching specialist skill's expertise:
 
-- `data-engineer` → [`skills/data-ai/data-engineer/`](../../../../data-ai/data-engineer/)
-- `devops-engineer` → [`skills/infrastructure/devops-engineer/`](../../../../infrastructure/devops-engineer/)
-- `product-manager` → [`skills/business-product/product-manager/`](../../../../business-product/product-manager/)
-- `risk-manager` → [`skills/specialized-domains/risk-manager/`](../../../../specialized-domains/risk-manager/)
-- `scrum-master` → [`skills/business-product/scrum-master/`](../../../../business-product/scrum-master/)
-- `technical-writer` → [`skills/business-product/technical-writer/`](../../../../business-product/technical-writer/)
+- `data-engineer` → [`skills/data-ai/data-engineer/`](../data-ai/data-engineer/)
+- `devops-engineer` → [`skills/infrastructure/devops-engineer/`](../infrastructure/devops-engineer/)
+- `product-manager` → [`skills/business-product/product-manager/`](../business-product/product-manager/)
+- `risk-manager` → [`skills/specialized-domains/risk-manager/`](../specialized-domains/risk-manager/)
+- `scrum-master` → [`skills/business-product/scrum-master/`](../business-product/scrum-master/)
+- `technical-writer` → [`skills/business-product/technical-writer/`](../business-product/technical-writer/)
 
 ## Adding a Persona
 
