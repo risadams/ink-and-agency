@@ -95,14 +95,20 @@ function Get-FrontmatterScalar {
     return $null
 }
 
-# "work-plan" -> "Work Plan"; acronyms and known tokens preserved.
+# "work-plan" -> "Work Plan"; acronyms preserved, minor joining words lowercased
+# unless first ("plan-to-spec" -> "Plan to Spec").
 function ConvertTo-DisplayName {
     param([string]$Slug)
-    $keep = @{ 'sp' = 'SP'; 'cli' = 'CLI'; 'sos' = 'SoS'; 'ai' = 'AI' }
-    ($Slug -split '-' | ForEach-Object {
-        if ($keep.ContainsKey($_)) { $keep[$_] }
-        else { $_.Substring(0, 1).ToUpper() + $_.Substring(1) }
-    }) -join ' '
+    $keep  = @{ 'sp' = 'SP'; 'cli' = 'CLI'; 'sos' = 'SoS'; 'ai' = 'AI'; 'tdd' = 'TDD' }
+    $minor = @('to', 'a', 'an', 'of', 'the', 'in', 'on', 'and', 'or', 'vs', 'for')
+    $parts = $Slug -split '-'
+    for ($i = 0; $i -lt $parts.Count; $i++) {
+        $w = $parts[$i]
+        if ($keep.ContainsKey($w))            { $parts[$i] = $keep[$w] }
+        elseif ($i -gt 0 -and $w -in $minor)  { $parts[$i] = $w }
+        else                                  { $parts[$i] = $w.Substring(0,1).ToUpper() + $w.Substring(1) }
+    }
+    $parts -join ' '
 }
 
 # Codex short_description: prefer an explicit `codex-short-description` override,

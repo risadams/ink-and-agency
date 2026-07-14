@@ -140,13 +140,13 @@ The full inventory lives in **[CLAUDE.md](CLAUDE.md#skills-inventory)**. That fi
 
 - **v1.2** (2026-06-17)
   - **Communication & interpretation**: `break-it-down` (helps neuro-divergent minds decode messages and intent)
-  - **Code analysis & understanding**: `codebase-explain`, `codebase-improve-architecture`, `codebase-churn`, `issue-triage`, `issue-dup-find`, `issue-estimate-sp`, `issue-feature-breakdown`, `issue-suggest-component`
+  - **Code analysis & understanding**: `codebase-explain`, `codebase-improve-architecture`, `codebase-churn`, `codebase-plan-refactor`, `issue-triage`, `issue-dup-find`, `issue-estimate-sp`, `issue-feature-breakdown`, `issue-suggest-component`
   - **Collaboration & decisions**: `clarity-council`, `grill-me`, `grill-with-docs`, `idea-generate`, `idea-choice`, `idea-decision-maker`
   - **Git & merge workflows**: `branch-rebase`, `branch-resolve-conflicts` (now with full intent preservation for complex conflicts)
   - **Planning & reporting**: `sprint-plan`, `sprint-review`, `sprint-snapshot`, `sprint-sos-report`, `daily-briefing`, `daily-standup-prep`, `good-morning`
   - **Writing workflows**: `writing-draft-article`, `writing-shape`, `writing-fragments`, `writing-beats`, `writing-cold-open`, `writing-humanize`, `writing-tone-check`, `writing-apology-calibrator`, `writing-social-script`, `writing-rejection-sensitivity-check`
   - **Workspace & knowledge**: `obsidian-vault`, `obsidian-markdown`, `obsidian-canvas`, `obsidian-charts`, `obsidian-bases`, `obsidian-cli`, `defuddle`
-  - **Utilities**: `hyperfocus-recovery`, `task-initiation`, `time-reality-check`, `energy-budget`, `interest-capture`, `meeting-decompression`, `rejection-sensitivity-check`, `handoff`, `request-refactor-plan`, `skill-create`
+  - **Utilities**: `hyperfocus-recovery`, `task-initiation`, `time-reality-check`, `energy-budget`, `interest-capture`, `meeting-decompression`, `rejection-sensitivity-check`, `handoff`, `skill-create`
   - Updated **Skills + Agents** section with integration patterns and related-agents field documentation
 - **v1.1** (2026-05-19)
   - New `writing-*` siblings for outgoing messages: `writing-tone-check`, `writing-apology-calibrator`, `writing-rejection-sensitivity-check`, `writing-social-script`, `writing-cold-open`

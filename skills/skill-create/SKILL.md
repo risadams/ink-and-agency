@@ -10,6 +10,8 @@ compatibility: claude-code codex opencode
 
 # Skill Create
 
+For the *mechanics* of assembling a skill, follow the process below. For the *principles* that make a skill predictable, lean, and reliably invoked — the two loads, information hierarchy, leading words, and failure modes — consult **[WRITING-SKILLS.md](WRITING-SKILLS.md)** while drafting and reviewing.
+
 ## Process
 
 1. **Gather requirements** - ask user about:
@@ -19,7 +21,7 @@ compatibility: claude-code codex opencode
    - Any reference materials to include?
 
 2. **Draft the skill** - create:
-   - SKILL.md with concise instructions
+   - SKILL.md with concise instructions (apply the information-hierarchy and leading-word guidance in [WRITING-SKILLS.md](WRITING-SKILLS.md))
    - Additional reference files if content exceeds 500 lines
    - Utility scripts if deterministic operations needed
 
@@ -120,5 +122,6 @@ After drafting, verify:
 - [ ] Consistent terminology
 - [ ] Concrete examples included
 - [ ] References one level deep
+- [ ] No [failure modes](WRITING-SKILLS.md#failure-modes) — no-ops, duplication, negation, sprawl
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

@@ -2,7 +2,7 @@
 
 An agent plugin for **Claude Code and OpenAI Codex**, merging two libraries into one installable unit:
 
-- **Ink** — 55 skills covering writing, sprint/Scrum workflows, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, and neurodivergent-friendly executive-function support (`skills/`)
+- **Ink** — 61 skills covering writing, sprint/Scrum workflows, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all (`skills/`)
 - **Agency** — 160 specialist subagents organized by domain, plus a persona-council system for multi-perspective decision making (`agents/`)
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
@@ -20,9 +20,10 @@ ink-and-agency/
 ├── plugin.json                  # Codex plugin manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
 ├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
-├── skills/                      # 55 skills, one folder per skill (shared by both hosts)
+├── skills/                      # 61 skills, one folder per skill (shared by both hosts)
 │   ├── <skill-name>/SKILL.md    #   canonical skill (both hosts read this)
 │   ├── <skill-name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
+│   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)
 │   └── PORTABILITY.md           # How to interpret Claude tool names on other hosts
 ├── agents/                      # Subagents, grouped by category (canonical markdown)
 │   ├── 00-council/              # Council orchestration agents
