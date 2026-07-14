@@ -27,7 +27,7 @@ The skill has two modes. **Chart the map** takes a loose idea and produces the m
 
 - **A loose idea** (chart mode) — the effort to plan. Vague is expected; sharpening it into a destination is the first act.
 - **A map reference** (work mode) — the `workplan:map` issue URL or number. A specific ticket is optional; without one, the skill picks the next frontier decision.
-- **An issue tracker** — provided to the session. If none, it defaults to a local-markdown tracker (or prompts `/setup-matt-pocock-skills`).
+- **An issue tracker** — provided to the session. If none, it defaults to a local-markdown tracker.
 
 ### Outputs
 

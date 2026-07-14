@@ -140,8 +140,3 @@ Not entry points; other skills invoke them.
 ## Roadmap
 
 The **idea → ship** flow is now end-to-end: `grill → work-plan → plan-to-spec → plan-to-tickets → implement (tdd + code-review) → mr-review`. It stages locally first (spec-kit `spec.md` / `tasks.md`) and treats Confluence/Jira/GitLab as opt-in publish targets, with `/implement`'s tunable phases spanning throwaway prototypes to CCB-gated features.
-
-Possible next directions:
-
-- **A `setup` skill** — Matt's `setup-matt-pocock-skills` equivalent: detect a repo's tracker/standards/domain-doc layout once, so the build-loop skills work in a non-GDMS repo (local-markdown fallback) as cleanly as they do against Jira.
-- **`prototype` as its own skill** — `implement`'s prototype preset builds directly; a dedicated `/prototype` (throwaway artifact to answer a design question, referenced from `work-plan`) would round out the front of the flow.

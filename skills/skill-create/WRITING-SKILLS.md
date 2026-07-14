@@ -2,8 +2,6 @@
 
 The principles and vocabulary behind a *good* skill — the layer above the mechanics in [SKILL.md](SKILL.md). `skill-create` tells you how to assemble a skill; this tells you how to make it **predictable**, lean, and reliably invoked. Consult it while drafting (step 2) and reviewing (step 3).
 
-> Concepts here are adapted from Matt Pocock's `writing-great-skills`, reworked for this repo's dual-host (Claude Code + Codex) conventions.
-
 ## The root virtue: predictability
 
 A skill exists to wrangle determinism out of a stochastic system. The goal is **predictability** — the agent taking the same *process* every run, not producing the same *output*. (A brainstorming skill should predictably diverge; its tokens vary, its behaviour doesn't.) Every lever below serves predictability. Cost and maintainability are symptoms of it, not rivals.
