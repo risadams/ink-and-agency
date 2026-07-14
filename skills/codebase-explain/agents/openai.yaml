@@ -1,6 +1,0 @@
-# Generated from skills/codebase-explain/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Codebase Explain"
-  short_description: "Tell the agent to explain code with broader context and a higher-level perspective"
-policy:
-  allow_implicit_invocation: false

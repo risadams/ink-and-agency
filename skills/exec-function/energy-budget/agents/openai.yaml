@@ -1,0 +1,4 @@
+# Generated from skills/exec-function/energy-budget/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Energy Budget"
+  short_description: "Log today's load (meetings, sensory stuff, social events, deep work); skill scores the..."

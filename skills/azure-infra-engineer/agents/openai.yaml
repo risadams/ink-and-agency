@@ -1,4 +1,0 @@
-# Generated from skills/azure-infra-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Azure Infra Engineer"
-  short_description: "Use when designing, deploying, or managing Azure infrastructure with focus on network a..."

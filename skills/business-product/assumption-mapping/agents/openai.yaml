@@ -1,0 +1,4 @@
+# Generated from skills/business-product/assumption-mapping/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Assumption Mapping"
+  short_description: "Use when the user needs to identify and prioritize risky assumptions in a product idea,..."

@@ -117,19 +117,21 @@ function Get-ShortDescription {
 
 $errors = @()
 
-# --- Per-skill Codex metadata: skills/<name>/agents/openai.yaml -----------
+# --- Per-skill Codex metadata: skills/**/<name>/agents/openai.yaml --------
 # Hand-authored SKILL.md is the source of truth; this derives the Codex picker
 # metadata beside it. User-invoked skills (disable-model-invocation: true) also
 # get policy.allow_implicit_invocation: false so Codex keeps them out of the
-# model's reach, matching Claude Code. Skill folders (junctions to _private/)
-# are followed like any directory.
+# model's reach, matching Claude Code. Skills are organized into category
+# subfolders (skills/<category>/<name>/SKILL.md), so discovery is RECURSIVE:
+# any SKILL.md at any depth under skills/ is a skill. The 'agents' subfolder we
+# generate is excluded so we never treat generated output as a skill.
 $skillYamlCount = 0
-$skillFolders = Get-ChildItem -Path $skillsDir -Directory |
-Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') } |
-Sort-Object Name
+$skillMdFiles = Get-ChildItem -Path $skillsDir -Recurse -Filter 'SKILL.md' -File |
+Sort-Object FullName
 
-foreach ($skill in $skillFolders) {
-    $skillMd = Join-Path $skill.FullName 'SKILL.md'
+foreach ($skillMdFile in $skillMdFiles) {
+    $skill = $skillMdFile.Directory
+    $skillMd = $skillMdFile.FullName
     $raw = Get-Content -Path $skillMd -Raw
 
     if ($raw -notmatch '(?s)^---\s*\r?\n(.*?)\r?\n---\s*\r?\n') {
@@ -150,8 +152,9 @@ foreach ($skill in $skillFolders) {
     $display = ConvertTo-DisplayName $skillName
     $short = Get-ShortDescription $override $skillDesc
 
+    $relSkillPath = [IO.Path]::GetRelativePath($RepoRoot, $skillMd) -replace '\\', '/'
     $yaml = @(
-        "# Generated from skills/$($skill.Name)/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand."
+        "# Generated from $relSkillPath by scripts/convert-agents-to-codex.ps1 -- do not edit by hand."
         "interface:"
         "  display_name: `"$(ConvertTo-YamlBasicString $display)`""
         "  short_description: `"$(ConvertTo-YamlBasicString $short)`""
@@ -171,12 +174,13 @@ foreach ($skill in $skillFolders) {
     $skillYamlCount++
 }
 
-# Remove openai.yaml for skills that no longer exist (folder deleted).
-Get-ChildItem -Path $skillsDir -Directory -Filter '*' | ForEach-Object {
-    $orphan = Join-Path $_.FullName 'agents/openai.yaml'
-    if ((Test-Path $orphan) -and -not (Test-Path (Join-Path $_.FullName 'SKILL.md'))) {
-        Write-Host "Removing stale $([IO.Path]::GetRelativePath($RepoRoot,$orphan) -replace '\\','/')" -ForegroundColor Yellow
-        Remove-Item $orphan -Confirm:$false
+# Remove openai.yaml for skills that no longer exist (folder deleted). Recurse,
+# and only treat an agents/openai.yaml as orphaned if its sibling SKILL.md is gone.
+Get-ChildItem -Path $skillsDir -Recurse -Filter 'openai.yaml' -File | ForEach-Object {
+    $skillDir = $_.Directory.Parent   # <skill>/agents/openai.yaml -> <skill>
+    if ($skillDir -and -not (Test-Path (Join-Path $skillDir.FullName 'SKILL.md'))) {
+        Write-Host "Removing stale $([IO.Path]::GetRelativePath($RepoRoot,$_.FullName) -replace '\\','/')" -ForegroundColor Yellow
+        Remove-Item $_.FullName -Confirm:$false
     }
 }
 
@@ -196,8 +200,8 @@ else {
     $errors += "AGENTS.md not found -- cannot generate CLAUDE.md mirror"
 }
 
-# Count skills (informational): every skills/ subfolder containing a SKILL.md
-$skillCount = @($skillFolders).Count
+# Count skills (informational): every SKILL.md anywhere under skills/
+$skillCount = @($skillMdFiles).Count
 
 # Codex plugin manifest (root plugin.json). Official schema: plugins bundle
 # skills / apps / MCP servers via directory-path fields. This pack is skills-only,

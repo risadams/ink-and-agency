@@ -1,4 +1,0 @@
-# Generated from skills/ansible-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Ansible Expert"
-  short_description: "Use when building infrastructure automation, configuration management, and orchestratio..."

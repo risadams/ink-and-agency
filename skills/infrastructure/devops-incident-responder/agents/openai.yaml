@@ -1,0 +1,4 @@
+# Generated from skills/infrastructure/devops-incident-responder/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Devops Incident Responder"
+  short_description: "Use when actively responding to production incidents, diagnosing critical service failu..."

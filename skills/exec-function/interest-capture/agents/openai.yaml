@@ -1,0 +1,4 @@
+# Generated from skills/exec-function/interest-capture/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Interest Capture"
+  short_description: "Quick dump for the current hyperfixation so it doesn't derail today's work but also isn..."

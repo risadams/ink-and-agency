@@ -1,0 +1,4 @@
+# Generated from skills/meta-orchestration/research/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Research"
+  short_description: "Investigate a question against high-trust primary sources and capture the findings as a..."

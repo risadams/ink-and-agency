@@ -4,22 +4,22 @@ Guidance for coding agents (Codex, Claude Code, or others) working in this repos
 
 ## Nature of this repo
 
-This is a dual-host **skills plugin**: a single-primitive pack of prompt-based skills installable into both Claude Code and OpenAI Codex. Everything is a skill (`skills/<name>/SKILL.md`) — the pack once shipped a separate library of subagents under `agents/`, but those were folded into the skills namespace so the whole pack ships in the one bundle both hosts read (Codex plugins bundle only `./skills/` — they cannot carry agents). See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md). There is no build system or test runner; the only automation is the PowerShell scripts under `scripts/`.
+This is a dual-host **skills plugin**: a single-primitive pack of prompt-based skills installable into both Claude Code and OpenAI Codex. Everything is a skill, organized into category subfolders: `skills/<category>/<name>/SKILL.md` (e.g. `skills/language-specialists/python-pro/SKILL.md`). Skill discovery is **recursive** — a `SKILL.md` at any depth under `skills/` is a skill, so categories are just folders and carry no meaning to the hosts. The 15 categories are listed in [`skills/CATEGORIES.md`](skills/CATEGORIES.md). The pack once shipped a separate library of subagents under `agents/`, but those were folded into the skills namespace so the whole pack ships in the one bundle both hosts read (Codex plugins bundle only `./skills/` — they cannot carry agents). See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md) and [ADR-0007](docs/adr/ADR-0007-skill-categories.md). There is no build system or test runner; the only automation is the PowerShell scripts under `scripts/`.
 
 ## Source of truth
 
 | Artifact | Role |
 | :--- | :--- |
-| `skills/<name>/SKILL.md` | Canonical skill definitions (open Agent Skills format — shared by both hosts as-is) |
+| `skills/<category>/<name>/SKILL.md` | Canonical skill definitions (open Agent Skills format — shared by both hosts as-is) |
 | `AGENTS.md` | Canonical maintainer guidance (this file — Codex auto-loads it) |
-| `skills/<name>/agents/openai.yaml` | **Generated** — Codex per-skill picker metadata derived from each `SKILL.md` frontmatter |
+| `skills/<category>/<name>/agents/openai.yaml` | **Generated** — Codex per-skill picker metadata derived from each `SKILL.md` frontmatter |
 | `plugin.json` (root) | **Generated** — Codex plugin manifest (bundles `./skills/`) |
 | `CLAUDE.md` (root) | **Generated** — mirror of `AGENTS.md` so Claude Code maintainers auto-load the same guidance |
 | `.claude-plugin/plugin.json` | Claude Code plugin manifest (hand-maintained) |
 | `.claude-plugin/marketplace.json` | Claude Code marketplace catalog (hand-maintained; required by `/plugin marketplace add`) |
 | `.agents/plugins/marketplace.json` | Codex marketplace catalog (hand-maintained; required by `codex plugin marketplace add`) |
 
-**Never edit generated files by hand** — `skills/*/agents/openai.yaml`, the root `plugin.json`, or the root `CLAUDE.md`. Edit the markdown source (a `SKILL.md`, or `AGENTS.md`), then regenerate:
+**Never edit generated files by hand** — `skills/**/agents/openai.yaml`, the root `plugin.json`, or the root `CLAUDE.md`. Edit the markdown source (a `SKILL.md`, or `AGENTS.md`), then regenerate:
 
 ```
 pwsh ./scripts/convert-agents-to-codex.ps1
@@ -28,8 +28,9 @@ pwsh ./scripts/convert-agents-to-codex.ps1
 ## Editing rules
 
 - Skill entry point is `SKILL.md` at the skill folder root; never move it. Supporting docs stay in the same folder and are referenced by paths relative to the skill folder (no host-specific variables like `${CLAUDE_PLUGIN_ROOT}` in new content).
+- New skills go in `skills/<category>/<name>/SKILL.md` under one of the 15 categories in [`skills/CATEGORIES.md`](skills/CATEGORIES.md). The **skill name is the leaf folder** (`<name>`) and must be globally unique across all categories. `name` is the invocation identifier and is independent of the category folder — moving a skill between categories does not change how it's invoked, but cross-skill relative links encode the category path (`../../<category>/<name>/`), so update those if you move one.
 - Skills must stay host-portable: describe intent ("ask the user", "consult the psychologist persona via the `clarity-council` skill in single mode") rather than naming host-specific tools. Host-specific behavior goes in a clearly marked note.
-- Skill frontmatter requires `name` (kebab-case, matches the folder) and `description`; `allowed-tools`, `related-skills`, `loop-eligible`/`recurrence-hint`, `compatibility`, and `disable-model-invocation` are optional. See `scripts/lint-skills.ps1` for the full ruleset. There is no `related-agents` field — the pack is skills-only; cross-references go in `related-skills`.
+- Skill frontmatter requires `name` (kebab-case, matches the leaf folder) and `description`; `allowed-tools`, `related-skills`, `loop-eligible`/`recurrence-hint`, `compatibility`, and `disable-model-invocation` are optional. See `scripts/lint-skills.ps1` for the full ruleset. There is no `related-agents` field — the pack is skills-only; cross-references go in `related-skills`.
 - Council personas are reference documents bundled inside the `clarity-council` skill. New personas go in `skills/clarity-council/skills/personas/`. The council itself is a skill (three inline modes: single / multi / iterative) — see [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
 - Many skills are former specialist subagents (persona experts like `python-pro`, `security-auditor`). They run inline like any skill — Claude Code no longer spawns them as isolated parallel subagents. See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md).
 - Folder and skill names are stable once published — do not rename.

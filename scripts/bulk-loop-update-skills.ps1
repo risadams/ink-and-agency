@@ -101,9 +101,12 @@ if (-not (Test-Path $SkillsPath)) {
 Write-Host "Updating skills with Loop Method fields..." -ForegroundColor Cyan
 
 foreach ($skillName in $skillPatterns.Keys) {
-    $skillPath = Join-Path $SkillsPath $skillName "SKILL.md"
+    # Skills live in category subfolders (skills/<category>/<name>/SKILL.md); find by leaf name.
+    $skillPath = Get-ChildItem -Path $SkillsPath -Recurse -Filter 'SKILL.md' -File |
+        Where-Object { $_.Directory.Name -eq $skillName } |
+        Select-Object -First 1 -ExpandProperty FullName
 
-    if (-not (Test-Path $skillPath)) {
+    if (-not $skillPath -or -not (Test-Path $skillPath)) {
         # Write-Host "  [SKIP] $skillName (not found)" -ForegroundColor Yellow
         continue
     }

@@ -1,4 +1,0 @@
-# Generated from skills/sql-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Sql Pro"
-  short_description: "Use when you need to optimize complex SQL queries, design efficient database schemas, o..."

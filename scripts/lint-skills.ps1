@@ -86,9 +86,11 @@ function Get-Frontmatter {
     return $result
 }
 
-# Pass 1: collect all skill folder names (for related-skills resolution)
-$skillDirs = Get-ChildItem -Path $SkillsPath -Directory |
-    Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') } |
+# Pass 1: collect all skill folder names (for related-skills resolution).
+# Skills live in category subfolders (skills/<category>/<name>/SKILL.md), so
+# discovery is RECURSIVE: each SKILL.md's parent directory is a skill.
+$skillDirs = Get-ChildItem -Path $SkillsPath -Recurse -Filter 'SKILL.md' -File |
+    ForEach-Object { $_.Directory } |
     Sort-Object Name
 $allSkillNames = @{}
 foreach ($d in $skillDirs) { $allSkillNames[$d.Name] = $true }

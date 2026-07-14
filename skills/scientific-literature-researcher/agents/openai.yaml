@@ -1,4 +1,0 @@
-# Generated from skills/scientific-literature-researcher/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Scientific Literature Researcher"
-  short_description: "Use when you need to search scientific literature and retrieve structured experimental..."

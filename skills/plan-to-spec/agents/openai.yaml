@@ -1,6 +1,0 @@
-# Generated from skills/plan-to-spec/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Plan to Spec"
-  short_description: "Synthesize a settled discussion into a local spec file"
-policy:
-  allow_implicit_invocation: false

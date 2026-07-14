@@ -1,4 +1,0 @@
-# Generated from skills/terragrunt-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Terragrunt Expert"
-  short_description: "Expert Terragrunt specialist mastering infrastructure orchestration, DRY configurations..."

@@ -1,0 +1,4 @@
+# Generated from skills/developer-experience/build-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Build Engineer"
+  short_description: "Use when you need to optimize build performance, reduce compilation times, or scale bui..."

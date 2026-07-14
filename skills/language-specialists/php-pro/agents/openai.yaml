@@ -1,0 +1,4 @@
+# Generated from skills/language-specialists/php-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Php Pro"
+  short_description: "Use when working with PHP 8.3+ projects that require strict typing, modern language fea..."

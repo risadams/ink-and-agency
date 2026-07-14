@@ -1,0 +1,4 @@
+# Generated from skills/developer-experience/tooling-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Tooling Engineer"
+  short_description: "Use when you need to build or enhance developer tools including CLIs, code generators,..."

@@ -1,4 +1,0 @@
-# Generated from skills/tdd/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "TDD"
-  short_description: "The red → green loop, done so tests are worth keeping"

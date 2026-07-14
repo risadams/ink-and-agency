@@ -1,4 +1,0 @@
-# Generated from skills/deployment-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Deployment Engineer"
-  short_description: "Use when designing, building, or optimizing CI/CD pipelines and deployment automation s..."

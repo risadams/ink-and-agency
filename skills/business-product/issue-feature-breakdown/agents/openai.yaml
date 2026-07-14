@@ -1,0 +1,4 @@
+# Generated from skills/business-product/issue-feature-breakdown/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Issue Feature Breakdown"
+  short_description: "Analyze a Jira ticket by gathering full context from Jira and Confluence, following lin..."

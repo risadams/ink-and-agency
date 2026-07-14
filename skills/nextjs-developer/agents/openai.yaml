@@ -1,4 +1,0 @@
-# Generated from skills/nextjs-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Nextjs Developer"
-  short_description: "Use when building production Next.js 14+ applications that require full-stack developme..."

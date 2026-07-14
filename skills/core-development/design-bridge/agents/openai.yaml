@@ -1,0 +1,4 @@
+# Generated from skills/core-development/design-bridge/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Design Bridge"
+  short_description: "Use when you need to translate a DESIGN.md into polished Claude Code instructions for b..."

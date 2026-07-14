@@ -1,4 +1,0 @@
-# Generated from skills/wordpress-master/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Wordpress Master"
-  short_description: "Use when you need to architect, optimize, or troubleshoot WordPress implementations ran..."

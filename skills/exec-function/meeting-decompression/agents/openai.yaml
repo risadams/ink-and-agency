@@ -1,0 +1,4 @@
+# Generated from skills/exec-function/meeting-decompression/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Meeting Decompression"
+  short_description: "Dump what happened in a meeting; skill separates facts from feelings, flags action item..."

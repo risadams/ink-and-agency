@@ -1,0 +1,4 @@
+# Generated from skills/business-product/issue-triage/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Issue Triage"
+  short_description: "Triage a bug or issue by gathering context (Jira ticket or free-form description), mapp..."

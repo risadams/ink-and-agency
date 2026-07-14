@@ -1,4 +1,0 @@
-# Generated from skills/debugger/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Debugger"
-  short_description: "Use when you need to diagnose and fix bugs, identify root causes of failures, or analyz..."

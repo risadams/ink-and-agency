@@ -1,4 +1,0 @@
-# Generated from skills/electron-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Electron Pro"
-  short_description: "Use when building Electron desktop applications that require native OS integration, cro..."

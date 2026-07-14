@@ -1,0 +1,4 @@
+# Generated from skills/writing/writing-tone-check/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Writing Tone Check"
+  short_description: "Reverse decoder — paste a draft message and get a read on how it will land before you send"

@@ -1,4 +1,0 @@
-# Generated from skills/visual-asset-generator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Visual Asset Generator"
-  short_description: "Use when you need to generate production-ready visual assets for a project — app icons,..."

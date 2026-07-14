@@ -1,4 +1,0 @@
-# Generated from skills/daily-standup-prep/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Daily Standup Prep"
-  short_description: "Generate a per-team standup markdown report by gathering activity over the last N days..."

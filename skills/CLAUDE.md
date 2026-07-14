@@ -10,13 +10,20 @@ This is a **Claude Skills Pack** — a collection of prompt-based skill definiti
 
 ## Structure
 
+Skills are organized into **category subfolders**; discovery is recursive (a `SKILL.md` at any
+depth is a skill). See [CATEGORIES.md](CATEGORIES.md) for the 15 categories and the full index.
+
 ```text
-{skill-name}/SKILL.md          # Skill entry point (YAML frontmatter + instructions)
-{skill-name}/*.md              # Supporting docs, formats, or deep-dive modules
-clarity-council/               # Monorepo for the clarity-council skill suite
-clarity-council/skills/        # Nested sub-skills (persona_consult, council_consult, etc.)
-clarity-council/skills/personas/  # Persona contracts
+<category>/<name>/SKILL.md        # Skill entry point (YAML frontmatter + instructions)
+<category>/<name>/*.md            # Supporting docs, formats, or deep-dive modules
+<category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED)
+research-analysis/clarity-council/                 # the clarity-council skill
+research-analysis/clarity-council/skills/personas/ # bundled persona contracts
 ```
+
+The skill **name** (invocation id) is the leaf folder and is independent of its category — moving a
+skill between categories does not change how it's invoked, but cross-skill relative links encode the
+category path, so fix those if you move one.
 
 ## Skill format
 
@@ -207,7 +214,7 @@ Validation is performed by `scripts/lint-skills.ps1`.
 
 ## Adding a new skill
 
-1. Create `{skill-name}/SKILL.md` with proper YAML frontmatter (name, description).
+1. Create `<category>/<name>/SKILL.md` under one of the categories in [CATEGORIES.md](CATEGORIES.md), with proper YAML frontmatter (name, description). The `name` must equal the leaf folder `<name>` and be globally unique across all categories.
 2. Add a row to the **Skills inventory** table above in this file — **but only for public skills**. If the skill lives under `_private/` (junction in the root), skip the inventory row and add it to `.gitignore` instead. (README.md links to the inventory — do not duplicate it there.)
 3. Keep supporting docs inside the skill folder.
 4. Each skill should have a README.md that expands on the instructions in `SKILL.md` with examples, edge cases, and troubleshooting tips. Link to it from `SKILL.md` if needed.

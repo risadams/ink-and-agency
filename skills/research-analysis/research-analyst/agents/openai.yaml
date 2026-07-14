@@ -1,0 +1,4 @@
+# Generated from skills/research-analysis/research-analyst/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Research Analyst"
+  short_description: "Use when you need comprehensive research across multiple sources with synthesis of find..."

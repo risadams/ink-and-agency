@@ -1,4 +1,0 @@
-# Generated from skills/codebase-churn/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Codebase Churn"
-  short_description: "Analyze a git repository's history and produce an SVG treemap of file churn — area = li..."

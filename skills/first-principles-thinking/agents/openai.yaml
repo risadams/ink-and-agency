@@ -1,4 +1,0 @@
-# Generated from skills/first-principles-thinking/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "First Principles Thinking"
-  short_description: "Use when the user wants to challenge assumptions, break down a complex problem from scr..."

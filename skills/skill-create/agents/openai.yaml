@@ -1,4 +1,0 @@
-# Generated from skills/skill-create/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Skill Create"
-  short_description: "Create new agent skills with proper structure, progressive disclosure, and bundled reso..."

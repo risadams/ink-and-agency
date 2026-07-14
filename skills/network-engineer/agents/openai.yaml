@@ -1,4 +1,0 @@
-# Generated from skills/network-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Network Engineer"
-  short_description: "Use when designing, optimizing, or troubleshooting cloud and hybrid network infrastruct..."

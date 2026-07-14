@@ -1,4 +1,0 @@
-# Generated from skills/llm-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Llm Architect"
-  short_description: "Use when designing LLM systems for production, implementing fine-tuning or RAG architec..."

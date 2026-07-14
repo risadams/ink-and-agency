@@ -1,0 +1,4 @@
+# Generated from skills/quality-security/code-reviewer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Code Reviewer"
+  short_description: "Use when you need to conduct comprehensive code reviews focusing on code quality, secur..."

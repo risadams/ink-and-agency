@@ -1,0 +1,4 @@
+# Generated from skills/exec-function/time-reality-check/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Time Reality Check"
+  short_description: "Counter time blindness — you say \"20 minutes\" but it'll take 2 hours"

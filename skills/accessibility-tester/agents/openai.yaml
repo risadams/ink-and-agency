@@ -1,4 +1,0 @@
-# Generated from skills/accessibility-tester/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Accessibility Tester"
-  short_description: "Use when you need comprehensive accessibility testing, WCAG compliance verification, or..."

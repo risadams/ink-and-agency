@@ -1,4 +1,0 @@
-# Generated from skills/error-coordinator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Error Coordinator"
-  short_description: "Use when distributed system errors occur and need coordinated handling across multiple..."

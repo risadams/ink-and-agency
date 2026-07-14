@@ -1,0 +1,4 @@
+# Generated from skills/research-analysis/data-researcher/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Data Researcher"
+  short_description: "Use when you need to discover, collect, and validate data from multiple sources to fuel..."

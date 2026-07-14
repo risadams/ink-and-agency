@@ -1,4 +1,0 @@
-# Generated from skills/fullstack-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Fullstack Developer"
-  short_description: "Use when you need to build complete features spanning database, API, and frontend layer..."

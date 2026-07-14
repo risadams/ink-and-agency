@@ -1,0 +1,4 @@
+# Generated from skills/language-specialists/elixir-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Elixir Expert"
+  short_description: "Use when you need to build fault-tolerant, concurrent systems leveraging OTP patterns,..."

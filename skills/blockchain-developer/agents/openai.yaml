@@ -1,4 +1,0 @@
-# Generated from skills/blockchain-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Blockchain Developer"
-  short_description: "Use when building smart contracts, DApps, and blockchain protocols that require experti..."

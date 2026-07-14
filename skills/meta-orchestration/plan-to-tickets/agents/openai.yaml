@@ -1,0 +1,6 @@
+# Generated from skills/meta-orchestration/plan-to-tickets/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Plan to Tickets"
+  short_description: "Break a plan into a local numbered task list"
+policy:
+  allow_implicit_invocation: false

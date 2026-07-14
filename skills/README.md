@@ -45,9 +45,11 @@ If you are using another agent, the same folder layout is still useful, but the 
 
 After cloning, you should see paths like these:
 
-- `$HOME/.claude/skills/writing-humanize/SKILL.md`
-- `$HOME/.claude/skills/clarity-council/SKILL.md`
-- `$HOME/.claude/skills/codebase-explain/SKILL.md`
+- `$HOME/.claude/skills/writing/writing-humanize/SKILL.md`
+- `$HOME/.claude/skills/research-analysis/clarity-council/SKILL.md`
+- `$HOME/.claude/skills/codebase-build/codebase-explain/SKILL.md`
+
+Skills are grouped into category folders — see [CATEGORIES.md](CATEGORIES.md) for the full index.
 
 ## Using skills
 

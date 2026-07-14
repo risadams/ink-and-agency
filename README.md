@@ -22,10 +22,14 @@ ink-and-agency/
 ├── plugin.json                  # Codex plugin manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
 ├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
-├── skills/                      # 215 skills, one folder per skill (shared by both hosts)
-│   ├── <skill-name>/SKILL.md    #   canonical skill (both hosts read this)
-│   ├── <skill-name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
-│   ├── clarity-council/         #   the persona council (skill w/ bundled personas)
+├── skills/                      # 215 skills in 15 category folders (shared by both hosts)
+│   ├── <category>/<name>/SKILL.md         # canonical skill (discovery is recursive)
+│   ├── <category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
+│   ├── language-specialists/    #   e.g. python-pro, rust-engineer, typescript-pro
+│   ├── infrastructure/          #   e.g. kubernetes-specialist, terraform-engineer
+│   ├── research-analysis/clarity-council/  # the persona council (skill w/ bundled personas)
+│   ├── ... (15 categories — see CATEGORIES.md)
+│   ├── CATEGORIES.md            # Browsable index of all skills by category
 │   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)
 │   └── PORTABILITY.md           # How to interpret Claude tool names on other hosts
 ├── scripts/
@@ -119,7 +123,7 @@ A skill's invocation mode is identical on both hosts — it's authored once in `
 - Skill bodies use Claude Code tool vocabulary; [skills/PORTABILITY.md](skills/PORTABILITY.md) defines how other hosts map those names by intent.
 - The markdown under `skills/`, plus `AGENTS.md`, are the single source of truth. Everything Codex-facing is **generated** from them by `pwsh ./scripts/convert-agents-to-codex.ps1`: `skills/*/agents/openai.yaml` (per-skill Codex picker metadata + invocation policy), the root `plugin.json`, and the root `CLAUDE.md` (mirror of `AGENTS.md`). After editing any source, re-run the script and commit the output; CI fails if they drift.
 - One skill, both hosts: a skill's invocation mode lives once in its `SKILL.md` frontmatter (`disable-model-invocation: true` = user-invoked only) and is projected to Codex as `policy.allow_implicit_invocation: false`. Never hand-edit `openai.yaml`. See [AGENTS.md](AGENTS.md#skill-invocation-across-hosts).
-- The persona council is the `clarity-council` skill (three inline modes), not a set of subagents — so it ships in the skills bundle on both hosts. Personas are reference documents bundled inside it (`skills/clarity-council/skills/personas/`), not agents. See [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
+- The persona council is the `clarity-council` skill (three inline modes), not a set of subagents — so it ships in the skills bundle on both hosts. Personas are reference documents bundled inside it (`skills/research-analysis/clarity-council/skills/personas/`), not agents. See [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
 - On Claude Code, skill names are namespaced by the plugin at install time (`ink-and-agency:skill-name`), so local project skills won't collide.
 
 ## License

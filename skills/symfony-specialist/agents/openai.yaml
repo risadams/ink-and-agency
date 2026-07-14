@@ -1,4 +1,0 @@
-# Generated from skills/symfony-specialist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Symfony Specialist"
-  short_description: "Use when building Symfony 6+/7+/8+ applications, architecting Doctrine ORM entities wit..."

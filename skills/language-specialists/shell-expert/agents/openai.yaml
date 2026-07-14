@@ -1,0 +1,4 @@
+# Generated from skills/language-specialists/shell-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Shell Expert"
+  short_description: "Use when building shell scripts for system administration, automation, and DevOps"

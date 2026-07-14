@@ -1,4 +1,0 @@
-# Generated from skills/ab-test-analysis/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Ab Test Analysis"
-  short_description: "Use when the user wants to analyze A/B test results, interpret p-values, determine stat..."

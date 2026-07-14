@@ -1,4 +1,0 @@
-# Generated from skills/rejection-sensitivity-check/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Rejection Sensitivity Check"
-  short_description: "Paste a message that stung; get a calibrated read on whether it's actually critical or..."

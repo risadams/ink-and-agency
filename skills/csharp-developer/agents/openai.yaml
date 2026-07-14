@@ -1,4 +1,0 @@
-# Generated from skills/csharp-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Csharp Developer"
-  short_description: "Use when building ASP.NET Core web APIs, cloud-native .NET solutions, or modern C# appl..."

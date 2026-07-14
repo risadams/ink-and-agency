@@ -1,4 +1,0 @@
-# Generated from skills/mobile-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Mobile Developer"
-  short_description: "Use when building cross-platform mobile applications requiring native performance optim..."
