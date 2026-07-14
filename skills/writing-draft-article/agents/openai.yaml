@@ -1,0 +1,4 @@
+# Generated from skills/writing-draft-article/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Writing Draft Article"
+  short_description: "Guide the user from raw idea, topic, or draft to a finished, polished article through r..."

@@ -1,0 +1,4 @@
+# Generated from skills/obsidian-bases/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Obsidian Bases"
+  short_description: "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries"

@@ -1,0 +1,6 @@
+# Generated from skills/teach/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Teach"
+  short_description: "Teach the user a new skill or concept, within this workspace"
+policy:
+  allow_implicit_invocation: false

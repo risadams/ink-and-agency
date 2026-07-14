@@ -1,0 +1,4 @@
+# Generated from skills/writing-beats/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Writing Beats"
+  short_description: "Shape an article as a journey of beats, choose-your-own-adventure style"

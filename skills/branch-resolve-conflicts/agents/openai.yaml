@@ -1,0 +1,4 @@
+# Generated from skills/branch-resolve-conflicts/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Branch Resolve Conflicts"
+  short_description: "Resolve complex git merge/rebase conflicts by reconstructing intent, preserving both br..."

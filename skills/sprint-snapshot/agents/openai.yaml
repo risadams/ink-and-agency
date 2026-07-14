@@ -1,0 +1,4 @@
+# Generated from skills/sprint-snapshot/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Sprint Snapshot"
+  short_description: "Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and r..."
