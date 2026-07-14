@@ -236,7 +236,7 @@ A: Only when there's something to sort. Quiet, low-load meetings don't need deco
 
 ## Related skills
 
-- **[writing-rejection-sensitivity-check](../writing-rejection-sensitivity-check/)** — for when the trigger is a single message, not a whole meeting.
+- **[rejection-sensitivity-check](../rejection-sensitivity-check/)** — for when the trigger is a single message, not a whole meeting.
 - **[break-it-down](../break-it-down/)** — for decoding a specific phrase someone used in the meeting that's nagging at you.
 - **[energy-budget](../energy-budget/)** — pairs well when post-meeting decompression reveals a day that's tipping toward overload.
 - **[clarity-council](../clarity-council/)** — the psychologist + personal-assistant pair is the engine.
