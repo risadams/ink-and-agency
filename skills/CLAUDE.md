@@ -48,6 +48,7 @@ recurrence-hint: daily                 # optional — daily/weekly/on-demand (if
 ## Extended Skill Format: Loop Method
 
 The Loop Method adds optional frontmatter fields and markdown sections to enable:
+
 1. **Cross-skill delegation:** Declare which other skills this skill uses
 2. **Quality loops:** Self-evaluate output before returning
 3. **Recurring execution:** Document how this skill runs via `/loop`

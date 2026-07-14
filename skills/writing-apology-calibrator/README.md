@@ -222,6 +222,7 @@ The clarity-council session uses `[psychologist, devils-advocate]`:
 - The **devils-advocate** stress-tests both directions — pushes back if accountability is being stripped from a warranted apology, and pushes back if reflexive over-apology is being preserved as "the user's voice."
 
 The four annotation tags are deliberately limited:
+
 - **Keep:** warranted, lands cleanly
 - **Soften:** over-strong, suggested replacement
 - **Cut:** reflexive, remove entirely
