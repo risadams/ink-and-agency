@@ -14,13 +14,16 @@ This is a dual-host **agent plugin**: a pack of prompt-based skills and subagent
 | :--- | :--- |
 | `skills/<name>/SKILL.md` | Canonical skill definitions (open Agent Skills format — shared by both hosts as-is) |
 | `agents/<category>/<name>.md` | Canonical agent definitions (Claude Code markdown frontmatter format) |
+| `AGENTS.md` | Canonical maintainer guidance (this file — Codex auto-loads it) |
 | `.codex/agents/*.toml` | **Generated** — Codex custom-agent files derived from `agents/**/*.md` |
+| `skills/<name>/agents/openai.yaml` | **Generated** — Codex per-skill picker metadata derived from each `SKILL.md` frontmatter |
 | `plugin.json` (root) | **Generated** — Codex plugin manifest (bundles `./skills/`; Codex plugins cannot carry agents) |
+| `CLAUDE.md` (root) | **Generated** — mirror of `AGENTS.md` so Claude Code maintainers auto-load the same guidance |
 | `.claude-plugin/plugin.json` | Claude Code plugin manifest (hand-maintained) |
 | `.claude-plugin/marketplace.json` | Claude Code marketplace catalog (hand-maintained; required by `/plugin marketplace add`) |
 | `.agents/plugins/marketplace.json` | Codex marketplace catalog (hand-maintained; required by `codex plugin marketplace add`) |
 
-**Never edit `.codex/agents/*.toml` or the root `plugin.json` by hand.** Edit the markdown source, then regenerate:
+**Never edit generated files by hand** — `.codex/agents/*.toml`, `skills/*/agents/openai.yaml`, the root `plugin.json`, or the root `CLAUDE.md`. Edit the markdown source (the skill/agent `.md`, or `AGENTS.md`), then regenerate:
 
 ```
 pwsh ./scripts/convert-agents-to-codex.ps1
@@ -34,6 +37,17 @@ pwsh ./scripts/convert-agents-to-codex.ps1
 - Council personas are reference documents, not agents. New personas go in `references/council-personas/`, not `agents/`.
 - Folder and agent names are stable once published — do not rename.
 - After changing any agent or adding/removing a skill, re-run `convert-agents-to-codex.ps1` and commit the regenerated files alongside the source change.
+
+## Skill invocation across hosts
+
+Every skill is reachable one of two ways, and the axis is **who can invoke it**. This is a single decision in the canonical `SKILL.md` frontmatter; the generator projects it onto both hosts.
+
+- **Model-invoked** (default) — reachable by the model *or* the user. Omit `disable-model-invocation`. Keep the rich trigger phrasing in `description` ("Use when the user says…, mentions…") so auto-invocation fires. The generated `openai.yaml` carries only the `interface` block.
+- **User-invoked** — reachable *only* when the human types the skill name. Set `disable-model-invocation: true` in the frontmatter. The generator then adds `policy.allow_implicit_invocation: false` to that skill's `openai.yaml` — the Codex analog — so neither host lets the model reach it. There are currently four: `codebase-explain`, `handoff`, `teach`, `work-plan`.
+
+Because the Codex side is **generated from the Claude-side frontmatter**, the two can't drift: a skill is user-invoked in both harnesses or neither. Do not hand-edit `openai.yaml` to change invocation — flip `disable-model-invocation` in `SKILL.md` and regenerate.
+
+**Picker label:** `openai.yaml`'s `short_description` is derived from the first sentence of `description` (trimmed to ~90 chars). When that first sentence is trigger-heavy or truncates badly, add an optional `codex-short-description:` line to the `SKILL.md` frontmatter — the generator uses it verbatim as the override.
 
 ## Validation
 
