@@ -118,7 +118,7 @@ If the answers materially change the hypothesis space, invoke the `/grill-me` sk
 
 ### Phase 5 — Hypothesize root causes
 
-Invoke the `/clarity-council` skill in `council-multi-persona` agent:
+Invoke the `/clarity-council` skill in multi mode:
 
 ```
 user_problem: "Identify the most likely root causes for: {issue summary}"

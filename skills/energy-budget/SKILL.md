@@ -30,11 +30,11 @@ This is spoon-theory accounting: count the load in advance, find the items that 
 
 ## Lens: personal-assistant + psychologist
 
-For non-trivial budgets (more than 4 items, anything spanning >6 hours, anything the user is already wound up about), invoke the `council-multi-persona` agent via `Skill` with personas `[personal-assistant, psychologist]`:
+For non-trivial budgets (more than 4 items, anything spanning >6 hours, anything the user is already wound up about), invoke `clarity-council` via `Skill` in multi mode with personas `[personal-assistant, psychologist]`:
 
 **Invocation**:
 ```
-Agent: council-multi-persona
+Skill: clarity-council (mode: multi)
 
 Score today's load and suggest defers. Account for sensory and social load, not just clock time.
 

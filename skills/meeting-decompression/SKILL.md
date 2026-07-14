@@ -30,7 +30,7 @@ Your job is to **separate those three jobs** so the user can deal with each one 
 
 ## Lens: psychologist + personal-assistant
 
-This skill always invokes `clarity-council` via `Skill` in `council-multi-persona` agent with personas `[psychologist, personal-assistant]`. Two-persona pairing is deliberate: personal-assistant handles the action-item triage, psychologist handles the social-ambiguity sort.
+This skill always invokes `clarity-council` via `Skill` in multi mode with personas `[psychologist, personal-assistant]`. Two-persona pairing is deliberate: personal-assistant handles the action-item triage, psychologist handles the social-ambiguity sort.
 
 - **user_problem:** *"User just left a meeting and needs to decompress. Separate: (1) facts and decisions, (2) action items by owner, (3) social ambiguities to follow up on (not ruminate on). Flag anything the user is over-weighting."*
 - **context:** the dump + meeting type + attendees + the user's role in it.

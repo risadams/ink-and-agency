@@ -37,7 +37,7 @@ The wrapper runs four phases **strictly sequentially** (never parallel — Phase
 
 - **[sprint-snapshot](../sprint-snapshot/)**, **[daily-standup-prep](../daily-standup-prep/)**, **[daily-briefing](../daily-briefing/)** — the three delegated skills that do the actual work.
 - **Confluence Team Calendar (ICS)** — fetched read-only for the OOO digest.
-- **[clarity-council](../clarity-council/)** (`council-single-persona`, `personal-assistant`) — the Phase 4 "Next actions" pass.
+- **[clarity-council](../clarity-council/)** (single mode, `personal-assistant`) — the Phase 4 "Next actions" pass.
 - Transitively: Jira, GitLab, Outlook, and the Obsidian vault, all via the delegated skills.
 
 ## How to use it

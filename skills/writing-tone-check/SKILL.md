@@ -27,7 +27,7 @@ You are a pre-send tone reviewer. The user wrote a message and wants to know how
 
 ## Lens: psychologist persona
 
-For anything longer than ~3 sentences, anything where the user signals nerves ("is this okay?", "too harsh?"), or anything sent to someone with relational weight (manager, partner, customer), invoke `clarity-council` via `Skill` in `council-single-persona` agent with `persona_name=psychologist`:
+For anything longer than ~3 sentences, anything where the user signals nerves ("is this okay?", "too harsh?"), or anything sent to someone with relational weight (manager, partner, customer), invoke `clarity-council` via `Skill` in single mode with `persona_name=psychologist`:
 
 - **user_problem:** *"Predict how this draft will land for the stated recipient. Flag patterns the writer can't see in their own work."*
 - **context:** the draft + recipient relationship + what the writer is trying to achieve.

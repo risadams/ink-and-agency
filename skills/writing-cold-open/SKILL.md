@@ -27,7 +27,7 @@ Sibling to [task-initiation](../task-initiation/SKILL.md) (which handles tasks) 
 
 Cold-open is fast by design. For most cases, run inline — three openings, no debate.
 
-For a high-stakes opener (cold outreach to a stranger, a sensitive message, a message you've drafted and deleted three times), invoke `clarity-council` via `Skill` in `council-single-persona` agent with `persona_name=psychologist`:
+For a high-stakes opener (cold outreach to a stranger, a sensitive message, a message you've drafted and deleted three times), invoke `clarity-council` via `Skill` in single mode with `persona_name=psychologist`:
 
 - **user_problem:** *"Generate three opening sentences for this message. Each should match a different register (direct / warm / contextual). Predict how each will land for the recipient."*
 - **context:** the goal of the message + recipient + relationship + channel.

@@ -28,7 +28,7 @@ Sibling to [break-it-down](../break-it-down/SKILL.md). Break-it-down is general 
 
 ## Lens: psychologist + devils-advocate
 
-This skill always invokes `clarity-council` via `Skill` in `council-multi-persona` agent with personas `[psychologist, devils-advocate]`. The two-persona setup is the whole point — psychologist reads the text neutrally, devils-advocate stress-tests both the worst-case and the best-case reading.
+This skill always invokes `clarity-council` via `Skill` in multi mode with personas `[psychologist, devils-advocate]`. The two-persona setup is the whole point — psychologist reads the text neutrally, devils-advocate stress-tests both the worst-case and the best-case reading.
 
 - **user_problem:** *"The user received this message and it stung. Separate what the text actually says from what the user's pattern-matching is adding. Calibrate whether the sting is warranted."*
 - **context:** the message + relationship + what the user is afraid it means + recent history with sender if shared.

@@ -326,11 +326,11 @@ After the weekly note is saved, regenerate the monthly rollup. Full template, we
 
 ### 9. Propose focus blocks
 
-**Delegate to `council-single-persona` agent (personal-assistant persona).** This step doesn't author the block list inline — invoke the agent via `Skill`:
+**Delegate to `clarity-council` in single mode (personal-assistant persona).** This step does not author the block list inline — invoke the skill via `Skill`:
 
 **Invocation**:
 ```
-Agent: council-single-persona
+Skill: clarity-council (mode: single)
 
 As a personal-assistant, propose focus blocks for today that pull the highest-leverage 
 open actions into the free time available.

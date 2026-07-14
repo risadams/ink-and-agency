@@ -102,7 +102,7 @@ Write the note in the [RELEASE-NOTE-FORMAT.md](RELEASE-NOTE-FORMAT.md) structure
 
 ### Phase 5 — Quality pass
 
-1. Invoke `/clarity-council` (`council-multi-persona`) with personas **Technical Writer**, **Product Owner**, and **Customer Advocate**:
+1. Invoke `/clarity-council` (multi mode) with personas **Technical Writer**, **Product Owner**, and **Customer Advocate**:
    - **user_problem:** "Is this release note accurate, clear, and appropriately scoped for its audience?"
    - **context:** the draft note + Context Summary + per-MR "what changed" takeaways + chosen audience/type.
    - **desired_outcome:** "A release note that a {audience} reads in 10 seconds and understands what changed and whether they must act. Flag any claim not supported by the ticket/MR evidence, and any leaked internal jargon."

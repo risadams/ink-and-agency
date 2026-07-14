@@ -147,7 +147,7 @@ If any is missing, `Edit` it into the note in place (reconstruct the gantt from 
 
 This is a sanity net, not the primary classifier. If this step is consistently demoting >2 items per run, that's a signal that `daily-briefing/SKILL.md` § 3a needs to be tightened further.
 
-**Then run a personal-assistant pass.** Phase 3 (daily-briefing) was invoked with `--no-focus-blocks`, so the user never sees a focus-block proposal during `/good-morning`. To preserve the "what should I actually do next" signal without re-introducing calendar drafts, invoke via `Skill` agent: with `council-single-persona` agent, persona pinned to `personal-assistant`. Pass:
+**Then run a personal-assistant pass.** Phase 3 (daily-briefing) was invoked with `--no-focus-blocks`, so the user never sees a focus-block proposal during `/good-morning`. To preserve the "what should I actually do next" signal without re-introducing calendar drafts, invoke `clarity-council` via `Skill` in single mode, persona pinned to `personal-assistant`. Pass:
 
 - **user_problem:** *"Given today's standup and briefing artifacts, what are the 3 most important next actions for the user?"*
 - **context:** the executive-summary bullets from the daily briefing (read from `{{vault_root}}/📅/YYYY/MM/YYYY-MM-DDD.md`), the burndown verdict from the standup report, and any impediments/blockers surfaced in Phase 2.

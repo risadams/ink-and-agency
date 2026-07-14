@@ -32,7 +32,6 @@ param(
 
 # Configuration
 $ValidCategories = @(
-    '00-council',
     '01-core-development',
     '02-language-specialists',
     '03-infrastructure',

@@ -29,7 +29,7 @@ Sibling to [writing-tone-check](../writing-tone-check/SKILL.md). Tone-check is g
 
 ## Lens: psychologist + devils-advocate
 
-This skill always invokes `clarity-council` via `Skill` in `council-multi-persona` agent with personas `[psychologist, devils-advocate]`:
+This skill always invokes `clarity-council` via `Skill` in multi mode with personas `[psychologist, devils-advocate]`:
 
 - **user_problem:** *"Calibrate this apology draft. Strip over-apology while keeping warranted accountability. Identify which 'sorrys' are reflexive vs. earned."*
 - **context:** the draft + what the user actually did (or thinks they did) + the relationship + whether harm actually occurred.

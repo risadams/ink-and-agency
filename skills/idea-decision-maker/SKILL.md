@@ -31,7 +31,7 @@ The user is stuck. Two (or more) options, all roughly defensible, brain spinning
 
 ## Lens: senior-architect + devils-advocate + personal-assistant
 
-For non-trivial decisions (anything reversible-but-costly, anything with stakeholders, anything the user has been stuck on for >30 minutes), invoke `clarity-council` via `Skill` in `council-multi-persona` agent with personas `[senior-architect, devils-advocate, personal-assistant]`:
+For non-trivial decisions (anything reversible-but-costly, anything with stakeholders, anything the user has been stuck on for >30 minutes), invoke `clarity-council` via `Skill` in multi mode with personas `[senior-architect, devils-advocate, personal-assistant]`:
 
 - **user_problem:** *"User is stuck between [N] options. Force a pick. Three personas vote. Majority wins. Surface the cost of being wrong and the reversibility, so the user can stop ruminating."*
 - **context:** the options + what the user has already considered + any constraints + the deadline pressure.

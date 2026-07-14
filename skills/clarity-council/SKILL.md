@@ -1,10 +1,6 @@
 ---
 name: clarity-council
 description: Facilitates structured single-persona or multi-persona consultation for strategy, product, engineering, operations, and risk decisions. Use when the user requests a council, multiple perspectives, persona advice, tradeoff analysis, or iterative clarification and debate.
-related-agents:
-  - council-single-persona
-  - council-multi-persona
-  - council-iterative
 related-skills:
   - grill-me
   - idea-generate
@@ -13,13 +9,22 @@ recurrence-hint: on-demand
 compatibility: claude-code codex opencode
 ---
 
-# Clarity Council: Agent-Based System
+# Clarity Council
 
-This skill routes to three specialized agents that ship with this plugin, in the `agents/00-council/` folder under the plugin root. Paths below are written relative to this skill's folder (`../../` is the plugin root; on Claude Code this is `${CLAUDE_PLUGIN_ROOT}`). Use the appropriate agent based on your decision-making need.
+Structured persona-based consultation for decisions that benefit from expert perspectives. This
+skill is **self-contained** — it carries its own persona library and runs entirely inline, in one
+of three **modes**. Nothing here depends on a separate subagent, so it behaves identically on every
+host.
+
+Persona contracts live alongside this skill in [`skills/personas/`](skills/personas/) — the index is
+[`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md) and pre-made panels are in
+[`skills/personas/GROUPS.md`](skills/personas/GROUPS.md). Paths below are relative to this skill's
+folder.
 
 ## When to use
 
-Use this system when you need any of the following:
+Use this skill when you need any of:
+
 - Quick expert opinion from one persona
 - Multiple expert viewpoints with synthesis
 - Iterative decision-making with clarifications
@@ -27,45 +32,55 @@ Use this system when you need any of the following:
 
 Do not use for pure factual lookup with no decision component.
 
-## Which Agent to Use?
+## Which mode?
 
-### Single Expert Perspective
-**Agent**: `council-single-persona`  
-**When**: You need focused advice from one expert (quick, 10–15 min)  
-**Example**: "As a senior-architect, should we migrate to microservices?"
+| Mode | When | Feel |
+| :--- | :--- | :--- |
+| **single** | Focused advice from one expert | Quick (10–15 min) |
+| **multi** | A decision needs several viewpoints synthesized | Standard (20–30 min) |
+| **iterative** | Multi-turn refinement as constraints emerge | Deep (30–60 min, 3–5 turns) |
 
-### Multiple Expert Synthesis
-**Agent**: `council-multi-persona`  
-**When**: A decision needs multiple viewpoints synthesized (20–30 min)  
-**Example**: "Convene a council on Kubernetes adoption."
+Callers select a mode explicitly. A skill invoking the council via `Skill` names the mode
+(e.g. "invoke `clarity-council` in **multi** mode with personas `[psychologist, personal-assistant]`").
+Users can say "as a senior-architect…" (single), "convene a council on…" (multi), or "run a council,
+I'll iterate" (iterative).
 
-### Iterative Decision-Making
-**Agent**: `council-iterative`  
-**When**: You need multi-turn iteration with clarifications (30–60 min, 3–5 turns)  
-**Example**: "Run a council on team restructuring. I'll iterate."
+## Common inputs
 
-## Agent Invocation
+- **Decision/problem** — required.
+- **Personas** — optional; which experts to consult (defaults apply per mode).
+- **Persona groups** — optional; pre-made panels from [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md).
+- **Depth** — optional: `brief` / `standard` / `deep`.
+- **Context / constraints / desired outcome** — optional but strongly recommended.
+- **Iterative state** — for multi-turn sessions (sessionId, turn, history).
 
-Simply invoke the appropriate agent directly:
+Load each named persona's contract from [`skills/personas/`](skills/personas/) and apply its
+**Decision Lens**, **Preferred Frameworks**, and **Blind Spots**. Keep terminology consistent with
+the names in [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md).
 
-```
-/council-single-persona
-  As a product-owner, should we ship this quarter?
+---
 
-/council-multi-persona
-  Convene a council on whether to adopt TypeScript.
+## Mode: single
 
-/council-iterative
-  Run a council on payment processor selection. I'll iterate.
-```
+Deliver focused expert perspective from **one** persona. If no persona is named, ask which
+perspective would help most.
 
-See the full documentation at `../../docs/agents/00-council.md` and `../../docs/agents/00-council-index.md`.
+**Workflow**
 
-## Output templates
+1. **Confirm the persona.** Load its contract from [`skills/personas/`](skills/personas/).
+2. **Understand the problem.** Ask a clarifying question only if a hard constraint (state, decision,
+   budget/timeline/compliance, definition of success) is ambiguous.
+3. **Apply the lens.** Frame the analysis through the persona's Decision Lens and Preferred
+   Frameworks (e.g. senior-architect → structural/scalability impact; security-expert → attack
+   surface/compliance; devils-advocate → challenge the obvious).
+4. **Produce structured advice** (template below).
+5. **Quality checks:** advice tied to the persona's focus (not generic); assumptions separated from
+   facts; at least one concrete next step; confidence justified; blind spots flagged where they matter.
 
-Use these structures exactly unless the user asks for a different format.
+If the user then wants multiple perspectives → switch to **multi**; back-and-forth refinement →
+**iterative**.
 
-### Single persona output
+### Single-persona output
 
 ```markdown
 summary: <short answer>
@@ -79,6 +94,45 @@ next_steps:
 - <action>
 confidence: <low|medium|high>
 ```
+
+---
+
+## Mode: multi
+
+Convene several personas, collect each perspective, then **synthesize**. Synthesis is mandatory —
+do not just list opinions.
+
+**Default panels** (if no personas named; ask if the panel doesn't fit):
+
+- **Architecture** — senior-architect, senior-developer, qa-engineer, tech-lead, devops-engineer, devils-advocate
+- **Feature/product** — product-owner, senior-developer, ux-designer, customer-advocate, tech-lead, devils-advocate
+- **Hiring/people** — culture-lead, product-owner, senior-architect, devils-advocate
+- **Risk/security** — security-expert, compliance-officer, senior-architect, devops-engineer, devils-advocate
+- **Financial/business** — financial-officer, product-owner, business-owner, devops-engineer, devils-advocate
+- **Estimation** — scrum-master, tech-lead, senior-developer, qa-engineer
+
+Pre-made groups also live in [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md) (technical-focus,
+stakeholder-focus, full-council, quick-pulse, estimation) — expand a named group into individuals
+before consulting.
+
+**Workflow**
+
+1. **Classify & prepare.** Confirm the problem; load/expand personas; dedupe, preserve requested order.
+2. **Consult each persona** using the single-mode method. **Collect all responses before
+   synthesizing — do not synthesize as you go.**
+3. **Synthesize across five dimensions:** Cost vs Speed · Risk vs Reversibility · Short-term vs
+   Long-term · Confidence (evidence vs assumption) · People Impact.
+4. **Agreements** — where two or more personas converge (strong evidence).
+5. **Conflicts** — **name the dimension** ("they disagree on reversibility", not "they disagree") and
+   give each a decision table.
+6. **Risks & tradeoffs** — what could go wrong; what the user is choosing between; underweighted
+   blind spots.
+7. **Next steps** — 2–4 concrete actions that reduce ambiguity or resolve conflicts.
+8. **Quality checks:** agreements separated from conflicts; every conflict has a dimension + table;
+   next steps concrete; blind spots acknowledged.
+
+If the user needs iterative back-and-forth → switch to **iterative**; a single perspective needs a
+deeper dive → **single**.
 
 ### Multi-persona output
 
@@ -100,49 +154,82 @@ synthesis:
   agreements:
   - <point>
   conflicts:
-  - <point>
+  - dimension: <Speed|Reversibility|Risk|People|Confidence>
+    table: |
+      | Option | Benefit | Risk | Who Favors |
+      | --- | --- | --- | --- |
+      | A | ... | ... | ... |
+      | B | ... | ... | ... |
+    decision_point: <one-line question that resolves this conflict>
   risks_tradeoffs:
   - <point>
   next_steps:
   - <action>
 ```
 
-### Multi-turn discussion output
+---
+
+## Mode: iterative
+
+Run a multi-turn session: ask targeted clarifications, re-consult the council (multi-mode) with
+updated constraints, resolve conflicts, and refine toward a decision. Slower, but catches edge cases
+and hidden assumptions.
+
+**Session state** carried each turn: `sessionId`, `turn`, `history` (compact per-turn summaries),
+`personas_active`, `conflicts_open`.
+
+**Workflow**
+
+- **Turn 1 — initialize:** load personas (or ask which panel); classify the problem; ask **one**
+  clarifying question if ambiguity is high; return `needs_clarification` or `in_progress`.
+- **Turn 2+ — iterate:** read the user's answer; update `history`; re-consult the council (multi mode)
+  with new constraints; check conflicts; return `needs_clarification`, `in_progress`, or `completed`.
+- **Conflict Protocol (mandatory when personas clash):** name the dimension → present a 2–3 option
+  decision table → ask **one** targeted question → record the decision in `history` → continue with
+  that constraint locked in.
+- **Turn limit:** 5–7. Beyond that, suggest narrowing the decision, external stakeholder input, or a
+  prototype/experiment.
+
+**Notes:** one question per turn; state carries forward (never make the user repeat constraints);
+this surfaces options and tradeoffs — the user decides.
+
+### Iterative output
 
 ```markdown
 status: <needs_clarification|in_progress|completed>
 message: <short user-facing response>
 nextAction: <what is needed next>
 output:
-  <single-persona or multi-persona structure>
+  <single- or multi-persona structure for this turn>
 state:
   sessionId: <id>
   turn: <number>
+  decisions_made:
+  - <decision>: <rationale>
+  conflicts_open:
+  - <unresolved conflict>
   history:
   - <compact turn summary>
 ```
 
-## Reference Files
+---
 
-Agent documentation:
-- `../../docs/agents/00-council.md` — Comprehensive guide to all agents
-- `../../docs/agents/00-council-index.md` — Quick navigation and decision tree
-- `../../agents/00-council/council-single-persona.md` — Single expert agent
-- `../../agents/00-council/council-multi-persona.md` — Multi-expert synthesis agent
-- `../../agents/00-council/council-iterative.md` — Iterative decision agent
+## Quality checks (all modes)
 
-Persona library:
-- [../../references/council-personas/PERSONAS.md](../../references/council-personas/PERSONAS.md) — Full persona index
-- [../../references/council-personas/GROUPS.md](../../references/council-personas/GROUPS.md) — Pre-made persona panels
-- [../../references/council-personas/*.md](../../references/council-personas/) — Individual persona contracts (35+ total)
+Before finalizing:
 
-## Quality checks
+- recommendations tie to stated constraints
+- assumptions separated from facts
+- at least one concrete next step
+- at least one explicit risk or tradeoff for non-trivial decisions
+- terminology consistent with the persona names in [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md)
 
-Before finalizing a response:
-- ensure recommendations tie to stated constraints
-- separate assumptions from facts
-- include at least one concrete next step
-- include at least one explicit risk or tradeoff for non-trivial decisions
-- keep terminology consistent with persona names in [../../references/council-personas/PERSONAS.md](../../references/council-personas/PERSONAS.md)
+## Reference files
 
-> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
+- [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md) — full persona index
+- [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md) — pre-made persona panels
+- [`skills/personas/`](skills/personas/) — individual persona contracts (36 total)
+- [EXAMPLES.md](EXAMPLES.md) — worked invocations for all three modes
+
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts
+> (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).

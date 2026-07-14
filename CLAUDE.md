@@ -32,9 +32,9 @@ pwsh ./scripts/convert-agents-to-codex.ps1
 ## Editing rules
 
 - Skill entry point is `SKILL.md` at the skill folder root; never move it. Supporting docs stay in the same folder and are referenced by paths relative to the skill folder (no host-specific variables like `${CLAUDE_PLUGIN_ROOT}` in new content).
-- Skills must stay host-portable: describe intent ("ask the user", "consult the psychologist persona — via the `council-single-persona` subagent if available, otherwise inline") rather than naming host-specific tools. Host-specific behavior goes in a clearly marked note.
+- Skills must stay host-portable: describe intent ("ask the user", "consult the psychologist persona via the `clarity-council` skill in single mode") rather than naming host-specific tools. Host-specific behavior goes in a clearly marked note.
 - Agent frontmatter requires `name` (kebab-case, matches filename), `description`, and `tools`; see `scripts/lint-agents.ps1` for the full ruleset (categories, model values, alphabetical ordering).
-- Council personas are reference documents, not agents. New personas go in `references/council-personas/`, not `agents/`.
+- Council personas are reference documents bundled inside the `clarity-council` skill, not agents. New personas go in `skills/clarity-council/skills/personas/`, not `agents/`. The council itself is a skill (three inline modes: single / multi / iterative), not a set of subagents — see [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
 - Folder and agent names are stable once published — do not rename.
 - After changing any agent or adding/removing a skill, re-run `convert-agents-to-codex.ps1` and commit the regenerated files alongside the source change.
 

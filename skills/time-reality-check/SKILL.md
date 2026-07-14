@@ -30,7 +30,7 @@ Your job is to produce a **calibrated** estimate that accounts for the gap betwe
 
 ## Lens: statistics-expert + devils-advocate
 
-For non-trivial estimates (anything the user is using to commit to others, anything over an hour, anything that will affect their schedule), invoke `clarity-council` via `Skill` in `council-multi-persona` agent with personas `[statistics-expert, devils-advocate]`:
+For non-trivial estimates (anything the user is using to commit to others, anything over an hour, anything that will affect their schedule), invoke `clarity-council` via `Skill` in multi mode with personas `[statistics-expert, devils-advocate]`:
 
 - **user_problem:** *"The user estimated [X] for [task]. Produce a calibrated range that accounts for known time-blindness factors: setup cost, interruption probability, decision points, re-entry cost from context switches."*
 - **context:** task description, user's gut estimate, deadline if any, similar tasks they've done before (if recalled).

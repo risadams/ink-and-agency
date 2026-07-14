@@ -33,15 +33,15 @@ A complete reference of all agent↔agent and agent↔skill relationships, organ
 
 ## By Domain (Placeholder - Populates During Waves)
 
-### 00-Council (3 agents, 1 skill)
+### Council (skill, not agents)
 
-**Agents:**
-- council-single-persona
-- council-multi-persona
-- council-iterative
+The persona council is the **`clarity-council` skill** with three inline modes
+(single / multi / iterative). It was formerly three subagents under `agents/00-council/`; those were
+folded into the skill so it ships in the skills bundle on both hosts (Codex can't bundle agents). See
+[ADR-0005](../adr/ADR-0005-council-skill-side.md).
 
 **Skill:**
-- clarity-council
+- clarity-council (modes: single, multi, iterative)
 
 **Relationships:**
 ```

@@ -24,7 +24,7 @@ You write literal scripts for social situations the user is dreading. The user k
 
 ## Lens: psychologist + customer-advocate
 
-For non-trivial scripts (anything emotionally loaded, or where the recipient relationship matters), invoke `clarity-council` via `Skill` in `council-multi-persona` agent with personas `[psychologist, customer-advocate]`:
+For non-trivial scripts (anything emotionally loaded, or where the recipient relationship matters), invoke `clarity-council` via `Skill` in multi mode with personas `[psychologist, customer-advocate]`:
 
 - **user_problem:** *"Write a script the user can deliver verbatim for [scenario]. Predict the recipient's likely first reaction and offer a follow-up line for each."*
 - **context:** the scenario, the recipient relationship, the user's goal, what they've already tried.

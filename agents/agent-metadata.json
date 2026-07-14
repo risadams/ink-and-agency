@@ -1,29 +1,5 @@
 [
     {
-        "name":  "council-iterative",
-        "description":  "",
-        "tools":  "",
-        "model":  "opus",
-        "filename":  "council-iterative.md",
-        "category":  "00-council"
-    },
-    {
-        "name":  "council-multi-persona",
-        "description":  "",
-        "tools":  "",
-        "model":  "opus",
-        "filename":  "council-multi-persona.md",
-        "category":  "00-council"
-    },
-    {
-        "name":  "council-single-persona",
-        "description":  "",
-        "tools":  "",
-        "model":  "opus",
-        "filename":  "council-single-persona.md",
-        "category":  "00-council"
-    },
-    {
         "name":  "api-designer",
         "description":  "",
         "tools":  "Read, Write, Edit, Bash, Glob, Grep",
@@ -821,6 +797,14 @@
         "tools":  "Read, Write, Edit, Bash, Glob, Grep",
         "model":  "sonnet",
         "filename":  "powershell-ui-architect.md",
+        "category":  "06-developer-experience"
+    },
+    {
+        "name":  "readme-generator",
+        "description":  "",
+        "tools":  "Read, Write, Edit, Bash, Glob, Grep, WebFetch, WebSearch",
+        "model":  "sonnet",
+        "filename":  "readme-generator.md",
         "category":  "06-developer-experience"
     },
     {

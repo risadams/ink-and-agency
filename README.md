@@ -3,7 +3,7 @@
 An agent plugin for **Claude Code and OpenAI Codex**, merging two libraries into one installable unit:
 
 - **Ink** — 61 skills covering writing, sprint/Scrum workflows, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all (`skills/`)
-- **Agency** — 160 specialist subagents organized by domain, plus a persona-council system for multi-perspective decision making (`agents/`)
+- **Agency** — 157 specialist subagents organized by domain (`agents/`), plus the `clarity-council` skill: a persona-council system for multi-perspective decision making (single / multi / iterative modes), bundled with the skills so it ships identically on both hosts
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
 
@@ -26,17 +26,13 @@ ink-and-agency/
 │   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)
 │   └── PORTABILITY.md           # How to interpret Claude tool names on other hosts
 ├── agents/                      # Subagents, grouped by category (canonical markdown)
-│   ├── 00-council/              # Council orchestration agents
 │   ├── 01-core-development/
 │   ├── 02-language-specialists/
 │   ├── ...
 │   └── 10-research-analysis/
 ├── .codex/
 │   └── agents/                  # Codex agent TOMLs (GENERATED from agents/ — do not edit)
-├── references/
-│   └── council-personas/        # Persona contracts consumed by council agents
-│                                # (not agents themselves — kept out of agents/
-│                                # to avoid loader pickup and name collisions)
+│                                # (the persona council is a skill — see skills/clarity-council/)
 ├── scripts/
 │   ├── bulk-loop-update-skills.ps1
 │   ├── bulk-loop-update-agents.ps1
@@ -58,7 +54,7 @@ Add the marketplace once, then install the plugin:
 /plugin install ink-and-agency
 ```
 
-This installs both the 61 skills and the 160 subagents. Or load locally for development (no marketplace, picks up your working copy):
+This installs both the 61 skills and the 157 subagents. Or load locally for development (no marketplace, picks up your working copy):
 
 ```sh
 claude --plugin-dir /path/to/ink-and-agency
@@ -144,7 +140,7 @@ A skill's invocation mode is identical on both hosts — it's authored once in `
 - Skill bodies use Claude Code tool vocabulary; [skills/PORTABILITY.md](skills/PORTABILITY.md) defines how other hosts map those names by intent.
 - The markdown under `agents/` and `skills/`, plus `AGENTS.md`, are the single source of truth. Everything Codex-facing is **generated** from them by `pwsh ./scripts/convert-agents-to-codex.ps1`: `.codex/agents/*.toml`, `skills/*/agents/openai.yaml` (per-skill Codex picker metadata + invocation policy), the root `plugin.json`, and the root `CLAUDE.md` (mirror of `AGENTS.md`). After editing any source, re-run the script and commit the output; CI fails if they drift.
 - One skill, both hosts: a skill's invocation mode lives once in its `SKILL.md` frontmatter (`disable-model-invocation: true` = user-invoked only) and is projected to Codex as `policy.allow_implicit_invocation: false`. Never hand-edit `openai.yaml`. See [AGENTS.md](AGENTS.md#skill-invocation-across-hosts).
-- Council personas are reference documents, not agents. New personas go in `references/council-personas/`, not `agents/`.
+- The persona council is the `clarity-council` skill (three inline modes), not a set of subagents — so it ships in the skills bundle on both hosts. Personas are reference documents bundled inside it (`skills/clarity-council/skills/personas/`), not agents. See [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
 - On Claude Code, skill names are namespaced by the plugin at install time (`ink-and-agency:skill-name`), so local project skills won't collide.
 
 ## License
