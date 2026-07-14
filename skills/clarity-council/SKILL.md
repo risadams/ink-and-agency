@@ -110,9 +110,11 @@ do not just list opinions.
 - **Financial/business** — financial-officer, product-owner, business-owner, devops-engineer, devils-advocate
 - **Estimation** — scrum-master, tech-lead, senior-developer, qa-engineer
 
-Pre-made groups also live in [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md) (technical-focus,
-stakeholder-focus, full-council, quick-pulse, estimation) — expand a named group into individuals
-before consulting.
+Pre-made groups also live in [`skills/personas/GROUPS.md`](skills/personas/GROUPS.md) — domain panels
+(`product-delivery-core`, `platform-and-reliability`, `investigation-and-diagnosis`,
+`stakeholder-reporting`, …) plus convenience archetypes (`technical-focus`, `stakeholder-focus`,
+`full-council`, `quick-pulse`, `estimation`). Reference a group by its slug; expand it into its listed
+personas before consulting.
 
 **Workflow**
 
