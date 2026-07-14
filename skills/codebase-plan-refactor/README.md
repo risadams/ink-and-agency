@@ -1,4 +1,4 @@
-# Request Refactor Plan
+# Codebase Plan Refactor
 
 Walk the user through a structured refactor interview, then file the result as a GitHub issue with a detailed plan of tiny commits. The interview covers problem, alternatives, scope, and test coverage; the output is an actionable plan that someone (you, your future self, or a teammate) can execute commit-by-commit while keeping the codebase in a working state at every step.
 
@@ -15,7 +15,7 @@ Invoke this skill by:
   - "create a refactoring RFC"
   - "break this refactor into safe steps"
   - "request a refactor plan for {area}"
-- Running the slash command: `/request-refactor-plan`
+- Running the slash command: `/codebase-plan-refactor`
 
 ## What it does
 

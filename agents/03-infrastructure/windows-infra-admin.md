@@ -4,7 +4,7 @@ description: "Use when managing Windows Server infrastructure, Active Directory,
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - terraform-engineer
 loop-eligible: false

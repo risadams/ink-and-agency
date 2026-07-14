@@ -4,7 +4,7 @@ description: "Use this agent when optimizing database performance, implementing 
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - terraform-engineer
 loop-eligible: false

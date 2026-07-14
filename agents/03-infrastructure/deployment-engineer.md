@@ -4,7 +4,7 @@ description: "Use this agent when designing, building, or optimizing CI/CD pipel
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: haiku
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - terraform-engineer
 loop-eligible: false

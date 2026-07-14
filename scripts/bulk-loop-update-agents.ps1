@@ -7,12 +7,12 @@
     Adds or updates Loop Method fields in agent frontmatter based on category and standard patterns.
 
     Patterns by category:
-    - 01-core-development: related-skills=[codebase-explain, request-refactor-plan], related-agents=[code-reviewer]
-    - 02-language-specialists: related-skills=[codebase-explain, request-refactor-plan], related-agents=[code-reviewer]
-    - 03-infrastructure: related-skills=[request-refactor-plan], related-agents=[terraform-engineer, devops-engineer]
+    - 01-core-development: related-skills=[codebase-explain, codebase-plan-refactor], related-agents=[code-reviewer]
+    - 02-language-specialists: related-skills=[codebase-explain, codebase-plan-refactor], related-agents=[code-reviewer]
+    - 03-infrastructure: related-skills=[codebase-plan-refactor], related-agents=[terraform-engineer, devops-engineer]
     - 04-quality-security: related-skills=[clarity-council], related-agents=[code-reviewer]
     - 05-data-ai: related-skills=[clarity-council], related-agents=[ml-engineer]
-    - 06-developer-experience: related-skills=[request-refactor-plan], related-agents=[refactoring-specialist]
+    - 06-developer-experience: related-skills=[codebase-plan-refactor], related-agents=[refactoring-specialist]
     - 07-specialized-domains: related-skills=[], related-agents=[] (domain-specific)
     - 08-business-product: related-skills=[sprint-snapshot, clarity-council], related-agents=[scrum-master]
     - 09-meta-orchestration: SKIP (already done in Wave 1)
@@ -38,15 +38,15 @@ param(
 # Pattern definitions by category
 $patterns = @{
     '01-core-development'     = @{
-        'related-skills' = @('codebase-explain', 'request-refactor-plan')
+        'related-skills' = @('codebase-explain', 'codebase-plan-refactor')
         'related-agents' = @('code-reviewer')
     }
     '02-language-specialists' = @{
-        'related-skills' = @('codebase-explain', 'request-refactor-plan')
+        'related-skills' = @('codebase-explain', 'codebase-plan-refactor')
         'related-agents' = @('code-reviewer')
     }
     '03-infrastructure'       = @{
-        'related-skills' = @('request-refactor-plan')
+        'related-skills' = @('codebase-plan-refactor')
         'related-agents' = @('terraform-engineer')
     }
     '04-quality-security'     = @{
@@ -58,7 +58,7 @@ $patterns = @{
         'related-agents' = @('ml-engineer')
     }
     '06-developer-experience' = @{
-        'related-skills' = @('request-refactor-plan')
+        'related-skills' = @('codebase-plan-refactor')
         'related-agents' = @('refactoring-specialist')
     }
     '07-specialized-domains'  = @{

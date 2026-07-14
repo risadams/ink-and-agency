@@ -3,7 +3,7 @@ name: codebase-orchestrator
 description: "Use this agent when you need repository-wide refactor governance with explicit approval loops, weighted risk prioritization, diff previews, and deterministic fallback strategies."
 tools: Read, Write, Edit, Bash, Glob, Grep, WebFetch, airis-mcp-gateway, context-manager, error-coordinator, pied-piper, subagent-catalog:search, subagent-catalog:fetch
 model: opus
-related-skills: [request-refactor-plan, codebase-improve-architecture]
+related-skills: [codebase-plan-refactor, codebase-improve-architecture]
 related-agents: [error-coordinator, context-manager, code-reviewer]
 loop-eligible: false
 ---

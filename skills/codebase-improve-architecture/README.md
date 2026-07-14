@@ -91,7 +91,7 @@ Skill: [Grilling loop on candidate 2]
 
 What this skill will NOT do, or what to avoid:
 
-- ❌ **Apply refactors automatically.** The skill is a design tool. Implementing the refactor is a separate task — usually one for [request-refactor-plan](../request-refactor-plan/) followed by careful incremental commits.
+- ❌ **Apply refactors automatically.** The skill is a design tool. Implementing the refactor is a separate task — usually one for [codebase-plan-refactor](../codebase-plan-refactor/) followed by careful incremental commits.
 - ❌ **Suggest a refactor with no callers.** Per the deletion test: a module that doesn't simplify anything when deepened isn't worth deepening. The skill skips suggestions that fail this test.
 - ❌ **Use generic vocabulary when the domain has its own.** "Service," "component," "API," "boundary" — all banned. The skill uses Module, Interface, Implementation, Seam, Adapter (see [LANGUAGE.md](LANGUAGE.md)) and the project's domain terms from `CONTEXT.md`.
 - ❌ **Re-propose ADR-rejected candidates as if new.** When a candidate contradicts an ADR, the skill flags it explicitly and only surfaces it if there's a load-bearing reason to re-open the discussion.
@@ -167,7 +167,7 @@ A: They're overloaded and drift in meaning. Module, Interface, Seam, Adapter hav
 A: The skill will offer to start one as terms emerge during the grilling loop. You can also draft one upfront with [grill-with-docs](../grill-with-docs/).
 
 **Q: Does it actually write code?**
-A: No. The output is a design conversation and updated docs (CONTEXT.md, ADRs). For implementation, hand off to [request-refactor-plan](../request-refactor-plan/) or implement directly with normal coding tools.
+A: No. The output is a design conversation and updated docs (CONTEXT.md, ADRs). For implementation, hand off to [codebase-plan-refactor](../codebase-plan-refactor/) or implement directly with normal coding tools.
 
 **Q: When does it record an ADR?**
 A: Only when the user rejects a candidate with a *load-bearing* reason — one that a future explorer would need to know to avoid re-suggesting the same refactor. Ephemeral reasons ("not worth it right now") and self-evident ones don't get ADRs.
@@ -177,7 +177,7 @@ A: Only when the user rejects a candidate with a *load-bearing* reason — one t
 - **[codebase-churn](../codebase-churn/)** — pair these. Churn surfaces *which* files are unstable; this skill decides *what to do* about them.
 - **[codebase-explain](../codebase-explain/)** — run first to orient if you don't know the area well.
 - **[grill-with-docs](../grill-with-docs/)** — for drafting `CONTEXT.md` and `docs/adr/` artifacts. The grilling conversation in this skill follows the same discipline.
-- **[request-refactor-plan](../request-refactor-plan/)** — once a deepening is designed, this skill builds an incremental commit plan for the implementation.
+- **[codebase-plan-refactor](../codebase-plan-refactor/)** — once a deepening is designed, this skill builds an incremental commit plan for the implementation.
 
 ## Files
 

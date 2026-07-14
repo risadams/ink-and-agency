@@ -45,7 +45,7 @@ Read-only drafting of a customer-facing release note for a Jira ticket. Gathers 
 
 ## Input
 
-A Jira ticket key — pattern `[A-Z][A-Z0-9]+-\d+` (e.g. `SC2-1234`). Extract from the user's message. If no key is present, ask for one. Default project key (if the user gives only a number) is read from memory (`reference_jira_default_project.md`).
+A Jira ticket key — pattern `[A-Z][A-Z0-9]+-\d+` (e.g. `PRJ-1234`). Extract from the user's message. If no key is present, ask for one. Default project key (if the user gives only a number) is read from memory (`reference_jira_default_project.md`).
 
 ## Workflow
 
@@ -72,7 +72,7 @@ The **issue type** and **fix version** strongly shape the note: a `Bug` reads as
 Locate merge requests tied to this ticket:
 
 1. **From remote links** — any GitLab MR URLs captured in Phase 1; fetch each via `get_merge_request`.
-2. **By search** — `list_merge_requests` filtered on the ticket key (MR titles and branch names usually embed it, e.g. `feature/SC2-1234-...`). Limit to the most relevant 5.
+2. **By search** — `list_merge_requests` filtered on the ticket key (MR titles and branch names usually embed it, e.g. `feature/PRJ-1234-...`). Limit to the most relevant 5.
 3. For each relevant MR: read the **title, description, and changed-files list** (`list_merge_request_changed_files`). Pull diffs (`get_merge_request_diffs`) **only** when the description is thin and you need to infer user-visible behavior — release notes describe *what changed for the user*, not line-level detail. If a diff exceeds ~2000 lines, rely on the file list + MR description.
 
 Resolve the GitLab project path from memory (`reference_gitlab_config.md`) — do not hardcode URLs. If no MRs are found, note that and draft from the ticket context alone.

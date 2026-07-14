@@ -6,7 +6,7 @@ model: sonnet
 related-skills:
   - clarity-council
   - grill-me
-  - request-refactor-plan
+  - codebase-plan-refactor
   - codebase-improve-architecture
   - codebase-churn
 loop-eligible: false

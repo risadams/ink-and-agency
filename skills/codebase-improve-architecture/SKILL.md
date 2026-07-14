@@ -6,7 +6,7 @@ related-agents:
   - refactoring-specialist
   - legacy-modernizer
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
   - grill-with-docs
 loop-eligible: false
 

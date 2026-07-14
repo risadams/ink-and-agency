@@ -20,7 +20,7 @@ Invoke this skill by:
   - "just-start"
 - Running the slash command: `/task-initiation`
 
-The skill does **not** activate for "make me a plan" — for that, route to [request-refactor-plan](../request-refactor-plan/), [grill-me](../grill-me/), or [clarity-council](../clarity-council/).
+The skill does **not** activate for "make me a plan" — for that, route to [codebase-plan-refactor](../codebase-plan-refactor/), [grill-me](../grill-me/), or [clarity-council](../clarity-council/).
 
 ## What it does
 
@@ -220,7 +220,7 @@ A: Say "done" and the skill will give you the next ≤30-second action. The loop
 A: Say what you'd rather do instead and the skill will recalibrate. The point is to get *something* started, not to commit to a specific path.
 
 **Q: Why won't the skill make a plan?**
-A: Because planning is what got you stuck. If you genuinely need a plan, use [request-refactor-plan](../request-refactor-plan/) or [grill-me](../grill-me/). Task-initiation is specifically for when planning is the trap.
+A: Because planning is what got you stuck. If you genuinely need a plan, use [codebase-plan-refactor](../codebase-plan-refactor/) or [grill-me](../grill-me/). Task-initiation is specifically for when planning is the trap.
 
 **Q: How is this different from a todo list?**
 A: A todo list says "do this 1-hour task." Task-initiation says "type these 7 characters in this file." Different unit of work.
@@ -228,7 +228,7 @@ A: A todo list says "do this 1-hour task." Task-initiation says "type these 7 ch
 ## Related skills
 
 - **[hyperfocus-recovery](../hyperfocus-recovery/)** — sibling for the inverse case: you *were* working and got pulled away and now don't know where to re-enter. Same shape of output (one literal action).
-- **[request-refactor-plan](../request-refactor-plan/)** — when you actually do need a plan.
+- **[codebase-plan-refactor](../codebase-plan-refactor/)** — when you actually do need a plan.
 - **[grill-me](../grill-me/)** — when the stall is "I don't know what I'm doing" rather than "I can't start."
 - **[interest-capture](../interest-capture/)** — when the stall is because a hyperfixation just lit up. Capture it, then return here.
 

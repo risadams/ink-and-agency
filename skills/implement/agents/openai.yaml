@@ -1,0 +1,6 @@
+# Generated from skills/implement/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Implement"
+  short_description: "Build through a tunable pipeline (every phase skippable)"
+policy:
+  allow_implicit_invocation: false

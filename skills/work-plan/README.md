@@ -147,7 +147,7 @@ A: Rule it out of scope: close the ticket and leave one line in Out of scope. It
 
 - **[grill-me](../grill-me/)** — the one-question-at-a-time discipline behind naming the destination and resolving grilling tickets.
 - **[research](../research/)** — background subagents that resolve `research`-type tickets in parallel.
-- **[request-refactor-plan](../request-refactor-plan/)** — when the effort is specifically an incremental refactor with known steps; produces an executable plan rather than a decision map.
+- **[codebase-plan-refactor](../codebase-plan-refactor/)** — when the effort is specifically an incremental refactor with known steps; produces an executable plan rather than a decision map.
 - **[idea-generate](../idea-generate/)** — when the effort is still upstream of a destination and you're generating the options themselves.
 
 ## Files

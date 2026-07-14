@@ -48,10 +48,10 @@ $skillPatterns = @{
     'issue-suggest-component'       = @{ 'related-skills' = @(); 'loop-eligible' = 'false' }
 
     # Code/Codebase domain
-    'codebase-explain'              = @{ 'related-skills' = @('request-refactor-plan'); 'loop-eligible' = 'false' }
-    'codebase-improve-architecture' = @{ 'related-skills' = @('request-refactor-plan', 'grill-with-docs'); 'loop-eligible' = 'false' }
+    'codebase-explain'              = @{ 'related-skills' = @('codebase-plan-refactor'); 'loop-eligible' = 'false' }
+    'codebase-improve-architecture' = @{ 'related-skills' = @('codebase-plan-refactor', 'grill-with-docs'); 'loop-eligible' = 'false' }
     'codebase-churn'                = @{ 'related-skills' = @(); 'loop-eligible' = 'false' }
-    'request-refactor-plan'         = @{ 'related-skills' = @('codebase-improve-architecture'); 'loop-eligible' = 'false' }
+    'codebase-plan-refactor'         = @{ 'related-skills' = @('codebase-improve-architecture'); 'loop-eligible' = 'false' }
 
     # Git domain
     'branch-rebase'                 = @{ 'related-skills' = @('branch-resolve-conflicts'); 'loop-eligible' = 'false' }

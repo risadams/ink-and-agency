@@ -1,4 +1,0 @@
-# Generated from skills/request-refactor-plan/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Request Refactor Plan"
-  short_description: "Create a detailed refactor plan with tiny commits via user interview, then file it as a..."

@@ -74,7 +74,7 @@ Spec — exact reproduction of `Format-JiraKanbanForMermaid`:
 flowchart
 
     subgraph Blocked ["Blocked"]
-        SC2_1234["SC2-1234<br/>Truncated summary…<br/>👤 Alex Rivera"]
+        SC2_1234["PRJ-1234<br/>Truncated summary…<br/>👤 Alex Rivera"]
     end
 
     subgraph Ready ["Ready"]

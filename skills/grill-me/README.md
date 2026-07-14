@@ -192,7 +192,7 @@ A: No. The skill cares about your plan being *understood*. If your plan is bad, 
 
 - **[grill-with-docs](../grill-with-docs/)** — same shape, but anchored to project documentation and updates docs inline.
 - **[clarity-council](../clarity-council/)** — for getting *other* perspectives instead of stress-testing your own plan.
-- **[request-refactor-plan](../request-refactor-plan/)** — Phase 4 of that skill borrows the grill-me discipline for the implementation interview.
+- **[codebase-plan-refactor](../codebase-plan-refactor/)** — Phase 4 of that skill borrows the grill-me discipline for the implementation interview.
 - **[writing-draft-article](../writing-draft-article/)** — Phase 1 of that skill can delegate to grill-me for thesis stress-testing.
 
 ## Files

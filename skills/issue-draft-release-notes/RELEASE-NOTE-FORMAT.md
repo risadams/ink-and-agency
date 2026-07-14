@@ -80,5 +80,5 @@ upgrading, or integrations using them will stop authenticating.
 
 **Internal (no customer-facing note):**
 
-> *Ticket SC2-1234 is an internal refactor with no user-visible change.
+> *Ticket PRJ-1234 is an internal refactor with no user-visible change.
 > No customer release note recommended.*

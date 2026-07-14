@@ -4,7 +4,7 @@ description: "Use this agent when you need a maintainer-ready README built from 
 tools: Read, Write, Edit, Bash, Glob, Grep, WebFetch, WebSearch
 model: sonnet
 related-skills:
-  - request-refactor-plan
+  - codebase-plan-refactor
 related-agents:
   - refactoring-specialist
 loop-eligible: false
