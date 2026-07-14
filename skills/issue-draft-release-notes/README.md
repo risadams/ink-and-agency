@@ -16,9 +16,9 @@ Given a Jira ticket key, the skill:
 ## Usage
 
 ```text
-/issue-draft-release-notes SC2-1234
-"draft a release note for SC2-1234"
-"what changed in SC2-1234 — write it up for customers"
+/issue-draft-release-notes PRJ-1234
+"draft a release note for PRJ-1234"
+"what changed in PRJ-1234 — write it up for customers"
 ```
 
 If you pass only a number, the default project key is read from memory (`reference_jira_default_project.md`).

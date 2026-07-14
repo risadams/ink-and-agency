@@ -224,7 +224,7 @@ For each item with `age ≥ 3`, scan the current briefing window's data (the ema
 - **Calendar — scheduled touchpoint.** A meeting in the briefing window or today's calendar lists the named person as an attendee AND is in a context plausibly related to the item (1:1, project sync, review). Standing all-hands meetings (CCB, knowledge transfer, morning coffee) do **not** count.
 - **Jira/MR — direct activity.** A `[JIRA]` or `gitlab` notification email in the window references the exact ticket key or MR number in the item's signature. Activity on adjacent tickets does **not** count.
 
-If none of the above are true, **fresh signal is absent**. Do not stretch — the failure mode is over-eager freshness inference (e.g., "Patel is in the feedback request email therefore the Patel SC2-23240 question is still live"). Tangential presence is not freshness.
+If none of the above are true, **fresh signal is absent**. Do not stretch — the failure mode is over-eager freshness inference (e.g., "Patel is in the feedback request email therefore the Patel PRJ-23240 question is still live"). Tangential presence is not freshness.
 
 **Phase C — Decide.**
 
