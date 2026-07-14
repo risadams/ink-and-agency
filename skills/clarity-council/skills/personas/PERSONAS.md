@@ -1,8 +1,18 @@
 # Personas
 
-Each persona lives in its own file. Edit, remove, or add files here to tune the council.
+The council resolves a persona name in two steps:
 
-## Active Personas
+1. **Local lens file** — if `<name>.md` exists in this folder, use it (Soul / Voice / Decision Lens).
+2. **Top-level specialist skill** — otherwise, if `skills/<name>/SKILL.md` exists, adopt that
+   skill's expertise as the persona's lens.
+
+This keeps every capability single-sourced: names that are also full specialist skills (e.g.
+`scrum-master`, `product-manager`) live **once**, as the skill — the council borrows them as voices
+rather than duplicating a contract here.
+
+## Council-only lenses (local files)
+
+Voices that exist only for council use — no standalone specialist skill:
 
 - [Growth Strategist](growth-strategist.md)
 - [Financial Officer](financial-officer.md)
@@ -11,10 +21,8 @@ Each persona lives in its own file. Edit, remove, or add files here to tune the 
 - [Customer Advocate](customer-advocate.md)
 - [Culture Lead](culture-lead.md)
 - [Product Owner](product-owner.md)
-- [Scrum Master](scrum-master.md)
 - [Senior Developer](senior-developer.md)
 - [Senior Architect](senior-architect.md)
-- [DevOps Engineer](devops-engineer.md)
 - [Security Expert](security-expert.md)
 - [QA Engineer](qa-engineer.md)
 - [Tech Lead](tech-lead.md)
@@ -22,17 +30,13 @@ Each persona lives in its own file. Edit, remove, or add files here to tune the 
 - [UI/UX Designer](ux-designer.md)
 - [Graphic Designer](graphic-designer.md)
 - [Release Train Engineer](release-train-engineer.md)
-- [Product Manager](product-manager.md)
-- [Data Engineer](data-engineer.md)
 - [Statistics Expert](statistics-expert.md)
 - [Infographics Expert](infographics-expert.md)
 - [Accessibility Expert](accessibility-expert.md)
 - [Site Reliability Engineer](site-reliability-engineer.md)
-- [Risk Manager](risk-manager.md)
 - [FinOps Engineer](finops-engineer.md)
 - [AI/ML Engineer](ai-ml-engineer.md)
 - [Knowledge Manager](knowledge-manager.md)
-- [Technical Writer](technical-writer.md)
 - [Compliance Officer](compliance-officer.md)
 - [Business Owner](business-owner.md)
 - [Social Media Marketer](social-media-marketer.md)
@@ -40,6 +44,17 @@ Each persona lives in its own file. Edit, remove, or add files here to tune the 
 - [Psychologist](psychologist.md)
 - [Researcher](researcher.md)
 - [Personal Assistant](personal-assistant.md)
+
+## Specialist skills used as lenses (resolve to a top-level skill)
+
+These names have no local file — the council adopts the matching specialist skill's expertise:
+
+- `data-engineer` → [`skills/data-engineer/`](../../../data-engineer/)
+- `devops-engineer` → [`skills/devops-engineer/`](../../../devops-engineer/)
+- `product-manager` → [`skills/product-manager/`](../../../product-manager/)
+- `risk-manager` → [`skills/risk-manager/`](../../../risk-manager/)
+- `scrum-master` → [`skills/scrum-master/`](../../../scrum-master/)
+- `technical-writer` → [`skills/technical-writer/`](../../../technical-writer/)
 
 ## Adding a Persona
 

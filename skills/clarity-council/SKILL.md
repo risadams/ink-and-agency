@@ -54,9 +54,12 @@ I'll iterate" (iterative).
 - **Context / constraints / desired outcome** — optional but strongly recommended.
 - **Iterative state** — for multi-turn sessions (sessionId, turn, history).
 
-Load each named persona's contract from [`skills/personas/`](skills/personas/) and apply its
-**Decision Lens**, **Preferred Frameworks**, and **Blind Spots**. Keep terminology consistent with
-the names in [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md).
+**Resolving a persona name** (two steps, see [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md)):
+first look for `skills/personas/<name>.md` and use its **Decision Lens**, **Preferred Frameworks**,
+and **Blind Spots**; if there's no such file, adopt the top-level specialist skill of that name
+(`skills/<name>/SKILL.md`, e.g. `scrum-master`, `product-manager`) as the persona's lens. Keep
+terminology consistent with the names in [`skills/personas/PERSONAS.md`](skills/personas/PERSONAS.md).
+
 ---
 
 ## Mode: single
@@ -66,7 +69,8 @@ perspective would help most.
 
 **Workflow**
 
-1. **Confirm the persona.** Load its contract from [`skills/personas/`](skills/personas/).
+1. **Confirm the persona.** Resolve its lens per the two-step rule above (local file, else the
+   top-level specialist skill of that name).
 2. **Understand the problem.** Ask a clarifying question only if a hard constraint (state, decision,
    budget/timeline/compliance, definition of success) is ambiguous.
 3. **Apply the lens.** Frame the analysis through the persona's Decision Lens and Preferred
