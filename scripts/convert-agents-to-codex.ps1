@@ -49,8 +49,8 @@ $ErrorActionPreference = 'Stop'
 
 $agentsDir = Join-Path $RepoRoot 'agents'
 $skillsDir = Join-Path $RepoRoot 'skills'
-$outDir    = Join-Path $RepoRoot '.codex/agents'
-$manifest  = Join-Path $RepoRoot 'plugin.json'
+$outDir = Join-Path $RepoRoot '.codex/agents'
+$manifest = Join-Path $RepoRoot 'plugin.json'
 
 if (-not (Test-Path $agentsDir)) { throw "agents/ not found under $RepoRoot" }
 New-Item -ItemType Directory -Force $outDir | Out-Null
@@ -101,7 +101,7 @@ function ConvertTo-DisplayName {
     $keep = @{ 'sp' = 'SP'; 'cli' = 'CLI'; 'sos' = 'SoS'; 'ai' = 'AI' }
     ($Slug -split '-' | ForEach-Object {
         if ($keep.ContainsKey($_)) { $keep[$_] }
-        else { $_.Substring(0,1).ToUpper() + $_.Substring(1) }
+        else { $_.Substring(0, 1).ToUpper() + $_.Substring(1) }
     }) -join ' '
 }
 
@@ -123,8 +123,8 @@ $generated = @()
 $errors = @()
 
 $agentFiles = Get-ChildItem -Path $agentsDir -Recurse -Filter '*.md' |
-    Where-Object { $_.Name -ne 'README.md' -and $_.FullName -notmatch '[\\/]\.github[\\/]' } |
-    Sort-Object FullName
+Where-Object { $_.Name -ne 'README.md' -and $_.FullName -notmatch '[\\/]\.github[\\/]' } |
+Sort-Object FullName
 
 foreach ($file in $agentFiles) {
     $raw = Get-Content -Path $file.FullName -Raw
@@ -139,7 +139,7 @@ foreach ($file in $agentFiles) {
     $name = $null
     $description = $null
     foreach ($line in ($frontmatter -split '\r?\n')) {
-        if ($line -match '^name:\s*(.+)$')        { $name = $Matches[1].Trim().Trim('"') }
+        if ($line -match '^name:\s*(.+)$') { $name = $Matches[1].Trim().Trim('"') }
         elseif ($line -match '^description:\s*(.+)$') { $description = $Matches[1].Trim().Trim('"') }
     }
 
@@ -181,8 +181,8 @@ Get-ChildItem -Path $outDir -Filter '*.toml' | Where-Object { $_.Name -notin $ge
 # are followed like any directory.
 $skillYamlCount = 0
 $skillFolders = Get-ChildItem -Path $skillsDir -Directory |
-    Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') } |
-    Sort-Object Name
+Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') } |
+Sort-Object Name
 
 foreach ($skill in $skillFolders) {
     $skillMd = Join-Path $skill.FullName 'SKILL.md'
@@ -194,17 +194,17 @@ foreach ($skill in $skillFolders) {
     }
     $fm = $Matches[1]
 
-    $skillName  = Get-FrontmatterScalar $fm 'name'
-    $skillDesc  = Get-FrontmatterScalar $fm 'description'
-    $override   = Get-FrontmatterScalar $fm 'codex-short-description'
-    if (-not $skillName)  { $skillName = $skill.Name }
-    if (-not $skillDesc)  { $errors += "${skillMd}: missing description"; continue }
+    $skillName = Get-FrontmatterScalar $fm 'name'
+    $skillDesc = Get-FrontmatterScalar $fm 'description'
+    $override = Get-FrontmatterScalar $fm 'codex-short-description'
+    if (-not $skillName) { $skillName = $skill.Name }
+    if (-not $skillDesc) { $errors += "${skillMd}: missing description"; continue }
 
     # User-invoked in Claude Code => must be user-invoked in Codex too.
     $userInvoked = $fm -match '(?m)^disable-model-invocation:\s*true\s*$'
 
     $display = ConvertTo-DisplayName $skillName
-    $short   = Get-ShortDescription $override $skillDesc
+    $short = Get-ShortDescription $override $skillDesc
 
     $yaml = @(
         "# Generated from skills/$($skill.Name)/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand."
@@ -247,7 +247,8 @@ if (Test-Path $agentsMd) {
     $agentsBody = (Get-Content -Path $agentsMd -Raw) -replace "`r`n", "`n"
     $header = "<!-- Generated from AGENTS.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand. Edit AGENTS.md instead. -->`n`n"
     [IO.File]::WriteAllText($claudeMd, $header + $agentsBody, [Text.UTF8Encoding]::new($false))
-} else {
+}
+else {
     $errors += "AGENTS.md not found -- cannot generate CLAUDE.md mirror"
 }
 
