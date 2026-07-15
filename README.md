@@ -1,5 +1,7 @@
 # Ink and Agency
 
+![Ink and Agency Skill Pack](docs/assets/skills-banner.svg)
+
 A **skills plugin** for **Claude Code and OpenAI Codex** — one installable unit, one primitive (skills):
 
 - **Ink** — workflow skills: writing, sprint/Scrum, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all.
@@ -40,6 +42,23 @@ ink-and-agency/
     ├── adr/                     # Architecture decision records
     └── assets/                  # Banners, skill map
 ```
+
+## Skill Map
+
+| Area | Example skills | What they help with |
+| --- | --- | --- |
+| Writing & messaging | `writing-humanize`, `writing-tone-check`, `writing-apology-calibrator`, `writing-social-script` | Composing long-form text, calibrating outgoing messages, scripting awkward conversations |
+| Analysis | `break-it-down`, `codebase-explain`, `issue-triage` | Making sense of a codebase, decoding incoming messages, diagnosing bugs faster |
+| Collaboration | `clarity-council`, `grill-me`, `grill-with-docs` | Getting sharper decisions through structured discussion |
+| Planning | `sprint-plan`, `sprint-review`, `daily-briefing`, `handoff` | Organizing work, progress, reporting, and context continuity |
+| Focus & state | `task-initiation`, `hyperfocus-recovery`, `idea-decision-maker`, `energy-budget`, `meeting-decompression` | Defeating stalls, recovering context, calibrating load — built with ND-friendly defaults |
+| Git & workflow | `branch-rebase`, `branch-resolve-conflicts` | Clean rebases with trivial conflict auto-resolution, complex conflict resolution with intent preservation |
+| Specialists | `python-pro`, `backend-developer`, `security-auditor`, `terraform-engineer` | Deep domain judgment across language, infra, data/AI, security, and product |
+| Workspace tools | `obsidian-vault`, `obsidian-markdown`, `obsidian-canvas` | Managing notes, structure, and visual knowledge maps |
+
+![Skill Map](docs/assets/skill-map.svg)
+
+The full inventory lives in **[skills/CLAUDE.md](skills/CLAUDE.md#skills-inventory)** — the source of truth for the skill list and descriptions. Skills are grouped into category folders; see **[skills/CATEGORIES.md](skills/CATEGORIES.md)** for the full index.
 
 ## Install
 
@@ -115,6 +134,39 @@ Not sure which skill fits? Run `/ink-and-agency:which-skill` — it routes over 
 | **Automatic** | Skills auto-fire on a matching task, *except* those marked user-invoked (same list as above), which Codex keeps out of automatic reach via `policy.allow_implicit_invocation: false`. |
 
 A skill's invocation mode is identical on both hosts — it's authored once in `SKILL.md` frontmatter and projected to each host, so a skill that's user-invoked in Claude Code is user-invoked in Codex too.
+
+## How skills compose
+
+This pack is **skills-only** — one primitive covering both quick workflow techniques and deep domain
+specialists (the latter, like `backend-developer` and `security-auditor`, were formerly subagents; see
+[ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md)).
+
+### Two kinds of skill
+
+| | Workflow skill | Specialist skill |
+| --- | --- | --- |
+| **Shape** | A triggered procedure | A persona expert |
+| **Examples** | `code-review`, `writing-humanize`, `sprint-plan` | `backend-developer`, `security-auditor`, `python-pro` |
+| **Use when** | You want a structured technique | You want domain judgment |
+
+### Common patterns
+
+#### Pattern 1: workflow skill invokes a specialist
+
+```text
+implement skill
+  → writes the API
+  → code-review skill → validated diff
+```
+
+#### Pattern 2: a flow chains skills
+
+```text
+grill → work-plan → plan-to-spec → plan-to-tickets → implement (tdd + code-review)
+```
+
+Skills declare workflow neighbours in the `related-skills` frontmatter field. For the full model, see
+**[skills/INTEGRATION.md](skills/INTEGRATION.md)**; for named end-to-end flows, see **[skills/FLOWS.md](skills/FLOWS.md)**.
 
 ## Conventions
 
