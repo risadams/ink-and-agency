@@ -12,12 +12,14 @@ This is a **Claude Skills Pack** — a collection of prompt-based skill definiti
 
 Skills are organized into **category subfolders**; discovery is recursive (a `SKILL.md` at any
 depth is a skill). See [CATEGORIES.md](CATEGORIES.md) for the 15 categories and the full index.
+The `clarity-council` skill sits at the top level of `skills/` (not inside a category) as a featured
+skill many others delegate to.
 
 ```text
 <category>/<name>/SKILL.md        # Skill entry point (YAML frontmatter + instructions)
 <category>/<name>/*.md            # Supporting docs, formats, or deep-dive modules
 <category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED)
-research-analysis/clarity-council/  # the clarity-council skill (reads persona/)
+clarity-council/                  # featured top-level skill (reads persona/)
 persona/                          # shared council persona contracts (reference docs, not skills)
 persona/PERSONAS.md               #   persona index; persona/GROUPS.md = pre-made panels
 ```

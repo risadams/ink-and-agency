@@ -29,7 +29,8 @@ ink-and-agency/
 │   ├── <category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
 │   ├── language-specialists/    #   e.g. python-pro, rust-engineer, typescript-pro
 │   ├── infrastructure/          #   e.g. kubernetes-specialist, terraform-engineer
-│   ├── research-analysis/clarity-council/  # the persona council (skill w/ bundled personas)
+│   ├── clarity-council/         # the persona council — a featured top-level skill w/ bundled personas
+│   ├── persona/                 # shared council persona contracts (reference docs, not skills)
 │   ├── ... (15 categories — see CATEGORIES.md)
 │   ├── CATEGORIES.md            # Browsable index of all skills by category
 │   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)

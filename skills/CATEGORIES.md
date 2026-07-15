@@ -4,10 +4,15 @@ All skills live under `skills/<category>/<name>/SKILL.md`. Categories are folder
 browsability only — a skill's invocation name is its leaf folder and is independent of
 category (see [ADR-0007](../docs/adr/ADR-0007-skill-categories.md)). Discovery is recursive.
 
-**199 skills across 15 categories.**
+**199 skills across 15 categories**, plus the featured top-level [`clarity-council`](clarity-council/) skill.
 
+> **Featured top-level skill:** [`clarity-council`](clarity-council/) lives at the root of `skills/`
+> rather than inside a category — it's the persona-consultation engine that many other skills delegate
+> to, and it ships with its bundled `persona/` library. It's an ordinary invokable skill; the top-level
+> placement just reflects how central it is.
+>
 > **Not a category:** `skills/persona/` holds the 46 council persona contracts — shared reference
-> documents (no `SKILL.md`), read by the [`clarity-council`](research-analysis/clarity-council/)
+> documents (no `SKILL.md`), read by the [`clarity-council`](clarity-council/)
 > skill. They're advisory voices you consult, not invokable skills, so they don't appear below.
 
 ## Business & Product &nbsp;`business-product` (18)
@@ -226,12 +231,12 @@ Testing, security auditing, compliance, and performance.
 - [`test-automator`](quality-security/test-automator/) — Use when you need to build, implement, or enhance automated test frameworks, create test scripts, or integrate testing into CI/CD pipelines.
 - [`ui-ux-tester`](quality-security/ui-ux-tester/) — Use when you need exhaustive UI and UX functionality testing driven by documented user flows, with browser or desktop interaction tooling an
 
-## Research & Analysis &nbsp;`research-analysis` (12)
+## Research & Analysis &nbsp;`research-analysis` (11)
 
-Research, decision support, idea work, and the clarity-council.
+Research, decision support, and idea work. (The [`clarity-council`](clarity-council/) skill — which
+many of these delegate to — lives at the top level; see the callout at the top of this file.)
 
 - [`ab-test-analysis`](research-analysis/ab-test-analysis/) — Use when the user wants to analyze A/B test results, interpret p-values, determine statistical significance, or make a ship/no-ship decision
-- [`clarity-council`](research-analysis/clarity-council/) — Facilitates structured single-persona or multi-persona consultation for strategy, product, engineering, operations, and risk decisions.
 - [`cohort-analysis`](research-analysis/cohort-analysis/) — Use when the user wants to analyze retention, cohort behavior, engagement trends, or understand how different user groups perform over time.
 - [`data-researcher`](research-analysis/data-researcher/) — Use when you need to discover, collect, and validate data from multiple sources to fuel analysis and decision-making.
 - [`first-principles-thinking`](research-analysis/first-principles-thinking/) — Use when the user wants to challenge assumptions, break down a complex problem from scratch, or approach something with first principles rea
