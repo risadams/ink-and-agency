@@ -1,0 +1,33 @@
+# Normalize line endings across all hosts and contributors.
+# The pack is prompt-based text; LF everywhere keeps diffs clean and the
+# PowerShell scripts (parsed by pwsh, which is LF-agnostic) unaffected.
+
+# Default: treat everything as text and check out with LF.
+* text=auto eol=lf
+
+# Explicit text types (belt-and-suspenders; also drives GitHub language stats/diffs).
+*.md        text eol=lf
+*.markdown  text eol=lf
+*.json      text eol=lf
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.ps1       text eol=lf
+*.psm1      text eol=lf
+*.psd1      text eol=lf
+*.sh        text eol=lf
+*.svg       text eol=lf
+*.txt       text eol=lf
+LICENSE     text eol=lf
+
+# Binary assets (none tracked today, but declare intent so future adds are safe).
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.pdf       binary
+*.woff      binary
+*.woff2     binary
+*.ttf       binary
+*.otf       binary
+*.zip       binary
