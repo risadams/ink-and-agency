@@ -3,6 +3,7 @@ name: which-skill
 description: Router over this pack's skills and flows. Ask it "which skill fits X" when you don't remember what's available.
 disable-model-invocation: true
 codex-short-description: "Find the right skill for your situation"
+compatibility: claude-code codex opencode
 ---
 
 # Which Skill

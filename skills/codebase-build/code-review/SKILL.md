@@ -2,6 +2,7 @@
 name: code-review
 description: Two-axis review of the working diff since a fixed point — Standards (does it follow this repo's coding standards + a code-smell baseline?) and Spec (does it match the originating ticket/spec?). Runs both as parallel sub-agents. Use to review a branch, work-in-progress changes, or "review since X" — before an MR exists.
 codex-short-description: "Two-axis (Standards + Spec) review of the working diff"
+compatibility: claude-code codex opencode
 ---
 
 # Code Review

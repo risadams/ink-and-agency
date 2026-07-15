@@ -3,6 +3,7 @@ name: implement
 description: Build a piece of work (ticket, spec, or free-form request) through a tunable pipeline — test-first, verify, review, and track — where every phase can be skipped or tuned. Use when the user wants to actually build something, from a throwaway prototype to a CCB-gated feature.
 codex-short-description: "Build through a tunable pipeline (every phase skippable)"
 disable-model-invocation: true
+compatibility: claude-code codex opencode
 ---
 
 # Implement

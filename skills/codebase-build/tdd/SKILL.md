@@ -2,6 +2,7 @@
 name: tdd
 description: Test-driven development — the red → green loop and the rules that make its tests worth keeping. Use when the user wants to build a feature or fix a bug test-first, mentions "red-green-refactor", TDD, or integration tests.
 codex-short-description: "The red → green loop, done so tests are worth keeping"
+compatibility: claude-code codex opencode
 ---
 
 # Test-Driven Development

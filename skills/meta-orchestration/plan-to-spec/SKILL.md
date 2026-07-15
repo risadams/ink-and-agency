@@ -3,6 +3,7 @@ name: plan-to-spec
 description: Synthesize the current conversation into a spec (PRD) and stage it as a local file. Use when a design discussion, grilling session, or work-plan is settled and you want it written up as a spec — no interview, just synthesis. Publishing to Confluence is opt-in, only on request.
 disable-model-invocation: true
 codex-short-description: "Synthesize a settled discussion into a local spec file"
+compatibility: claude-code codex opencode
 ---
 
 # Plan to Spec

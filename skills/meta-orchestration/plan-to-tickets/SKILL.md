@@ -3,6 +3,7 @@ name: plan-to-tickets
 description: Break a spec, plan, or the current conversation into a local, numbered, spec-kit-style task list of tracer-bullet vertical slices with explicit dependencies. Use when a spec or plan is ready to become actionable tasks. Pushing to Jira is opt-in, only on request.
 disable-model-invocation: true
 codex-short-description: "Break a plan into a local numbered task list"
+compatibility: claude-code codex opencode
 ---
 
 # Plan to Tickets
