@@ -78,7 +78,11 @@ if (-not $SkipConvert) {
     $converter = Join-Path $PSScriptRoot 'convert-agents-to-codex.ps1'
     Write-Host "Regenerating Codex artifacts via convert-agents-to-codex.ps1..." -ForegroundColor Cyan
     & $converter -RepoRoot $RepoRoot
-    if ($LASTEXITCODE -ne 0) {
+    # $LASTEXITCODE is $null when the child script succeeds without an explicit
+    # `exit` (PowerShell leaves it unset). `if ($LASTEXITCODE)` is truthy only
+    # for a non-null, non-zero code, so a clean run ($null or 0) never throws;
+    # a real failure exits non-zero (or throws, which propagates through `&`).
+    if ($LASTEXITCODE) {
         throw "convert-agents-to-codex.ps1 failed with exit code $LASTEXITCODE"
     }
 }

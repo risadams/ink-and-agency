@@ -239,3 +239,7 @@ if ($errors.Count -gt 0) {
     $errors | ForEach-Object { Write-Host "[ERROR] $_" -ForegroundColor Red }
     exit 1
 }
+
+# Explicit success code so callers that inspect $LASTEXITCODE (e.g.
+# bump-version.ps1) see 0 rather than an unset $null after `& this-script`.
+exit 0
