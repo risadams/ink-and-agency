@@ -29,7 +29,7 @@ Skill: [runs council, scores pros/cons, renders table, gives recommendation]
 
 1. **Capture the ideas + criteria.** If the user gives one idea, evaluate it standalone. If two or more, evaluate each, then compare. If no criteria are stated, ask one targeted question to surface 2–4 (cost, time, risk, fit, reversibility, etc.).
 2. **Optional grill.** If the idea is vague or rests on unstated assumptions, invoke [grill-me](../../research-analysis/grill-me/) for a short pass to surface them — keep it tight (3–5 questions). Skip if the idea is concrete.
-3. **Council pros/cons pass.** Invoke [clarity-council](../../research-analysis/clarity-council/) with personas that argue both sides. Default trio: **Advocate** (lists upside), **Skeptic** (lists downside), **Pragmatist** (lists operational reality). For technical ideas, add **Senior Engineer**; for product ideas, **Customer Advocate**; for personal/life choices, **Psychologist**.
+3. **Council pros/cons pass.** Invoke [clarity-council](../../clarity-council/) with personas that argue both sides. Default trio: **Advocate** (lists upside), **Skeptic** (lists downside), **Pragmatist** (lists operational reality). For technical ideas, add **Senior Engineer**; for product ideas, **Customer Advocate**; for personal/life choices, **Psychologist**.
 4. **Score each item.** For every pro and con the council produced, assign:
    - **Impact** (1–5): if this turns out to be true, how much does it matter?
    - **Confidence** (1–5): how sure are we it *is* true / will materialize?

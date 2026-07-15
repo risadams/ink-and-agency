@@ -195,7 +195,7 @@ A: Yes. The skill will start from scratch. Be prepared for it to spend the first
 ## Related skills
 
 - **[grill-me](../../research-analysis/grill-me/)** — the simpler version: plain grilling, no docs context, no docs updates.
-- **[clarity-council](../../research-analysis/clarity-council/)** — for multiple-perspective decisions; pairs well when grill-with-docs surfaces a real tradeoff that warrants several voices.
+- **[clarity-council](../../clarity-council/)** — for multiple-perspective decisions; pairs well when grill-with-docs surfaces a real tradeoff that warrants several voices.
 - **[codebase-improve-architecture](../../codebase-build/codebase-improve-architecture/)** — uses the same documentation discipline (CONTEXT.md, ADRs); pair for refactor-shaped grillings.
 
 ## Files

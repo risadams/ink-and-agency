@@ -157,7 +157,7 @@ A: Yes — if SP was previously set and changed, the council will note it as evi
 ## Related skills
 
 - **[issue-feature-breakdown](../../business-product/issue-feature-breakdown/)** — for features (vs atomic stories), decompose first then estimate each piece.
-- **[clarity-council](../../research-analysis/clarity-council/)** — Step 4 invokes this directly. Use standalone when you want the same panel to estimate something that isn't a Jira ticket.
+- **[clarity-council](../../clarity-council/)** — Step 4 invokes this directly. Use standalone when you want the same panel to estimate something that isn't a Jira ticket.
 
 ## Files
 

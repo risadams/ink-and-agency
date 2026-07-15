@@ -19,7 +19,7 @@ Invoke this skill by:
   - "this stung"
 - Running the slash command: `/rejection-sensitivity-check`
 
-The skill always invokes [clarity-council](../../research-analysis/clarity-council/) with `psychologist + devils-advocate` — the second perspective is the whole value.
+The skill always invokes [clarity-council](../../clarity-council/) with `psychologist + devils-advocate` — the second perspective is the whole value.
 
 ## What it does
 
@@ -226,7 +226,7 @@ A: No. It's calibration. It can help you not spiral on individual messages; it c
 - **[break-it-down](../../exec-function/break-it-down/)** — general-purpose decoder. Use that when the message didn't sting but is ambiguous; use this one when the message specifically triggered an RSD reaction.
 - **[meeting-decompression](../../exec-function/meeting-decompression/)** — for the post-meeting equivalent: sorting "actually a problem" from "RSD noise".
 - **[writing-tone-check](../../writing/writing-tone-check/)** — sibling that runs in the other direction (outgoing drafts).
-- **[clarity-council](../../research-analysis/clarity-council/)** — the psychologist + devils-advocate pairing is what makes the calibration honest.
+- **[clarity-council](../../clarity-council/)** — the psychologist + devils-advocate pairing is what makes the calibration honest.
 
 ## Files
 

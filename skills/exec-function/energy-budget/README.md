@@ -20,7 +20,7 @@ Invoke this skill by:
   - "I'm already tired and it's [time]"
 - Running the slash command: `/energy-budget`
 
-For non-trivial budgets (>4 items, spanning a full day, or starting from an already-drained baseline) the skill invokes [clarity-council](../../research-analysis/clarity-council/) with `personal-assistant + psychologist`. Trivial budgets are scored inline.
+For non-trivial budgets (>4 items, spanning a full day, or starting from an already-drained baseline) the skill invokes [clarity-council](../../clarity-council/) with `personal-assistant + psychologist`. Trivial budgets are scored inline.
 
 ## What it does
 
@@ -249,7 +249,7 @@ The intensity rubric is the most subjective part of the skill, so it's spelled o
 
 Cost is duration × intensity (hours × intensity score). Capacity is calibrated from baseline: drained = 18-22, normal = 24-28, rested = 30+. These ranges are intentionally approximate — the skill doesn't claim measurement-grade precision.
 
-For non-trivial budgets the skill invokes [clarity-council](../../research-analysis/clarity-council/) in `council_consult` mode with `[personal-assistant, psychologist]`:
+For non-trivial budgets the skill invokes [clarity-council](../../clarity-council/) in `council_consult` mode with `[personal-assistant, psychologist]`:
 - The personal-assistant ranks defers by recoverable energy and considers logistics (who needs to be notified, what's the cost of moving it).
 - The psychologist names the masking and recovery dynamics and validates the baseline self-assessment.
 
@@ -275,7 +275,7 @@ A: Personal-assistant on its own would optimize for clock time and miss the mask
 - **[meeting-decompression](../../exec-function/meeting-decompression/)** — for after a meeting that ate more cost than budgeted.
 - **[idea-decision-maker](../../research-analysis/idea-decision-maker/)** — when budget reveals you can't do everything and have to pick.
 - **[daily-briefing](../../exec-function/daily-briefing/)** — covers similar territory for general daily planning; energy-budget is the spoon-aware specialization.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the personal-assistant + psychologist engine.
+- **[clarity-council](../../clarity-council/)** — the personal-assistant + psychologist engine.
 
 ## Files
 

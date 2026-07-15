@@ -224,7 +224,7 @@ A: It suggests follow-up *questions* to reduce ambiguity. The reply is your call
 
 ## Related skills
 
-- **[clarity-council](../../research-analysis/clarity-council/)** — for structured analysis of decisions (not messages). When the decoded message reveals a real decision to make, the council can take it from there.
+- **[clarity-council](../../clarity-council/)** — for structured analysis of decisions (not messages). When the decoded message reveals a real decision to make, the council can take it from there.
 
 ## Files
 

@@ -1,6 +1,6 @@
 # Idea Choice
 
-Deliberate pros/cons analysis with weighted scoring and a written recommendation. Takes one or more ideas/concepts, runs a [clarity-council](../../research-analysis/clarity-council/) pass to surface arguments on both sides (with an optional [grill-me](../../research-analysis/grill-me/) preflight to expose hidden assumptions), scores each pro and con on **Impact × Confidence** (1–25), and renders a markdown table per idea — plus a comparison table when multiple ideas are evaluated together. The output is a defensible record, not a vibe.
+Deliberate pros/cons analysis with weighted scoring and a written recommendation. Takes one or more ideas/concepts, runs a [clarity-council](../../clarity-council/) pass to surface arguments on both sides (with an optional [grill-me](../../research-analysis/grill-me/) preflight to expose hidden assumptions), scores each pro and con on **Impact × Confidence** (1–25), and renders a markdown table per idea — plus a comparison table when multiple ideas are evaluated together. The output is a defensible record, not a vibe.
 
 ## Why this exists
 
@@ -66,7 +66,7 @@ The skill captures the idea(s) plus optional criteria, runs the relevant sibling
 
 ### External systems used
 
-- **[clarity-council](../../research-analysis/clarity-council/)** — required, for the pros/cons generation pass.
+- **[clarity-council](../../clarity-council/)** — required, for the pros/cons generation pass.
 - **[grill-me](../../research-analysis/grill-me/)** — optional, for surfacing hidden assumptions when the idea is vague.
 
 ## How to use it
@@ -156,7 +156,7 @@ The skill follows this workflow per request:
 
 1. **Capture** — read the idea(s) and any user-supplied criteria. Ask one question if criteria are missing.
 2. **Optional grill** — invoke [grill-me](../../research-analysis/grill-me/) for 3–5 questions if the idea is vague. Skip if concrete.
-3. **Council** — invoke [clarity-council](../../research-analysis/clarity-council/) with persona trio appropriate to the domain (default: Advocate / Skeptic / Pragmatist; technical adds Senior Engineer; product adds Customer Advocate; personal adds Psychologist).
+3. **Council** — invoke [clarity-council](../../clarity-council/) with persona trio appropriate to the domain (default: Advocate / Skeptic / Pragmatist; technical adds Senior Engineer; product adds Customer Advocate; personal adds Psychologist).
 4. **Score** — for every pro and con, assign Impact (1–5) and Confidence (1–5). Weight = product.
 5. **Aggregate** — sum weighted pros, sum weighted cons, compute net.
 6. **Render** — pros table, cons table, totals, recommendation.
@@ -203,7 +203,7 @@ A: Adjust it and re-aggregate. The numbers exist to be argued with — that's th
 
 - **[idea-decision-maker](../../research-analysis/idea-decision-maker/)** — when you need a fast pick, not a written analysis. See the comparison table above.
 - **[idea-generate](../../research-analysis/idea-generate/)** — when you don't have the options yet. Runs before this skill.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the multi-persona engine that powers the pros/cons pass.
+- **[clarity-council](../../clarity-council/)** — the multi-persona engine that powers the pros/cons pass.
 - **[grill-me](../../research-analysis/grill-me/)** — for surfacing hidden assumptions before scoring.
 - **[time-reality-check](../../exec-function/time-reality-check/)** — useful when an idea involves a time estimate the user might be miscalibrated on (feeds into Confidence scores).
 - **[energy-budget](../../exec-function/energy-budget/)** — useful when the criteria include "do I have the energy for this." Can feed the council a load score.

@@ -180,7 +180,7 @@ A: Two to five minutes for a Jira ticket with rich context; under two minutes fo
 - **[issue-dup-find](../../business-product/issue-dup-find/)** — when you suspect the bug has already been reported, run this first. Triage assumes the ticket is novel.
 - **[issue-feature-breakdown](../../business-product/issue-feature-breakdown/)** — for *features* (not bugs), use the breakdown skill instead. It surfaces ambiguity rather than ranking causes.
 - **[codebase-explain](../../codebase-build/codebase-explain/)** — Phase 2 invokes this directly. Run it standalone when you just want the module map without the rest of the triage flow.
-- **[clarity-council](../../research-analysis/clarity-council/)** — Phase 5 invokes this. Worth knowing standalone if you want to apply the same persona panel to a non-bug decision.
+- **[clarity-council](../../clarity-council/)** — Phase 5 invokes this. Worth knowing standalone if you want to apply the same persona panel to a non-bug decision.
 - **[grill-me](../../research-analysis/grill-me/)** — Phase 4 invokes this when gaps are material. Useful standalone for stress-testing any plan.
 
 ## Files

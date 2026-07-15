@@ -83,7 +83,7 @@ The handoff is ready to share with the next agent, or to paste into a GitHub iss
 
 - ❌ **Handing off without committing or saving.** A handoff that references uncommitted work is useless to the next agent. Commit first.
 - ❌ **Repeating what's in code or closed issues.** If the work is already documented in a commit message, issue, or ADR, just link to it.
-- ❌ **Asking the skill to decide priorities.** The handoff lists what's left; the next agent (or you, in the next session) decides what matters. Use [clarity-council](../../research-analysis/clarity-council/) or [idea-choice](../../research-analysis/idea-choice/) for prioritization.
+- ❌ **Asking the skill to decide priorities.** The handoff lists what's left; the next agent (or you, in the next session) decides what matters. Use [clarity-council](../../clarity-council/) or [idea-choice](../../research-analysis/idea-choice/) for prioritization.
 - ❌ **Writing a handoff for a conversation that's still active.** If you're still working, keep going. Handoff when you're stepping away.
 - ❌ **Storing sensitive data in the handoff.** The skill redacts obvious patterns (API keys, tokens), but it's your job not to paste them in chat in the first place.
 
@@ -188,7 +188,7 @@ A: The skill compresses ruthlessly. Long conversations produce short handoffs �
 - **[hyperfocus-recovery](../../exec-function/hyperfocus-recovery/)** — inverse case: you were deep in work and got interrupted. Reconstructs your re-entry point from git/file artifacts.
 - **[task-initiation](../../exec-function/task-initiation/)** — next agent is stuck starting. Use this if the handoff says "ready to begin, but unclear where to start."
 - **[grill-me](../../research-analysis/grill-me/)** — next agent needs to stress-test the plan or design. Reference from the handoff if you want the next session to challenge assumptions.
-- **[clarity-council](../../research-analysis/clarity-council/)** — if the handoff surfaces a decision that needs multiple perspectives, the next agent can invoke this.
+- **[clarity-council](../../clarity-council/)** — if the handoff surfaces a decision that needs multiple perspectives, the next agent can invoke this.
 
 ## Files
 

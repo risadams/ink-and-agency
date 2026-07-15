@@ -23,7 +23,7 @@ The skill always asks three setup questions before writing.
 
 ## What it does
 
-The skill produces a one-line scenario restatement, then three phrasings — direct, neutral, softened — each with: the script (deliverable in one breath), a predicted recipient reaction, and a follow-up line for after their reaction. It closes with a single exit line for if the conversation escalates. For non-trivial scripts (emotionally loaded, weighty recipient) it invokes [clarity-council](../../research-analysis/clarity-council/) with `psychologist + customer-advocate`. The psychologist handles delivery and likely recipient response; the customer-advocate ensures the script actually serves the user's goal, not just defuses the moment.
+The skill produces a one-line scenario restatement, then three phrasings — direct, neutral, softened — each with: the script (deliverable in one breath), a predicted recipient reaction, and a follow-up line for after their reaction. It closes with a single exit line for if the conversation escalates. For non-trivial scripts (emotionally loaded, weighty recipient) it invokes [clarity-council](../../clarity-council/) with `psychologist + customer-advocate`. The psychologist handles delivery and likely recipient response; the customer-advocate ensures the script actually serves the user's goal, not just defuses the moment.
 
 ### Inputs
 
@@ -190,7 +190,7 @@ Skill:
 
 ## Internals
 
-The skill always asks three setup questions before writing — recipient, goal, channel — because each one changes the script meaningfully. For non-trivial scripts it invokes [clarity-council](../../research-analysis/clarity-council/) in `council_consult` mode with `[psychologist, customer-advocate]`:
+The skill always asks three setup questions before writing — recipient, goal, channel — because each one changes the script meaningfully. For non-trivial scripts it invokes [clarity-council](../../clarity-council/) in `council_consult` mode with `[psychologist, customer-advocate]`:
 
 - The psychologist handles the recipient's likely first reaction and the social cost of each phrasing.
 - The customer-advocate keeps the script anchored to the user's goal, not just to defusing the moment.
@@ -220,7 +220,7 @@ A: Use writing-social-script when you don't have a draft yet and need help findi
 - **[writing-cold-open](../../writing/writing-cold-open/)** — for when you just need the first sentence of a longer message.
 - **[writing-apology-calibrator](../../writing/writing-apology-calibrator/)** — for apology drafts specifically.
 - **[break-it-down](../../exec-function/break-it-down/)** — for decoding what *they* meant before you reply.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the personas powering the recipient prediction.
+- **[clarity-council](../../clarity-council/)** — the personas powering the recipient prediction.
 
 ## Files
 

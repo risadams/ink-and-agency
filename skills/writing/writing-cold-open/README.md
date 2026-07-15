@@ -20,7 +20,7 @@ Invoke this skill by:
   - "I've been staring at this message"
 - Running the slash command: `/writing-cold-open`
 
-The skill normally runs inline. For high-stakes openers (cold outreach to a stranger, sensitive subject, message drafted-and-deleted multiple times) it invokes [clarity-council](../../research-analysis/clarity-council/) with the `psychologist` persona for a landing-prediction per opening.
+The skill normally runs inline. For high-stakes openers (cold outreach to a stranger, sensitive subject, message drafted-and-deleted multiple times) it invokes [clarity-council](../../clarity-council/) with the `psychologist` persona for a landing-prediction per opening.
 
 ## What it does
 
@@ -194,7 +194,7 @@ The council-augmented version adds landing predictions because the stakes are hi
 
 ## Internals
 
-For most invocations the skill runs inline — three openings, no debate, exit. For high-stakes openers (cold outreach to strangers, sensitive subject matter, drafts the user has deleted multiple times) it invokes [clarity-council](../../research-analysis/clarity-council/) in `persona_consult` mode with `psychologist`, which adds a one-line landing prediction to each opening.
+For most invocations the skill runs inline — three openings, no debate, exit. For high-stakes openers (cold outreach to strangers, sensitive subject matter, drafts the user has deleted multiple times) it invokes [clarity-council](../../clarity-council/) in `persona_consult` mode with `psychologist`, which adds a one-line landing prediction to each opening.
 
 The three registers are deliberately the standard set:
 - **Direct** is the under-used option for most writers; included by default to keep it on the menu.
@@ -226,7 +226,7 @@ A: Cold-open = stuck on the first sentence. Social-script = need a whole scripte
 - **[writing-social-script](../../writing/writing-social-script/)** — for when you need the whole script, not just the opener.
 - **[writing-tone-check](../../writing/writing-tone-check/)** — for when you have a draft and want to know how it lands.
 - **[writing-apology-calibrator](../../writing/writing-apology-calibrator/)** — for apology drafts specifically.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the psychologist persona is used for high-stakes openers.
+- **[clarity-council](../../clarity-council/)** — the psychologist persona is used for high-stakes openers.
 
 ## Files
 

@@ -22,7 +22,7 @@ Pass the draft inline (paste it) along with the recipient relationship and the m
 
 ## What it does
 
-The skill produces three sections: (1) a plain restatement of what the draft is actually trying to say underneath the phrasing; (2) a landing-prediction table with rows for direct/clear, cold/curt, passive-aggressive, over-apologetic, and warm/collaborative, plus relationship-specific reads ("reads as challenging authority", "reads as oversharing") — each with Low/Medium/High probability and specific phrases as signals; (3) rewrite suggestions split into Keep / Soften / Strengthen, with optional full rewrite on request. For non-trivial drafts it invokes the [clarity-council](../../research-analysis/clarity-council/) `psychologist` persona for the landing prediction; trivial drafts are handled inline.
+The skill produces three sections: (1) a plain restatement of what the draft is actually trying to say underneath the phrasing; (2) a landing-prediction table with rows for direct/clear, cold/curt, passive-aggressive, over-apologetic, and warm/collaborative, plus relationship-specific reads ("reads as challenging authority", "reads as oversharing") — each with Low/Medium/High probability and specific phrases as signals; (3) rewrite suggestions split into Keep / Soften / Strengthen, with optional full rewrite on request. For non-trivial drafts it invokes the [clarity-council](../../clarity-council/) `psychologist` persona for the landing prediction; trivial drafts are handled inline.
 
 ### Inputs
 
@@ -180,7 +180,7 @@ The skill follows a fixed three-section output:
 2. **Landing prediction** — markdown table with the five mandatory rows (direct/clear, cold/curt, passive-aggressive, over-apologetic, warm/collaborative) using Low/Medium/High bands, plus relationship-specific rows. Signals column cites specific phrases.
 3. **Rewrite suggestions** — Keep / Soften / Strengthen, with optional full rewrite on request.
 
-For non-trivial drafts (>3 sentences, signs of writer anxiety, weighty recipient), the skill invokes [clarity-council](../../research-analysis/clarity-council/) in `persona_consult` mode with `psychologist`. Trivial drafts run inline.
+For non-trivial drafts (>3 sentences, signs of writer anxiety, weighty recipient), the skill invokes [clarity-council](../../clarity-council/) in `persona_consult` mode with `psychologist`. Trivial drafts run inline.
 
 Hard constraints: preserve the writer's voice; don't rewrite the whole draft unless asked; don't strip directness in the name of politeness; don't add emojis.
 
@@ -204,7 +204,7 @@ A: Yes. The rewrite swaps phrases, not personality. If your normal register is t
 - **[writing-apology-calibrator](../../writing/writing-apology-calibrator/)** — narrower sibling specifically for apology drafts.
 - **[writing-social-script](../../writing/writing-social-script/)** — when you don't have a draft yet, but you need a script for a specific scenario.
 - **[writing-cold-open](../../writing/writing-cold-open/)** — when you can't get past the first sentence.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the psychologist persona is the engine behind the landing prediction.
+- **[clarity-council](../../clarity-council/)** — the psychologist persona is the engine behind the landing prediction.
 
 ## Files
 

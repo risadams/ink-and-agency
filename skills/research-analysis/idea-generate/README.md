@@ -1,6 +1,6 @@
 # Idea Generate
 
-Generate, refine, and stress-test ideas from loose topics through a two-phase workflow: **Divergence** (a multi-persona [clarity-council](../../research-analysis/clarity-council/) session generates wide-ranging options using First Principles and SCAMPER) followed by **Convergence** (a [grill-me](../../research-analysis/grill-me/) session attacks the shortlist to harden it into something defensible). The output is not a brainstorm dump but a small set of ideas that have already survived their first round of skepticism.
+Generate, refine, and stress-test ideas from loose topics through a two-phase workflow: **Divergence** (a multi-persona [clarity-council](../../clarity-council/) session generates wide-ranging options using First Principles and SCAMPER) followed by **Convergence** (a [grill-me](../../research-analysis/grill-me/) session attacks the shortlist to harden it into something defensible). The output is not a brainstorm dump but a small set of ideas that have already survived their first round of skepticism.
 
 ## Why this exists
 
@@ -35,7 +35,7 @@ The skill orchestrates two sibling skills in sequence. **Phase 1** spawns a clar
 
 ### External systems used
 
-- **[clarity-council](../../research-analysis/clarity-council/)** — multi-persona idea generation in Phase 1.
+- **[clarity-council](../../clarity-council/)** — multi-persona idea generation in Phase 1.
 - **[grill-me](../../research-analysis/grill-me/)** — iterative stress-testing in Phase 3.
 
 ## How to use it
@@ -111,7 +111,7 @@ Skill: Council says (Visionary / Skeptic / Pragmatist):
 The skill follows this workflow per request:
 
 1. **Receive the loose topic** — capture constraints if the user offered any.
-2. **Phase 1: Divergence** — invoke [clarity-council](../../research-analysis/clarity-council/) with the Visionary + Skeptic + Pragmatist persona set, directing them to apply First Principles and SCAMPER (see [REFERENCE.md](REFERENCE.md)).
+2. **Phase 1: Divergence** — invoke [clarity-council](../../clarity-council/) with the Visionary + Skeptic + Pragmatist persona set, directing them to apply First Principles and SCAMPER (see [REFERENCE.md](REFERENCE.md)).
 3. **Phase 2: Selection** — present the raw list, ask the user to pick 2–3.
 4. **Phase 3: Convergence** — for each shortlisted idea, invoke [grill-me](../../research-analysis/grill-me/) for an iterative hardening session.
 5. **Output** — leave the user with refined concepts; no files unless asked.
@@ -149,7 +149,7 @@ A: It works, but for binary decisions try [idea-decision-maker](../../research-a
 
 ## Related skills
 
-- **[clarity-council](../../research-analysis/clarity-council/)** — the multi-persona engine that powers Phase 1.
+- **[clarity-council](../../clarity-council/)** — the multi-persona engine that powers Phase 1.
 - **[grill-me](../../research-analysis/grill-me/)** — the iterative questioning engine that powers Phase 3.
 - **[idea-decision-maker](../../research-analysis/idea-decision-maker/)** — when the task is "pick between two options," not "generate options."
 - **[interest-capture](../../exec-function/interest-capture/)** — when an idea surfaces that you don't want to develop now but don't want to lose.

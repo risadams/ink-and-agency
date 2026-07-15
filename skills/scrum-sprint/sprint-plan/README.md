@@ -156,7 +156,7 @@ A: Add `infographics-expert` to the council via `--personas` and the council wil
 - **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)** — produces the `start.canvas` this skill consumes; **run first** if missing
 - **[sprint-sos-report](../../scrum-sprint/sprint-sos-report/)** — sibling weekly comparison report; same `_team-rules.md`
 - **[sprint-review](../../scrum-sprint/sprint-review/)** — sibling end-of-sprint stakeholder report; reuses scaffolding
-- **[clarity-council](../../research-analysis/clarity-council/)** — Phase 5 delegates to it; statistics-expert is load-bearing for capacity-vs-velocity reasoning
+- **[clarity-council](../../clarity-council/)** — Phase 5 delegates to it; statistics-expert is load-bearing for capacity-vs-velocity reasoning
 - **[obsidian-markdown](../../obsidian/obsidian-markdown/)** — used when extending the report template with callouts, dataview, embeds
 - **[obsidian-vault](../../obsidian/obsidian-vault/)** — used for batch wikilink verification (>15 names)
 - **[obsidian-bases](../../obsidian/obsidian-bases/)** — use to aggregate sprint plans across an INC into a dashboard

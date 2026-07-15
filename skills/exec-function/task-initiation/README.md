@@ -20,7 +20,7 @@ Invoke this skill by:
   - "just-start"
 - Running the slash command: `/task-initiation`
 
-The skill does **not** activate for "make me a plan" — for that, route to [codebase-plan-refactor](../../codebase-build/codebase-plan-refactor/), [grill-me](../../research-analysis/grill-me/), or [clarity-council](../../research-analysis/clarity-council/).
+The skill does **not** activate for "make me a plan" — for that, route to [codebase-plan-refactor](../../codebase-build/codebase-plan-refactor/), [grill-me](../../research-analysis/grill-me/), or [clarity-council](../../clarity-council/).
 
 ## What it does
 
@@ -97,7 +97,7 @@ Skill: (acknowledges, exits)
 - ❌ **Asking for a plan.** Wrong skill. The whole point is that the user doesn't need a plan, they need an action.
 - ❌ **Multiple actions per turn.** One. Always one. More than one is a plan, which is the thing that wasn't working.
 - ❌ **Encouragement.** "You've got this!" adds friction, not lubricant. The skill stays neutral.
-- ❌ **Calling [clarity-council](../../research-analysis/clarity-council/) or any other multi-step skill.** Latency kills the use case.
+- ❌ **Calling [clarity-council](../../clarity-council/) or any other multi-step skill.** Latency kills the use case.
 - ❌ **"Are you sure?" / "Want to do something different?"** No interrogation. The user came here to be unstuck.
 
 ## Examples

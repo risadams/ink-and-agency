@@ -23,7 +23,7 @@ The skill always captures the gut estimate first, then calibrates against it —
 
 ## What it does
 
-The skill produces five sections: (1) restated gut estimate, (2) a three-point estimate table (best / likely / worst) with what each assumes about interruptions and setup, (3) "what your gut probably missed" — concrete to the task, not generic, (4) recommended commitment (worst-case minus buffer if external, likely if personal), (5) one-line summary. For non-trivial estimates it invokes [clarity-council](../../research-analysis/clarity-council/) with `statistics-expert + devils-advocate`. For trivial single-task estimates it runs inline with a one-liner.
+The skill produces five sections: (1) restated gut estimate, (2) a three-point estimate table (best / likely / worst) with what each assumes about interruptions and setup, (3) "what your gut probably missed" — concrete to the task, not generic, (4) recommended commitment (worst-case minus buffer if external, likely if personal), (5) one-line summary. For non-trivial estimates it invokes [clarity-council](../../clarity-council/) with `statistics-expert + devils-advocate`. For trivial single-task estimates it runs inline with a one-liner.
 
 ### Inputs
 
@@ -174,7 +174,7 @@ The three questions are deliberately ordered:
 2. Gut estimate (captured *before* anything else, so the skill has the uncalibrated number)
 3. Last similar task duration (the strongest reality anchor)
 
-For non-trivial estimates the skill invokes [clarity-council](../../research-analysis/clarity-council/) in `council_consult` mode with `[statistics-expert, devils-advocate]`:
+For non-trivial estimates the skill invokes [clarity-council](../../clarity-council/) in `council_consult` mode with `[statistics-expert, devils-advocate]`:
 - statistics-expert handles the three-point estimate and base rates.
 - devils-advocate stress-tests both the best case ("what makes this faster than expected?") and worst case ("what makes this an all-week task?").
 
@@ -201,7 +201,7 @@ A: Not automatically. If you re-run the skill after the fact with the actual tim
 - **[energy-budget](../../exec-function/energy-budget/)** — sibling for cost-counting, but for energy rather than time. They pair well: time-reality-check tells you how long; energy-budget tells you whether you can afford it today.
 - **[idea-decision-maker](../../research-analysis/idea-decision-maker/)** — when the time estimate reveals you can't do everything and have to pick.
 - **[issue-estimate-sp](../../business-product/issue-estimate-sp/)** — Jira-ticket-specific story point estimation with scrum-poker council.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the statistics-expert + devils-advocate pairing is the engine.
+- **[clarity-council](../../clarity-council/)** — the statistics-expert + devils-advocate pairing is the engine.
 
 ## Files
 

@@ -18,7 +18,7 @@ Invoke this skill by:
   - "is this too much"
 - Running the slash command: `/writing-apology-calibrator`
 
-The skill always invokes [clarity-council](../../research-analysis/clarity-council/) with `psychologist + devils-advocate` — same as [rejection-sensitivity-check](../../exec-function/rejection-sensitivity-check/), the second perspective is the value.
+The skill always invokes [clarity-council](../../clarity-council/) with `psychologist + devils-advocate` — same as [rejection-sensitivity-check](../../exec-function/rejection-sensitivity-check/), the second perspective is the value.
 
 ## What it does
 
@@ -250,7 +250,7 @@ A: Tone-check is general-purpose pre-send review. Apology-calibrator is speciali
 - **[rejection-sensitivity-check](../../exec-function/rejection-sensitivity-check/)** — for the *receiving* end: a message that landed badly and you're not sure if it warranted the sting.
 - **[break-it-down](../../exec-function/break-it-down/)** — for decoding the message you're responding to before drafting your apology.
 - **[writing-social-script](../../writing/writing-social-script/)** — if you don't have a draft yet, use this for scripted apology shapes.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the psychologist + devils-advocate engine.
+- **[clarity-council](../../clarity-council/)** — the psychologist + devils-advocate engine.
 
 ## Files
 

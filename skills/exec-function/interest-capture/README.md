@@ -105,7 +105,7 @@ after.
 - ❌ **Suggesting next steps beyond the one in the note.** The single "next concrete step" field is enough.
 - ❌ **Offering to research, expand, or sketch.** The skill is a stash, not a workshop.
 - ❌ **Producing a summary back to the user.** The note *is* the summary. The user only needs the confirmation line.
-- ❌ **Calling [clarity-council](../../research-analysis/clarity-council/) or any other skill.** Latency kills the use case.
+- ❌ **Calling [clarity-council](../../clarity-council/) or any other skill.** Latency kills the use case.
 
 ## Examples
 

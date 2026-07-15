@@ -146,7 +146,7 @@ A: Add `infographics-expert` to the council via `--personas`. They consult stati
 - **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)** — captures the snapshots this skill compares; **run before this** at each phase boundary
 - **[sprint-plan](../../scrum-sprint/sprint-plan/)** — sibling start-of-sprint planning report; same `_team-rules.md` and `_sprint.md`
 - **[sprint-review](../../scrum-sprint/sprint-review/)** — sibling end-of-sprint stakeholder report; reuses scaffolding
-- **[clarity-council](../../research-analysis/clarity-council/)** — Phase 5 delegates; statistics-expert is load-bearing for velocity / carry-over / trend forecasting
+- **[clarity-council](../../clarity-council/)** — Phase 5 delegates; statistics-expert is load-bearing for velocity / carry-over / trend forecasting
 - **[obsidian-markdown](../../obsidian/obsidian-markdown/)** — used when extending the report template with callouts, dataview, embeds
 - **[obsidian-vault](../../obsidian/obsidian-vault/)** — used for batch wikilink verification (>15 names)
 - **[obsidian-bases](../../obsidian/obsidian-bases/)** — use to aggregate SoS reports across sprints (e.g. wedge consumption + scope-creep verdicts per sprint)

@@ -87,7 +87,7 @@ What this skill will NOT do, or what to avoid:
 
 - ❌ **Make decisions for you.** It surfaces them. The recommended answers are anchors, not commitments.
 - ❌ **Ask 10 questions at once.** One at a time. Always.
-- ❌ **Replace a design review.** This is a self-stress-test, not a peer review. If you need other voices, run [clarity-council](../../research-analysis/clarity-council/) instead.
+- ❌ **Replace a design review.** This is a self-stress-test, not a peer review. If you need other voices, run [clarity-council](../../clarity-council/) instead.
 - ❌ **Leave you with a written plan automatically.** The output is the conversation. If you want a written summary, ask explicitly at the end.
 
 ## Examples
@@ -191,7 +191,7 @@ A: No. The skill cares about your plan being *understood*. If your plan is bad, 
 ## Related skills
 
 - **[grill-with-docs](../../research-analysis/grill-with-docs/)** — same shape, but anchored to project documentation and updates docs inline.
-- **[clarity-council](../../research-analysis/clarity-council/)** — for getting *other* perspectives instead of stress-testing your own plan.
+- **[clarity-council](../../clarity-council/)** — for getting *other* perspectives instead of stress-testing your own plan.
 - **[codebase-plan-refactor](../../codebase-build/codebase-plan-refactor/)** — Phase 4 of that skill borrows the grill-me discipline for the implementation interview.
 - **[writing-draft-article](../../writing/writing-draft-article/)** — Phase 1 of that skill can delegate to grill-me for thesis stress-testing.
 

@@ -171,7 +171,7 @@ A: Triage ranks root causes for a bug. Breakdown decomposes scope for a feature.
 
 - **[issue-estimate-sp](../../business-product/issue-estimate-sp/)** — pair with this. Break down a feature first, then estimate each piece.
 - **[issue-triage](../../business-product/issue-triage/)** — for bugs, not features. Ranks hypotheses rather than decomposing scope.
-- **[clarity-council](../../research-analysis/clarity-council/)** — Phase 2 invokes this. Use standalone when you want the same panel for a non-ticket decision.
+- **[clarity-council](../../clarity-council/)** — Phase 2 invokes this. Use standalone when you want the same panel for a non-ticket decision.
 - **[grill-me](../../research-analysis/grill-me/)** — Phase 3 borrows the one-question-at-a-time pattern. Use grill-me when there's no Jira ticket to anchor against.
 
 ## Files

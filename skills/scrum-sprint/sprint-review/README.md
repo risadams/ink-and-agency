@@ -164,7 +164,7 @@ A: The skill prompts to either run `sprint-snapshot --phase end` first or fall b
 - **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)** — captures `start.canvas` and `end.canvas`; **run `--phase start` at sprint kickoff and `--phase end` at sprint close**
 - **[sprint-plan](../../scrum-sprint/sprint-plan/)** — sibling start-of-sprint planning report; the council's PI Confidence here is informed by patterns flagged earlier
 - **[sprint-sos-report](../../scrum-sprint/sprint-sos-report/)** — sibling weekly comparison reports; their `Trends` sections feed PI Confidence reasoning
-- **[clarity-council](../../research-analysis/clarity-council/)** — Phase 5 delegates; statistics-expert load-bearing for commitment ratios + PI Confidence; product-owner leads Accomplishments; scrum-master leads Impediments
+- **[clarity-council](../../clarity-council/)** — Phase 5 delegates; statistics-expert load-bearing for commitment ratios + PI Confidence; product-owner leads Accomplishments; scrum-master leads Impediments
 - **[obsidian-markdown](../../obsidian/obsidian-markdown/)** — used when extending the report template with callouts, dataview, embeds
 - **[obsidian-vault](../../obsidian/obsidian-vault/)** — used for batch wikilink verification (>15 names)
 - **[obsidian-bases](../../obsidian/obsidian-bases/)** — use to aggregate reviews across an INC (commitment ratio + carry-over per sprint); strong forecasting input

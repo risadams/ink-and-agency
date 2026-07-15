@@ -19,7 +19,7 @@ Invoke this skill by:
   - "I think I said something weird"
 - Running the slash command: `/meeting-decompression`
 
-The skill always invokes [clarity-council](../../research-analysis/clarity-council/) with `psychologist + personal-assistant` — psychologist sorts the social ambiguities, personal-assistant handles the action items.
+The skill always invokes [clarity-council](../../clarity-council/) with `psychologist + personal-assistant` — psychologist sorts the social ambiguities, personal-assistant handles the action items.
 
 ## What it does
 
@@ -239,7 +239,7 @@ A: Only when there's something to sort. Quiet, low-load meetings don't need deco
 - **[rejection-sensitivity-check](../../exec-function/rejection-sensitivity-check/)** — for when the trigger is a single message, not a whole meeting.
 - **[break-it-down](../../exec-function/break-it-down/)** — for decoding a specific phrase someone used in the meeting that's nagging at you.
 - **[energy-budget](../../exec-function/energy-budget/)** — pairs well when post-meeting decompression reveals a day that's tipping toward overload.
-- **[clarity-council](../../research-analysis/clarity-council/)** — the psychologist + personal-assistant pair is the engine.
+- **[clarity-council](../../clarity-council/)** — the psychologist + personal-assistant pair is the engine.
 
 ## Files
 

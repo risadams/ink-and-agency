@@ -38,7 +38,7 @@ For each team in the run, the skill executes a seven-phase pipeline: **(1)** res
 - **GitLab** (`mcp__gitlab-mcp__*`) — MRs, discussions, pipelines across the group. Read-only.
 - **Local Git repo** — `fetch` + `log` only, never checkout/pull/merge.
 - **The Obsidian vault** — the only write target (`Scrum Teams/`); the template is read-only.
-- **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)** and **[clarity-council](../../research-analysis/clarity-council/)** — own the sprint pulse; never reimplemented inline.
+- **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)** and **[clarity-council](../../clarity-council/)** — own the sprint pulse; never reimplemented inline.
 
 ## How to use it
 
@@ -126,7 +126,7 @@ A: Yes — `Pyrite,Onyx` loops the whole pipeline per team and writes one file e
 ## Related skills
 
 - **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)** — owns the Phase 4.5 daily snapshot and the `_snapshots.jsonl` trend schema; always delegated, never reimplemented.
-- **[clarity-council](../../research-analysis/clarity-council/)** — owns the Phase 4.5 pulse council (infographics-expert + statistics-expert + scrum-master).
+- **[clarity-council](../../clarity-council/)** — owns the Phase 4.5 pulse council (infographics-expert + statistics-expert + scrum-master).
 - **[daily-briefing](../../exec-function/daily-briefing/)** — the personal (Outlook-driven) sibling; both run on the same morning and share the vault-root resolution pattern.
 - **[good-morning](../../scrum-sprint/good-morning/)** — the wrapper that runs this skill (with sprint pulse) as one phase of a three-skill morning chain.
 - **[obsidian-markdown](../../obsidian/obsidian-markdown/)** / **[obsidian-vault](../../obsidian/obsidian-vault/)** / **[obsidian-bases](../../obsidian/obsidian-bases/)** — the canonical references for extending the template, verifying wikilinks in bulk, or building a standup dashboard.

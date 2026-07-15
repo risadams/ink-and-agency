@@ -129,7 +129,7 @@ A: Append-only without rewriting the whole file — the trend log can grow forev
 - **[obsidian-markdown](../../obsidian/obsidian-markdown/)** — Phase 6 delegates when extending the markdown template
 - **[obsidian-vault](../../obsidian/obsidian-vault/)** — used for batch wikilink verification
 - **[daily-standup-prep](../../scrum-sprint/daily-standup-prep/)** — pattern parent for vault-write conventions, roster CSV format, identity matching
-- **[clarity-council](../../research-analysis/clarity-council/)** — future "sprint health" persona session over the JSONL trend log
+- **[clarity-council](../../clarity-council/)** — future "sprint health" persona session over the JSONL trend log
 
 ## Files
 

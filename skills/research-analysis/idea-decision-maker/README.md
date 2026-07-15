@@ -24,7 +24,7 @@ The skill will ask you to constrain the option set to 2-4 — if you have more, 
 
 ## What it does
 
-The skill produces five sections: (1) the pick — one option, one sentence, no hedging; (2) why this one — 3-5 concrete bullets referencing your own success criteria; (3) why not the others — one bullet per rejected option; (4) cost of being wrong — table with reversibility; (5) revisit point — the explicit trigger that would warrant re-opening. For non-trivial decisions it invokes [clarity-council](../../research-analysis/clarity-council/) with `senior-architect + devils-advocate + personal-assistant`; majority wins. For trivial low-stakes reversible decisions it picks inline.
+The skill produces five sections: (1) the pick — one option, one sentence, no hedging; (2) why this one — 3-5 concrete bullets referencing your own success criteria; (3) why not the others — one bullet per rejected option; (4) cost of being wrong — table with reversibility; (5) revisit point — the explicit trigger that would warrant re-opening. For non-trivial decisions it invokes [clarity-council](../../clarity-council/) with `senior-architect + devils-advocate + personal-assistant`; majority wins. For trivial low-stakes reversible decisions it picks inline.
 
 ### Inputs
 
@@ -198,7 +198,7 @@ You: (provides 30-day success and cost-of-wrong)
 
 ## Internals
 
-For non-trivial decisions the skill invokes [clarity-council](../../research-analysis/clarity-council/) in `council_consult` mode with `[senior-architect, devils-advocate, personal-assistant]`:
+For non-trivial decisions the skill invokes [clarity-council](../../clarity-council/) in `council_consult` mode with `[senior-architect, devils-advocate, personal-assistant]`:
 
 - The **senior-architect** votes on long-term technical/structural fit.
 - The **devils-advocate** stress-tests the picked option and forces the worst-case scenario into the cost-of-wrong section.
@@ -224,7 +224,7 @@ A: Yes — the personas adapt. Senior-architect becomes "long-term thinker", per
 
 ## Related skills
 
-- **[clarity-council](../../research-analysis/clarity-council/)** — the underlying voting engine.
+- **[clarity-council](../../clarity-council/)** — the underlying voting engine.
 - **[grill-me](../../research-analysis/grill-me/)** — use first if the options aren't well-defined yet. Grill clarifies, idea-decision-maker picks.
 - **[time-reality-check](../../exec-function/time-reality-check/)** — pairs well when the decision is about how much you can commit to.
 - **[energy-budget](../../exec-function/energy-budget/)** — pairs well when the decision is about what to drop.

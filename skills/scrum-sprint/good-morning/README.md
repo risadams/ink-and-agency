@@ -37,7 +37,7 @@ The wrapper runs four phases **strictly sequentially** (never parallel — Phase
 
 - **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)**, **[daily-standup-prep](../../scrum-sprint/daily-standup-prep/)**, **[daily-briefing](../../exec-function/daily-briefing/)** — the three delegated skills that do the actual work.
 - **Confluence Team Calendar (ICS)** — fetched read-only for the OOO digest.
-- **[clarity-council](../../research-analysis/clarity-council/)** (single mode, `personal-assistant`) — the Phase 4 "Next actions" pass.
+- **[clarity-council](../../clarity-council/)** (single mode, `personal-assistant`) — the Phase 4 "Next actions" pass.
 - Transitively: Jira, GitLab, Outlook, and the Obsidian vault, all via the delegated skills.
 
 ## How to use it
@@ -125,7 +125,7 @@ A: Yes — `--skip-snapshot`, `--skip-calendar`, `--skip-standup`, `--skip-brief
 - **[sprint-snapshot](../../scrum-sprint/sprint-snapshot/)** — Phase 1; the daily snapshot and JSONL trend row every later phase depends on.
 - **[daily-standup-prep](../../scrum-sprint/daily-standup-prep/)** — Phase 2; the per-team standup report with sprint pulse.
 - **[daily-briefing](../../exec-function/daily-briefing/)** — Phase 3; the Outlook-driven daily report + rollups (run report-only here).
-- **[clarity-council](../../research-analysis/clarity-council/)** — the Phase 4 `personal-assistant` pass that produces the Next-actions block.
+- **[clarity-council](../../clarity-council/)** — the Phase 4 `personal-assistant` pass that produces the Next-actions block.
 
 ## Files
 
