@@ -2,7 +2,7 @@
 
 The pack is **skills-only** — every capability is a `skills/<name>/SKILL.md`. This guide explains how
 skills reference and compose with each other. (There is no separate agent layer; the former subagents
-were folded into skills — see [ADR-0006](../docs/adr/ADR-0006-agents-folded-into-skills.md).)
+were folded into skills.)
 
 ## Two kinds of skill
 

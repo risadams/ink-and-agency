@@ -7,7 +7,7 @@ A **skills plugin** for **Claude Code and OpenAI Codex** — one installable uni
 - **Ink** — workflow skills: writing, sprint/Scrum, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all.
 - **Agency** — ~138 specialist skills (language/framework experts, infra, data/AI, security, product, and more — formerly subagents), plus the `clarity-council` skill and its library of 46 advisory personas for multi-perspective decisions (single / multi / iterative modes).
 
-**199 skills total.** Everything lives under `skills/` and ships in the one bundle both hosts read. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so Codex — which can't bundle agents — gets the full library. See [ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md).)
+**199 skills total.** Everything lives under `skills/` and ships in the one bundle both hosts read. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so Codex — which can't bundle agents — gets the full library.)
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
 
@@ -139,8 +139,7 @@ A skill's invocation mode is identical on both hosts — it's authored once in `
 ## How skills compose
 
 This pack is **skills-only** — one primitive covering both quick workflow techniques and deep domain
-specialists (the latter, like `backend-developer` and `security-auditor`, were formerly subagents; see
-[ADR-0006](docs/adr/ADR-0006-agents-folded-into-skills.md)).
+specialists (the latter, like `backend-developer` and `security-auditor`, were formerly subagents).
 
 ### Two kinds of skill
 
@@ -176,7 +175,7 @@ Skills declare workflow neighbours in the `related-skills` frontmatter field. Fo
 - Skill bodies use Claude Code tool vocabulary; [skills/PORTABILITY.md](skills/PORTABILITY.md) defines how other hosts map those names by intent.
 - The markdown under `skills/`, plus `AGENTS.md`, are the single source of truth. Everything Codex-facing is **generated** from them by `pwsh ./scripts/convert-agents-to-codex.ps1`: `skills/*/agents/openai.yaml` (per-skill Codex picker metadata + invocation policy), the root `plugin.json`, and the root `CLAUDE.md` (mirror of `AGENTS.md`). After editing any source, re-run the script and commit the output; CI fails if they drift.
 - One skill, both hosts: a skill's invocation mode lives once in its `SKILL.md` frontmatter (`disable-model-invocation: true` = user-invoked only) and is projected to Codex as `policy.allow_implicit_invocation: false`. Never hand-edit `openai.yaml`. See [AGENTS.md](AGENTS.md#skill-invocation-across-hosts).
-- The persona council is the `clarity-council` skill (three inline modes), not a set of subagents — so it ships in the skills bundle on both hosts. Personas are reference documents in the shared `skills/persona/` category (not skills — they have no `SKILL.md`), read by the council. See [ADR-0005](docs/adr/ADR-0005-council-skill-side.md).
+- The persona council is the `clarity-council` skill (three inline modes), not a set of subagents — so it ships in the skills bundle on both hosts. Personas are reference documents in the shared `skills/persona/` category (not skills — they have no `SKILL.md`), read by the council.
 - On Claude Code, skill names are namespaced by the plugin at install time (`ink-and-agency:skill-name`), so local project skills won't collide.
 
 ## License

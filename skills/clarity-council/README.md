@@ -27,8 +27,7 @@ Earlier versions shipped the council as three subagents (`council-single-persona
 this single skill for one decisive reason: **Codex plugins bundle only `./skills/` — they can't carry
 agents.** A skill that told the model to "invoke `council-multi-persona`" left that agent unbundled on
 Codex, breaking the pack's most-used integration on one host. Folding the modes inline (and moving the
-persona library inside the skill) makes the council behave identically everywhere. See
-[ADR-0005](../../../docs/adr/ADR-0005-council-skill-side.md).
+persona library inside the skill) makes the council behave identically everywhere.
 
 ## How to invoke
 

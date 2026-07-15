@@ -31,8 +31,7 @@
     AGENTS.md. Stale openai.yaml files for removed skills are deleted.
 
     (Historical: the pack once shipped subagents under agents/ that were
-    compiled to .codex/agents/*.toml here. Those were folded into skills; see
-    docs/adr/ADR-0006.)
+    compiled to .codex/agents/*.toml here. Those were folded into skills.)
 
 .PARAMETER RepoRoot
     Path to the repository root (default: parent of this script's folder)

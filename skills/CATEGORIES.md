@@ -2,7 +2,7 @@
 
 All skills live under `skills/<category>/<name>/SKILL.md`. Categories are folders for
 browsability only — a skill's invocation name is its leaf folder and is independent of
-category (see [ADR-0007](../docs/adr/ADR-0007-skill-categories.md)). Discovery is recursive.
+category. Discovery is recursive.
 
 **199 skills across 15 categories**, plus the featured top-level [`clarity-council`](clarity-council/) skill.
 
