@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/react-specialist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "React Specialist"
-  short_description: "Use when optimizing existing React applications for performance, implementing advanced..."
+  short_description: "Optimizing existing React applications for performance, implementing advanced React 18+…"

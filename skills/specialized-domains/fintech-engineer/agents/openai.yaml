@@ -1,4 +1,4 @@
 # Generated from skills/specialized-domains/fintech-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Fintech Engineer"
-  short_description: "Use when building payment systems, financial integrations, or compliance-heavy financia..."
+  short_description: "Payment systems, financial integrations, or compliance-heavy financial applications that…"

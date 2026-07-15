@@ -1,6 +1,7 @@
 ---
 name: obsidian-charts
 description: Build interactive charts in Obsidian notes using the Charts plugin (phibr0/obsidian-charts). Renders Chart.js bar/line/pie/doughnut/radar/polarArea via `chart` codeblocks, can pull data straight from a markdown table by block ID (cross-file supported), and can render from a Dataview query via `window.renderChart`. Use when the user wants to chart, plot, graph, or visualize data sitting in their Obsidian notes — including tables, frontmatter values, Dataview/Dataviewjs results, or hand-written series — or mentions "obsidian charts", "chart codeblock", "renderChart", or "chart from table".
+codex-short-description: "Build interactive charts in Obsidian notes using the Charts plugin…"
 related-skills:
   - obsidian-bases
   - data-analyst
@@ -8,7 +9,6 @@ loop-eligible: false
 
 compatibility: claude-code codex opencode
 ---
-
 # Obsidian Charts Skill
 
 Assumes the user already has the **Charts** community plugin (phibr0/obsidian-charts) installed and enabled.

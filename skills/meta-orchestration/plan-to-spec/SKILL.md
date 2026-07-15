@@ -89,4 +89,17 @@ If — and only if — the user asks to publish, confirm the destination first (
 
 The staged spec feeds `/plan-to-tickets`, which breaks it into a local numbered task list.
 
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Spec is staged as a numbered local spec.md (spec-kit style), not published unless asked
+   - Every requirement traces back to a point settled in the source discussion
+   - Open questions are listed rather than silently decided
+   - No implementation detail leaks into what should be a requirements doc
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+
 > **Host portability:** tool names follow Claude Code conventions; on other hosts map by intent — see [PORTABILITY.md](../../PORTABILITY.md).

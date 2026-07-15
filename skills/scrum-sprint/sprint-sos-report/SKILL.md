@@ -1,6 +1,7 @@
 ---
 name: sprint-sos-report
 description: End-of-week scrum-of-scrums report comparing two sprint snapshots and surfacing key findings, observations, trouble areas, and trends. Auto-detects which two snapshots to compare (most-recent two by snapshot_at) with `--from`/`--to` overrides for re-planning churn comparisons (e.g. compare `week 1` vs a mid-week `week 1.5`). Applies team-specific overhead, wedge-balancing, and in-review overhead rules from `_team-rules.md`. Auto-runs a clarity-council session (statistics-expert + scrum-master + product-owner). Use when user says "scrum of scrums", "sos report", "weekly sprint report", "sprint progress report", or invokes /sprint-sos-report.
+codex-short-description: "End-of-week scrum-of-scrums report comparing two sprint snapshots and surfacing key…"
 allowed-tools:
   - Read
   - Write
@@ -17,7 +18,6 @@ loop-eligible: false
 
 compatibility: claude-code codex opencode
 ---
-
 # Sprint Scrum-of-Scrums Report
 
 Weekly progress report for scrum-of-scrums. Compares two sprint snapshots, applies team-specific rules, and produces a markdown report with findings, trends, and trouble areas. Read-only on Jira (uses already-captured snapshots). Writes one report file into the sprint folder.
@@ -238,5 +238,18 @@ Saved:        [sos-week 2.md](Scrum Teams/Aurora/Scrum 📅/INC 28/Sprint 2/repo
 | `obsidian-vault` | Use for batch wikilink verification (>15 names). |
 | `obsidian-bases` | Use when the user wants a `.base` aggregating SoS reports across sprints — e.g. "show wedge consumption + scope-creep verdicts per sprint for Aurora this PI". |
 | `daily-standup-prep` | Pattern parent for vault-write conventions and identity matching. |
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - The two compared snapshots are named with their capture dates
+   - Scope changes and status transitions are quantified, not just described
+   - Per-member workload delta is shown
+   - Findings/trends come from the council pass and reconcile with the raw deltas
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

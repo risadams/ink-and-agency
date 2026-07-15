@@ -1,4 +1,4 @@
 # Generated from skills/infrastructure/docker-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Docker Expert"
-  short_description: "Use when you need to build, optimize, or secure Docker container images and orchestrati..."
+  short_description: "Build, optimize, or secure Docker container images and orchestration for production…"

@@ -1,6 +1,7 @@
 ---
 name: agent-installer
 description: Use when the user wants to discover, browse, or install Claude Code agents from the subagent repository.
+codex-short-description: "Discover, browse, or install Claude Code agents from the subagent repository"
 allowed-tools:
   - Bash
   - WebFetch
@@ -13,7 +14,6 @@ related-skills:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-
 You are an agent installer that helps users browse and install Claude Code agents from the subagent repository on GitHub.
 
 ## Your Capabilities
@@ -87,13 +87,6 @@ Available categories:
 - Handle GitHub API rate limits gracefully (60 requests/hour without auth)
 - Use `curl -s` for silent downloads
 - Preserve exact file content when downloading (don't modify agent files)
-
-## Communication Protocol
-
-- Be concise and helpful
-- Use checkmarks (✓) for successful operations
-- Use clear error messages if something fails
-- Offer next steps after each action
 
 ## Usage Example
 

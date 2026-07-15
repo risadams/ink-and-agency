@@ -1,5 +1,6 @@
 ---
 name: issue-dup-find
+codex-short-description: "Scan open Jira issues for likely duplicates; markdown report with probability + reason"
 description: >
   Scan all open issues in a Jira project and identify likely duplicates using
   semantic comparison. Produces a markdown report listing each suspected
@@ -141,5 +142,18 @@ After the report is delivered (and any user-requested file write is confirmed co
 - Do not invent reasons. If the only signal is "same component", say so plainly and rate it Low.
 - Cap reported pairs per anchor at 5. If more candidates score High, list the top 5 and add a footnote: `_+N additional medium/low matches suppressed._`
 - The default project key is read from memory (`reference_jira_default_project.md`). Always confirm the resolved project key in the report header so the user can verify scope.
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Each suspected pair has a probability score and a one-line reason
+   - Pairs are ordered by descending probability
+   - Read-only respected — no tickets linked, transitioned, or edited
+   - Obvious non-duplicates are not padded into the report
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

@@ -220,4 +220,17 @@ If the run aborted with an error, **always keep** the scratch folder and surface
 
 When in doubt, suggest nothing. The cost of an over-tagged ticket is higher than an under-tagged one because it pollutes filters and reports.
 
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Suggested components already exist in the project (or a new one is explicitly flagged as new)
+   - Each suggestion has a rationale tied to the ticket's content
+   - Confirmation is sought before any modification
+   - Conservative — no more components suggested than the ticket clearly warrants
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

@@ -1,5 +1,6 @@
 ---
 name: rejection-sensitivity-check
+codex-short-description: "Calibrate a message that stung: separate evidence from interpretation"
 description: >
   Paste a message that stung; get a calibrated read on whether it's actually
   critical or neutral-but-terse. Separates evidence from interpretation to

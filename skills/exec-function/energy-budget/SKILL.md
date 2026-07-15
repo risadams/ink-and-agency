@@ -1,5 +1,6 @@
 ---
 name: energy-budget
+codex-short-description: "Score today's calendar load, flag burnout risk, suggest what to drop or defer"
 description: >
   Log today's load (meetings, sensory stuff, social events, deep work);
   skill scores the load, warns when the day is heading toward burnout,

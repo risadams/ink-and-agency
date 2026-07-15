@@ -1,6 +1,7 @@
 ---
 name: branch-resolve-conflicts
-description: "Resolve complex git merge/rebase conflicts by reconstructing intent, preserving both branches' goals when possible, and running automated checks."
+description: "Use when a git merge or rebase hits complex conflicts, or the user says \"resolve conflicts\" / \"fix merge conflicts\". Reconstructs intent, preserves both branches' goals when possible, and runs automated checks."
+codex-short-description: "Git merge or rebase hits complex conflicts, or the user says \"resolve conflicts\" /…"
 argument-hint: "Optional: PR number, ticket, or merge context (e.g., 'GitHub #1234' or 'merging feature/checkout into main')"
 version: 1.0.0
 license: MIT
@@ -18,7 +19,6 @@ loop-eligible: false
 
 compatibility: claude-code codex opencode
 ---
-
 ## Workflow
 
 1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.

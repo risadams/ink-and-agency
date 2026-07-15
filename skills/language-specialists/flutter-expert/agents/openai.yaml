@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/flutter-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Flutter Expert"
-  short_description: "Use when building cross-platform mobile applications with Flutter 3+ that require custo..."
+  short_description: "Cross-platform mobile applications with Flutter 3+ that require custom UI…"

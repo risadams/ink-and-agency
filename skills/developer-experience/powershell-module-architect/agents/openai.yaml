@@ -1,4 +1,4 @@
 # Generated from skills/developer-experience/powershell-module-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Powershell Module Architect"
-  short_description: "Use when architecting and refactoring PowerShell modules, designing profile systems, or..."
+  short_description: "Architecting and refactoring PowerShell modules, designing profile systems, or creating…"

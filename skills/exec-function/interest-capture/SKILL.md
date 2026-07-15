@@ -1,5 +1,6 @@
 ---
 name: interest-capture
+codex-short-description: "Fast-file the current hyperfixation to the vault so it doesn't derail today's work"
 description: >
   Quick dump for the current hyperfixation so it doesn't derail today's work
   but also isn't lost. Captures the idea, tags it, files it into the Obsidian

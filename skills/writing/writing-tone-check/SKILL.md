@@ -1,5 +1,6 @@
 ---
 name: writing-tone-check
+codex-short-description: "Predict how a draft message will land before you send; flags tone problems"
 description: >
   Reverse decoder — paste a draft message and get a read on how it will land
   before you send. Flags blunt, cold, accidentally passive-aggressive, or

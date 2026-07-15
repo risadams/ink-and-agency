@@ -8,12 +8,21 @@
     consistency:
       - required fields: name, description
       - name is lowercase kebab-case (dots allowed) and matches its folder
-      - description length bounds (>= 10, <= 800 chars)
+      - description length bounds (>= 10 error, > 800 warn, > 1024 error)
+      - description carries trigger phrasing (use when / when user / triggers on)
+        so auto-invocation fires reliably (warn; skipped for user-invoked skills)
+      - description first sentence fits the Codex picker label (<= 90 chars) or a
+        codex-short-description override is supplied (warn)
       - allowed-tools: core tools spelled correctly; anything else (MCP/custom)
         surfaced as a warning
       - related-skills: every entry resolves to a real skill folder, no
         self-reference, and no non-skill (tool/agent) names leaked in
       - loop-eligible: true requires a recurrence-hint of daily|weekly|on-demand|none
+      - body carries no stale subagent-era boilerplate ("When invoked:", "Query
+        context manager", "Integration with other agents", requesting_agent JSON)
+        that contradicts the skills-only/run-inline model (warn)
+      - large bodies (> 350 lines) should split depth into references/*.md (warn)
+      - each skill should ship a sibling README.md (warn)
 
 .PARAMETER SkillsPath
     Path to the skills folder (default: ./skills relative to repo root)
@@ -120,11 +129,31 @@ foreach ($dir in $skillDirs) {
     if ($name -ne $folder) {
         Add-Error "$folder : name field '$name' does not match folder"
     }
-    # description bounds
+    # description bounds: >=10 error, >800 soft warn, >1024 hard error
+    # (1024 is the validator-backed MAX_DESCRIPTION_LENGTH ceiling)
     if ($fm['description']) {
-        $len = $fm['description'].Length
+        $desc = $fm['description']
+        $len = $desc.Length
         if ($len -lt 10) { Add-Error "$folder : Description too short (>= 10 chars)" }
-        if ($len -gt 800) { Add-Warning "$folder : Description very long ($len chars)" }
+        elseif ($len -gt 1024) { Add-Error "$folder : Description over hard cap ($len chars, max 1024)" }
+        elseif ($len -gt 800) { Add-Warning "$folder : Description very long ($len chars)" }
+
+        # trigger phrasing drives auto-invocation; user-invoked skills are exempt
+        $userInvoked = $fm['disable-model-invocation'] -eq 'true'
+        if (-not $userInvoked -and $desc -notmatch '(?i)\buse (this skill )?(when|for|to|before|after|if)\b|\bwhen (the )?user\b|\btriggers? on\b|\bwhen you\b|\binvoke') {
+            Add-Warning "$folder : Description lacks trigger phrasing ('Use when ...') - weakens auto-invocation"
+        }
+
+        # Codex picker label is the first sentence trimmed to ~90 chars; warn when
+        # it will truncate and no explicit override is supplied
+        if (-not $fm['codex-short-description']) {
+            $first = $desc
+            if ($first -match '^(.*?[.!?])(\s|$)') { $first = $matches[1] }
+            elseif ($first -match '^(.*?);') { $first = $matches[1] }
+            if ($first.Length -gt 90) {
+                Add-Warning "$folder : Description first sentence $($first.Length) chars (>90); add codex-short-description for a clean Codex picker label"
+            }
+        }
     }
 
     # allowed-tools: core tools spelled right; others (MCP/custom) => warning
@@ -161,6 +190,31 @@ foreach ($dir in $skillDirs) {
         elseif ($fm['recurrence-hint'] -notin $ValidRecurrence) {
             Add-Error "$folder : invalid recurrence-hint '$($fm['recurrence-hint'])' (must be: $($ValidRecurrence -join ', '))"
         }
+    }
+
+    # --- body hygiene (skills-only pack: no subagent-era orchestration prose) --
+    $body = Get-Content -Path $skillMd -Raw
+    $staleHits = @()
+    if ($body -match '(?im)^\s*When invoked:') { $staleHits += 'When invoked:' }
+    if ($body -match '(?i)Query context manager') { $staleHits += 'Query context manager' }
+    if ($body -match '(?i)Integration with other agents') { $staleHits += 'Integration with other agents' }
+    if ($body -match '(?i)requesting_agent') { $staleHits += 'requesting_agent' }
+    if ($body -match '(?i)## Communication Protocol') { $staleHits += '## Communication Protocol' }
+    if ($staleHits.Count) {
+        Add-Warning "$folder : Stale subagent boilerplate ($($staleHits -join ', ')) - pack is skills-only/run-inline"
+    }
+
+    # --- progressive disclosure: large bodies should split into references/*.md -
+    $lineCount = @($body -split '\r?\n').Count
+    $hasRefs = @(Get-ChildItem -Path $dir.FullName -Recurse -Filter '*.md' -File |
+        Where-Object { $_.Name -ne 'SKILL.md' -and $_.Name -ne 'README.md' -and $_.Directory.Name -ne 'agents' }).Count -gt 0
+    if ($lineCount -gt 350 -and -not $hasRefs) {
+        Add-Warning "$folder : SKILL.md is $lineCount lines with no supporting .md - split depth into references/*.md"
+    }
+
+    # --- docs coverage: each skill should ship a README.md ---------------------
+    if (-not (Test-Path (Join-Path $dir.FullName 'README.md'))) {
+        Add-Warning "$folder : No sibling README.md"
     }
 
     Add-Ok "$folder : Valid"

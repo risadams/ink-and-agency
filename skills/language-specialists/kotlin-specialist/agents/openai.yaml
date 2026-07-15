@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/kotlin-specialist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Kotlin Specialist"
-  short_description: "Use when building Kotlin applications requiring advanced coroutine patterns, multiplatf..."
+  short_description: "Kotlin applications requiring advanced coroutine patterns, multiplatform code sharing…"

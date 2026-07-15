@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/spring-boot-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Spring Boot Engineer"
-  short_description: "Use when building enterprise Spring Boot 3+ applications requiring microservices archit..."
+  short_description: "Enterprise Spring Boot 3+ applications requiring microservices architecture…"

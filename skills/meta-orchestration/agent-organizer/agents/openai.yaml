@@ -1,4 +1,4 @@
 # Generated from skills/meta-orchestration/agent-organizer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Agent Organizer"
-  short_description: "Use when assembling and optimizing multi-agent teams to execute complex projects that r..."
+  short_description: "Assembling and optimizing multi-agent teams to execute complex projects that require…"

@@ -114,4 +114,17 @@ Write the `T00N -> KEY` mapping back into the local `tasks.md` **Jira mapping** 
 - **Blockers first, native links.** When pushing to Jira, create in dependency order and use the "Blocks" relationship (renders the frontier in Jira's UI), not just prose.
 - **Never modify the parent.** Link to it; don't transition or close it.
 
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Tickets are tracer-bullet vertical slices with explicit dependencies and [P] markers
+   - The local tasks.md is the artifact; Jira push happens only on opt-in
+   - Wide refactors use expand-contract sequencing where relevant
+   - Every ticket maps to something in the source spec/plan — none invented
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+
 > **Host portability:** tool names follow Claude Code conventions; on other hosts map by intent — see [PORTABILITY.md](../../PORTABILITY.md).

@@ -1,4 +1,4 @@
 # Generated from skills/business-product/issue-estimate-sp/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Issue Estimate SP"
-  short_description: "Estimate story points for a Jira ticket using historical data and multi-persona scrum p..."
+  short_description: "Estimate story points for a Jira ticket via history + multi-persona scrum poker"

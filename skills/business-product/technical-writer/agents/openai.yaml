@@ -1,4 +1,4 @@
 # Generated from skills/business-product/technical-writer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Technical Writer"
-  short_description: "Use when you need to create, improve, or maintain technical documentation including API..."
+  short_description: "Create, improve, or maintain technical documentation including API references, user…"

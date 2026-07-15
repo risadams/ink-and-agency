@@ -1,4 +1,4 @@
 # Generated from skills/exec-function/hyperfocus-recovery/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Hyperfocus Recovery"
-  short_description: "Reconstruct context after a deep session or interruption — \"what was I doing?\" Reads re..."
+  short_description: "Rebuild context after a deep session or interruption from git and file artifacts"

@@ -1,4 +1,4 @@
 # Generated from skills/obsidian/obsidian-canvas/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Obsidian Canvas"
-  short_description: "Create and edit Obsidian Canvas files (.canvas) following the JSON Canvas spec — nodes,..."
+  short_description: "Create and edit Obsidian Canvas files (.canvas) following the JSON Canvas spec — nodes…"

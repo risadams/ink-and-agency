@@ -1,6 +1,6 @@
 ---
 name: sprint-plan
-description: Convert the start-of-sprint canvas into a planning markdown report — sprint goal summary, committed scope, capacity vs commitment (split into carry-over from previous sprint vs new commit), key observations, and risks. Assumes all unclosed items from the previous sprint's end snapshot are carried into this sprint and surfaces them as a dedicated section with WIP-saturation risk. Reuses sprint-snapshot's `_sprint.md`, `_team-rules.md`, current `start.canvas`, and previous sprint's `end.canvas`. Auto-runs a clarity-council session (statistics-expert + scrum-master + product-owner) for the observations/risks block. Output is date-stamped (`sprint-plan-YYYY-MM-DD.md`) — same-day re-runs silently refresh today's file, prior days are preserved as historical record; a `sprint-plan-latest.md` pointer always wikilinks the newest. Use when user says "sprint plan", "sprint planning report", "convert sprint plan to markdown", or invokes /sprint-plan.
+description: Convert the start-of-sprint canvas into a planning markdown report. Use when the user says "sprint plan", "sprint planning report", "convert sprint plan to markdown", or invokes /sprint-plan. Produces a sprint-goal summary, committed scope (carry-over vs new commit), capacity vs commitment with WIP-saturation risk, observations, and risks; auto-runs a clarity-council pass and writes a date-stamped report with a `-latest` pointer.
 related-skills:
   - sprint-snapshot
   - clarity-council
@@ -318,5 +318,18 @@ If this is the second run today: `Saved: refreshed sprint-plan-2026-04-01.md (si
 | `obsidian-markdown` | Use when extending the report template with callouts, dataview, embeds. |
 | `obsidian-vault` | Use for batch wikilink verification (>15 names). |
 | `obsidian-bases` | Use when the user wants a `.base` aggregating sprint plans across an INC (e.g. "show committed vs avg velocity for every Aurora sprint in INC 28"). |
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Carry-over vs new-commit split is explicit and the numbers reconcile to total committed points
+   - Capacity-vs-commitment is stated with the WIP-saturation risk called out when over capacity
+   - Observations and risks come from the council pass, not filler
+   - Output is date-stamped and the -latest pointer updated
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

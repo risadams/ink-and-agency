@@ -1,4 +1,4 @@
 # Generated from skills/infrastructure/devops-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Devops Engineer"
-  short_description: "Use when building or optimizing infrastructure automation, CI/CD pipelines, containeriz..."
+  short_description: "Optimize infrastructure automation, CI/CD, containerization, and deployment workflows"

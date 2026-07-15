@@ -1,4 +1,4 @@
 # Generated from skills/writing/writing-social-script/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Writing Social Script"
-  short_description: "Generate a script for a specific social scenario you're dreading: declining a meeting,..."
+  short_description: "Generate a script for a dreaded social scenario, with phrasings + an exit line"

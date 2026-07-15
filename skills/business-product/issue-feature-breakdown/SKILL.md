@@ -1,5 +1,6 @@
 ---
 name: issue-feature-breakdown
+codex-short-description: "Gather Jira/Confluence context + council pass into an actionable breakdown plan"
 description: >
   Analyze a Jira ticket by gathering full context from Jira and Confluence,
   following linked tickets, then running a clarity-council to identify gaps
@@ -100,5 +101,18 @@ Iterate until the user approves.
 - **Read-only**: Never call `jira_create_issue`, `jira_update_issue`, `jira_transition_issue`, or any write operation on Jira or Confluence.
 - Do not create files on disk unless the user explicitly asks to save the breakdown.
 - If the Jira ticket key cannot be found, stop and ask the user to provide a valid key.
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Breakdown items are vertical slices, not layers — each delivers observable value
+   - Gaps and ambiguities from the council pass are listed explicitly, not silently resolved
+   - Dependencies between items are stated
+   - Every claim about the ticket is grounded in gathered Jira/Confluence context, not assumed
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

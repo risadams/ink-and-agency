@@ -1,6 +1,7 @@
 ---
 name: sprint-snapshot
 description: Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and render it into the Obsidian vault as (1) an Obsidian Canvas with sprint overview, team workload, kanban columns, and issue cards, (2) a companion markdown summary, and (3) an append-only JSONL trend log. Auto-detects sprint phase (start / week 1 / week 2 / week 3 / end) from today's date. Supports `--as-of <date>` for historical snapshots. Reuses obsidian-canvas / obsidian-vault / obsidian-markdown for vault writes and follows the issue-* skills' Jira context-gathering patterns. Use when user says "sprint snapshot", "snapshot the sprint", "capture sprint state", "sprint planner", "scrum board snapshot", or invokes /sprint-snapshot.
+codex-short-description: "Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and…"
 related-skills:
   - sprint-plan
   - sprint-review
@@ -20,7 +21,6 @@ allowed-tools:
   - mcp__atlassian__jira_get_issue
 compatibility: claude-code codex opencode
 ---
-
 # Sprint Snapshot
 
 Point-in-time snapshot of a scrum team's current sprint. Read-only across Jira. Writes three artifacts per run into the team's vault folder so progress can be tracked over time, scrum-of-scrums and end-of-sprint reporting become low-friction, and trends can be forecast.
@@ -304,5 +304,18 @@ This skill writes into the user's Obsidian vault and reads from Jira. Delegate t
 | `issue-feature-breakdown` | Pattern reference for Jira context-gathering depth and read-only discipline. |
 | `issue-suggest-component` | Pattern reference for memory-driven default Jira project + bulk pacing if the snapshot ever expands to multi-team. |
 | `clarity-council` | Future extension: stand up a "sprint health council" persona session that reviews the latest JSONL trend log and flags risks. Out of scope for v1. When that lands, the council pull-list is **`statistics-expert + scrum-master + infographics-expert`** — statistics-expert reads the trend with uncertainty rendering, infographics-expert chooses the chart format (sparklines per metric? small-multiple per team?) and produces the SVG/Mermaid output that embeds back into the canvas or companion markdown. |
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Canvas, companion markdown, and JSONL trend log are all written
+   - Sprint phase was auto-detected (or honored --as-of) correctly
+   - Every board issue is represented as a card with its status column
+   - Team workload totals reconcile with the per-member card sums
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

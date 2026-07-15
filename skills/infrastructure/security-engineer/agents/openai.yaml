@@ -1,4 +1,4 @@
 # Generated from skills/infrastructure/security-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Security Engineer"
-  short_description: "Use when implementing comprehensive security solutions across infrastructure, building..."
+  short_description: "Comprehensive security solutions across infrastructure, building automated security…"

@@ -1,6 +1,7 @@
 ---
 name: good-morning
 description: Morning kickoff wrapper that runs sprint-snapshot (daily tag), daily-standup-prep (with sprint burndown), and daily-briefing (report only — no focus-block suggestions) in order. Re-runs idempotently — existing same-day artifacts are overwritten in place. Use when user says "good morning", "morning routine", "kick off my day", "start my day", or invokes /good-morning.
+codex-short-description: "Morning kickoff wrapper that runs sprint-snapshot (daily tag), daily-standup-prep (with…"
 related-skills:
   - sprint-snapshot
   - daily-standup-prep
@@ -17,7 +18,6 @@ allowed-tools:
   - Glob
 compatibility: claude-code codex opencode
 ---
-
 # Good Morning
 
 Single-command wrapper that runs the user's three morning skills in order. Owns no business logic of its own — every artifact is produced by the delegated skill. This skill exists so the user types one command instead of three.

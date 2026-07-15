@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/python-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Python Pro"
-  short_description: "Use when you need to build type-safe, production-ready Python code for web APIs, system..."
+  short_description: "Build type-safe, production-ready Python code for web APIs, system utilities, or complex…"

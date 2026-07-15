@@ -1,4 +1,4 @@
 # Generated from skills/data-ai/reinforcement-learning-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Reinforcement Learning Engineer"
-  short_description: "Use when designing RL environments, training agents with reward optimization, implement..."
+  short_description: "RL environments, training agents with reward optimization, implementing policy gradient…"

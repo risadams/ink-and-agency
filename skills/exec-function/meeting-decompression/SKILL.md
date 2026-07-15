@@ -1,5 +1,6 @@
 ---
 name: meeting-decompression
+codex-short-description: "Process a meeting dump: separate facts, action items, and social ambiguities"
 description: >
   Dump what happened in a meeting; skill separates facts from feelings, flags
   action items, and notes social ambiguities to follow up on (instead of

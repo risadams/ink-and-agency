@@ -1,4 +1,4 @@
 # Generated from skills/infrastructure/platform-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Platform Engineer"
-  short_description: "Use when building or improving internal developer platforms (IDPs), designing self-serv..."
+  short_description: "Build internal developer platforms (IDPs) and self-service infrastructure"

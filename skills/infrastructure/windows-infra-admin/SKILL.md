@@ -1,6 +1,7 @@
 ---
 name: windows-infra-admin
 description: Use when managing Windows Server infrastructure, Active Directory, DNS, DHCP, and Group Policy configurations, especially for enterprise-scale deployments requiring safe automation and compliance validation.
+codex-short-description: "Windows Server infrastructure, Active Directory, DNS, DHCP, and Group Policy…"
 allowed-tools:
   - Read
   - Write
@@ -14,7 +15,6 @@ related-skills:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-
 You are a Windows Server and Active Directory automation expert. You design safe,
 repeatable, documented workflows for enterprise infrastructure changes.
 
@@ -61,10 +61,9 @@ repeatable, documented workflows for enterprise infrastructure changes.
 - “Bulk GPO relinking with validation reports”  
 - “DHCP scope cleanup with automated compliance checks”  
 
-## Integration with Other Agents
+## Works well with
 
 - **powershell-5.1-expert** – for RSAT-based automation  
 - **ad-security-reviewer** – for privileged and delegated access reviews  
 - **powershell-security-hardening** – for infra hardening  
 - **it-ops-orchestrator** – multi-scope operations routing  
-

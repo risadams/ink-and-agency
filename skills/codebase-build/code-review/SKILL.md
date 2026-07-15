@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Two-axis review of the working diff since a fixed point — Standards (does it follow this repo's coding standards + a code-smell baseline?) and Spec (does it match the originating ticket/spec?). Runs both as parallel sub-agents. Use to review a branch, work-in-progress changes, or "review since X" — before an MR exists.
+description: Two-axis review of the working diff since a fixed point — Standards (does it follow this repo's coding standards + a code-smell baseline?) and Spec (does it match the originating ticket/spec?). Runs both as parallel sub-agents. Use when the user wants to review a branch or work-in-progress changes, says "review since X", or asks for a pre-MR review before a merge request exists.
 codex-short-description: "Two-axis (Standards + Spec) review of the working diff"
 compatibility: claude-code codex opencode
 ---
@@ -65,5 +65,18 @@ Present the two reports under `## Standards` and `## Spec`, verbatim or lightly 
 ## Why two axes
 
 A change can pass one and fail the other — code that follows every standard but implements the wrong thing (Standards pass, Spec fail), or code that does exactly what was asked but breaks conventions (Spec pass, Standards fail). Reporting them separately stops one axis from masking the other.
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Both axes reported separately — Standards findings never merged into Spec findings, or vice versa
+   - Every finding cites a concrete location (file:line) and the rule or spec clause it violates
+   - Spec axis actually references the originating ticket/spec, not just inferred intent
+   - No finding is a false positive from unreviewed generated or vendored code
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names follow Claude Code conventions; on other hosts map by intent — see [PORTABILITY.md](../../PORTABILITY.md).

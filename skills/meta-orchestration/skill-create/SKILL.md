@@ -1,13 +1,13 @@
 ---
 name: skill-create
 description: Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.
+codex-short-description: "Create new agent skills with proper structure, progressive disclosure, and bundled…"
 related-skills:
   - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode
 ---
-
 # Skill Create
 
 For the *mechanics* of assembling a skill, follow the process below. For the *principles* that make a skill predictable, lean, and reliably invoked — the two loads, information hierarchy, leading words, and failure modes — consult **[WRITING-SKILLS.md](WRITING-SKILLS.md)** while drafting and reviewing.

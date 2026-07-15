@@ -1,5 +1,6 @@
 ---
 name: writing-cold-open
+codex-short-description: "Get the first sentence when the blank cursor is winning; 2-3 openings, then steps out"
 description: >
   Generates the first sentence of a message or email when you can't get past
   the blank cursor. Offers 2-3 openings matched to the relationship and goal,

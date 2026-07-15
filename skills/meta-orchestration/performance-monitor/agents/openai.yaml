@@ -1,4 +1,4 @@
 # Generated from skills/meta-orchestration/performance-monitor/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Performance Monitor"
-  short_description: "Use when establishing observability infrastructure to track system metrics, detect perf..."
+  short_description: "Establishing observability infrastructure to track system metrics, detect performance…"

@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/powershell-5.1-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Powershell 5.1 Expert"
-  short_description: "Use when automating Windows infrastructure tasks requiring PowerShell 5.1 scripts with..."
+  short_description: "Windows infrastructure tasks requiring PowerShell 5.1 scripts with RSAT modules for…"

@@ -1,4 +1,4 @@
 # Generated from skills/data-ai/postgres-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Postgres Pro"
-  short_description: "Use when you need to optimize PostgreSQL performance, design high-availability replicat..."
+  short_description: "Optimize PostgreSQL performance, design high-availability replication, or troubleshoot…"

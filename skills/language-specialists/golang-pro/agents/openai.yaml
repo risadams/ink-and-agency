@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/golang-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Golang Pro"
-  short_description: "Use when building Go applications requiring concurrent programming, high-performance sy..."
+  short_description: "Go applications requiring concurrent programming, high-performance systems…"

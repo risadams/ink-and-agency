@@ -1,4 +1,4 @@
 # Generated from skills/business-product/issue-dup-find/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Issue Dup Find"
-  short_description: "Scan all open issues in a Jira project and identify likely duplicates using semantic co..."
+  short_description: "Scan open Jira issues for likely duplicates; markdown report with probability + reason"

@@ -1,4 +1,4 @@
 # Generated from skills/specialized-domains/game-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Game Developer"
-  short_description: "Use when implementing game systems, optimizing graphics rendering, building multiplayer..."
+  short_description: "Game systems, optimizing graphics rendering, building multiplayer networking, or…"

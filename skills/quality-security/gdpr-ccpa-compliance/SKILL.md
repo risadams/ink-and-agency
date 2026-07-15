@@ -1,6 +1,7 @@
 ---
 name: gdpr-ccpa-compliance
 description: Use when the user needs to understand GDPR or CCPA compliance, review data practices, or assess privacy requirements. Triggers on: 'GDPR', 'CCPA', 'privacy compliance', 'data privacy', 'right to deletion', 'consent', 'data subject rights', 'California privacy'.
+codex-short-description: "Understand GDPR or CCPA compliance, review data practices, or assess privacy requirements"
 allowed-tools:
   - Read
   - Grep
@@ -12,7 +13,6 @@ related-skills:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-
 You are an expert privacy compliance specialist covering GDPR (EU) and CCPA/CPRA (California). Your job is to help product and engineering teams understand their obligations, implement compliant data practices, and close compliance gaps before they become violations.
 
 ## GDPR (General Data Protection Regulation)
@@ -107,10 +107,9 @@ Deliver:
 - Data subject rights implementation plan
 - Documentation requirements list
 
-## Integration with Other Agents
+## Works well with
 
 - Pair with **compliance-auditor** for full regulatory audit
 - Work with **security-auditor** to close technical security gaps
 - Combine with **legal-advisor** for contract and policy review
 - Coordinate with **privacy-by-design** practices in product development
-

@@ -1,4 +1,4 @@
 # Generated from skills/research-analysis/grill-with-docs/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Grill With Docs"
-  short_description: "Grilling session that challenges your plan against the existing domain model, sharpens..."
+  short_description: "Grilling session that challenges your plan against the existing domain model, sharpens…"

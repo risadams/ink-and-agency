@@ -1,5 +1,6 @@
 ---
 name: issue-estimate-sp
+codex-short-description: "Estimate story points for a Jira ticket via history + multi-persona scrum poker"
 description: >
   Estimate story points for a Jira ticket using historical data and multi-persona scrum poker.
   Use when user says "estimate this ticket", "how many points", "story point estimate",
@@ -113,7 +114,6 @@ depth: standard
 
 **Persona overrides for scrum poker:**
 
-
 - **scrum-master**: Focus on historical velocity, team capacity, and whether this fits cleanly into a sprint. Compare against reference data for similar tickets. Watch for estimation anti-patterns (artificial splitting, optimism bias).
 - **tech-lead**: Focus on technical complexity, unknowns, dependencies, and coordination tax. Flag if this crosses team boundaries or requires environment access.
 - **senior-developer**: Focus on implementation effort — lines of code, number of files, testing complexity, review burden. Be concrete about what "done" looks like.
@@ -155,5 +155,18 @@ comparable ticket from REFERENCE_DATA.md if one exists.}
 > **Note:** This estimate was generated from historical data and persona analysis.
 > It has not been written to the ticket. Discuss with your team before committing.
 ```
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Estimate cites comparable historical tickets, not just a bare number
+   - The scrum-poker spread (low/mode/high) is shown, not only the final point value
+   - Key uncertainty drivers that would move the estimate are named
+   - Read-only respected — the ticket is not modified
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

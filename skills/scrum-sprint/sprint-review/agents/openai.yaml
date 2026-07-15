@@ -1,4 +1,4 @@
 # Generated from skills/scrum-sprint/sprint-review/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Sprint Review"
-  short_description: "End-of-sprint stakeholder report comparing the start.canvas (planning) to end.canvas (s..."
+  short_description: "End-of-sprint stakeholder report comparing the start.canvas (planning) to end.canvas…"

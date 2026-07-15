@@ -1,6 +1,7 @@
 ---
 name: sprint-review
 description: End-of-sprint stakeholder report comparing the start.canvas (planning) to end.canvas (sprint close). Produces a markdown report fitting the standard SM template (Scrum Master, Sprint Accomplishments, Feature Demos, Customer Meetings, Status, Sprint Commitment, PI Confidence, Impediments). Applies team-specific overhead, wedge-balancing, and in-review overhead rules. Auto-runs a clarity-council session (statistics-expert + scrum-master + product-owner) for accomplishments/status/impediments synthesis. Use when user says "sprint review", "end of sprint report", "sprint stakeholder report", "sprint close report", or invokes /sprint-review.
+codex-short-description: "End-of-sprint stakeholder report comparing the start.canvas (planning) to end.canvas…"
 allowed-tools:
   - Read
   - Write
@@ -17,7 +18,6 @@ recurrence-hint: on-demand
 
 compatibility: claude-code codex opencode
 ---
-
 # Sprint Review Report
 
 End-of-sprint stakeholder report comparing **planning** (`start.canvas`) to **sprint close** (`end.canvas`). Read-only on Jira; uses the canvases captured by [sprint-snapshot](../../scrum-sprint/sprint-snapshot/SKILL.md). Writes one report file into the sprint folder, formatted to drop into the SM's stakeholder template.
@@ -268,5 +268,18 @@ Saved:            [sprint-review.md](Scrum Teams/Aurora/Scrum 📅/INC 28/Sprint
 | `obsidian-vault` | Use for batch wikilink verification (>15 names). |
 | `obsidian-bases` | Use when the user wants a `.base` aggregating reviews across an INC — e.g. "show commitment ratio + carry-over per sprint for Aurora this PI". Strong forecasting input. |
 | `daily-standup-prep` | Pattern parent for vault-write conventions and identity matching. |
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Every template section is present (Accomplishments / Status / Sprint Commitment / PI Confidence / Impediments)
+   - Accomplishments are traced to start.canvas vs end.canvas deltas, not narrated from memory
+   - Team-specific overhead and wedge-balancing rules were applied
+   - Impediments are concrete and actionable, not vague
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

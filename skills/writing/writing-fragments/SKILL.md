@@ -1,6 +1,7 @@
 ---
 name: writing-fragments
 description: Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions "fragments", "ideate", or "raw material" for writing.
+codex-short-description: "Grilling session that mines the user for fragments — heterogeneous nuggets of writing…"
 related-skills:
   - writing-shape
   - content-quality-editor
@@ -8,7 +9,6 @@ loop-eligible: false
 
 compatibility: claude-code codex opencode
 ---
-
 <what-to-do>
 
 Run a grilling session that produces fragments. Interview the user relentlessly about whatever they want to write about. Do not impose phases, outlines, or structure — that is explicitly out of scope.

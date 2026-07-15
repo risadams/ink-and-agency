@@ -1,6 +1,6 @@
 # Generated from skills/meta-orchestration/work-plan/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Work Plan"
-  short_description: "Plan a huge chunk of work — more than one agent session can hold — as a shared map of d..."
+  short_description: "Plan a huge chunk of work — more than one agent session can hold — as a shared map of…"
 policy:
   allow_implicit_invocation: false

@@ -1,4 +1,4 @@
 # Generated from skills/data-ai/nlp-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Nlp Engineer"
-  short_description: "Use when building production NLP systems, implementing text processing pipelines, devel..."
+  short_description: "Production NLP systems, implementing text processing pipelines, developing language…"

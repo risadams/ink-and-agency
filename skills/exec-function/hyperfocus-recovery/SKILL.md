@@ -1,5 +1,6 @@
 ---
 name: hyperfocus-recovery
+codex-short-description: "Rebuild context after a deep session or interruption from git and file artifacts"
 description: >
   Reconstruct context after a deep session or interruption — "what was I doing?"
   Reads recent git diff, modified files, open editors, and last commits to

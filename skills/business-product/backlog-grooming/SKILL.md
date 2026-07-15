@@ -102,10 +102,9 @@ Deliver:
 - Items recommended for archival
 - Refinement agenda for next session
 
-## Integration with Other Agents
+## Works well with
 
 - Work with **scrum-master** for ceremony facilitation
 - Collaborate with **product-manager** for priority decisions
 - Partner with **business-analyst** for story definition
 - Coordinate with **project-manager** for timeline alignment
-

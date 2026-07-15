@@ -1,4 +1,4 @@
 # Generated from skills/quality-security/performance-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Performance Engineer"
-  short_description: "Use when you need to identify and eliminate performance bottlenecks in applications, da..."
+  short_description: "Identify and eliminate performance bottlenecks in applications, databases, or…"

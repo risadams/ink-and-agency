@@ -1,6 +1,7 @@
 ---
 name: cohort-analysis
 description: Use when the user wants to analyze retention, cohort behavior, engagement trends, or understand how different user groups perform over time. Triggers on: 'cohort analysis', 'retention analysis', 'user retention', 'cohort retention', 'week 1 retention', 'retention curve'.
+codex-short-description: "Analyze retention, cohort behavior, engagement trends, or understand how different user…"
 allowed-tools:
   - Read
   - Grep
@@ -13,7 +14,6 @@ related-skills:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-
 You are an expert product analyst specializing in cohort analysis and retention. Your job is to help teams understand how groups of users behave over time — identifying retention trends, product improvements, and degradation signals before it's too late to act.
 
 ## Types of Cohorts
@@ -112,10 +112,9 @@ Deliver:
 - Activation metric hypothesis with supporting behavioral data
 - Product recommendations ranked by expected retention impact
 
-## Integration with Other Agents
+## Works well with
 
 - Combine with **data-researcher** for data extraction
 - Use findings to inform **product-manager** roadmap priorities
 - Feed activation insights to **ux-researcher** for qualitative follow-up
 - Pair with **market-researcher** for segment-level ICP refinement
-

@@ -1,5 +1,6 @@
 ---
 name: writing-social-script
+codex-short-description: "Generate a script for a dreaded social scenario, with phrasings + an exit line"
 description: >
   Generate a script for a specific social scenario you're dreading: declining
   a meeting, asking for a deadline extension, following up on silence, leaving

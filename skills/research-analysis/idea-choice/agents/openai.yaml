@@ -1,4 +1,4 @@
 # Generated from skills/research-analysis/idea-choice/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Idea Choice"
-  short_description: "Weigh one or more ideas/concepts with a structured pros-and-cons analysis"
+  short_description: "Weigh one or more ideas with a structured pros-and-cons analysis"

@@ -1,6 +1,7 @@
 ---
 name: clarity-council
 description: Facilitates structured single-persona or multi-persona consultation for strategy, product, engineering, operations, and risk decisions. Use when the user requests a council, multiple perspectives, persona advice, tradeoff analysis, or iterative clarification and debate.
+codex-short-description: "Facilitates structured single-persona or multi-persona consultation for strategy…"
 related-skills:
   - grill-me
   - idea-generate
@@ -8,7 +9,6 @@ loop-eligible: false
 recurrence-hint: on-demand
 compatibility: claude-code codex opencode
 ---
-
 # Clarity Council
 
 Structured persona-based consultation for decisions that benefit from expert perspectives. The

@@ -1,6 +1,7 @@
 ---
 name: daily-standup-prep
 description: Generate a per-team standup markdown report by gathering activity over the last N days from Jira, GitLab, Confluence, and a local Git repo. Maps activity to team members from a roster CSV, renders a Mermaid kanban + randomized talking order, captures a `daily`-tagged sprint snapshot, and runs a clarity-council (infographics-expert burndown chart + statistics-expert forecast + scrum-master suggestions) for sprint pulse. Writes one file per team into the Obsidian vault. Use when the user says "daily standup prep", "standup report", "generate standup", "scrum prep", or invokes /daily-standup-prep.
+codex-short-description: "Generate a per-team standup markdown report by gathering activity over the last N days…"
 allowed-tools:
   - Read
   - Write
@@ -28,7 +29,6 @@ recurrence-hint: daily
 
 compatibility: claude-code codex opencode
 ---
-
 # Daily Standup Prep
 
 Per-team standup report. Read-only across Jira, GitLab, Confluence, and Git. Writes one markdown file per team to the Obsidian vault.
@@ -310,5 +310,18 @@ This skill writes into and reads from the user's Obsidian vault. When any vault-
 | `obsidian-cli` | Use for property/task queries, frontmatter inspection, and any CLI-driven vault operation that `Read` + `Glob` cannot do cheaply. |
 | `obsidian-bases` | Use when the user wants a dashboard `.base` file (e.g. "show me all standups for Pyrite this sprint", "which team members had no activity in the last 5 standups"). Don't hand-author `.base` YAML. |
 | `obsidian-canvas` | Use if the user wants a visual board summarizing the standup (e.g. a sprint-overview canvas with linked standup notes as nodes). |
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Activity is mapped to the correct roster member from the CSV
+   - The Mermaid kanban renders and reflects the gathered Jira/GitLab state
+   - Sources cover the requested N-day window across Jira, GitLab, Confluence, and Git
+   - One file per team is written to the vault
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

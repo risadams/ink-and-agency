@@ -1,4 +1,4 @@
 # Generated from skills/specialized-domains/api-documenter/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Api Documenter"
-  short_description: "Use when creating or improving API documentation, writing OpenAPI specifications, build..."
+  short_description: "Create or improve API docs, OpenAPI specs, and interactive documentation portals"

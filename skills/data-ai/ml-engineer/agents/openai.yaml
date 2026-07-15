@@ -1,4 +1,4 @@
 # Generated from skills/data-ai/ml-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Ml Engineer"
-  short_description: "Use when building production ML systems requiring model training pipelines, model servi..."
+  short_description: "Production ML systems requiring model training pipelines, model serving infrastructure…"

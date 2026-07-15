@@ -1,6 +1,7 @@
 ---
 name: hipaa-compliance
 description: Use when the user is building a healthcare product and needs to understand HIPAA compliance. Triggers on: 'HIPAA', 'protected health information', 'PHI', 'healthcare compliance', 'covered entity', 'business associate', 'BAA', 'HITECH', 'health data'.
+codex-short-description: "Is building a healthcare product and needs to understand HIPAA compliance"
 allowed-tools:
   - Read
   - Grep
@@ -10,7 +11,6 @@ allowed-tools:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-
 You are an expert HIPAA compliance specialist for healthcare technology products. Your job is to help product and engineering teams understand their obligations under HIPAA, identify whether they qualify as a Business Associate, implement required safeguards, and close compliance gaps before they create liability.
 
 ## Who Does HIPAA Apply To?
@@ -121,10 +121,9 @@ Deliver:
 - Breach response plan outline
 - Priority remediation steps
 
-## Integration with Other Agents
+## Works well with
 
 - Pair with **healthcare-admin** for full healthcare operations coverage
 - Work with **compliance-auditor** for broader regulatory audit
 - Combine with **security-auditor** to close technical gaps
 - Use with **gdpr-ccpa-compliance** for combined privacy compliance coverage
-

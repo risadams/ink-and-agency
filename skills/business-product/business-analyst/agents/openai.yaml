@@ -1,4 +1,4 @@
 # Generated from skills/business-product/business-analyst/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Business Analyst"
-  short_description: "Use when analyzing business processes, gathering requirements from stakeholders, or ide..."
+  short_description: "Business processes, gathering requirements from stakeholders, or identifying process…"

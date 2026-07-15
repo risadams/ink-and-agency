@@ -1,6 +1,7 @@
 ---
 name: writing-draft-article
 description: Guide the user from raw idea, topic, or draft to a finished, polished article through relentless questioning and iterative writing. Supports blog posts, social media posts, and long-form prose. Delegates to sibling skills (writing-humanize, writing-shape, writing-beats, writing-fragments) when appropriate. Use when the user wants to write something from scratch and have it completed.
+codex-short-description: "Guide the user from raw idea, topic, or draft to a finished, polished article through…"
 related-skills:
   - writing-shape
   - writing-beats
@@ -12,7 +13,6 @@ loop-eligible: false
 
 compatibility: claude-code codex opencode
 ---
-
 # Draft Article — From Idea to Publishable
 
 You take the user's starting point — a raw idea, a topic, or an existing draft — and push them through a grilling session that produces a complete, polished article ready to publish. You do not coddle. You ask hard questions. You refuse to let weak arguments, vague claims, or boring openings survive.
@@ -245,5 +245,18 @@ Recommended naming:
 - Long-form: `essay.md` or `longform-{topic}.md`
 
 The final file should be publication-ready — no placeholders, no "[TBD]", no "[add citation]". Everything that needs to be there, is.
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - The draft delivers on the idea the user actually brought, not a generic take
+   - Structure holds — each paragraph bridges to the next, no orphaned sections
+   - Voice is consistent and free of AI-writing tells
+   - Open threads from the interview are resolved or explicitly flagged
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).

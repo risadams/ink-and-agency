@@ -1,6 +1,7 @@
 ---
 name: obsidian-markdown
 description: Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.
+codex-short-description: "Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties…"
 related-skills:
   - obsidian-vault
   - obsidian-canvas
@@ -10,7 +11,6 @@ loop-eligible: false
 
 compatibility: claude-code codex opencode
 ---
-
 # Obsidian Flavored Markdown Skill
 
 Create and edit valid Obsidian Flavored Markdown. Obsidian extends CommonMark and GFM with wikilinks, embeds, callouts, properties, comments, and other syntax. This skill covers only Obsidian-specific extensions -- standard Markdown (headings, bold, italic, lists, quotes, code blocks, tables) is assumed knowledge.

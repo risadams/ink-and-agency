@@ -1,5 +1,6 @@
 ---
 name: issue-triage
+codex-short-description: "Triage a bug into ranked root-cause hypotheses + solution paths (read-only)"
 description: >
   Triage a bug or issue by gathering context (Jira ticket or free-form
   description), mapping the suspected code area via codebase-explain, hypothesizing
@@ -237,5 +238,18 @@ If the comment fails to post (permissions, network, etc.), surface the error and
 - Do not propose code edits. The output is a hypothesis + path, not a fix.
 - If the input is ambiguous (no Jira key and no clear description), ask once for clarification — do not invent an issue to triage.
 - Time-box signal gathering. Five recent commits beats fifty; one close sibling ticket beats ten weak matches.
+
+## Quality Loop
+
+Before returning the artifact, evaluate it and refine if it falls short.
+
+1. **Generate** the artifact via the workflow above.
+2. **Self-evaluate** against these criteria:
+   - Root-cause candidates are ranked and each is falsifiable (states what would confirm/refute it)
+   - Each hypothesis names the suspected code area with evidence (commit, file, or sibling ticket)
+   - At least one concrete next step / solution path per top candidate
+   - Read-only respected — no files written unless the user asked
+3. **Loop** — if two or more criteria fail, revise and re-check.
+4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).
