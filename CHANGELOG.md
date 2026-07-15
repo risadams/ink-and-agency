@@ -5,6 +5,11 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.1] - 2026-07-15
+
+### Fixed
+- infographics-expert: require comma-separated `xychart-beta` x-axis category lists. Space-separated labels (`x-axis ["a" "b" "c"]`) throw a Mermaid `Parse error` and break the whole chart block; added as render-validity rule (e).
+
 ## [1.4.0] - 2026-07-15
 
 ### Added
