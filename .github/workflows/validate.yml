@@ -29,7 +29,7 @@ jobs:
     name: Lint skill frontmatter
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v7
 
     - name: Run skill linting
       run: pwsh ./scripts/lint-skills.ps1
@@ -38,7 +38,7 @@ jobs:
     name: Codex artifacts in sync
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v7
 
     - name: Regenerate Codex artifacts and manifest
       run: pwsh ./scripts/convert-agents-to-codex.ps1
