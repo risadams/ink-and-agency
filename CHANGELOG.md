@@ -5,6 +5,36 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-07-15
+
+### Added
+- Add 6 skill-quality rules to lint-skills.ps1
+- Merge deleted persona content into surviving skills
+
+### Changed
+- Bump actions/checkout to v7
+- Remove ADRs and scrub references
+- Normalize all line endings to LF + add .gitattributes
+- Declare compatibility on the last 10 skills
+- Frame clarity-council as a featured top-level skill
+- Consolidate skill map and composition docs into root README
+- Promoted council
+- Reclassify 16 advisory skills as council personas
+- Scrub internal identifiers from skill docs with generic placeholders
+- Promote council personas to a shared skills/persona/ category
+- Organize 215 skills into 15 category subfolders
+- De-duplicate personas vs top-level skills
+- Fold all agents into skills (skills-only pack)
+- Fold council agents into the clarity-council skill
+- Removed bad upstreams refs
+- Expand README with install, update, and invocation guidance
+
+### Fixed
+- Don't treat a clean convert as failure in bump-version
+- Repair council cross-references after top-level promotion
+- Repair broken persona-group references
+- Clean skill metadata defects and doc drift
+
 ## [1.3.0] - 2026-07-14
 
 ### Added
