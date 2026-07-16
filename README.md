@@ -34,8 +34,10 @@ ink-and-agency/
 │   ├── ... (15 categories — see CATEGORIES.md)
 │   ├── CATEGORIES.md            # Browsable index of all skills by category
 │   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)
-│   └── PORTABILITY.md           # How to interpret Claude tool names on other hosts
+│   ├── PORTABILITY.md           # How to interpret Claude tool names on other hosts
+│   └── SELF-EVOLVE.md           # The self-evolution contract every skill's footer points to
 ├── scripts/
+│   ├── add-self-evolve.ps1      # Maintains the Self-Evolve footer in every SKILL.md
 │   ├── bulk-loop-update-skills.ps1
 │   ├── convert-agents-to-codex.ps1  # Regenerates GENERATED artifacts (openai.yaml, plugin.json, CLAUDE.md)
 │   └── lint-skills.ps1
@@ -168,6 +170,43 @@ grill → work-plan → plan-to-spec → plan-to-tickets → implement (tdd + co
 Skills declare workflow neighbours in the `related-skills` frontmatter field. For the full model, see
 **[skills/INTEGRATION.md](skills/INTEGRATION.md)**; for named end-to-end flows, see **[skills/FLOWS.md](skills/FLOWS.md)**.
 
+## Self-evolution
+
+Every skill in the pack **learns across invocations**. Each `SKILL.md` ends with a short
+Self-Evolve footer pointing at the shared contract, **[skills/SELF-EVOLVE.md](skills/SELF-EVOLVE.md)**.
+The loop it runs:
+
+1. **Start** — the skill reads its learnings journal, if one exists, and applies what's
+   relevant (standing guidance always; past entries when they match the situation).
+2. **End** — the skill silently evaluates how the run went, from observable signals:
+   corrections, retries, things that misfired, things that clicked.
+3. **Optional feedback** — it may ask you *one* short question, and only when the session
+   is interactive and the run had visible friction. Ignoring or declining costs nothing;
+   it never asks during `/loop` runs, in subagents, or in non-interactive sessions.
+4. **Capture** — only signal-bearing runs get a journal entry (the test: *would this
+   change the next invocation?*). Routine clean runs write nothing.
+5. **Route improvements** — when a learning suggests the *skill itself* should change,
+   not just your context, it's routed by tier (see below).
+
+**Where learnings live — always on your machine.** One markdown journal per skill:
+`~/.ink-and-agency/learnings/<skill-name>.md` (user-global, follows you across projects),
+falling back to `.ink-and-agency/learnings/<skill-name>.md` at the workspace root on hosts
+whose sandbox confines writes to the workspace (Codex's default). Journals are plain
+markdown you can read, edit, or delete; nothing is ever sent anywhere.
+
+**How the skill itself improves.** If the canonical checkout of this repo is present —
+you're working inside it, or `~/.ink-and-agency/config.md` names its path — the skill
+proposes a concrete edit and, with your confirmation, applies it to the checkout
+(uncommitted, generated artifacts re-synced). Otherwise it records the idea under
+*Suggested skill improvements* in the journal and, only with your consent, offers to file
+it as an issue on this repo. A skill **never edits its running copy in a plugin cache** —
+caches are wiped on update and diverge from source.
+
+For contributors: the footer is machine-maintained by `pwsh ./scripts/add-self-evolve.ps1`
+(idempotent — run it after adding a skill; lint fails on a missing footer). A skill where
+end-of-run evaluation makes no sense can opt out with `self-evolve: false` in its
+frontmatter.
+
 ## Conventions
 
 - Skills cross-reference each other via the `related-skills` frontmatter field.
@@ -176,6 +215,7 @@ Skills declare workflow neighbours in the `related-skills` frontmatter field. Fo
 - The markdown under `skills/`, plus `AGENTS.md`, are the single source of truth. Everything Codex-facing is **generated** from them by `pwsh ./scripts/convert-agents-to-codex.ps1`: `skills/*/agents/openai.yaml` (per-skill Codex picker metadata + invocation policy), the root `plugin.json`, and the root `CLAUDE.md` (mirror of `AGENTS.md`). After editing any source, re-run the script and commit the output; CI fails if they drift.
 - One skill, both hosts: a skill's invocation mode lives once in its `SKILL.md` frontmatter (`disable-model-invocation: true` = user-invoked only) and is projected to Codex as `policy.allow_implicit_invocation: false`. Never hand-edit `openai.yaml`. See [AGENTS.md](AGENTS.md#skill-invocation-across-hosts).
 - The persona council is the `clarity-council` skill (three inline modes), not a set of subagents — so it ships in the skills bundle on both hosts. Personas are reference documents in the shared `skills/persona/` category (not skills — they have no `SKILL.md`), read by the council.
+- The Self-Evolve footer at the bottom of every `SKILL.md` is machine-maintained (between `<!-- self-evolve:start/end -->` markers) by `pwsh ./scripts/add-self-evolve.ps1` — change the template in that script and re-run it, never the footer itself. See [Self-evolution](#self-evolution).
 - On Claude Code, skill names are namespaced by the plugin at install time (`ink-and-agency:skill-name`), so local project skills won't collide.
 
 ## License
