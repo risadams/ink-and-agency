@@ -45,10 +45,10 @@ jobs:
 
     - name: Fail if generated files drifted from source
       run: |
-        if ! git diff --exit-code -- plugin.json 'skills/**/agents/openai.yaml' CLAUDE.md; then
+        if ! git diff --exit-code -- plugin.json '.claude-plugin/plugin.json' 'skills/**/agents/openai.yaml' CLAUDE.md; then
           echo ""
           echo "::error::Generated Codex artifacts are out of sync with skills/ or AGENTS.md."
-          echo "::error::Affected: plugin.json, skills/*/agents/openai.yaml, CLAUDE.md."
+          echo "::error::Affected: plugin.json, .claude-plugin/plugin.json, skills/*/agents/openai.yaml, CLAUDE.md."
           echo "::error::Run 'pwsh ./scripts/convert-agents-to-codex.ps1' locally and commit the result."
           exit 1
         fi

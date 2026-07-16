@@ -10,10 +10,13 @@ This is a **Claude Skills Pack** — a collection of prompt-based skill definiti
 
 ## Structure
 
-Skills are organized into **category subfolders**; discovery is recursive (a `SKILL.md` at any
-depth is a skill). See [CATEGORIES.md](CATEGORIES.md) for the 15 categories and the full index.
-The `clarity-council` skill sits at the top level of `skills/` (not inside a category) as a featured
-skill many others delegate to.
+Skills are organized into **category subfolders**. Codex discovers them recursively (any
+`SKILL.md` at any depth is a skill); **Claude Code does not** — it loads only the skill folders
+enumerated in the `skills` array of `.claude-plugin/plugin.json`, which is generated from the full
+`SKILL.md` set by `convert-agents-to-codex.ps1`. So a new skill in any category is picked up on the
+next regenerate; do not hand-edit that array. See [CATEGORIES.md](CATEGORIES.md) for the 15
+categories and the full index. The `clarity-council` skill sits at the top level of `skills/` (not
+inside a category) as a featured skill many others delegate to.
 
 ```text
 <category>/<name>/SKILL.md        # Skill entry point (YAML frontmatter + instructions)

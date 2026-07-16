@@ -121,9 +121,11 @@ $errors = @()
 # metadata beside it. User-invoked skills (disable-model-invocation: true) also
 # get policy.allow_implicit_invocation: false so Codex keeps them out of the
 # model's reach, matching Claude Code. Skills are organized into category
-# subfolders (skills/<category>/<name>/SKILL.md), so discovery is RECURSIVE:
-# any SKILL.md at any depth under skills/ is a skill. The 'agents' subfolder we
-# generate is excluded so we never treat generated output as a skill.
+# subfolders (skills/<category>/<name>/SKILL.md); this walk is recursive so any
+# SKILL.md at any depth is a skill. This same set drives the enumerated `skills`
+# array we write into .claude-plugin/plugin.json below (Claude Code does not
+# discover recursively, so it needs every folder listed). The 'agents' subfolder
+# we generate is excluded so we never treat generated output as a skill.
 $skillYamlCount = 0
 $skillMdFiles = Get-ChildItem -Path $skillsDir -Recurse -Filter 'SKILL.md' -File |
 Sort-Object FullName
@@ -229,10 +231,31 @@ $manifestObj = [ordered]@{
 $json = ($manifestObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
 [IO.File]::WriteAllText($manifest, $json + "`n", [Text.UTF8Encoding]::new($false))
 
+# Claude Code plugin manifest (.claude-plugin/plugin.json). Unlike Codex, Claude
+# Code does NOT discover skills recursively -- with no `skills` key it only finds
+# SKILL.md one level under skills/, so category-nested skills go missing. Fix: it
+# needs every skill folder enumerated. We regenerate ONLY that `skills` array from
+# the same SKILL.md set (so it can never drift); all other keys are hand-authored
+# in this file and preserved in place. Paths are ./skills/<category>/<name>.
+$skillFolderPaths = @($skillMdFiles | ForEach-Object {
+        './' + ([IO.Path]::GetRelativePath($RepoRoot, $_.Directory.FullName) -replace '\\', '/')
+    } | Sort-Object)
+
+$claudeManifestPath = Join-Path $RepoRoot '.claude-plugin/plugin.json'
+$claudeObj = [ordered]@{}
+foreach ($prop in $claudeManifest.PSObject.Properties) {
+    if ($prop.Name -eq 'skills') { continue }   # replaced below; keep all others in order
+    $claudeObj[$prop.Name] = $prop.Value
+}
+$claudeObj['skills'] = $skillFolderPaths
+$claudeJson = ($claudeObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
+[IO.File]::WriteAllText($claudeManifestPath, $claudeJson + "`n", [Text.UTF8Encoding]::new($false))
+
 Write-Host ""
 Write-Host "Generated $skillYamlCount skill openai.yaml files in skills/*/agents/" -ForegroundColor Green
 Write-Host "Mirrored AGENTS.md -> CLAUDE.md" -ForegroundColor Green
 Write-Host "Manifest plugin.json written ($skillCount skills bundled via ./skills/)" -ForegroundColor Green
+Write-Host "Manifest .claude-plugin/plugin.json written ($($skillFolderPaths.Count) skills enumerated)" -ForegroundColor Green
 
 if ($errors.Count -gt 0) {
     Write-Host ""

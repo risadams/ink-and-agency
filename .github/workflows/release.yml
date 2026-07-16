@@ -37,7 +37,7 @@ jobs:
     - name: Verify Codex artifacts are in sync
       run: |
         pwsh ./scripts/convert-agents-to-codex.ps1
-        if ! git diff --exit-code -- plugin.json 'skills/**/agents/openai.yaml' CLAUDE.md; then
+        if ! git diff --exit-code -- plugin.json '.claude-plugin/plugin.json' 'skills/**/agents/openai.yaml' CLAUDE.md; then
           echo "::error::Generated Codex artifacts are out of sync. Run 'pwsh ./scripts/convert-agents-to-codex.ps1' and commit before releasing."
           exit 1
         fi

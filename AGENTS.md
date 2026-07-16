@@ -4,7 +4,7 @@ Guidance for coding agents (Codex, Claude Code, or others) working in this repos
 
 ## Nature of this repo
 
-This is a dual-host **skills plugin**: a single-primitive pack of prompt-based skills installable into both Claude Code and OpenAI Codex. Everything is a skill, organized into category subfolders: `skills/<category>/<name>/SKILL.md` (e.g. `skills/language-specialists/python-pro/SKILL.md`). Skill discovery is **recursive** — a `SKILL.md` at any depth under `skills/` is a skill, so categories are just folders and carry no meaning to the hosts. The 15 categories are listed in [`skills/CATEGORIES.md`](skills/CATEGORIES.md). The pack once shipped a separate library of subagents under `agents/`, but those were folded into the skills namespace so the whole pack ships in the one bundle both hosts read (Codex plugins bundle only `./skills/` — they cannot carry agents). There is no build system or test runner; the only automation is the PowerShell scripts under `scripts/`.
+This is a dual-host **skills plugin**: a single-primitive pack of prompt-based skills installable into both Claude Code and OpenAI Codex. Everything is a skill, organized into category subfolders: `skills/<category>/<name>/SKILL.md` (e.g. `skills/language-specialists/python-pro/SKILL.md`). Categories are just folders and carry no meaning at invocation time — the skill's `name` (the leaf folder) is what's invoked. **Discovery differs by host, so both must be able to find category-nested skills:** Codex bundles `./skills/` and walks it recursively; Claude Code does **not** discover recursively — it loads only the skill folders enumerated in the `skills` array of `.claude-plugin/plugin.json`. That array is **generated** by `convert-agents-to-codex.ps1` from the full `SKILL.md` set, so a new skill in any category is picked up automatically once you regenerate — never hand-edit the array. The 15 categories are listed in [`skills/CATEGORIES.md`](skills/CATEGORIES.md). The pack once shipped a separate library of subagents under `agents/`, but those were folded into the skills namespace so the whole pack ships in the one bundle both hosts read (Codex plugins bundle only `./skills/` — they cannot carry agents). There is no build system or test runner; the only automation is the PowerShell scripts under `scripts/`.
 
 ## Source of truth
 
@@ -15,13 +15,13 @@ This is a dual-host **skills plugin**: a single-primitive pack of prompt-based s
 | `skills/<category>/<name>/agents/openai.yaml` | **Generated** — Codex per-skill picker metadata derived from each `SKILL.md` frontmatter |
 | `plugin.json` (root) | **Generated** — Codex plugin manifest (bundles `./skills/`) |
 | `CLAUDE.md` (root) | **Generated** — mirror of `AGENTS.md` so Claude Code maintainers auto-load the same guidance |
-| `.claude-plugin/plugin.json` | Claude Code plugin manifest (hand-maintained) |
+| `.claude-plugin/plugin.json` | Claude Code plugin manifest — metadata hand-maintained; the `skills` array is **generated** (enumerates every skill folder so Claude Code, which does not discover recursively, loads them all) |
 | `.claude-plugin/marketplace.json` | Claude Code marketplace catalog (hand-maintained; required by `/plugin marketplace add`) |
 | `.agents/plugins/marketplace.json` | Codex marketplace catalog (hand-maintained; required by `codex plugin marketplace add`) |
 
-**Never edit generated files by hand** — `skills/**/agents/openai.yaml`, the root `plugin.json`, or the root `CLAUDE.md`. Edit the markdown source (a `SKILL.md`, or `AGENTS.md`), then regenerate:
+**Never edit generated files by hand** — `skills/**/agents/openai.yaml`, the root `plugin.json`, the root `CLAUDE.md`, or the `skills` array in `.claude-plugin/plugin.json`. Edit the markdown source (a `SKILL.md`, or `AGENTS.md`), then regenerate (the other keys in `.claude-plugin/plugin.json` stay hand-maintained):
 
-```
+```sh
 pwsh ./scripts/convert-agents-to-codex.ps1
 ```
 

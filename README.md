@@ -25,7 +25,7 @@ ink-and-agency/
 ├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
 ├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
 ├── skills/                      # 199 skills in 15 category folders (shared by both hosts)
-│   ├── <category>/<name>/SKILL.md         # canonical skill (discovery is recursive)
+│   ├── <category>/<name>/SKILL.md         # canonical skill (Codex walks recursively; Claude Code loads via the generated skills[] in .claude-plugin/plugin.json)
 │   ├── <category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
 │   ├── language-specialists/    #   e.g. python-pro, rust-engineer, typescript-pro
 │   ├── infrastructure/          #   e.g. kubernetes-specialist, terraform-engineer
