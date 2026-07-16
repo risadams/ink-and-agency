@@ -127,3 +127,19 @@ User invokes with a map (URL or number). A ticket is **optional** — without on
 5. Add newly-surfaced tickets (create-then-wire); graduate any fog the answer has made specifiable, clearing each graduated patch from **Not yet specified** so it lives only as its new ticket. If the answer reveals a ticket — this one or another — sits beyond the destination, **rule it out of scope** rather than resolving it on the route. If the decision invalidates other parts of the map, update or delete those tickets.
 
 The user may run unblocked tickets in parallel, so expect other sessions to be editing the tracker concurrently.
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/work-plan.md` and/or the workspace-local
+`.ink-and-agency/learnings/work-plan.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

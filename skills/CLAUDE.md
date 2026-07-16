@@ -53,6 +53,7 @@ loop-eligible: true                    # optional — true if can run via /loop
 recurrence-hint: daily                 # optional — daily/weekly/on-demand (if loop-eligible=true)
 disable-model-invocation: true         # optional — user-invoked only (see below)
 codex-short-description: "…"           # optional — override for the Codex picker label
+self-evolve: false                     # optional — opt out of the Self-Evolve Loop footer
 ```
 
 **Note:** The pack is skills-only — there is no `related-agents` field. `related-skills` entries should name skills that actually exist and have a clear workflow connection. See **[INTEGRATION.md](INTEGRATION.md)** for guidance.
@@ -145,8 +146,28 @@ recurrence-hint: weekly  # Usually run once per sprint, or on-demand
 - **No circular chains:** A→B→C→A rejected
 - **Type correctness:** only skill names in related-skills (no tool or MCP names)
 - **Recurrence consistency:** loop-eligible=true requires recurrence-hint
+- **Self-Evolve footer:** every SKILL.md carries the Self-Evolve Loop footer unless it opts out with `self-evolve: false`; the footer link must resolve to `SELF-EVOLVE.md`
 
 Validation is performed by `scripts/lint-skills.ps1`.
+
+## Self-Evolve Loop (cross-invocation)
+
+Where the Quality Loop evaluates output *before returning it*, the **Self-Evolve
+Loop** learns *across invocations*: at the end of each run a skill self-evaluates,
+optionally asks the user for feedback (never blocking), appends signal-bearing
+learnings to a per-skill journal (`~/.ink-and-agency/learnings/<name>.md`, or the
+workspace-local `.ink-and-agency/learnings/<name>.md` where the sandbox confines
+writes), reads that journal back at the start of future runs, and routes
+skill-improvement ideas by tier — editing the **canonical repo** directly when one is
+present on the machine (never the plugin cache), recording suggestions otherwise.
+The full contract is [SELF-EVOLVE.md](SELF-EVOLVE.md).
+
+Every skill carries a short `## Self-Evolve Loop` footer between
+`<!-- self-evolve:start -->` / `<!-- self-evolve:end -->` markers pointing at the
+contract. The footer is **machine-maintained** by `scripts/add-self-evolve.ps1`
+(idempotent: adds missing footers, syncs drifted ones to the template, strips them
+from skills with `self-evolve: false`) — edit the template in the script and re-run,
+never hand-edit a footer.
 
 ## Skills inventory
 
@@ -226,7 +247,8 @@ Validation is performed by `scripts/lint-skills.ps1`.
 4. Each skill should have a README.md that expands on the instructions in `SKILL.md` with examples, edge cases, and troubleshooting tips. Link to it from `SKILL.md` if needed.
 5. Each skill should be self-contained. If it depends on another skill, link to that skill's README for instructions instead of cross-referencing internal steps.
 6. If needed, the skill should have an examples.md with annotated code snippets for common use cases and edge cases. Link to it from the README.
-7. Folder names are stable — do not rename once published.
+7. Run `pwsh ./scripts/add-self-evolve.ps1` so the new skill gets its Self-Evolve Loop footer (lint fails without it; opt out with `self-evolve: false` in frontmatter where end-of-run evaluation makes no sense).
+8. Folder names are stable — do not rename once published.
 
 ## Editing an existing skill
 
@@ -235,3 +257,4 @@ Validation is performed by `scripts/lint-skills.ps1`.
 - Update the skill's README if the workflow or reference files change.
 - **Loop Method:** If you add related-skills or a Delegation Map, update the frontmatter + add the section to SKILL.md.
 - If the skill can now run recurring, add `loop-eligible: true` and `recurrence-hint: [frequency]`.
+- **Self-Evolve footer:** never hand-edit the block between the `self-evolve` markers — change the template in `scripts/add-self-evolve.ps1` and re-run it.

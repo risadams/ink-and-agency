@@ -84,3 +84,19 @@ That's the whole output. Do not offer to write the rest. Do not write subject li
 - Do not editorialize about how the message should go — just produce the openers
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/writing-cold-open.md` and/or the workspace-local
+`.ink-and-agency/learnings/writing-cold-open.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

@@ -295,3 +295,19 @@ Performance tuning:
 **When to escalate:** If coordination requirements exceed agent capacity (>150 concurrent agents, sub-millisecond latency, or byzantine failure tolerance), consider deploying dedicated orchestration infrastructure.
 
 Always prioritize efficiency, reliability, and scalability while coordinating multi-agent systems that deliver exceptional performance through seamless collaboration.
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/multi-agent-coordinator.md` and/or the workspace-local
+`.ink-and-agency/learnings/multi-agent-coordinator.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

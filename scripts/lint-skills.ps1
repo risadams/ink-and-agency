@@ -18,6 +18,9 @@
       - related-skills: every entry resolves to a real skill folder, no
         self-reference, and no non-skill (tool/agent) names leaked in
       - loop-eligible: true requires a recurrence-hint of daily|weekly|on-demand|none
+      - self-evolve: optional true|false; every skill carries the Self-Evolve Loop
+        footer (markers + section, link resolving to skills/SELF-EVOLVE.md) unless
+        it opts out with self-evolve: false — maintained by add-self-evolve.ps1
       - body carries no stale subagent-era boilerplate ("When invoked:", "Query
         context manager", "Integration with other agents", requesting_agent JSON)
         that contradicts the skills-only/run-inline model (warn)
@@ -192,6 +195,11 @@ foreach ($dir in $skillDirs) {
         }
     }
 
+    # self-evolve: optional boolean opt-out of the Self-Evolve Loop footer
+    if ($fm['self-evolve'] -and $fm['self-evolve'] -notin @('true', 'false')) {
+        Add-Error "$folder : invalid self-evolve '$($fm['self-evolve'])' (must be true or false)"
+    }
+
     # --- body hygiene (skills-only pack: no subagent-era orchestration prose) --
     $body = Get-Content -Path $skillMd -Raw
     $staleHits = @()
@@ -202,6 +210,22 @@ foreach ($dir in $skillDirs) {
     if ($body -match '(?i)## Communication Protocol') { $staleHits += '## Communication Protocol' }
     if ($staleHits.Count) {
         Add-Warning "$folder : Stale subagent boilerplate ($($staleHits -join ', ')) - pack is skills-only/run-inline"
+    }
+
+    # --- Self-Evolve Loop footer invariant (see skills/SELF-EVOLVE.md) ---------
+    $optedOut = $fm['self-evolve'] -eq 'false'
+    $hasSelfEvolve = $body.Contains('<!-- self-evolve:start -->') -and $body -match '## Self-Evolve Loop'
+    if ($optedOut -and $hasSelfEvolve) {
+        Add-Error "$folder : self-evolve: false but footer present - run scripts/add-self-evolve.ps1"
+    }
+    elseif (-not $optedOut -and -not $hasSelfEvolve) {
+        Add-Error "$folder : missing Self-Evolve Loop footer - run scripts/add-self-evolve.ps1"
+    }
+    if ($hasSelfEvolve -and $body -match '\[SELF-EVOLVE\.md\]\(([^)]+)\)') {
+        $target = Join-Path $dir.FullName $matches[1]
+        if (-not (Test-Path $target)) {
+            Add-Error "$folder : Self-Evolve footer link '$($matches[1])' does not resolve - run scripts/add-self-evolve.ps1"
+        }
     }
 
     # --- progressive disclosure: large bodies should split into references/*.md -

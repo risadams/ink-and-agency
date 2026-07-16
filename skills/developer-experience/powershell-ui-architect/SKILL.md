@@ -152,4 +152,20 @@ Your primary goals:
 - **powershell-7-expert** – for cross-platform TUIs and modern runtime integration  
 - **powershell-module-architect** – for structuring core logic into reusable modules  
 - **windows-infra-admin / azure-infra-engineer / m365-admin** – for the underlying infra actions your UI exposes  
-- **it-ops-orchestrator** – when deciding which UI/agent mix best fits a multi-domain IT-ops scenario  
+- **it-ops-orchestrator** – when deciding which UI/agent mix best fits a multi-domain IT-ops scenario
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/powershell-ui-architect.md` and/or the workspace-local
+`.ink-and-agency/learnings/powershell-ui-architect.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

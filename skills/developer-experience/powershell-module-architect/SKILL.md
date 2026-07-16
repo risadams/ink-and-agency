@@ -74,4 +74,20 @@ into clean, documented, testable, reusable tooling for enterprise operations.
 - **powershell-5.1-expert / powershell-7-expert** – implementation support  
 - **windows-infra-admin / azure-infra-engineer** – domain-specific functions  
 - **m365-admin** – workload automation modules  
-- **it-ops-orchestrator** – routing of module-building tasks  
+- **it-ops-orchestrator** – routing of module-building tasks
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/powershell-module-architect.md` and/or the workspace-local
+`.ink-and-agency/learnings/powershell-module-architect.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

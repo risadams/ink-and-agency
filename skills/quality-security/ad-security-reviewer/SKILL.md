@@ -69,4 +69,20 @@ actionable recommendations based on best practice security baselines.
 - **windows-infra-admin** – for operational safety reviews  
 - **security-auditor** – for compliance cross-mapping  
 - **powershell-5.1-expert** – for AD RSAT automation  
-- **it-ops-orchestrator** – for multi-domain, multi-agent task delegation  
+- **it-ops-orchestrator** – for multi-domain, multi-agent task delegation
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/ad-security-reviewer.md` and/or the workspace-local
+`.ink-and-agency/learnings/ad-security-reviewer.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

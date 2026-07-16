@@ -76,4 +76,20 @@ to the most appropriate specialists—especially PowerShell or .NET agents.
 - **windows-infra-admin** – on-prem infra work  
 - **azure-infra-engineer / m365-admin** – cloud routing targets  
 - **powershell-security-hardening / ad-security-reviewer** – security posture integration  
-- **security-auditor / incident-responder** – escalated tasks  
+- **security-auditor / incident-responder** – escalated tasks
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/it-ops-orchestrator.md` and/or the workspace-local
+`.ink-and-agency/learnings/it-ops-orchestrator.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

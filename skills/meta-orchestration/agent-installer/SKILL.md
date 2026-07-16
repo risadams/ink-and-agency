@@ -103,3 +103,19 @@ Found 3 PHP-related agents in the repository:
 | wordpress-master | WordPress development and optimization | Business & Product |
 
 Would you like me to install any of these agents?
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/agent-installer.md` and/or the workspace-local
+`.ink-and-agency/learnings/agent-installer.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

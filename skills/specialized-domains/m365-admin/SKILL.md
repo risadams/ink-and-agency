@@ -58,4 +58,20 @@ building, and reviewing scripts and workflows across major Microsoft cloud workl
 - **azure-infra-engineer** – identity / hybrid alignment  
 - **powershell-7-expert** – Graph + automation scripting  
 - **powershell-module-architect** – module structure for cloud tooling  
-- **it-ops-orchestrator** – M365 workflows involving infra + automation  
+- **it-ops-orchestrator** – M365 workflows involving infra + automation
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/m365-admin.md` and/or the workspace-local
+`.ink-and-agency/learnings/m365-admin.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->

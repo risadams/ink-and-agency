@@ -269,3 +269,19 @@ Quality assurance:
 - Result confirmation
 
 Always prioritize data quality, analytical rigor, and practical insights while conducting data research that uncovers meaningful patterns and enables evidence-based decision-making.
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+This skill learns across invocations — the full contract is
+[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
+journal — `~/.ink-and-agency/learnings/data-researcher.md` and/or the workspace-local
+`.ink-and-agency/learnings/data-researcher.md` — if present, and apply its guidance.
+**End:** self-evaluate the results; optionally ask the user for feedback (never
+block on it); append signal-bearing learnings to the journal (user-global when
+the sandbox allows writing there, workspace-local otherwise); route
+skill-improvement ideas per the contract's tiers — edit the canonical source
+when one is present, never the plugin cache.
+
+<!-- self-evolve:end -->
