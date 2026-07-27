@@ -156,6 +156,7 @@
     "./skills/meta-orchestration/performance-monitor",
     "./skills/meta-orchestration/plan-to-spec",
     "./skills/meta-orchestration/plan-to-tickets",
+    "./skills/meta-orchestration/prototype",
     "./skills/meta-orchestration/research",
     "./skills/meta-orchestration/skill-create",
     "./skills/meta-orchestration/task-distributor",

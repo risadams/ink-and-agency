@@ -4,7 +4,7 @@ All skills live under `skills/<category>/<name>/SKILL.md`. Categories are folder
 browsability only — a skill's invocation name is its leaf folder and is independent of
 category. Discovery is recursive.
 
-**199 skills across 15 categories**, plus the featured top-level [`clarity-council`](clarity-council/) skill.
+**200 skills across 15 categories**, plus the featured top-level [`clarity-council`](clarity-council/) skill.
 
 > **Featured top-level skill:** [`clarity-council`](clarity-council/) lives at the root of `skills/`
 > rather than inside a category — it's the persona-consultation engine that many other skills delegate
@@ -178,7 +178,7 @@ Language- and framework-specific experts.
 - [`typescript-pro`](language-specialists/typescript-pro/) — Use when implementing TypeScript code requiring advanced type system patterns, complex generics, type-level programming, or end-to-end type 
 - [`vue-expert`](language-specialists/vue-expert/) — Use when building Vue 3 applications that require Composition API mastery, reactivity optimization, or Nuxt 3 development with enterprise-sc
 
-## Meta-Orchestration &nbsp;`meta-orchestration` (19)
+## Meta-Orchestration &nbsp;`meta-orchestration` (20)
 
 Multi-agent coordination, planning, and the plan→spec→tickets build pipeline.
 
@@ -195,6 +195,7 @@ Multi-agent coordination, planning, and the plan→spec→tickets build pipeline
 - [`performance-monitor`](meta-orchestration/performance-monitor/) — Use when establishing observability infrastructure to track system metrics, detect performance anomalies, and optimize resource usage across
 - [`plan-to-spec`](meta-orchestration/plan-to-spec/) — Synthesize the current conversation into a spec (PRD) and stage it as a local file.
 - [`plan-to-tickets`](meta-orchestration/plan-to-tickets/) — Break a spec, plan, or the current conversation into a local, numbered, spec-kit-style task list of tracer-bullet vertical slices with expli
+- [`prototype`](meta-orchestration/prototype/) — Build a throwaway prototype to answer a design question.
 - [`research`](meta-orchestration/research/) — Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo.
 - [`skill-create`](meta-orchestration/skill-create/) — Create new agent skills with proper structure, progressive disclosure, and bundled resources.
 - [`task-distributor`](meta-orchestration/task-distributor/) — Use when distributing tasks across multiple agents or workers, managing queues, and balancing workloads to maximize throughput while respect

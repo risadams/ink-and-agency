@@ -56,7 +56,8 @@ grill-with-docs / grill-me ──> work-plan ──> plan-to-spec ──> plan-t
 ```
 
 - **`/grill-with-docs`** — sharpen an idea by interview *against the codebase*, leaving a paper trail (CONTEXT.md, ADRs). Use `/grill-me` when there's no codebase.
-- **`/work-plan`** — chart a large effort as a map of decision tickets; resolve one decision per session. Fires **`/research`** subagents for research-type tickets.
+- **`/work-plan`** — chart a large effort as a map of decision tickets; resolve one decision per session. Fires **`/research`** subagents for research-type tickets and **`/prototype`** for prototype-type ones.
+- **`/prototype`** — settle a design question with throwaway code before committing to a build: a hand-driven TUI over a pure logic module (state models), or N structurally different UI variants behind one switcher. Answers the question, then gets thrown away — only the decision moves forward.
 - **`/plan-to-spec`** — once the design is settled, synthesize the conversation into a spec (PRD) staged as a local `spec.md` (spec-kit style). No interview — just write-up. Publishing to Confluence is opt-in, on request.
 - **`/plan-to-tickets`** — break the spec (or plan/conversation) into a local numbered `tasks.md` (tracer-bullet vertical slices, explicit dependencies, `[P]` markers). Pushing to Jira as tickets with native "Blocks" links is opt-in, on request.
 - **`/implement`** — build one ticket through a **tunable pipeline** (test-first → verify → review → track), every phase skippable. Auto-detects a preset from `prototype` to `full`. Drives **`/tdd`** and **`/code-review`** internally.
@@ -73,7 +74,7 @@ implement ──┬──> tdd          (red → green, one vertical slice at a 
 - **`/tdd`** — the red→green loop and what makes a test worth keeping (seams, anti-patterns). On its own when you just want to build a behaviour test-first.
 - **`/code-review`** — two-axis review of the *working diff* (pre-MR). Distinct from **`/mr-review`** / **`/mr-gatekeep`**, which gate a *posted* GitLab MR.
 
-**Tuning:** a prototype runs `implement` with test-first/review/track all off; a CCB-gated feature runs the full pipeline into an MR. The pipeline is the same; the phases vary.
+**Tuning:** throwaway work runs `implement` with test-first/review/track all off (its `prototype` *preset* — not the **`/prototype`** skill, which answers a design question instead of building the thing); a CCB-gated feature runs the full pipeline into an MR. The pipeline is the same; the phases vary.
 
 ## Codebase-understanding flow
 
