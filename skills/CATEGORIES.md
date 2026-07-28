@@ -99,7 +99,7 @@ Tooling, build, CLI, docs, refactoring, and Git workflow.
 - [`mcp-developer`](developer-experience/mcp-developer/) — Use when you need to build, debug, or optimize Model Context Protocol (MCP) servers and clients that connect AI systems to external tools an
 - [`powershell-module-architect`](developer-experience/powershell-module-architect/) — Use when architecting and refactoring PowerShell modules, designing profile systems, or creating cross-version compatible automation librari
 - [`powershell-ui-architect`](developer-experience/powershell-ui-architect/) — Use when designing or building desktop graphical interfaces (WinForms, WPF, Metro-style dashboards) or terminal user interfaces (TUIs) for P
-- [`readme-generator`](developer-experience/readme-generator/) — Use when you need a maintainer-ready README built from exact repository reality, with deep codebase scanning, zero hallucination, and option
+- [`readme-generator`](developer-experience/readme-generator/) — Write, overhaul, or review a project README that is accurate to the repository and easy for a human to read — deep codebase scan for exact
 - [`refactoring-specialist`](developer-experience/refactoring-specialist/) — Use when you need to transform poorly structured, complex, or duplicated code into clean, maintainable systems while preserving all existing
 - [`slack-expert`](developer-experience/slack-expert/) — Use when developing Slack applications, implementing Slack API integrations, or reviewing Slack bot code for security and best practices.
 - [`tooling-engineer`](developer-experience/tooling-engineer/) — Use when you need to build or enhance developer tools including CLIs, code generators, build tools, and IDE extensions.

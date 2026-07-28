@@ -1,7 +1,13 @@
 ---
 name: readme-generator
-description: Use when you need a maintainer-ready README built from exact repository reality, with deep codebase scanning, zero hallucination, and optional git commit/push only when explicitly requested.
-codex-short-description: "You need a maintainer-ready README built from exact repository reality, with deep…"
+description: >
+  Write, overhaul, or review a project README that is accurate to the repository
+  and easy for a human to read — deep codebase scan for exact commands and
+  config, a best-practice section ladder, and a pass/fail review rubric. Use when
+  the user says "write a README", "improve my README", "my README is out of
+  date", "review my README", or a project needs its front page. Commits or pushes
+  only when explicitly asked.
+codex-short-description: "Write, overhaul, or review a README that is accurate to the repo and readable by humans"
 allowed-tools:
   - Read
   - Write
