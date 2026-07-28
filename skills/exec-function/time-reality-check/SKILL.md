@@ -16,6 +16,7 @@ allowed-tools:
 related-skills:
   - clarity-council
   - project-manager
+  - i-have-adhd
 loop-eligible: false
 ---
 

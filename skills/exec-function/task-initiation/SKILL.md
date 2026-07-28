@@ -13,6 +13,7 @@ allowed-tools:
   - AskUserQuestion
 related-skills:
   - project-manager
+  - i-have-adhd
 loop-eligible: false
 ---
 

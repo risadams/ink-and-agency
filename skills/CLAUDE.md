@@ -195,7 +195,10 @@ never hand-edit a footer.
 | grill-me | Stress-test plans through iterative questioning |
 | grill-with-docs | Grilling against domain docs + updating CONTEXT/ADR artifacts inline |
 | handoff | Compact the current conversation into a structured handoff document so a fresh agent can pick up work without re-deriving context. Saves to OS temp directory, includes suggested skills, redacts sensitive data. |
-| hyperfocus-recovery | Reconstruct context after a deep session or interruption from git/file artifacts → suggested re-entry point |
+| hyperfocus-exit | Park a deep session before a forced interrupt: clock-tiered (slam / standard / full), captures the head-state that isn't on disk, writes `.ink-and-agency/park/<ts>.md` + a `PARKED` breadcrumb at the cursor line. Inverse of hyperfocus-recovery, which reads both |
+| hyperfocus-recovery | Reconstruct context after a deep session or interruption from git/file artifacts → suggested re-entry point. Reads a hyperfocus-exit park file first when one exists |
+| i-am-autistic | Output-shaping skill for an autistic reader: say the thing directly, label every instruction required/recommended/optional, literal language, quantified uncertainty instead of hedges, fact/inference/opinion labeled, social subtext named, no demanded social performance. Composes with i-have-adhd (safety → explicitness → brevity) |
+| i-have-adhd | Output-shaping skill for an ADHD reader: next action on the first line, numbered multi-step work, progress state restated every turn, one thread at a time, numeric time estimates, no preamble/recap/closer. Overrides for "explain", destructive actions, debug spirals, real ambiguity. Shapes form, never substance |
 | idea-choice | Deliberate pros/cons analysis for one or more ideas: clarity-council pass + optional grill-me, scores each item on Impact × Confidence, renders markdown table per idea, comparison table across ideas, recommendation (Go / Go with caveats / Don't / Needs more analysis). Complements idea-generate (which produces ideas) and idea-decision-maker (which forces a fast binary pick) |
 | idea-decision-maker | Force a pick between options to defeat analysis paralysis. Council: senior-architect + devils-advocate + personal-assistant vote, majority wins. Fast counterpart to idea-choice — use when the user needs a verdict, not a written record (was: `decision-breaker`) |
 | idea-generate | Generate and refine ideas from loose topics using Divergence (council) and Convergence (grill) workflows |
@@ -208,6 +211,7 @@ never hand-edit a footer.
 | issue-suggest-component | Suggest Jira components for a ticket or sweep a project (default project from memory, max 250). Confirms before each add; can create new components |
 | issue-triage | Triage Jira ticket or free-form bug → ranked root-cause hypotheses + solution paths (read-only) |
 | meeting-decompression | Process a meeting dump: separate facts/action-items/social ambiguities. Sorts ruminations into "worth following up on" vs "RSD noise". Council: psychologist + personal-assistant |
+| overwhelm-triage | Unstructured dump of everything competing for attention → exactly one thing to do, rest parked with a date. Sorts by consequence-if-missed (not importance) into Today / this week / no date / not yours; non-tasks pulled out as worries. Routes to energy-budget when ≥3 real Today items (capacity, not triage) |
 | obsidian-bases | Create and edit Obsidian Bases (.base files) — views, filters, formulas, summaries |
 | obsidian-canvas | Create and edit Obsidian .canvas files (nodes, edges, groups, connections) |
 | obsidian-charts | Build interactive Chart.js charts in Obsidian via `chart` codeblocks — inline literal series, link to a markdown table by `^blockId` (same note or cross-file), or render from a Dataview/Dataviewjs query via `window.renderChart` |

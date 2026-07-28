@@ -18,6 +18,8 @@ allowed-tools:
 related-skills:
   - task-initiation
   - project-manager
+  - i-have-adhd
+  - hyperfocus-exit
 loop-eligible: false
 ---
 
@@ -42,13 +44,14 @@ This is forensic reconstruction, not interpretation. A council call would add no
 
 Run these in parallel, take what works, ignore what doesn't:
 
+0. **Newest file in `.ink-and-agency/park/`** — a park file left by [hyperfocus-exit](../hyperfocus-exit/). Check this first: it holds the head-state that no artifact can reconstruct (what they were about to try, what they already ruled out, what will silently disappear). When one exists and is recent, lead the reconstruction with it and use the rest of this pass to confirm it still matches the tree.
 1. **`git status`** — uncommitted changes (the freshest evidence of intent)
 2. **`git diff`** (working tree) — what they were actively editing
 3. **`git diff --staged`** — what they had decided was ready
 4. **`git log --oneline -10`** — the trail of recent committed thinking
 5. **`git stash list`** — abandoned work
 6. **Modified files in last 4 hours** — `find . -mmin -240 -type f -not -path './.git/*'` (or platform equivalent)
-7. **TODO/FIXME/XXX in recently-touched files** — breadcrumbs they left themselves
+7. **`PARKED`/TODO/FIXME/XXX in recently-touched files** — breadcrumbs they left themselves. A `PARKED` comment is deliberate and points at the exact re-entry line; treat it as the strongest signal in the file.
 8. **Open editor file** — from IDE context if available
 
 ## Output format
@@ -67,7 +70,9 @@ A bulleted list of the active threads, ranked by recency and certainty:
 
 ### Breadcrumbs you left yourself
 
-Surface any TODO / FIXME / XXX / `// TEMP` comments in recently-touched files, with file:line links. These are usually the most reliable signal of intent.
+Surface any PARKED / TODO / FIXME / XXX / `// TEMP` comments in recently-touched files, with file:line links. These are usually the most reliable signal of intent.
+
+If a park file supplied a **Do not lose** list, restate it here verbatim — running processes and set env vars are the loose ends most likely to be gone by now, and the user needs to know which ones died.
 
 ### Loose ends
 

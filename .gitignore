@@ -2,3 +2,6 @@
 .claude/
 
 docs/workplan/
+
+# Workspace-local skill state: self-evolve learnings journals, hyperfocus-exit park files
+.ink-and-agency/

@@ -118,6 +118,8 @@ These fire when a specific state hits, not in sequence:
 | When you feel… | Reach for |
 | :--- | :--- |
 | Can't start a known task | **`/task-initiation`** |
+| Eleven things and can't pick one | **`/overwhelm-triage`** |
+| Have to stop mid-flow, right now | **`/hyperfocus-exit`** |
 | Overcommitted / heading to burnout | **`/energy-budget`** |
 | "How long will this really take?" | **`/time-reality-check`** |
 | Lost the thread after a deep session | **`/hyperfocus-recovery`** |
@@ -125,6 +127,15 @@ These fire when a specific state hits, not in sequence:
 | Post-meeting overload | **`/meeting-decompression`** |
 | "What does this message actually mean?" | **`/break-it-down`** |
 | An idea is derailing today's focus | **`/interest-capture`** |
+
+Two of them are **modes, not moments** — they reshape every response for the rest of the session rather than answering one situation: **`/i-have-adhd`** (next action first, state restated each turn, no preamble) and **`/i-am-autistic`** (direct, modality-labeled, literal, quantified uncertainty). They compose; resolve conflicts safety → explicitness → brevity. Make either permanent with a pointer line in `CLAUDE.md`; see [Making it permanent](exec-function/i-have-adhd/README.md#making-it-permanent).
+
+One pair is a **chain**: `hyperfocus-exit` writes the park file and the `PARKED` breadcrumb that `hyperfocus-recovery` reads back.
+
+```text
+hyperfocus-exit ──> .ink-and-agency/park/<ts>.md ──> hyperfocus-recovery ──> task-initiation
+   (leaving)              + PARKED breadcrumb            (coming back)         (if still stuck)
+```
 
 ## Vocabulary layers — run underneath other flows
 

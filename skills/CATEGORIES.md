@@ -4,7 +4,7 @@ All skills live under `skills/<category>/<name>/SKILL.md`. Categories are folder
 browsability only — a skill's invocation name is its leaf folder and is independent of
 category. Discovery is recursive.
 
-**200 skills across 15 categories**, plus the featured top-level [`clarity-council`](clarity-council/) skill.
+**204 skills across 15 categories**, plus the featured top-level [`clarity-council`](clarity-council/) skill.
 
 > **Featured top-level skill:** [`clarity-council`](clarity-council/) lives at the root of `skills/`
 > rather than inside a category — it's the persona-consultation engine that many other skills delegate
@@ -105,16 +105,20 @@ Tooling, build, CLI, docs, refactoring, and Git workflow.
 - [`tooling-engineer`](developer-experience/tooling-engineer/) — Use when you need to build or enhance developer tools including CLIs, code generators, build tools, and IDE extensions.
 - [`visual-asset-generator`](developer-experience/visual-asset-generator/) — Use when you need to generate production-ready visual assets for a project — app icons, favicons, OG images, logos, wordmarks, or social med
 
-## Executive Function &nbsp;`exec-function` (9)
+## Executive Function &nbsp;`exec-function` (13)
 
 Neurodivergent-friendly executive-function support.
 
 - [`break-it-down`](exec-function/break-it-down/) — Decode messages into plain language with tone and intent analysis.
 - [`daily-briefing`](exec-function/daily-briefing/) — Personal daily briefing assistant.
 - [`energy-budget`](exec-function/energy-budget/) — Log today's load (meetings, sensory stuff, social events, deep work); skill scores the load, warns when the day is heading toward burnout, a
+- [`hyperfocus-exit`](exec-function/hyperfocus-exit/) — Stop a deep work session on purpose without losing the thread — captures what is only in your head, writes a park file, and drops a PARKED br
 - [`hyperfocus-recovery`](exec-function/hyperfocus-recovery/) — Reconstruct context after a deep session or interruption — "what was I doing?" Reads recent git diff, modified files, open editors, and last
+- [`i-am-autistic`](exec-function/i-am-autistic/) — Shape every response for an autistic reader — say the thing directly, label whether an instruction is required or optional, keep language lit
+- [`i-have-adhd`](exec-function/i-have-adhd/) — Shape every response for a reader with ADHD — lead with the next action, number multi-step work, restate progress state each turn, hold one t
 - [`interest-capture`](exec-function/interest-capture/) — Quick dump for the current hyperfixation so it doesn't derail today's work but also isn't lost.
 - [`meeting-decompression`](exec-function/meeting-decompression/) — Dump what happened in a meeting; skill separates facts from feelings, flags action items, and notes social ambiguities to follow up on (inst
+- [`overwhelm-triage`](exec-function/overwhelm-triage/) — Take an unstructured dump of everything competing for attention and return exactly one thing to do now, with the rest explicitly parked and
 - [`rejection-sensitivity-check`](exec-function/rejection-sensitivity-check/) — Paste a message that stung; get a calibrated read on whether it's actually critical or neutral-but-terse.
 - [`task-initiation`](exec-function/task-initiation/) — You know what to do but can't start.
 - [`time-reality-check`](exec-function/time-reality-check/) — Counter time blindness — you say "20 minutes" but it'll take 2 hours.
