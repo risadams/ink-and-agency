@@ -1,4 +1,4 @@
 # Generated from skills/meta-orchestration/it-ops-orchestrator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "It Ops Orchestrator"
-  short_description: "Orchestrating complex IT operations tasks that span multiple domains (PowerShell…"
+  short_description: "Route multi-domain IT ops work: PowerShell, .NET, infrastructure, Azure, M365"

@@ -1,7 +1,7 @@
 ---
 name: dotnet-framework-4.8-expert
 description: Use when working on legacy .NET Framework 4.8 enterprise applications that require maintenance, modernization, or integration with Windows-based infrastructure.
-codex-short-description: "On legacy .NET Framework 4.8 enterprise applications that require maintenance…"
+codex-short-description: "Maintain and modernize legacy .NET Framework 4.8 enterprise applications"
 allowed-tools:
   - Read
   - Write

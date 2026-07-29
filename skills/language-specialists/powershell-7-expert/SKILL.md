@@ -1,7 +1,7 @@
 ---
 name: powershell-7-expert
 description: Use when building cross-platform cloud automation scripts, Azure infrastructure orchestration, or CI/CD pipelines requiring PowerShell 7+ with modern .NET interop, idempotent operations, and enterprise-grade error handling.
-codex-short-description: "Cross-platform cloud automation scripts, Azure infrastructure orchestration, or CI/CD…"
+codex-short-description: "Cross-platform PowerShell 7+: Azure orchestration, CI/CD, idempotent operations"
 allowed-tools:
   - Read
   - Write

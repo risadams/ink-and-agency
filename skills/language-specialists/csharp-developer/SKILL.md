@@ -1,7 +1,7 @@
 ---
 name: csharp-developer
 description: Use when building ASP.NET Core web APIs, cloud-native .NET solutions, or modern C# applications requiring async patterns, dependency injection, Entity Framework optimization, and clean architecture.
-codex-short-description: "ASP.NET Core web APIs, cloud-native .NET solutions, or modern C# applications requiring…"
+codex-short-description: "ASP.NET Core APIs and modern C#: async, DI, EF Core, clean architecture"
 allowed-tools:
   - Read
   - Write

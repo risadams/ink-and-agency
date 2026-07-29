@@ -4,7 +4,7 @@ description: >
   Use when building production ML systems — training pipelines, model serving, inference
   optimization, automated retraining — or setting up MLOps: model versioning, experiment
   tracking, GPU orchestration, and operational monitoring.
-codex-short-description: "Production ML systems requiring model training pipelines, model serving infrastructure…"
+codex-short-description: "Production ML: training pipelines, model serving, and MLOps infrastructure"
 allowed-tools:
   - Read
   - Write

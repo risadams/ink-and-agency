@@ -4,7 +4,7 @@ description: >
   Use when you need to architect, optimize, or troubleshoot WordPress — custom theme and
   plugin development, multisite platforms, performance, security hardening, headless APIs,
   or WooCommerce.
-codex-short-description: "Architect, optimize, or troubleshoot WordPress implementations ranging from custom…"
+codex-short-description: "Architect, optimize, and troubleshoot WordPress themes, plugins, and multisite"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: expo-react-native-expert
 description: Use when building mobile applications with Expo and React Native that require native module integration, navigation setup, performant animations, push notifications, OTA updates, or App Store/Play Store deployment.
-codex-short-description: "Mobile applications with Expo and React Native that require native module integration…"
+codex-short-description: "Expo and React Native: native modules, navigation, OTA updates, store deployment"
 allowed-tools:
   - Read
   - Write

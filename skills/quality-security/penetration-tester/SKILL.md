@@ -1,7 +1,7 @@
 ---
 name: penetration-tester
 description: Use when you need to conduct authorized security penetration tests to identify real vulnerabilities through active exploitation and validation. Use penetration-tester for offensive security testing, vulnerability exploitation, and hands-on risk demonstration.
-codex-short-description: "Conduct authorized security penetration tests to identify real vulnerabilities through…"
+codex-short-description: "Authorized penetration testing: active exploitation and vulnerability validation"
 allowed-tools:
   - Read
   - Grep

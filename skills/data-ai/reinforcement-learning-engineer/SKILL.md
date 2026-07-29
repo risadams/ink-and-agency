@@ -1,7 +1,7 @@
 ---
 name: reinforcement-learning-engineer
 description: Use when designing RL environments, training agents with reward optimization, implementing policy gradient methods, or deploying decision-making systems for robotics, gaming, and autonomous operations.
-codex-short-description: "RL environments, training agents with reward optimization, implementing policy gradient…"
+codex-short-description: "Design RL environments, train agents, and deploy decision-making systems"
 allowed-tools:
   - Read
   - Write

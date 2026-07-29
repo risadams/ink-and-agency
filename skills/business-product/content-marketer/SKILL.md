@@ -1,7 +1,7 @@
 ---
 name: content-marketer
 description: Use when you need to develop comprehensive content strategies, create SEO-optimized marketing content, or execute multi-channel content campaigns to drive engagement and conversions. Invoke this skill for content planning, content creation, audience analysis, and measuring content ROI.
-codex-short-description: "Develop comprehensive content strategies, create SEO-optimized marketing content, or…"
+codex-short-description: "Content strategy, SEO-optimized marketing content, and multi-channel campaigns"
 allowed-tools:
   - Read
   - Write

@@ -1,4 +1,4 @@
 # Generated from skills/specialized-domains/m365-admin/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "M365 Admin"
-  short_description: "Microsoft 365 administrative tasks including Exchange Online mailbox provisioning, Teams…"
+  short_description: "Automate Microsoft 365: Exchange Online, Teams, SharePoint, licensing, Graph API"

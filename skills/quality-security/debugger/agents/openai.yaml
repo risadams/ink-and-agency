@@ -1,4 +1,4 @@
 # Generated from skills/quality-security/debugger/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Debugger"
-  short_description: "Diagnose and fix bugs, identify root causes of failures, or analyze error logs and stack…"
+  short_description: "Diagnose bugs, find root causes, and analyze error logs and stack traces"

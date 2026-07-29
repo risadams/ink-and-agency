@@ -1,7 +1,7 @@
 ---
 name: terragrunt-expert
 description: Use when orchestrating Terraform with Terragrunt — DRY configurations, multi-environment deployments, stacks, units, and dependency management. Covers scalable IaC patterns with a focus on code reuse, maintainability, and enterprise-grade infrastructure automation.
-codex-short-description: "Orchestrating Terraform with Terragrunt — DRY configurations, multi-environment…"
+codex-short-description: "Orchestrate Terraform with Terragrunt: DRY configs, multi-environment, stacks"
 allowed-tools:
   - Read
   - Write

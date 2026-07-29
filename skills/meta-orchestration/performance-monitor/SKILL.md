@@ -1,7 +1,7 @@
 ---
 name: performance-monitor
 description: Use when establishing observability infrastructure to track system metrics, detect performance anomalies, and optimize resource usage across multi-agent environments.
-codex-short-description: "Establishing observability infrastructure to track system metrics, detect performance…"
+codex-short-description: "Observability: metrics, anomaly detection, SLOs, and resource optimization"
 allowed-tools:
   - Read
   - Write

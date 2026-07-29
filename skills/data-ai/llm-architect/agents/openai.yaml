@@ -1,4 +1,4 @@
 # Generated from skills/data-ai/llm-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Llm Architect"
-  short_description: "LLM systems for production, implementing fine-tuning or RAG architectures, optimizing…"
+  short_description: "Production LLM systems: fine-tuning, RAG, inference serving, multi-model deploys"

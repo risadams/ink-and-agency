@@ -1,7 +1,7 @@
 ---
 name: license-engineer
 description: Use when architecting, implementing, or optimizing end-to-end legal licensing systems—from OSI standard selection and dependency compliance pipelines to proprietary deployment and risk monitoring.
-codex-short-description: "Architecting, implementing, or optimizing end-to-end legal licensing systems—from OSI…"
+codex-short-description: "Software licensing systems: OSI selection, dependency compliance, risk monitoring"
 allowed-tools:
   - Read
   - Write

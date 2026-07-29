@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/dotnet-framework-4.8-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Dotnet Framework 4.8 Expert"
-  short_description: "On legacy .NET Framework 4.8 enterprise applications that require maintenance…"
+  short_description: "Maintain and modernize legacy .NET Framework 4.8 enterprise applications"

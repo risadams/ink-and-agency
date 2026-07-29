@@ -1,7 +1,7 @@
 ---
 name: sql-pro
 description: Use when you need to optimize complex SQL queries, design efficient database schemas, or solve performance issues across PostgreSQL, MySQL, SQL Server, and Oracle requiring advanced query optimization, index strategies, or data warehouse patterns.
-codex-short-description: "Optimize complex SQL queries, design efficient database schemas, or solve performance…"
+codex-short-description: "Optimize SQL queries and schemas across PostgreSQL, MySQL, SQL Server, Oracle"
 allowed-tools:
   - Read
   - Write

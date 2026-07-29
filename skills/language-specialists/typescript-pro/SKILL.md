@@ -1,7 +1,7 @@
 ---
 name: typescript-pro
 description: Use when implementing TypeScript code requiring advanced type system patterns, complex generics, type-level programming, or end-to-end type safety across full-stack applications.
-codex-short-description: "TypeScript code requiring advanced type system patterns, complex generics, type-level…"
+codex-short-description: "Advanced TypeScript: complex generics, type-level programming, end-to-end safety"
 allowed-tools:
   - Read
   - Write

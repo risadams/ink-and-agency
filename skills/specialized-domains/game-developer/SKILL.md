@@ -1,7 +1,7 @@
 ---
 name: game-developer
 description: Use when implementing game systems, optimizing graphics rendering, building multiplayer networking, or developing gameplay mechanics for games targeting specific platforms.
-codex-short-description: "Game systems, optimizing graphics rendering, building multiplayer networking, or…"
+codex-short-description: "Game systems, rendering optimization, multiplayer networking, gameplay mechanics"
 allowed-tools:
   - Read
   - Write

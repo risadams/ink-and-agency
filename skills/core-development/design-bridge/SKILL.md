@@ -1,7 +1,7 @@
 ---
 name: design-bridge
 description: Use when you need to translate a DESIGN.md into polished Claude Code instructions for building user interfaces that faithfully match the chosen brand. Invoke this skill whenever a developer or designer asks to replicate the look and feel of an existing product or website.
-codex-short-description: "Translate a DESIGN.md into polished Claude Code instructions for building user…"
+codex-short-description: "Turn a DESIGN.md into Claude Code instructions that match the brand"
 allowed-tools:
   - Read
   - Write

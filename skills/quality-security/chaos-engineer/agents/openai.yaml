@@ -1,4 +1,4 @@
 # Generated from skills/quality-security/chaos-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Chaos Engineer"
-  short_description: "Design and execute controlled failure experiments, validate system resilience before…"
+  short_description: "Design controlled failure experiments and game days to validate resilience"

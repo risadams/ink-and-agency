@@ -1,7 +1,7 @@
 ---
 name: content-quality-editor
 description: Use this skill before publishing any AI-generated content — blog posts, READMEs, release notes, commit messages, PR descriptions, documentation, or social posts. Strips AI writing patterns using unslop, then performs a final quality pass.
-codex-short-description: "Publishing any AI-generated content — blog posts, READMEs, release notes, commit…"
+codex-short-description: "Strip AI writing patterns and quality-check content before publishing"
 allowed-tools:
   - Read
   - Write

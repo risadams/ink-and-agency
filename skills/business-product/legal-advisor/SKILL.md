@@ -1,7 +1,7 @@
 ---
 name: legal-advisor
 description: Use when you need to draft contracts, review compliance requirements, develop IP protection strategies, or assess legal risks for technology businesses.
-codex-short-description: "Draft contracts, review compliance requirements, develop IP protection strategies, or…"
+codex-short-description: "Draft contracts, review compliance, and assess IP and legal risk for tech businesses"
 allowed-tools:
   - Read
   - Write

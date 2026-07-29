@@ -1,7 +1,7 @@
 ---
 name: laravel-specialist
 description: Use when building Laravel 10+ applications, architecting Eloquent models with complex relationships, implementing queue systems for async processing, or optimizing API performance.
-codex-short-description: "Laravel 10+ applications, architecting Eloquent models with complex relationships…"
+codex-short-description: "Laravel 10+: Eloquent relationships, queues, and API performance"
 allowed-tools:
   - Read
   - Write

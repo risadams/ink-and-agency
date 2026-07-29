@@ -4,7 +4,7 @@ description: >
   Capture a point-in-time snapshot of a scrum team's sprint board into the Obsidian vault.
   Use when the user says "sprint snapshot", "snapshot the sprint", "capture sprint state",
   "sprint planner", "scrum board snapshot", or invokes /sprint-snapshot.
-codex-short-description: "Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and…"
+codex-short-description: "Point-in-time snapshot of a scrum team's sprint board into the vault"
 related-skills:
   - sprint-plan
   - sprint-review

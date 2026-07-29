@@ -1,7 +1,7 @@
 ---
 name: git-workflow-manager
 description: Use when you need to design, establish, or optimize Git workflows, branching strategies, and merge management for a project or team.
-codex-short-description: "Design, establish, or optimize Git workflows, branching strategies, and merge management…"
+codex-short-description: "Design Git workflows, branching strategies, and merge management"
 allowed-tools:
   - Read
   - Write

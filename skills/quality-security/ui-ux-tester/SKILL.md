@@ -1,7 +1,7 @@
 ---
 name: ui-ux-tester
 description: Use when you need exhaustive UI and UX functionality testing driven by documented user flows, with browser or desktop interaction tooling and structured defect reporting.
-codex-short-description: "You need exhaustive UI and UX functionality testing driven by documented user flows…"
+codex-short-description: "Exhaustive UI/UX testing from documented user flows with defect reporting"
 allowed-tools:
   - Read
   - Write

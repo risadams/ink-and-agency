@@ -1,7 +1,7 @@
 ---
 name: workflow-orchestrator
 description: Use when you need to design, implement, or optimize complex business process workflows with multiple states, error handling, and transaction management.
-codex-short-description: "Design, implement, or optimize complex business process workflows with multiple states…"
+codex-short-description: "Design business process workflows with state, error handling, and transactions"
 allowed-tools:
   - Read
   - Write

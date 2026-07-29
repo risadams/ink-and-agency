@@ -1,4 +1,4 @@
 # Generated from skills/quality-security/powershell-security-hardening/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Powershell Security Hardening"
-  short_description: "Harden PowerShell automation, secure remoting configuration, enforce least-privilege…"
+  short_description: "Harden PowerShell automation, remoting, and least-privilege design"

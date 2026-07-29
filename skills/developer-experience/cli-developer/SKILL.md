@@ -1,7 +1,7 @@
 ---
 name: cli-developer
 description: Use when building command-line tools and terminal applications that require intuitive command design, cross-platform compatibility, and optimized developer experience.
-codex-short-description: "Command-line tools and terminal applications that require intuitive command design…"
+codex-short-description: "Build command-line tools with intuitive commands and cross-platform support"
 allowed-tools:
   - Read
   - Write

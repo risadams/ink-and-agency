@@ -1,7 +1,7 @@
 ---
 name: powershell-5.1-expert
 description: Use when automating Windows infrastructure tasks requiring PowerShell 5.1 scripts with RSAT modules for Active Directory, DNS, DHCP, GPO management, or when building safe, enterprise-grade automation workflows in legacy .NET Framework environments.
-codex-short-description: "Windows infrastructure tasks requiring PowerShell 5.1 scripts with RSAT modules for…"
+codex-short-description: "PowerShell 5.1 automation with RSAT: Active Directory, DNS, DHCP, GPO"
 allowed-tools:
   - Read
   - Write

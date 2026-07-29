@@ -1,7 +1,7 @@
 ---
 name: codebase-plan-refactor
 description: Create a detailed refactor plan with tiny commits via user interview, then file it as an issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.
-codex-short-description: "Create a detailed refactor plan with tiny commits via user interview, then file it as an…"
+codex-short-description: "Plan a refactor as tiny commits via interview, then file it as an issue"
 related-skills:
   - codebase-improve-architecture
   - refactoring-specialist

@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/typescript-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Typescript Pro"
-  short_description: "TypeScript code requiring advanced type system patterns, complex generics, type-level…"
+  short_description: "Advanced TypeScript: complex generics, type-level programming, end-to-end safety"

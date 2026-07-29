@@ -1,4 +1,4 @@
 # Generated from skills/meta-orchestration/multi-agent-coordinator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Multi Agent Coordinator"
-  short_description: "Coordinating multiple concurrent agents that need to communicate, share state…"
+  short_description: "Coordinate concurrent agents: communication, shared state, failure handling"

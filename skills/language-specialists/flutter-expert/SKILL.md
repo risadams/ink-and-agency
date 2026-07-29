@@ -1,7 +1,7 @@
 ---
 name: flutter-expert
 description: Use when building cross-platform mobile applications with Flutter 3+ that require custom UI implementation, complex state management, native platform integrations, or performance optimization across iOS/Android/Web.
-codex-short-description: "Cross-platform mobile applications with Flutter 3+ that require custom UI…"
+codex-short-description: "Cross-platform Flutter 3+ apps: custom UI, state management, native integration"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: php-pro
 description: Use when working with PHP 8.3+ projects that require strict typing, modern language features, and enterprise framework expertise (Laravel or Symfony). Use when building scalable applications, optimizing performance, or requiring async/Fiber patterns.
-codex-short-description: "With PHP 8.3+ projects that require strict typing, modern language features, and…"
+codex-short-description: "PHP 8.3+ with strict typing and enterprise frameworks (Laravel, Symfony)"
 allowed-tools:
   - Read
   - Write

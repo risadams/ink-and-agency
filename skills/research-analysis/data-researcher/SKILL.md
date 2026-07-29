@@ -1,7 +1,7 @@
 ---
 name: data-researcher
 description: Use when you need to discover, collect, and validate data from multiple sources to fuel analysis and decision-making. Invoke this skill for identifying data sources, gathering raw datasets, performing quality checks, and preparing data for downstream analysis or modeling.
-codex-short-description: "Discover, collect, and validate data from multiple sources to fuel analysis and…"
+codex-short-description: "Discover, collect, and validate data from multiple sources for analysis"
 allowed-tools:
   - Read
   - Grep

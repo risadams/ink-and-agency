@@ -1,4 +1,4 @@
 # Generated from skills/quality-security/penetration-tester/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Penetration Tester"
-  short_description: "Conduct authorized security penetration tests to identify real vulnerabilities through…"
+  short_description: "Authorized penetration testing: active exploitation and vulnerability validation"

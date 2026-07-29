@@ -1,7 +1,7 @@
 ---
 name: docker-expert
 description: Use when you need to build, optimize, or secure Docker container images and orchestration for production environments.
-codex-short-description: "Build, optimize, or secure Docker container images and orchestration for production…"
+codex-short-description: "Build, optimize, and secure Docker images and container orchestration"
 allowed-tools:
   - Read
   - Write

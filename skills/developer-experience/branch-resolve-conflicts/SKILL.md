@@ -1,7 +1,7 @@
 ---
 name: branch-resolve-conflicts
 description: "Use when a git merge or rebase hits complex conflicts, or the user says \"resolve conflicts\" / \"fix merge conflicts\". Reconstructs intent, preserves both branches' goals when possible, and runs automated checks."
-codex-short-description: "Git merge or rebase hits complex conflicts, or the user says \"resolve conflicts\" /…"
+codex-short-description: "Resolve complex merge and rebase conflicts, preserving both branches' intent"
 argument-hint: "Optional: PR number, ticket, or merge context (e.g., 'GitHub #1234' or 'merging feature/checkout into main')"
 version: 1.0.0
 license: MIT

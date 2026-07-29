@@ -5,7 +5,7 @@ description: >
   statistical significance, or make a ship/no-ship decision. Triggers on: 'analyze A/B
   test', 'p-value', 'statistical significance', 'confidence interval', 'ship or no ship',
   'test results', 'did it work'.
-codex-short-description: "Analyze A/B test results, interpret p-values, determine statistical significance, or…"
+codex-short-description: "Analyze A/B results: p-values, significance, and ship/no-ship decisions"
 allowed-tools:
   - Read
   - Grep

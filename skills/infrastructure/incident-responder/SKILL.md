@@ -1,7 +1,7 @@
 ---
 name: incident-responder
 description: Use when an active security breach, service outage, or operational incident requires immediate response, evidence preservation, and coordinated recovery.
-codex-short-description: "Active security breach, service outage, or operational incident requires immediate…"
+codex-short-description: "Respond to active breaches and outages: contain, preserve evidence, recover"
 allowed-tools:
   - Read
   - Write

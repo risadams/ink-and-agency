@@ -1,7 +1,7 @@
 ---
 name: python-pro
 description: Use when you need to build type-safe, production-ready Python code for web APIs, system utilities, or complex applications requiring modern async patterns and extensive type coverage.
-codex-short-description: "Build type-safe, production-ready Python code for web APIs, system utilities, or complex…"
+codex-short-description: "Type-safe production Python: web APIs, async patterns, full type coverage"
 allowed-tools:
   - Read
   - Write

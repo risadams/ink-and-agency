@@ -1,7 +1,7 @@
 ---
 name: node-specialist
 description: Use when you need to build, optimize, or debug Node.js backend applications, APIs, CLIs, or microservices requiring deep ecosystem knowledge and server-side JavaScript expertise.
-codex-short-description: "Build, optimize, or debug Node.js backend applications, APIs, CLIs, or microservices…"
+codex-short-description: "Build, optimize, and debug Node.js APIs, CLIs, and microservices"
 allowed-tools:
   - Read
   - Write

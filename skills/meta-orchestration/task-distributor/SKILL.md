@@ -1,7 +1,7 @@
 ---
 name: task-distributor
 description: Use when distributing tasks across multiple agents or workers, managing queues, and balancing workloads to maximize throughput while respecting priorities and deadlines.
-codex-short-description: "Distributing tasks across multiple agents or workers, managing queues, and balancing…"
+codex-short-description: "Distribute tasks across workers: queues, priorities, and load balancing"
 allowed-tools:
   - Read
   - Write

@@ -5,7 +5,7 @@ description: >
   scratch, or approach something with first principles reasoning. Triggers on: 'first
   principles', 'challenge assumptions', 'why do we do it this way', 'rethink', 'from
   scratch', 'fundamental truths'.
-codex-short-description: "Challenge assumptions, break down a complex problem from scratch, or approach something…"
+codex-short-description: "Challenge assumptions and rebuild a problem from first principles"
 allowed-tools:
   - Read
   - Grep

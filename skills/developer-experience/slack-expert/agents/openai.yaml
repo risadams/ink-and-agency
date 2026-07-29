@@ -1,4 +1,4 @@
 # Generated from skills/developer-experience/slack-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Slack Expert"
-  short_description: "Developing Slack applications, implementing Slack API integrations, or reviewing Slack…"
+  short_description: "Build Slack apps and API integrations; review bot code for security"

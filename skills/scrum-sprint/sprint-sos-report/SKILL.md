@@ -4,7 +4,7 @@ description: >
   Weekly scrum-of-scrums report comparing two sprint snapshots — findings, observations,
   trouble areas, trends. Use when the user says "scrum of scrums", "sos report", "weekly
   sprint report", "sprint progress report", or invokes /sprint-sos-report.
-codex-short-description: "End-of-week scrum-of-scrums report comparing two sprint snapshots and surfacing key…"
+codex-short-description: "Weekly scrum-of-scrums report comparing two sprint snapshots"
 allowed-tools:
   - Read
   - Write

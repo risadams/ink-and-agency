@@ -5,7 +5,7 @@ description: >
   understand how different user groups perform over time. Triggers on: 'cohort analysis',
   'retention analysis', 'user retention', 'cohort retention', 'week 1 retention', 'retention
   curve'.
-codex-short-description: "Analyze retention, cohort behavior, engagement trends, or understand how different user…"
+codex-short-description: "Analyze retention, cohort behavior, and engagement trends over time"
 allowed-tools:
   - Read
   - Grep

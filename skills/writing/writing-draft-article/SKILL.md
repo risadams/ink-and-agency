@@ -4,7 +4,7 @@ description: >
   Guide the user from raw idea or draft to a finished article through relentless questioning
   and iterative writing. Use when the user wants to write something from scratch and have it
   completed.
-codex-short-description: "Guide the user from raw idea, topic, or draft to a finished, polished article through…"
+codex-short-description: "Guide a raw idea to a finished article through iterative questioning"
 related-skills:
   - writing-shape
   - writing-beats

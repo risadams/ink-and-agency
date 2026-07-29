@@ -1,7 +1,7 @@
 ---
 name: slack-expert
 description: Use when developing Slack applications, implementing Slack API integrations, or reviewing Slack bot code for security and best practices.
-codex-short-description: "Developing Slack applications, implementing Slack API integrations, or reviewing Slack…"
+codex-short-description: "Build Slack apps and API integrations; review bot code for security"
 allowed-tools:
   - Read
   - Write

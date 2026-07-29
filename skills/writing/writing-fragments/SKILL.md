@@ -5,7 +5,7 @@ description: >
   thoughts — and append them to one document as material for a future article. Use when the
   user wants to develop ideas before imposing structure, or mentions "fragments" or "raw
   material".
-codex-short-description: "Grilling session that mines the user for fragments — heterogeneous nuggets of writing…"
+codex-short-description: "Mine raw writing fragments into one document as material for a future article"
 related-skills:
   - writing-shape
   - content-quality-editor

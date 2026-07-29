@@ -1,7 +1,7 @@
 ---
 name: ui-designer
 description: Use when designing visual interfaces, creating design systems, building component libraries, or refining user-facing aesthetics requiring expert visual design, interaction patterns, and accessibility considerations.
-codex-short-description: "Visual interfaces, creating design systems, building component libraries, or refining…"
+codex-short-description: "Design visual interfaces, design systems, and accessible component libraries"
 allowed-tools:
   - Read
   - Write

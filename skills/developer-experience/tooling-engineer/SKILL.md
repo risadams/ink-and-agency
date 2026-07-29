@@ -1,7 +1,7 @@
 ---
 name: tooling-engineer
 description: Use when you need to build or enhance developer tools including CLIs, code generators, build tools, and IDE extensions.
-codex-short-description: "Build or enhance developer tools including CLIs, code generators, build tools, and IDE…"
+codex-short-description: "Build developer tools: CLIs, code generators, build tools, IDE extensions"
 allowed-tools:
   - Read
   - Write

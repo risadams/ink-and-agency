@@ -1,7 +1,7 @@
 ---
 name: documentation-engineer
 description: Use when you need to create, architect, or overhaul comprehensive documentation systems including API docs, tutorials, guides, and developer-friendly content that keeps pace with code changes.
-codex-short-description: "Create, architect, or overhaul comprehensive documentation systems including API docs…"
+codex-short-description: "Architect documentation systems: API docs, tutorials, guides that track code"
 allowed-tools:
   - Read
   - Write

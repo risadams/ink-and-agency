@@ -1,7 +1,7 @@
 ---
 name: java-architect
 description: Use when designing enterprise Java architectures, migrating Spring Boot applications, or establishing microservices patterns for scalable cloud-native systems.
-codex-short-description: "Enterprise Java architectures, migrating Spring Boot applications, or establishing…"
+codex-short-description: "Enterprise Java architecture, Spring Boot migration, and microservices patterns"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: knowledge-synthesizer
 description: Use when you need to extract actionable patterns from agent interactions, synthesize insights across multiple workflows, and enable organizational learning from collective experience.
-codex-short-description: "Extract actionable patterns from agent interactions, synthesize insights across multiple…"
+codex-short-description: "Extract validated patterns and insights across workflows and past runs"
 allowed-tools:
   - Read
   - Write

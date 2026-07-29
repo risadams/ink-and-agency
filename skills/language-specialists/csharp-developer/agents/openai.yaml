@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/csharp-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Csharp Developer"
-  short_description: "ASP.NET Core web APIs, cloud-native .NET solutions, or modern C# applications requiring…"
+  short_description: "ASP.NET Core APIs and modern C#: async, DI, EF Core, clean architecture"

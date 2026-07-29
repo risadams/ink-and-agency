@@ -1,7 +1,7 @@
 ---
 name: microservices-architect
 description: Use when designing distributed system architecture, decomposing monolithic applications into independent microservices, or establishing communication patterns between services at scale.
-codex-short-description: "Distributed system architecture, decomposing monolithic applications into independent…"
+codex-short-description: "Decompose monoliths and design service boundaries and communication patterns"
 allowed-tools:
   - Read
   - Write

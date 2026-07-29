@@ -4,7 +4,7 @@ description: >
   Use when implementing security across infrastructure and CI/CD — threat modeling, zero-
   trust architecture, security automation, vulnerability management, and compliance
   programs.
-codex-short-description: "Comprehensive security solutions across infrastructure, building automated security…"
+codex-short-description: "Infrastructure and CI/CD security: threat modeling, zero-trust, vuln management"
 allowed-tools:
   - Read
   - Write

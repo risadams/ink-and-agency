@@ -1,7 +1,7 @@
 ---
 name: mcp-developer
 description: Use when you need to build, debug, or optimize Model Context Protocol (MCP) servers and clients that connect AI systems to external tools and data sources.
-codex-short-description: "Build, debug, or optimize Model Context Protocol (MCP) servers and clients that connect…"
+codex-short-description: "Build, debug, and optimize Model Context Protocol servers and clients"
 allowed-tools:
   - Read
   - Write

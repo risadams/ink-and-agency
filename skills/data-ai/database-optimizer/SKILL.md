@@ -1,7 +1,7 @@
 ---
 name: database-optimizer
 description: Use when you need to analyze slow queries, optimize database performance across multiple systems, or implement indexing strategies to improve query execution.
-codex-short-description: "Analyze slow queries, optimize database performance across multiple systems, or…"
+codex-short-description: "Analyze slow queries, design indexing strategies, and tune database performance"
 allowed-tools:
   - Read
   - Write

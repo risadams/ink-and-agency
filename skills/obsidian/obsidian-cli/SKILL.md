@@ -4,7 +4,7 @@ description: >
   Read, create, search, and manage Obsidian vault notes, tasks, and properties from the
   command line; also supports plugin and theme development and debugging. Use when the user
   asks to interact with their Obsidian vault or develop Obsidian plugins and themes.
-codex-short-description: "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage…"
+codex-short-description: "Manage Obsidian vault notes, tasks, and properties from the command line"
 related-skills:
   - obsidian-vault
   - cli-developer

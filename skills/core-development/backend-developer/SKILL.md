@@ -1,7 +1,7 @@
 ---
 name: backend-developer
 description: Use when building server-side APIs, microservices, and backend systems that require robust architecture, scalability planning, and production-ready implementation.
-codex-short-description: "Server-side APIs, microservices, and backend systems that require robust architecture…"
+codex-short-description: "Build server-side APIs, microservices, and production-ready backend systems"
 allowed-tools:
   - Read
   - Write

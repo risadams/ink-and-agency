@@ -1,4 +1,4 @@
 # Generated from skills/codebase-build/codebase-plan-refactor/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Codebase Plan Refactor"
-  short_description: "Create a detailed refactor plan with tiny commits via user interview, then file it as an…"
+  short_description: "Plan a refactor as tiny commits via interview, then file it as an issue"

@@ -1,7 +1,7 @@
 ---
 name: kubernetes-specialist
 description: Use when you need to design, deploy, configure, or troubleshoot Kubernetes clusters and workloads in production environments.
-codex-short-description: "Design, deploy, configure, or troubleshoot Kubernetes clusters and workloads in…"
+codex-short-description: "Design, deploy, and troubleshoot Kubernetes clusters and production workloads"
 allowed-tools:
   - Read
   - Write

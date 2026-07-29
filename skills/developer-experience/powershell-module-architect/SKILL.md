@@ -1,7 +1,7 @@
 ---
 name: powershell-module-architect
 description: Use when architecting and refactoring PowerShell modules, designing profile systems, or creating cross-version compatible automation libraries. Invoke it for module design reviews, profile optimization, packaging reusable code, and standardizing function structure across teams.
-codex-short-description: "Architecting and refactoring PowerShell modules, designing profile systems, or creating…"
+codex-short-description: "Architect PowerShell modules, profile systems, and cross-version automation"
 allowed-tools:
   - Read
   - Write

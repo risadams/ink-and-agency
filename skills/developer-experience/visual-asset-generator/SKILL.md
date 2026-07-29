@@ -1,7 +1,7 @@
 ---
 name: visual-asset-generator
 description: Use when you need to generate production-ready visual assets for a project — app icons, favicons, OG images, logos, wordmarks, or social media images. Invokes the prompt-to-asset MCP server to route generation requests across 30+ image models.
-codex-short-description: "Generate production-ready visual assets for a project — app icons, favicons, OG images…"
+codex-short-description: "Generate app icons, favicons, OG images, logos, and social media assets"
 allowed-tools:
   - Read
   - Write

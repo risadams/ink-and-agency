@@ -4,7 +4,7 @@ description: >
   Morning kickoff wrapper running sprint-snapshot, daily-standup-prep, and daily-briefing in
   order; idempotent on same-day re-runs. Use when the user says "good morning", "morning
   routine", "kick off my day", "start my day", or invokes /good-morning.
-codex-short-description: "Morning kickoff wrapper that runs sprint-snapshot (daily tag), daily-standup-prep (with…"
+codex-short-description: "Morning kickoff: sprint snapshot, standup prep, and daily briefing in order"
 related-skills:
   - sprint-snapshot
   - daily-standup-prep

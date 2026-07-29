@@ -3,7 +3,7 @@ name: mobile-developer
 description: >
   Use when building iOS and Android apps, native or cross-platform (React Native, Flutter),
   with a focus on native performance, platform-specific UX, and offline-first architecture.
-codex-short-description: "Cross-platform mobile applications requiring native performance optimization…"
+codex-short-description: "Build native and cross-platform iOS/Android apps (React Native, Flutter)"
 allowed-tools:
   - Read
   - Write

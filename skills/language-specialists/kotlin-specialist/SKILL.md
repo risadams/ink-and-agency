@@ -1,7 +1,7 @@
 ---
 name: kotlin-specialist
 description: Use when building Kotlin applications requiring advanced coroutine patterns, multiplatform code sharing, or Android/server-side development with functional programming principles.
-codex-short-description: "Kotlin applications requiring advanced coroutine patterns, multiplatform code sharing…"
+codex-short-description: "Kotlin coroutines, multiplatform sharing, and Android/server-side development"
 allowed-tools:
   - Read
   - Write

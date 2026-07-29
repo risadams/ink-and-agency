@@ -1,7 +1,7 @@
 ---
 name: codebase-orchestrator
 description: Use when you need repository-wide refactor governance with explicit approval loops, weighted risk prioritization, diff previews, and deterministic fallback strategies.
-codex-short-description: "You need repository-wide refactor governance with explicit approval loops, weighted risk…"
+codex-short-description: "Govern repo-wide refactors with risk ranking, diff previews, and approval gates"
 allowed-tools:
   - Read
   - Write

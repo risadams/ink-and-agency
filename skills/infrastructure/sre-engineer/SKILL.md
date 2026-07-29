@@ -1,7 +1,7 @@
 ---
 name: sre-engineer
 description: Use when you need to establish or improve system reliability through SLO definition, error budget management, and automation. Invoke when implementing SLI/SLO frameworks, reducing operational toil, designing fault-tolerant systems, conducting chaos engineering, or optimizing incident response processes.
-codex-short-description: "Establish or improve system reliability through SLO definition, error budget management…"
+codex-short-description: "Establish SLOs and error budgets, reduce toil, design fault-tolerant systems"
 allowed-tools:
   - Read
   - Write

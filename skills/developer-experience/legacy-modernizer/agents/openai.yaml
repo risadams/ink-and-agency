@@ -1,4 +1,4 @@
 # Generated from skills/developer-experience/legacy-modernizer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Legacy Modernizer"
-  short_description: "Modernizing legacy systems that need incremental migration strategies, technical debt…"
+  short_description: "Incrementally modernize legacy systems while maintaining business continuity"

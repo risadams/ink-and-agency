@@ -1,4 +1,4 @@
 # Generated from skills/developer-experience/documentation-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Documentation Engineer"
-  short_description: "Create, architect, or overhaul comprehensive documentation systems including API docs…"
+  short_description: "Architect documentation systems: API docs, tutorials, guides that track code"

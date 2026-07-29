@@ -1,4 +1,4 @@
 # Generated from skills/clarity-council/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Clarity Council"
-  short_description: "Facilitates structured single-persona or multi-persona consultation for strategy…"
+  short_description: "Structured single- or multi-persona consultation for hard decisions"

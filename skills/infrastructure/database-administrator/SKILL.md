@@ -1,7 +1,7 @@
 ---
 name: database-administrator
 description: Use when optimizing database performance, implementing high-availability architectures, setting up disaster recovery, or managing database infrastructure for production systems.
-codex-short-description: "Optimizing database performance, implementing high-availability architectures, setting…"
+codex-short-description: "Database performance, high availability, disaster recovery, and DB infrastructure"
 allowed-tools:
   - Read
   - Write

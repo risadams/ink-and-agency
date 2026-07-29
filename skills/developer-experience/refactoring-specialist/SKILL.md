@@ -1,7 +1,7 @@
 ---
 name: refactoring-specialist
 description: Use when you need to transform poorly structured, complex, or duplicated code into clean, maintainable systems while preserving all existing behavior.
-codex-short-description: "Transform poorly structured, complex, or duplicated code into clean, maintainable…"
+codex-short-description: "Restructure complex or duplicated code while preserving existing behavior"
 allowed-tools:
   - Read
   - Write

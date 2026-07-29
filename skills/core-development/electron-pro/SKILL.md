@@ -1,7 +1,7 @@
 ---
 name: electron-pro
 description: Use when building Electron desktop applications that require native OS integration, cross-platform distribution, security hardening, and performance optimization. Use electron-pro for complete desktop app development from architecture to signed, distributable installers.
-codex-short-description: "Electron desktop applications that require native OS integration, cross-platform…"
+codex-short-description: "Build Electron desktop apps: native OS integration, packaging, security hardening"
 allowed-tools:
   - Read
   - Write

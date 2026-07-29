@@ -1,7 +1,7 @@
 ---
 name: debugger
 description: Use when you need to diagnose and fix bugs, identify root causes of failures, or analyze error logs and stack traces to resolve issues.
-codex-short-description: "Diagnose and fix bugs, identify root causes of failures, or analyze error logs and stack…"
+codex-short-description: "Diagnose bugs, find root causes, and analyze error logs and stack traces"
 allowed-tools:
   - Read
   - Write

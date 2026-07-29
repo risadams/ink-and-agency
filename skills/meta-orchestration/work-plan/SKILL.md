@@ -1,7 +1,7 @@
 ---
 name: work-plan
 description: Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
-codex-short-description: "Plan a huge chunk of work — more than one agent session can hold — as a shared map of…"
+codex-short-description: "Map oversized work as decision tickets and resolve them one session at a time"
 disable-model-invocation: true
 compatibility: claude-code codex opencode
 ---

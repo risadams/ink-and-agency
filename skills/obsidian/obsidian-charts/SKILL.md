@@ -5,7 +5,7 @@ description: >
   series, a markdown table by block ID, or a Dataview query. Use when the user wants to
   chart, plot, graph, or visualize data in their Obsidian notes, or mentions "obsidian
   charts" or "renderChart".
-codex-short-description: "Build interactive charts in Obsidian notes using the Charts plugin…"
+codex-short-description: "Build Chart.js charts in Obsidian notes from inline series, tables, or Dataview"
 related-skills:
   - obsidian-bases
   - data-analyst

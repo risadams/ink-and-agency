@@ -1,7 +1,7 @@
 ---
 name: dx-optimizer
 description: Use when optimizing the complete developer workflow including build times, feedback loops, testing efficiency, and developer satisfaction metrics across the entire development environment.
-codex-short-description: "Optimizing the complete developer workflow including build times, feedback loops…"
+codex-short-description: "Optimize developer workflow: build times, feedback loops, testing efficiency"
 allowed-tools:
   - Read
   - Write

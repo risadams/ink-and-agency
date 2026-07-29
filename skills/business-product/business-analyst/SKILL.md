@@ -1,7 +1,7 @@
 ---
 name: business-analyst
 description: Use when analyzing business processes, gathering requirements from stakeholders, or identifying process improvement opportunities to drive operational efficiency and measurable business value.
-codex-short-description: "Business processes, gathering requirements from stakeholders, or identifying process…"
+codex-short-description: "Analyze business processes, gather requirements, and find process improvements"
 allowed-tools:
   - Read
   - Write

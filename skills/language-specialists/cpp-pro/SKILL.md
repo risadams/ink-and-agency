@@ -1,7 +1,7 @@
 ---
 name: cpp-pro
 description: Use when building high-performance C++ systems requiring modern C++20/23 features, template metaprogramming, or zero-overhead abstractions for systems programming, embedded systems, or performance-critical applications.
-codex-short-description: "High-performance C++ systems requiring modern C++20/23 features, template…"
+codex-short-description: "Modern C++20/23: templates, zero-overhead abstractions, systems programming"
 allowed-tools:
   - Read
   - Write

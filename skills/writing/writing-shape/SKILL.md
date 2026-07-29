@@ -4,7 +4,7 @@ description: >
   Shape a file of raw material into an article through a conversational session — candidate
   openings, paragraph by paragraph, arguing format at each step. Use when the user has
   notes, fragments, or a rough draft and wants it turned into something publishable.
-codex-short-description: "Take a markdown file of raw material and shape it into an article through a…"
+codex-short-description: "Shape raw notes into an article, paragraph by paragraph, in conversation"
 related-skills:
   - writing-draft-article
   - writing-beats

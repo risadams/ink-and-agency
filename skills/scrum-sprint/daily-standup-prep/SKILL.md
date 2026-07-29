@@ -4,7 +4,7 @@ description: >
   Generate a per-team standup report from recent Jira, GitLab, Confluence, and Git activity,
   written into the Obsidian vault. Use when the user says "daily standup prep", "standup
   report", "generate standup", "scrum prep", or invokes /daily-standup-prep.
-codex-short-description: "Generate a per-team standup markdown report by gathering activity over the last N days…"
+codex-short-description: "Per-team standup report from Jira, GitLab, Confluence, and Git activity"
 allowed-tools:
   - Read
   - Write

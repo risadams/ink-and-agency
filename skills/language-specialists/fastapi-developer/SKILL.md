@@ -1,7 +1,7 @@
 ---
 name: fastapi-developer
 description: Use when building modern async Python APIs with FastAPI, implementing Pydantic v2 validation, dependency injection patterns, or deploying high-performance ASGI applications.
-codex-short-description: "Modern async Python APIs with FastAPI, implementing Pydantic v2 validation, dependency…"
+codex-short-description: "Async Python APIs with FastAPI, Pydantic v2, and high-performance ASGI"
 allowed-tools:
   - Read
   - Write

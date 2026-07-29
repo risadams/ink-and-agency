@@ -4,7 +4,7 @@ description: >
   End-of-sprint stakeholder report comparing the sprint's start and end canvases, fitted to
   the standard Scrum Master template. Use when the user says "sprint review", "end of sprint
   report", "sprint stakeholder report", or invokes /sprint-review.
-codex-short-description: "End-of-sprint stakeholder report comparing the start.canvas (planning) to end.canvas…"
+codex-short-description: "End-of-sprint stakeholder report comparing start and end sprint canvases"
 allowed-tools:
   - Read
   - Write

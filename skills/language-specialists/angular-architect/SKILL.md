@@ -1,7 +1,7 @@
 ---
 name: angular-architect
 description: Use when architecting enterprise Angular 15+ applications with complex state management, optimizing RxJS patterns, designing micro-frontend systems, or solving performance and scalability challenges in large codebases.
-codex-short-description: "Architecting enterprise Angular 15+ applications with complex state management…"
+codex-short-description: "Architect enterprise Angular 15+ apps: state, RxJS, micro-frontends, performance"
 allowed-tools:
   - Read
   - Write

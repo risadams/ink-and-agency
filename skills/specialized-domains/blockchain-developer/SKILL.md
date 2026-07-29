@@ -1,7 +1,7 @@
 ---
 name: blockchain-developer
 description: Use when building smart contracts, DApps, and blockchain protocols that require expertise in Solidity, gas optimization, security auditing, and Web3 integration.
-codex-short-description: "Smart contracts, DApps, and blockchain protocols that require expertise in Solidity, gas…"
+codex-short-description: "Build and audit smart contracts, DApps, and protocols in Solidity"
 allowed-tools:
   - Read
   - Write

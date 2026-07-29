@@ -1,4 +1,4 @@
 # Generated from skills/core-development/frontend-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Frontend Developer"
-  short_description: "Complete frontend applications across React, Vue, and Angular frameworks requiring…"
+  short_description: "Build frontend applications across React, Vue, and Angular"

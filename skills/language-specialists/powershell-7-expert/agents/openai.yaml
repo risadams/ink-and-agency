@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/powershell-7-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Powershell 7 Expert"
-  short_description: "Cross-platform cloud automation scripts, Azure infrastructure orchestration, or CI/CD…"
+  short_description: "Cross-platform PowerShell 7+: Azure orchestration, CI/CD, idempotent operations"

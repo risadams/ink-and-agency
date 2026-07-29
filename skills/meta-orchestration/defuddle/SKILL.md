@@ -4,7 +4,7 @@ description: >
   Extract clean markdown from web pages using Defuddle CLI, stripping navigation and clutter
   to save tokens. Use instead of WebFetch for any standard web page, documentation, article,
   or blog post — but not for URLs ending in .md, which WebFetch handles directly.
-codex-short-description: "Extract clean markdown content from web pages using Defuddle CLI, removing clutter and…"
+codex-short-description: "Extract clean markdown from web pages via Defuddle CLI, stripping clutter"
 related-skills:
   - technical-writer
   - documentation-engineer

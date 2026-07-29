@@ -1,7 +1,7 @@
 ---
 name: react-specialist
 description: Use when optimizing existing React applications for performance, implementing advanced React 18+ features, or solving complex state management and architectural challenges within React codebases.
-codex-short-description: "Optimizing existing React applications for performance, implementing advanced React 18+…"
+codex-short-description: "Optimize React apps and apply advanced React 18+ features and state patterns"
 allowed-tools:
   - Read
   - Write

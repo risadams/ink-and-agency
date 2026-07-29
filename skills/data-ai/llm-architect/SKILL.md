@@ -1,7 +1,7 @@
 ---
 name: llm-architect
 description: Use when designing LLM systems for production, implementing fine-tuning or RAG architectures, optimizing inference serving infrastructure, or managing multi-model deployments.
-codex-short-description: "LLM systems for production, implementing fine-tuning or RAG architectures, optimizing…"
+codex-short-description: "Production LLM systems: fine-tuning, RAG, inference serving, multi-model deploys"
 allowed-tools:
   - Read
   - Write

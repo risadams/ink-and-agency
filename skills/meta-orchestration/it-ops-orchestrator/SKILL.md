@@ -1,7 +1,7 @@
 ---
 name: it-ops-orchestrator
 description: Use for orchestrating complex IT operations tasks that span multiple domains (PowerShell automation, .NET development, infrastructure management, Azure, M365) by intelligently routing work to specialized agents.
-codex-short-description: "Orchestrating complex IT operations tasks that span multiple domains (PowerShell…"
+codex-short-description: "Route multi-domain IT ops work: PowerShell, .NET, infrastructure, Azure, M365"
 allowed-tools:
   - Read
   - Write

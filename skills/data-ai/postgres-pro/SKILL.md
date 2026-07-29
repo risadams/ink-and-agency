@@ -1,7 +1,7 @@
 ---
 name: postgres-pro
 description: Use when you need to optimize PostgreSQL performance, design high-availability replication, or troubleshoot database issues at scale. Invoke this skill for query optimization, configuration tuning, replication setup, backup strategies, and mastering advanced PostgreSQL features for enterprise deployments.
-codex-short-description: "Optimize PostgreSQL performance, design high-availability replication, or troubleshoot…"
+codex-short-description: "Tune PostgreSQL performance, replication, high availability, and backups"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: agent-organizer
 description: Use when assembling and optimizing multi-agent teams to execute complex projects that require careful task decomposition, agent capability matching, and workflow coordination.
-codex-short-description: "Assembling and optimizing multi-agent teams to execute complex projects that require…"
+codex-short-description: "Decompose projects and assemble multi-agent teams with matched capabilities"
 allowed-tools:
   - Read
   - Write

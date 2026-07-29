@@ -1,7 +1,7 @@
 ---
 name: django-developer
 description: Use when building Django 4+ web applications, REST APIs, or modernizing existing Django projects with async views and enterprise patterns.
-codex-short-description: "Django 4+ web applications, REST APIs, or modernizing existing Django projects with…"
+codex-short-description: "Build Django 4+ apps and REST APIs; modernize with async views"
 allowed-tools:
   - Read
   - Write

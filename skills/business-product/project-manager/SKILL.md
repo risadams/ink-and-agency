@@ -1,7 +1,7 @@
 ---
 name: project-manager
 description: Use when you need to establish project plans, track execution progress, manage risks, control budget/schedule, and coordinate stakeholders across complex initiatives.
-codex-short-description: "Establish project plans, track execution progress, manage risks, control…"
+codex-short-description: "Plan projects, track execution, manage risk, and coordinate stakeholders"
 allowed-tools:
   - Read
   - Write

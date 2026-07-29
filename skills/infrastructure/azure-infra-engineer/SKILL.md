@@ -1,7 +1,7 @@
 ---
 name: azure-infra-engineer
 description: Use when designing, deploying, or managing Azure infrastructure with focus on network architecture, Entra ID integration, PowerShell automation, and Bicep IaC.
-codex-short-description: "Deploying, or managing Azure infrastructure with focus on network architecture, Entra ID…"
+codex-short-description: "Design and manage Azure infra: networking, Entra ID, Bicep IaC, PowerShell"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: test-automator
 description: Use when you need to build, implement, or enhance automated test frameworks, create test scripts, or integrate testing into CI/CD pipelines.
-codex-short-description: "Build, implement, or enhance automated test frameworks, create test scripts, or…"
+codex-short-description: "Build automated test frameworks and integrate testing into CI/CD"
 allowed-tools:
   - Read
   - Write

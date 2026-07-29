@@ -1,7 +1,7 @@
 ---
 name: windows-infra-admin
 description: Use when managing Windows Server infrastructure, Active Directory, DNS, DHCP, and Group Policy configurations, especially for enterprise-scale deployments requiring safe automation and compliance validation.
-codex-short-description: "Windows Server infrastructure, Active Directory, DNS, DHCP, and Group Policy…"
+codex-short-description: "Manage Windows Server, Active Directory, DNS, DHCP, and Group Policy safely"
 allowed-tools:
   - Read
   - Write

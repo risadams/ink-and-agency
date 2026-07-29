@@ -1,7 +1,7 @@
 ---
 name: spring-boot-engineer
 description: Use when building enterprise Spring Boot 3+ applications requiring microservices architecture, cloud-native deployment, or reactive programming patterns.
-codex-short-description: "Enterprise Spring Boot 3+ applications requiring microservices architecture…"
+codex-short-description: "Enterprise Spring Boot 3+: microservices, cloud-native, reactive patterns"
 allowed-tools:
   - Read
   - Write

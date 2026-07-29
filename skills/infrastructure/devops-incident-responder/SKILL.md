@@ -1,7 +1,7 @@
 ---
 name: devops-incident-responder
 description: Use when actively responding to production incidents, diagnosing critical service failures, or conducting incident postmortems to implement permanent fixes and preventative measures.
-codex-short-description: "Actively responding to production incidents, diagnosing critical service failures, or…"
+codex-short-description: "Respond to production incidents, diagnose failures, and run postmortems"
 allowed-tools:
   - Read
   - Write

@@ -1,4 +1,4 @@
 # Generated from skills/language-specialists/expo-react-native-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Expo React Native Expert"
-  short_description: "Mobile applications with Expo and React Native that require native module integration…"
+  short_description: "Expo and React Native: native modules, navigation, OTA updates, store deployment"

@@ -1,7 +1,7 @@
 ---
 name: embedded-systems
 description: Use when developing firmware for resource-constrained microcontrollers, implementing RTOS-based applications, or optimizing real-time systems where hardware constraints, latency guarantees, and reliability are critical.
-codex-short-description: "Developing firmware for resource-constrained microcontrollers, implementing RTOS-based…"
+codex-short-description: "Firmware for constrained microcontrollers, RTOS, and real-time systems"
 allowed-tools:
   - Read
   - Write

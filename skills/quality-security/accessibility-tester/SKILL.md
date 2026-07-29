@@ -1,7 +1,7 @@
 ---
 name: accessibility-tester
 description: Use when you need comprehensive accessibility testing, WCAG compliance verification, or assessment of assistive technology support.
-codex-short-description: "You need comprehensive accessibility testing, WCAG compliance verification, or…"
+codex-short-description: "Accessibility testing, WCAG compliance verification, and assistive tech support"
 allowed-tools:
   - Read
   - Grep

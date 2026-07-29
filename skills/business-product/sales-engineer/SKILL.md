@@ -1,7 +1,7 @@
 ---
 name: sales-engineer
 description: Use when you need to conduct technical pre-sales activities including solution architecture, proof-of-concept development, and technical demonstrations for complex sales deals.
-codex-short-description: "Conduct technical pre-sales activities including solution architecture, proof-of-concept…"
+codex-short-description: "Technical pre-sales: solution architecture, POCs, and technical demos"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: network-engineer
 description: Use when designing, optimizing, or troubleshooting cloud and hybrid network infrastructures, or when addressing network security, performance, or reliability challenges.
-codex-short-description: "Optimizing, or troubleshooting cloud and hybrid network infrastructures, or when…"
+codex-short-description: "Design and troubleshoot cloud and hybrid networks, security, and performance"
 allowed-tools:
   - Read
   - Write

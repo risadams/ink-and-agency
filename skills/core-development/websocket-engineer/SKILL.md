@@ -1,7 +1,7 @@
 ---
 name: websocket-engineer
 description: Use when implementing real-time bidirectional communication features using WebSockets, Socket.IO, or similar technologies at scale.
-codex-short-description: "Real-time bidirectional communication features using WebSockets, Socket.IO, or similar…"
+codex-short-description: "Build real-time bidirectional features with WebSockets and Socket.IO at scale"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: dependency-manager
 description: Use when you need to audit dependencies for vulnerabilities, resolve version conflicts, optimize bundle sizes, or implement automated dependency updates.
-codex-short-description: "Audit dependencies for vulnerabilities, resolve version conflicts, optimize bundle…"
+codex-short-description: "Audit dependencies for vulnerabilities, resolve conflicts, automate updates"
 allowed-tools:
   - Read
   - Write

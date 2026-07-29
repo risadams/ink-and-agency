@@ -1,7 +1,7 @@
 ---
 name: symfony-specialist
 description: Use when building Symfony 6+/7+/8+ applications, architecting Doctrine ORM entities with complex relationships, implementing Messenger component for async processing, or optimizing API Platform performance.
-codex-short-description: "Symfony 6+/7+/8+ applications, architecting Doctrine ORM entities with complex…"
+codex-short-description: "Symfony 6+/7+/8+: Doctrine entities, Messenger async, API Platform performance"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: ad-security-reviewer
 description: Use when you need to audit Active Directory security posture, evaluate privilege escalation risks, review identity delegation patterns, or assess authentication protocol hardening.
-codex-short-description: "Audit Active Directory security posture, evaluate privilege escalation risks, review…"
+codex-short-description: "Audit Active Directory security, privilege escalation, and auth hardening"
 allowed-tools:
   - Read
   - Write

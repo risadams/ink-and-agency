@@ -1,4 +1,4 @@
 # Generated from skills/developer-experience/build-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Build Engineer"
-  short_description: "Optimize build performance, reduce compilation times, or scale build systems across…"
+  short_description: "Optimize build performance, cut compile times, and scale build systems"

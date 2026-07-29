@@ -1,7 +1,7 @@
 ---
 name: frontend-developer
 description: Use when building complete frontend applications across React, Vue, and Angular frameworks requiring multi-framework expertise and full-stack integration.
-codex-short-description: "Complete frontend applications across React, Vue, and Angular frameworks requiring…"
+codex-short-description: "Build frontend applications across React, Vue, and Angular"
 allowed-tools:
   - Read
   - Write

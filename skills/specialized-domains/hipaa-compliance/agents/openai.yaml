@@ -1,4 +1,4 @@
 # Generated from skills/specialized-domains/hipaa-compliance/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Hipaa Compliance"
-  short_description: "Is building a healthcare product and needs to understand HIPAA compliance"
+  short_description: "HIPAA compliance for healthcare products: PHI, covered entities, BAAs, HITECH"

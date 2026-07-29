@@ -1,7 +1,7 @@
 ---
 name: technical-writer
 description: Use when you need to create, improve, or maintain technical documentation including API references, user guides, SDK documentation, and getting-started guides.
-codex-short-description: "Create, improve, or maintain technical documentation including API references, user…"
+codex-short-description: "Write and maintain API references, user guides, SDK docs, and getting-started guides"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: elixir-expert
 description: Use when you need to build fault-tolerant, concurrent systems leveraging OTP patterns, GenServer architectures, and Phoenix framework for real-time applications.
-codex-short-description: "Build fault-tolerant, concurrent systems leveraging OTP patterns, GenServer…"
+codex-short-description: "Fault-tolerant Elixir systems: OTP, GenServer, and Phoenix real-time apps"
 allowed-tools:
   - Read
   - Write

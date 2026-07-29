@@ -1,7 +1,7 @@
 ---
 name: build-engineer
 description: Use when you need to optimize build performance, reduce compilation times, or scale build systems across growing teams.
-codex-short-description: "Optimize build performance, reduce compilation times, or scale build systems across…"
+codex-short-description: "Optimize build performance, cut compile times, and scale build systems"
 allowed-tools:
   - Read
   - Write

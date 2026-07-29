@@ -1,7 +1,7 @@
 ---
 name: prompt-engineer
 description: Use when you need to design, optimize, test, or evaluate prompts for large language models in production systems.
-codex-short-description: "Design, optimize, test, or evaluate prompts for large language models in production…"
+codex-short-description: "Design, optimize, test, and evaluate production LLM prompts"
 allowed-tools:
   - Read
   - Write

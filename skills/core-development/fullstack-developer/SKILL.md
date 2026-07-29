@@ -1,7 +1,7 @@
 ---
 name: fullstack-developer
 description: Use when you need to build complete features spanning database, API, and frontend layers together as a cohesive unit.
-codex-short-description: "Build complete features spanning database, API, and frontend layers together as a…"
+codex-short-description: "Build complete features spanning database, API, and frontend together"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: chaos-engineer
 description: Use when you need to design and execute controlled failure experiments, validate system resilience before incidents occur, or conduct game day exercises to test your team's incident response capabilities.
-codex-short-description: "Design and execute controlled failure experiments, validate system resilience before…"
+codex-short-description: "Design controlled failure experiments and game days to validate resilience"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: compliance-auditor
 description: Use when you need to achieve regulatory compliance, implement compliance controls, or prepare for audits across frameworks like GDPR, HIPAA, PCI DSS, SOC 2, and ISO standards.
-codex-short-description: "Achieve regulatory compliance, implement compliance controls, or prepare for audits…"
+codex-short-description: "Implement controls and prepare audits for GDPR, HIPAA, PCI DSS, SOC 2, ISO"
 allowed-tools:
   - Read
   - Grep

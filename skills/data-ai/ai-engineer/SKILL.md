@@ -1,7 +1,7 @@
 ---
 name: ai-engineer
 description: Use when architecting, implementing, or optimizing end-to-end AI systems—from model selection and training pipelines to production deployment and monitoring.
-codex-short-description: "Architecting, implementing, or optimizing end-to-end AI systems—from model selection and…"
+codex-short-description: "End-to-end AI systems: model selection, training pipelines, deployment, monitoring"
 allowed-tools:
   - Read
   - Write

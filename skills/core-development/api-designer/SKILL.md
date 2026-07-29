@@ -1,7 +1,7 @@
 ---
 name: api-designer
 description: Use when designing new APIs, creating API specifications, or refactoring existing API architecture for scalability and developer experience. Invoke when you need REST/GraphQL endpoint design, OpenAPI documentation, authentication patterns, or API versioning strategies.
-codex-short-description: "New APIs, creating API specifications, or refactoring existing API architecture for…"
+codex-short-description: "Design REST and GraphQL APIs, OpenAPI specs, and versioning strategy"
 allowed-tools:
   - Read
   - Write

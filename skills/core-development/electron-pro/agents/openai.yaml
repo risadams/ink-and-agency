@@ -1,4 +1,4 @@
 # Generated from skills/core-development/electron-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Electron Pro"
-  short_description: "Electron desktop applications that require native OS integration, cross-platform…"
+  short_description: "Build Electron desktop apps: native OS integration, packaging, security hardening"

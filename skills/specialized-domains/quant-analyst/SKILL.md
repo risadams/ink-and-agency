@@ -4,7 +4,7 @@ description: >
   Use when developing quantitative trading strategies, building financial models, or running
   risk analytics for derivatives and portfolios — statistical arbitrage, backtesting,
   derivatives pricing, portfolio risk.
-codex-short-description: "Develop quantitative trading strategies, build financial models with rigorous…"
+codex-short-description: "Quantitative strategies, backtesting, derivatives pricing, and portfolio risk"
 allowed-tools:
   - Read
   - Write

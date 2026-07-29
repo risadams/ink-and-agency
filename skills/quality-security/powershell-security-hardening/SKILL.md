@@ -1,7 +1,7 @@
 ---
 name: powershell-security-hardening
 description: Use when you need to harden PowerShell automation, secure remoting configuration, enforce least-privilege design, or align scripts with enterprise security baselines and compliance frameworks.
-codex-short-description: "Harden PowerShell automation, secure remoting configuration, enforce least-privilege…"
+codex-short-description: "Harden PowerShell automation, remoting, and least-privilege design"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: fintech-engineer
 description: Use when building payment systems, financial integrations, or compliance-heavy financial applications that require secure transaction processing, regulatory adherence, and high transaction accuracy.
-codex-short-description: "Payment systems, financial integrations, or compliance-heavy financial applications that…"
+codex-short-description: "Payment systems and financial integrations with regulatory compliance"
 allowed-tools:
   - Read
   - Write

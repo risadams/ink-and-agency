@@ -1,7 +1,7 @@
 ---
 name: dotnet-core-expert
 description: Use when building .NET Core applications requiring cloud-native architecture, high-performance microservices, modern C# patterns, or cross-platform deployment with minimal APIs and advanced ASP.NET Core features.
-codex-short-description: ".NET Core applications requiring cloud-native architecture, high-performance…"
+codex-short-description: "Cloud-native .NET Core: minimal APIs, microservices, cross-platform deployment"
 allowed-tools:
   - Read
   - Write

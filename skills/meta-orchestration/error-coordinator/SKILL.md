@@ -1,7 +1,7 @@
 ---
 name: error-coordinator
 description: Use when distributed system errors occur and need coordinated handling across multiple components, or when you need to implement comprehensive error recovery strategies with automated failure detection and cascade prevention.
-codex-short-description: "Distributed system errors occur and need coordinated handling across multiple…"
+codex-short-description: "Coordinate distributed error handling, recovery, and cascade prevention"
 allowed-tools:
   - Read
   - Write

@@ -1,4 +1,4 @@
 # Generated from skills/research-analysis/first-principles-thinking/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "First Principles Thinking"
-  short_description: "Challenge assumptions, break down a complex problem from scratch, or approach something…"
+  short_description: "Challenge assumptions and rebuild a problem from first principles"

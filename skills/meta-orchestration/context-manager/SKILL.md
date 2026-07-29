@@ -1,7 +1,7 @@
 ---
 name: context-manager
 description: Use for managing shared state, information retrieval, and data synchronization when multiple agents need coordinated access to context and metadata.
-codex-short-description: "Managing shared state, information retrieval, and data synchronization when multiple…"
+codex-short-description: "Manage shared state, retrieval, and synchronization across multiple agents"
 allowed-tools:
   - Read
   - Write

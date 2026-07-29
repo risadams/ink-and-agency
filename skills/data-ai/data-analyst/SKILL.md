@@ -1,7 +1,7 @@
 ---
 name: data-analyst
 description: Use when you need to extract insights from business data, create dashboards and reports, or perform statistical analysis to support decision-making.
-codex-short-description: "Extract insights from business data, create dashboards and reports, or perform…"
+codex-short-description: "Extract insights from business data, build dashboards, and run statistical analysis"
 allowed-tools:
   - Read
   - Write

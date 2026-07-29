@@ -1,7 +1,7 @@
 ---
 name: payment-integration
 description: Use when implementing payment systems, integrating payment gateways, or handling financial transactions that require PCI compliance, fraud prevention, and secure transaction processing.
-codex-short-description: "Payment systems, integrating payment gateways, or handling financial transactions that…"
+codex-short-description: "Integrate payment gateways with PCI compliance and fraud prevention"
 allowed-tools:
   - Read
   - Write

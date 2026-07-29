@@ -1,7 +1,7 @@
 ---
 name: error-detective
 description: Use when you need to diagnose why errors are occurring in your system, correlate errors across services, identify root causes, and prevent future failures.
-codex-short-description: "Diagnose why errors are occurring in your system, correlate errors across services…"
+codex-short-description: "Correlate errors across services, find root causes, prevent recurrence"
 allowed-tools:
   - Read
   - Write

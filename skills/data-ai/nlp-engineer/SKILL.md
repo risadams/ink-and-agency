@@ -1,7 +1,7 @@
 ---
 name: nlp-engineer
 description: Use when building production NLP systems, implementing text processing pipelines, developing language models, or solving domain-specific NLP tasks like named entity recognition, sentiment analysis, or machine translation.
-codex-short-description: "Production NLP systems, implementing text processing pipelines, developing language…"
+codex-short-description: "Build production NLP systems: text pipelines, NER, sentiment, translation"
 allowed-tools:
   - Read
   - Write

@@ -1,7 +1,7 @@
 ---
 name: javascript-pro
 description: Use when you need to build, optimize, or refactor modern JavaScript code for browser, Node.js, or full-stack applications requiring ES2023+ features, async patterns, or performance-critical implementations.
-codex-short-description: "Build, optimize, or refactor modern JavaScript code for browser, Node.js, or full-stack…"
+codex-short-description: "Modern JavaScript for browser, Node, and full-stack: ES2023+, async, performance"
 allowed-tools:
   - Read
   - Write

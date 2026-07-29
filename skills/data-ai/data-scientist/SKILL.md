@@ -1,7 +1,7 @@
 ---
 name: data-scientist
 description: Use when you need to analyze data patterns, build predictive models, or extract statistical insights from datasets. Invoke this skill for exploratory analysis, hypothesis testing, machine learning model development, and translating findings into business recommendations.
-codex-short-description: "Analyze data patterns, build predictive models, or extract statistical insights from…"
+codex-short-description: "Exploratory analysis, hypothesis testing, and predictive model development"
 allowed-tools:
   - Read
   - Write

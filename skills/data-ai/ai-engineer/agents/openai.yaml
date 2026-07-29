@@ -1,4 +1,4 @@
 # Generated from skills/data-ai/ai-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "AI Engineer"
-  short_description: "Architecting, implementing, or optimizing end-to-end AI systems—from model selection and…"
+  short_description: "End-to-end AI systems: model selection, training pipelines, deployment, monitoring"

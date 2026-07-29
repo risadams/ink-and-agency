@@ -4,7 +4,7 @@ description: >
   Use when the user is building a healthcare product and needs to understand HIPAA
   compliance. Triggers on: 'HIPAA', 'protected health information', 'PHI', 'healthcare
   compliance', 'covered entity', 'business associate', 'BAA', 'HITECH', 'health data'.
-codex-short-description: "Is building a healthcare product and needs to understand HIPAA compliance"
+codex-short-description: "HIPAA compliance for healthcare products: PHI, covered entities, BAAs, HITECH"
 allowed-tools:
   - Read
   - Grep

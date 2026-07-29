@@ -1,7 +1,7 @@
 ---
 name: search-specialist
 description: Use when you need to find specific information across multiple sources using advanced search strategies, query optimization, and targeted information retrieval. Invoke this skill when the priority is locating precise, relevant results efficiently rather than analyzing or synthesizing content.
-codex-short-description: "Find specific information across multiple sources using advanced search strategies…"
+codex-short-description: "Locate precise information across sources with advanced search strategies"
 allowed-tools:
   - Read
   - Grep

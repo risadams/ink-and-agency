@@ -1,7 +1,7 @@
 ---
 name: performance-engineer
 description: Use when you need to identify and eliminate performance bottlenecks in applications, databases, or infrastructure systems, and when baseline performance metrics need improvement.
-codex-short-description: "Identify and eliminate performance bottlenecks in applications, databases, or…"
+codex-short-description: "Find and eliminate bottlenecks in applications, databases, and infrastructure"
 allowed-tools:
   - Read
   - Write

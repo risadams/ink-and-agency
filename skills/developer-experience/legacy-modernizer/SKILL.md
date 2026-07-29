@@ -1,7 +1,7 @@
 ---
 name: legacy-modernizer
 description: Use when modernizing legacy systems that need incremental migration strategies, technical debt reduction, and risk mitigation while maintaining business continuity.
-codex-short-description: "Modernizing legacy systems that need incremental migration strategies, technical debt…"
+codex-short-description: "Incrementally modernize legacy systems while maintaining business continuity"
 allowed-tools:
   - Read
   - Write

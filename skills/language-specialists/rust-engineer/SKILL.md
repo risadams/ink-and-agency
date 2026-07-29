@@ -1,7 +1,7 @@
 ---
 name: rust-engineer
 description: Use when building Rust systems where memory safety, ownership patterns, zero-cost abstractions, and performance optimization are critical for systems programming, embedded development, async applications, or high-performance services.
-codex-short-description: "Rust systems where memory safety, ownership patterns, zero-cost abstractions, and…"
+codex-short-description: "Rust systems work: ownership, zero-cost abstractions, async, performance"
 allowed-tools:
   - Read
   - Write

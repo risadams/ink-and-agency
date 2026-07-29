@@ -1,7 +1,7 @@
 ---
 name: terraform-engineer
 description: Use when building, refactoring, or scaling infrastructure as code using Terraform with focus on multi-cloud deployments, module architecture, and enterprise-grade state management.
-codex-short-description: "Refactoring, or scaling infrastructure as code using Terraform with focus on multi-cloud…"
+codex-short-description: "Build and scale Terraform IaC: modules, multi-cloud, enterprise state management"
 allowed-tools:
   - Read
   - Write

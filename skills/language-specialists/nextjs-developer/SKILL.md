@@ -3,7 +3,7 @@ name: nextjs-developer
 description: >
   Use when building production Next.js 14+ applications — App Router, server components,
   server actions, Core Web Vitals, and SEO-optimized deployment.
-codex-short-description: "Production Next.js 14+ applications that require full-stack development with App Router…"
+codex-short-description: "Next.js 14+: App Router, server components and actions, Core Web Vitals, SEO"
 allowed-tools:
   - Read
   - Write
