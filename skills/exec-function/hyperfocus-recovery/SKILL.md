@@ -2,11 +2,9 @@
 name: hyperfocus-recovery
 codex-short-description: "Rebuild context after a deep session or interruption from git and file artifacts"
 description: >
-  Reconstruct context after a deep session or interruption — "what was I doing?"
-  Reads recent git diff, modified files, open editors, and last commits to
-  rebuild your mental state and propose the next concrete action. Use when user
-  says "what was I doing", "where did I leave off", "lost my place", "context
-  recovery", "hyperfocus recovery", or invokes /hyperfocus-recovery.
+  Reconstruct context after a deep session or interruption from git diff, modified files,
+  and recent commits, then propose the next concrete action. Use when the user says "what
+  was I doing", "where did I leave off", "lost my place", or invokes /hyperfocus-recovery.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -106,14 +104,8 @@ If the user wants to start fresh and abandon what they were doing, offer that as
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/hyperfocus-recovery.md` and/or the workspace-local
-`.ink-and-agency/learnings/hyperfocus-recovery.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/hyperfocus-recovery.md` (workspace-local
+`.ink-and-agency/learnings/hyperfocus-recovery.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

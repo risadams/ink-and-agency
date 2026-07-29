@@ -1,15 +1,11 @@
 ---
 name: idea-decision-maker
 description: >
-  Stuck between options. Forces a binary, asks three clarifying questions,
-  picks one with reasoning. Defeats analysis paralysis without leaving the
-  decision to a coin flip. Use when user says "I can't decide", "help me
-  pick", "decision paralysis", "break the tie", "which should I",
-  or invokes /idea-decision-maker. Part of the `idea-*` family — the fast
-  counterpart to idea-choice (which deliberates and produces a written
-  pros/cons artifact); use this one when the user needs a verdict, not a
-  record. Sits alongside idea-generate (which produces new options) at the
-  "convergent / pick one" end of the family.
+  Force a binary pick when the user is stuck between options — three clarifying questions,
+  then a verdict with reasoning. The fast counterpart to idea-choice. Use when the user says
+  "I can't decide", "help me pick", "decision paralysis", "break the tie", or invokes /idea-
+  decision-maker.
+codex-short-description: "Force a binary pick when stuck between options — three questions, then a verdict"
 version: 2.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -99,14 +95,8 @@ Until that trigger fires, the decision is closed.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/idea-decision-maker.md` and/or the workspace-local
-`.ink-and-agency/learnings/idea-decision-maker.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/idea-decision-maker.md` (workspace-local
+`.ink-and-agency/learnings/idea-decision-maker.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

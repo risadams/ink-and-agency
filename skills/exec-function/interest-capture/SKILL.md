@@ -2,12 +2,10 @@
 name: interest-capture
 codex-short-description: "Fast-file the current hyperfixation to the vault so it doesn't derail today's work"
 description: >
-  Quick dump for the current hyperfixation so it doesn't derail today's work
-  but also isn't lost. Captures the idea, tags it, files it into the Obsidian
-  vault for later return. Optimized for speed — no clarifying questions
-  unless absolutely needed. Use when user says "capture this idea",
-  "hyperfixation dump", "interest capture", "stash this", "don't let me
-  forget", or invokes /interest-capture.
+  Capture the current hyperfixation into the Obsidian vault fast, so it isn't lost and
+  doesn't derail today's work. Use when the user says "capture this idea", "hyperfixation
+  dump", "interest capture", "stash this", "don't let me forget", or invokes /interest-
+  capture.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -117,14 +115,8 @@ That's it. No "great idea!", no expansion, no follow-up questions. Send them bac
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/interest-capture.md` and/or the workspace-local
-`.ink-and-agency/learnings/interest-capture.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/interest-capture.md` (workspace-local
+`.ink-and-agency/learnings/interest-capture.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

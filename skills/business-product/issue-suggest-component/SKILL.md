@@ -1,14 +1,10 @@
 ---
 name: issue-suggest-component
 description: >
-  Suggest Jira components for one ticket or sweep all open tickets in a
-  project. Gathers context from Jira, Confluence, and GitLab, proposes a
-  conservative set of existing components (or recommends new ones), and
-  confirms with the user before any modification. Bulk mode default project
-  key is read from memory (`reference_jira_default_project.md`); max 250
-  tickets, highest key first. Use when user says "suggest components", "tag
-  components", "fix components", "categorize tickets", or invokes
-  /issue-suggest-component with or without a ticket key.
+  Suggest Jira components for one ticket or sweep a project's open tickets, confirming
+  before any modification. Use when the user says "suggest components", "tag components",
+  "fix components", "categorize tickets", or invokes /issue-suggest-component.
+codex-short-description: "Suggest Jira components for one ticket or sweep a project, confirming before changes"
 allowed-tools:
   - Read
   - Write
@@ -239,14 +235,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/issue-suggest-component.md` and/or the workspace-local
-`.ink-and-agency/learnings/issue-suggest-component.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/issue-suggest-component.md` (workspace-local
+`.ink-and-agency/learnings/issue-suggest-component.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

@@ -2,12 +2,10 @@
 name: rejection-sensitivity-check
 codex-short-description: "Calibrate a message that stung: separate evidence from interpretation"
 description: >
-  Paste a message that stung; get a calibrated read on whether it's actually
-  critical or neutral-but-terse. Separates evidence from interpretation to
-  counter rejection-sensitive dysphoria. Use when user says "did they mean
-  it that way", "is this criticism", "am I reading this wrong", "rejection
-  check", "this stung", "rsd check", or invokes
-  /rejection-sensitivity-check.
+  Calibrate a message that stung — separate evidence from interpretation, score how much
+  sting is warranted. Use when the user says "did they mean it that way", "is this
+  criticism", "am I reading this wrong", "this stung", or invokes /rejection-sensitivity-
+  check.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -102,14 +100,8 @@ One-sentence rationale.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/rejection-sensitivity-check.md` and/or the workspace-local
-`.ink-and-agency/learnings/rejection-sensitivity-check.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/rejection-sensitivity-check.md` (workspace-local
+`.ink-and-agency/learnings/rejection-sensitivity-check.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

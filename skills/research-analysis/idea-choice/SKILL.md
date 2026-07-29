@@ -1,6 +1,11 @@
 ---
 name: idea-choice
-description: Weigh one or more ideas with a structured pros-and-cons analysis. Use when the user wants to evaluate an idea before committing, compare options on the merits, build a pros/cons list, score tradeoffs, justify a decision in writing, or asks "should I do X" / "is X worth it" / "weigh the tradeoffs". Runs a clarity-council pass, optionally grills for hidden assumptions, scores each point on Impact × Confidence, and recommends Go / Go with caveats / Don't / Needs more analysis. Deliberates on options you already have — unlike idea-decision-maker (fast binary pick) and idea-generate (produces new options).
+description: >
+  Weigh one or more ideas with a structured pros-and-cons analysis and a Go / Go with
+  caveats / Don't recommendation. Use when the user wants to evaluate an idea before
+  committing, compare options on the merits, score tradeoffs, or asks "should I do X" / "is
+  X worth it".
+codex-short-description: "Weigh ideas with a structured pros-and-cons analysis and a Go / caveats / Don't verdict"
 related-skills:
   - clarity-council
   - idea-generate
@@ -103,14 +108,8 @@ For multiple ideas, append:
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/idea-choice.md` and/or the workspace-local
-`.ink-and-agency/learnings/idea-choice.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/idea-choice.md` (workspace-local
+`.ink-and-agency/learnings/idea-choice.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

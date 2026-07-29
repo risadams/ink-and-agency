@@ -1,6 +1,9 @@
 ---
 name: obsidian-cli
-description: Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.
+description: >
+  Read, create, search, and manage Obsidian vault notes, tasks, and properties from the
+  command line; also supports plugin and theme development and debugging. Use when the user
+  asks to interact with their Obsidian vault or develop Obsidian plugins and themes.
 codex-short-description: "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage…"
 related-skills:
   - obsidian-vault
@@ -118,14 +121,8 @@ Run `obsidian help` to see additional developer commands including CDP and debug
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/obsidian-cli.md` and/or the workspace-local
-`.ink-and-agency/learnings/obsidian-cli.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/obsidian-cli.md` (workspace-local
+`.ink-and-agency/learnings/obsidian-cli.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

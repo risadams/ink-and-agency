@@ -2,14 +2,9 @@
 name: issue-dup-find
 codex-short-description: "Scan open Jira issues for likely duplicates; markdown report with probability + reason"
 description: >
-  Scan all open issues in a Jira project and identify likely duplicates using
-  semantic comparison. Produces a markdown report listing each suspected
-  duplicate pair with a probability score and reasoning. Read-only — never
-  modifies, links, or transitions tickets. Default project key is read from
-  memory (`reference_jira_default_project.md`); accepts an override project
-  key. Use when user says "find duplicates", "duplicate check", "dedupe
-  issues", "find duplicate tickets", or invokes /issue-dup-find with or
-  without a project key.
+  Scan a Jira project's open issues for likely duplicates and report each suspected pair
+  with a probability score and reasoning. Read-only. Use when the user says "find
+  duplicates", "duplicate check", "dedupe issues", or invokes /issue-dup-find.
 allowed-tools:
   - Read
   - Write
@@ -162,14 +157,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/issue-dup-find.md` and/or the workspace-local
-`.ink-and-agency/learnings/issue-dup-find.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/issue-dup-find.md` (workspace-local
+`.ink-and-agency/learnings/issue-dup-find.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

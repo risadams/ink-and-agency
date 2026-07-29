@@ -2,14 +2,10 @@
 name: issue-triage
 codex-short-description: "Triage a bug into ranked root-cause hypotheses + solution paths (read-only)"
 description: >
-  Triage a bug or issue by gathering context (Jira ticket or free-form
-  description), mapping the suspected code area via codebase-explain, hypothesizing
-  root causes via clarity-council, and producing a structured triage report
-  with ranked root-cause candidates and proposed solution paths. Read-only
-  by default; the user may opt in at the end to publish the report as a
-  Jira comment. Use when user says "triage this", "triage [TICKET-KEY]",
-  "what's causing this bug", "help me find the root cause", or invokes
-  /issue-triage with a ticket key or issue description.
+  Triage a bug or Jira ticket into ranked root-cause candidates and proposed solution paths.
+  Read-only unless the user opts in to publish. Use when the user says "triage this",
+  "triage [TICKET-KEY]", "what's causing this bug", "help me find the root cause", or
+  invokes /issue-triage.
 allowed-tools:
   - Read
   - Glob
@@ -258,14 +254,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/issue-triage.md` and/or the workspace-local
-`.ink-and-agency/learnings/issue-triage.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/issue-triage.md` (workspace-local
+`.ink-and-agency/learnings/issue-triage.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

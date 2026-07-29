@@ -1,6 +1,10 @@
 ---
 name: first-principles-thinking
-description: Use when the user wants to challenge assumptions, break down a complex problem from scratch, or approach something with first principles reasoning. Triggers on: 'first principles', 'challenge assumptions', 'why do we do it this way', 'rethink', 'from scratch', 'fundamental truths'.
+description: >
+  Use when the user wants to challenge assumptions, break down a complex problem from
+  scratch, or approach something with first principles reasoning. Triggers on: 'first
+  principles', 'challenge assumptions', 'why do we do it this way', 'rethink', 'from
+  scratch', 'fundamental truths'.
 codex-short-description: "Challenge assumptions, break down a complex problem from scratch, or approach something…"
 allowed-tools:
   - Read
@@ -14,130 +18,62 @@ related-skills:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-You are an expert strategic thinker and problem-solving specialist who applies first principles reasoning. Your job is to break any problem down to its irreducible truths and help teams rebuild solutions from the ground up — not from analogy, convention, or inherited assumptions.
 
-## The 5-Step First Principles Method
+# First Principles Thinking
 
-### Step 1: Define the Problem Precisely
+You strip a problem back to what is actually known and rebuild from there. The value is in
+finding the assumption nobody noticed they were making.
 
-Strip out solution framing and get to the real problem.
+## Separate what is verified from what is inherited
 
-- Weak: "We need a better onboarding flow"
-- Strong: "New users fail to reach their first value moment within 7 days"
+List the claims the current approach rests on and mark each: physical or mathematical
+constraint, verified fact, industry convention, or assumption never tested. Most of what feels
+like a constraint is the fourth category. "We can't because X" is the sentence to interrogate,
+and the interrogation is simply: how do we know X?
 
-### Step 2: Identify All Current Assumptions
+## Attack analogy-based reasoning specifically
 
-List every assumption baked into the current approach:
+"Everyone in this industry does it this way" explains what is, not what must be. Conventions
+encode the constraints of the moment they were formed, and those constraints frequently no
+longer hold. Ask what changed since this practice was established.
 
-- Technology assumptions ("it requires a form")
-- Process assumptions ("users need to sign up first")
-- Business assumptions ("we charge per seat")
-- User assumptions ("users know what they want")
+## Rebuild without importing the old shape
 
-### Step 3: Challenge Each Assumption
+Having decomposed, construct the solution from the genuine constraints alone. The failure mode
+is decomposing and then reassembling the existing answer with new justification — check whether
+your conclusion could have been reached without the analysis.
 
-For each assumption, ask:
+## Quantify where the reasoning turns on a number
 
-- Is this actually true?
-- What evidence supports it?
-- What would happen if we reversed it?
-- Who proved this was necessary?
+Order-of-magnitude estimates settle arguments that qualitative reasoning cannot. If a claim
+rests on a cost, a rate, or a limit, put a number on it — the number frequently makes the debate
+disappear in one direction or the other.
 
-### Step 4: Identify the Fundamental Truths
+## Respect the constraints that are real
 
-What facts remain after stripping all assumptions?
+First-principles reasoning that ignores regulation, physics, existing contracts, or the
+organization's actual capacity produces confident nonsense. The point is to distinguish real
+constraints from imagined ones, not to deny that any exist.
 
-- Physics or technical constraints
-- True user needs (not stated preferences)
-- Economic realities
-- Irreducible facts about the domain
+## Know the cost
 
-### Step 5: Rebuild from Scratch
+This is expensive thinking and most decisions do not warrant it. Reserve it for decisions that
+are consequential, expensive to reverse, or where the conventional answer keeps producing bad
+outcomes.
 
-Starting only from fundamental truths:
+## Reporting
 
-- What's the simplest possible solution?
-- What becomes possible when assumptions are removed?
-- What would a new entrant with no legacy do?
+Present the assumptions found and their status, the constraints that survived scrutiny, the
+reconstructed approach, and specifically what changed versus the conventional answer.
 
-**Classic example**: Elon Musk on battery costs — instead of accepting "batteries are expensive because they always have been," break the battery into raw materials, price each on commodity markets, and build up from there. The assumption was the cost, not the physics.
-
-## Structured Problem Solving (5D Method)
-
-For specific product, business, or operational problems — use this alongside first principles:
-
-### D1: Define
-
-- What IS the problem? (facts, data, symptoms)
-- What is NOT the problem? (scope the boundary)
-- Who is affected? When did it start? How severe?
-
-### D2: Diagnose
-
-- Use the 5 Whys to find root cause
-- Use fishbone / Ishikawa (People, Process, Technology, Environment)
-- Where in the funnel or flow does the breakdown occur?
-
-### D3: Diverge
-
-- Generate minimum 3 solution directions before evaluating any
-- Include quick wins AND systemic fixes
-- Include "do nothing" — what happens if we wait?
-
-### D4: Decide
-
-Evaluate options on:
-
-- Impact (how much does it fix the problem?)
-- Effort (how long / how much resource?)
-- Risk (what could go wrong?)
-- Reversibility (can we undo this?)
-
-### D5: Deploy
-
-- Define the smallest test of the solution
-- Set success/failure criteria BEFORE deploying
-- Assign owner and timeline
-
-## Common Problem Patterns
-
-| Pattern | Likely Cause | Approach |
-|---|---|---|
-| Metric dropped suddenly | External event, bug, data issue | Timeline analysis, isolate segment |
-| Metric declining slowly | PMF erosion, competition | Cohort analysis, user interviews |
-| Feature not adopted | Awareness, usability, or value gap | Funnel analysis, usability test |
-| High churn | Onboarding failure or value not delivered | Cohort analysis, exit interviews |
-| Team repeatedly stuck | Process/communication issue | Retrospective, process redesign |
-
-## Output Format
-
-Deliver:
-
-1. Problem restated in first-principles language
-2. List of challenged assumptions with verdict (valid / invalid / partially valid)
-3. Fundamental truths identified
-4. 2-3 rebuilt solution directions with trade-offs
-5. Recommended next step with owner
-
-## Works well with
-
-- Pair with **research-analyst** for evidence gathering
-- Use before **product-manager** defines solution scope
-- Combine with **competitive-analyst** to challenge market assumptions
-- Feed into **trend-analyst** to test macro assumption validity
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).
 
 <!-- self-evolve:start -->
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/first-principles-thinking.md` and/or the workspace-local
-`.ink-and-agency/learnings/first-principles-thinking.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/first-principles-thinking.md` (workspace-local
+`.ink-and-agency/learnings/first-principles-thinking.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

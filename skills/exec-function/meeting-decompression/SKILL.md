@@ -2,12 +2,10 @@
 name: meeting-decompression
 codex-short-description: "Process a meeting dump: separate facts, action items, and social ambiguities"
 description: >
-  Dump what happened in a meeting; skill separates facts from feelings, flags
-  action items, and notes social ambiguities to follow up on (instead of
-  ruminate on). Useful for masking-heavy meetings where the cognitive cost is
-  paid afterward. Use when user says "meeting decompression", "process this
-  meeting", "what just happened", "decompress", "after meeting",
-  or invokes /meeting-decompression.
+  Process a meeting dump — separate facts from feelings, flag action items, sort social
+  ambiguities into worth-following-up vs noise. Use when the user says "meeting
+  decompression", "process this meeting", "what just happened", or invokes /meeting-
+  decompression.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -98,14 +96,8 @@ One paragraph. Acknowledge the cognitive load of the meeting. Name what the user
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/meeting-decompression.md` and/or the workspace-local
-`.ink-and-agency/learnings/meeting-decompression.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/meeting-decompression.md` (workspace-local
+`.ink-and-agency/learnings/meeting-decompression.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

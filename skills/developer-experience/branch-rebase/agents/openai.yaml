@@ -1,4 +1,4 @@
 # Generated from skills/developer-experience/branch-rebase/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
 interface:
   display_name: "Branch Rebase"
-  short_description: "Safely rebase the current branch onto its upstream target (baseline, main, or master)"
+  short_description: "Safely rebase the current branch onto its upstream target, auto-resolving trivial conflicts"

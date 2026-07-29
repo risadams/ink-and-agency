@@ -1,12 +1,10 @@
 ---
 name: i-have-adhd
 description: >
-  Shape every response for a reader with ADHD — lead with the next action,
-  number multi-step work, restate progress state each turn, hold one thread,
-  give numeric time estimates, and make finished work visible. Use when the
-  user says "I have ADHD", asks for ADHD-shaped output, or invokes
-  /i-have-adhd — then keep applying it to every later message in the session,
-  coding or casual, whether or not brevity was requested.
+  Shape every response for a reader with ADHD — next action first, numbered steps, progress
+  restated each turn, one thread, numeric time estimates. Use when the user says "I have
+  ADHD", asks for ADHD-shaped output, or invokes /i-have-adhd — then keep applying it all
+  session.
 codex-short-description: "Shape all output for an ADHD reader: next action first, state restated, no preamble."
 version: 1.0.0
 license: MIT
@@ -88,14 +86,8 @@ Then verify: reading **only the first line and the last line**, does the reader 
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/i-have-adhd.md` and/or the workspace-local
-`.ink-and-agency/learnings/i-have-adhd.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/i-have-adhd.md` (workspace-local
+`.ink-and-agency/learnings/i-have-adhd.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

@@ -2,12 +2,9 @@
 name: energy-budget
 codex-short-description: "Score today's calendar load, flag burnout risk, suggest what to drop or defer"
 description: >
-  Log today's load (meetings, sensory stuff, social events, deep work);
-  skill scores the load, warns when the day is heading toward burnout,
-  and suggests what to drop or defer. Spoon-theory accounting for your
-  calendar. Use when user says "energy budget", "spoon check", "am I
-  overcommitted", "what should I drop", "burnout check",
-  or invokes /energy-budget.
+  Score today's load (meetings, sensory demand, social events, deep work), flag burnout
+  risk, and suggest what to drop or defer. Use when the user says "energy budget", "spoon
+  check", "am I overcommitted", "what should I drop", or invokes /energy-budget.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -137,14 +134,8 @@ If the day is tight or over even after suggested defers, one sentence on **what 
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/energy-budget.md` and/or the workspace-local
-`.ink-and-agency/learnings/energy-budget.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/energy-budget.md` (workspace-local
+`.ink-and-agency/learnings/energy-budget.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

@@ -1,6 +1,9 @@
 ---
 name: good-morning
-description: Morning kickoff wrapper that runs sprint-snapshot (daily tag), daily-standup-prep (with sprint burndown), and daily-briefing (report only — no focus-block suggestions) in order. Re-runs idempotently — existing same-day artifacts are overwritten in place. Use when user says "good morning", "morning routine", "kick off my day", "start my day", or invokes /good-morning.
+description: >
+  Morning kickoff wrapper running sprint-snapshot, daily-standup-prep, and daily-briefing in
+  order; idempotent on same-day re-runs. Use when the user says "good morning", "morning
+  routine", "kick off my day", "start my day", or invokes /good-morning.
 codex-short-description: "Morning kickoff wrapper that runs sprint-snapshot (daily tag), daily-standup-prep (with…"
 related-skills:
   - sprint-snapshot
@@ -183,14 +186,8 @@ Append the persona's `## Next actions` block to the Phase 4 console output. This
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/good-morning.md` and/or the workspace-local
-`.ink-and-agency/learnings/good-morning.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/good-morning.md` (workspace-local
+`.ink-and-agency/learnings/good-morning.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

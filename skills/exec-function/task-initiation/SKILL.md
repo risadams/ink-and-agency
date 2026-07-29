@@ -1,11 +1,10 @@
 ---
 name: task-initiation
 description: >
-  You know what to do but can't start. Skill asks three questions and produces
-  the literal first action (open file X, type heading Y) — not a plan, not a
-  breakdown. Defeats executive-function stalls. Use when user says "I can't
-  start", "help me begin", "task initiation", "stuck on starting", "just-start",
-  or invokes /task-initiation.
+  Produce the literal first physical action when the user knows what to do but can't start —
+  not a plan, not a breakdown. Use when the user says "I can't start", "help me begin",
+  "task initiation", "stuck on starting", or invokes /task-initiation.
+codex-short-description: "Produce the literal first physical action when you know what to do but can't start"
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -82,14 +81,8 @@ When the user comes back and says "done":
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/task-initiation.md` and/or the workspace-local
-`.ink-and-agency/learnings/task-initiation.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/task-initiation.md` (workspace-local
+`.ink-and-agency/learnings/task-initiation.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

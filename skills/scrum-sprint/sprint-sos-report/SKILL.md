@@ -1,6 +1,9 @@
 ---
 name: sprint-sos-report
-description: End-of-week scrum-of-scrums report comparing two sprint snapshots and surfacing key findings, observations, trouble areas, and trends. Auto-detects which two snapshots to compare (most-recent two by snapshot_at) with `--from`/`--to` overrides for re-planning churn comparisons (e.g. compare `week 1` vs a mid-week `week 1.5`). Applies team-specific overhead, wedge-balancing, and in-review overhead rules from `_team-rules.md`. Auto-runs a clarity-council session (statistics-expert + scrum-master + product-owner). Use when user says "scrum of scrums", "sos report", "weekly sprint report", "sprint progress report", or invokes /sprint-sos-report.
+description: >
+  Weekly scrum-of-scrums report comparing two sprint snapshots — findings, observations,
+  trouble areas, trends. Use when the user says "scrum of scrums", "sos report", "weekly
+  sprint report", "sprint progress report", or invokes /sprint-sos-report.
 codex-short-description: "End-of-week scrum-of-scrums report comparing two sprint snapshots and surfacing key…"
 allowed-tools:
   - Read
@@ -258,14 +261,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/sprint-sos-report.md` and/or the workspace-local
-`.ink-and-agency/learnings/sprint-sos-report.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/sprint-sos-report.md` (workspace-local
+`.ink-and-agency/learnings/sprint-sos-report.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

@@ -89,74 +89,40 @@ When available, integrate with:
 - **CAQH ProView** for credentialing status
 - **NPPES NPI Registry** for provider lookups
 
-## Development Workflow
+## How to work
 
-Execute healthcare administration work through systematic phases:
+**Establish the regulatory frame before proposing any operational change.** Which federal rules
+apply (CMS Conditions of Participation, HIPAA, Stark, Anti-Kickback), which state licensure
+requirements overlay them, which accreditation standard the organization is surveyed against
+(TJC, DNV, HFAP), what the payer contracts actually say, and what reporting deadlines are live.
+An operational improvement that violates a CoP is not an improvement.
 
-### 1. Regulatory and Compliance Analysis
+**Cite the source, not your recollection.** Specific CFR sections, CMS transmittals, and measure
+specifications by name and version. Healthcare regulation changes annually and differs by state
+and payer — a confident answer from memory is the failure mode here. Where you are working from
+a general understanding rather than a verified current citation, say so explicitly rather than
+producing something that reads as authoritative.
 
-Understand the applicable regulatory framework before any operational change.
+**Design for the audit, because there will be one.** Every compliance-sensitive process needs an
+audit trail that reconstructs who did what and under which version of the policy. Joint
+Commission uses tracer methodology — pick a patient and follow them through — so a process that
+is only documented centrally and not visible at the point of care will fail survey regardless of
+how well it is written.
 
-Analysis priorities:
+**Pilot before facility-wide rollout.** Map the current-state workflow first (what people
+actually do, not what the policy says), design the compliant target state, test it on one unit,
+and fix what the pilot surfaces. Include the staff competency validation and education
+requirement as part of the change, not as a follow-up.
 
-- Federal regulations (CMS CoPs, HIPAA, Stark, AKS)
-- State-specific requirements and licensure
-- Accreditation standards (TJC, DNV, HFAP)
-- Payer-specific rules and contract terms
-- Quality program deadlines and measure specifications
-- Reporting obligations (cost reports, quality, NHSN)
+**Measure against the benchmark that governs.** Revenue cycle KPIs against industry and contract
+targets, quality measures against the program's own thresholds and deadlines. Track the
+reporting calendar as a first-class artifact — missed deadlines have financial consequences
+independent of performance.
 
-Compliance evaluation:
+**Judgment stays with the licensed professionals.** Coding, billing determinations, and clinical
+decisions carry legal and licensure liability. Produce the analysis, the citation, and the
+recommendation, and route the decision to the person with the credential to make it.
 
-- Gap analysis against current regulations
-- Risk scoring by likelihood and impact
-- Corrective action plan development
-- Policy and procedure drafting
-- Staff education requirements
-- Monitoring and audit schedules
-
-### 2. Implementation Phase
-
-Build operational improvements with regulatory compliance built in.
-
-Implementation approach:
-
-- Map current-state workflows
-- Identify regulatory constraints and requirements
-- Design compliant target-state processes
-- Develop deliverable templates (policies, reports, tools)
-- Create monitoring dashboards and KPIs
-- Test with pilot units before facility-wide rollout
-- Document everything for survey readiness
-
-Healthcare-specific patterns:
-
-- Always cite specific CFR sections and CMS transmittals
-- Use CMS-approved templates where available
-- Build audit trails for every compliance-sensitive process
-- Design for Joint Commission tracer methodology
-- Include staff competency validation steps
-- Plan for annual regulatory updates
-
-Progress tracking:
-
-### 3. Operational Excellence
-
-Ensure healthcare systems meet regulatory, quality, and financial targets.
-
-Excellence checklist:
-
-- Regulatory compliance validated with CFR citations
-- Quality measures meeting or exceeding benchmarks
-- Revenue cycle KPIs within target ranges
-- Accreditation survey readiness confirmed
-- Staff training and competency documented
-- Incident response procedures tested
-- Reporting deadlines tracked and met
-- Continuous improvement cycles active
-
-Delivery notification:
-"Healthcare administration project completed. Closed 47 compliance gaps with CFR-cited corrective actions, improved quality scores across 12 CMS measures, reduced denial rate by 15%, and achieved survey readiness across all accreditation standards."
 
 ## Example Use Cases
 
@@ -193,14 +159,8 @@ Always prioritize patient safety, regulatory compliance, and evidence-based prac
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/healthcare-admin.md` and/or the workspace-local
-`.ink-and-agency/learnings/healthcare-admin.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/healthcare-admin.md` (workspace-local
+`.ink-and-agency/learnings/healthcare-admin.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

@@ -1,6 +1,10 @@
 ---
 name: obsidian-charts
-description: Build interactive charts in Obsidian notes using the Charts plugin (phibr0/obsidian-charts). Renders Chart.js bar/line/pie/doughnut/radar/polarArea via `chart` codeblocks, can pull data straight from a markdown table by block ID (cross-file supported), and can render from a Dataview query via `window.renderChart`. Use when the user wants to chart, plot, graph, or visualize data sitting in their Obsidian notes — including tables, frontmatter values, Dataview/Dataviewjs results, or hand-written series — or mentions "obsidian charts", "chart codeblock", "renderChart", or "chart from table".
+description: >
+  Build interactive Chart.js charts in Obsidian notes via `chart` codeblocks — inline
+  series, a markdown table by block ID, or a Dataview query. Use when the user wants to
+  chart, plot, graph, or visualize data in their Obsidian notes, or mentions "obsidian
+  charts" or "renderChart".
 codex-short-description: "Build interactive charts in Obsidian notes using the Charts plugin…"
 related-skills:
   - obsidian-bases
@@ -134,14 +138,8 @@ See [REFERENCE.md](REFERENCE.md) for the full parameter list, `renderChart` API,
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/obsidian-charts.md` and/or the workspace-local
-`.ink-and-agency/learnings/obsidian-charts.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/obsidian-charts.md` (workspace-local
+`.ink-and-agency/learnings/obsidian-charts.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

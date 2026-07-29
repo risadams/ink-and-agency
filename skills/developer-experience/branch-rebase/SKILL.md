@@ -1,10 +1,11 @@
 ---
 name: branch-rebase
 description: >
-  Safely rebase the current branch onto its upstream target (baseline, main, or master).
-  Auto-resolves simple merge conflicts (version bumps, changelogs). Prompts for complex ones.
-  Use when user says "rebase", "rebase branch", "rebase onto main", "update my branch",
-  "sync with baseline", "catch up with main", or invokes /branch-rebase.
+  Safely rebase the current branch onto its upstream target, auto-resolving trivial
+  conflicts and prompting for complex ones. Use when the user says "rebase", "rebase onto
+  main", "update my branch", "sync with baseline", "catch up with main", or invokes /branch-
+  rebase.
+codex-short-description: "Safely rebase the current branch onto its upstream target, auto-resolving trivial conflicts"
 related-skills:
   - branch-resolve-conflicts
   - devops-engineer
@@ -238,14 +239,8 @@ List any files that were auto-resolved during conflict resolution so the user ca
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/branch-rebase.md` and/or the workspace-local
-`.ink-and-agency/learnings/branch-rebase.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/branch-rebase.md` (workspace-local
+`.ink-and-agency/learnings/branch-rebase.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

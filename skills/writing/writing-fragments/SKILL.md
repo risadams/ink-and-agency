@@ -1,6 +1,10 @@
 ---
 name: writing-fragments
-description: Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions "fragments", "ideate", or "raw material" for writing.
+description: >
+  Mine the user for raw writing fragments — claims, vignettes, sharp sentences, half-
+  thoughts — and append them to one document as material for a future article. Use when the
+  user wants to develop ideas before imposing structure, or mentions "fragments" or "raw
+  material".
 codex-short-description: "Grilling session that mines the user for fragments — heterogeneous nuggets of writing…"
 related-skills:
   - writing-shape
@@ -105,14 +109,8 @@ If the user is ready for any of that, the session is over and a different tool t
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/writing-fragments.md` and/or the workspace-local
-`.ink-and-agency/learnings/writing-fragments.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/writing-fragments.md` (workspace-local
+`.ink-and-agency/learnings/writing-fragments.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

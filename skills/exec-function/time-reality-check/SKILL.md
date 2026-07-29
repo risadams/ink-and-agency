@@ -1,11 +1,10 @@
 ---
 name: time-reality-check
 description: >
-  Counter time blindness — you say "20 minutes" but it'll take 2 hours. Skill
-  asks about the task, factors in your usual underestimation pattern, and
-  offers a calibrated estimate with reasoning. Use when user says "how long
-  will this take", "time check", "reality check", "estimate this", "am I being
-  realistic", or invokes /time-reality-check.
+  Counter time blindness with a calibrated estimate that accounts for setup, interruptions,
+  and re-entry. Use when the user says "how long will this take", "time check", "reality
+  check", "estimate this", "am I being realistic", or invokes /time-reality-check.
+codex-short-description: "Counter time blindness with a calibrated estimate including setup and re-entry"
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -101,14 +100,8 @@ If the user only reads one line, this is it: a flat declarative sentence with th
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/time-reality-check.md` and/or the workspace-local
-`.ink-and-agency/learnings/time-reality-check.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/time-reality-check.md` (workspace-local
+`.ink-and-agency/learnings/time-reality-check.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

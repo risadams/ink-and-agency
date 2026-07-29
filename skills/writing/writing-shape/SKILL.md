@@ -1,6 +1,9 @@
 ---
 name: writing-shape
-description: Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing about format (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a rough draft and wants help turning it into something publishable.
+description: >
+  Shape a file of raw material into an article through a conversational session — candidate
+  openings, paragraph by paragraph, arguing format at each step. Use when the user has
+  notes, fragments, or a rough draft and wants it turned into something publishable.
 codex-short-description: "Take a markdown file of raw material and shape it into an article through a…"
 related-skills:
   - writing-draft-article
@@ -76,14 +79,8 @@ Append to the article file as each block is agreed. Re-read the file from disk b
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/writing-shape.md` and/or the workspace-local
-`.ink-and-agency/learnings/writing-shape.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/writing-shape.md` (workspace-local
+`.ink-and-agency/learnings/writing-shape.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

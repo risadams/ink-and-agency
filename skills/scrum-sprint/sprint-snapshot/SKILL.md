@@ -1,6 +1,9 @@
 ---
 name: sprint-snapshot
-description: Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and render it into the Obsidian vault as (1) an Obsidian Canvas with sprint overview, team workload, kanban columns, and issue cards, (2) a companion markdown summary, and (3) an append-only JSONL trend log. Auto-detects sprint phase (start / week 1 / week 2 / week 3 / end) from today's date. Supports `--as-of <date>` for historical snapshots. Reuses obsidian-canvas / obsidian-vault / obsidian-markdown for vault writes and follows the issue-* skills' Jira context-gathering patterns. Use when user says "sprint snapshot", "snapshot the sprint", "capture sprint state", "sprint planner", "scrum board snapshot", or invokes /sprint-snapshot.
+description: >
+  Capture a point-in-time snapshot of a scrum team's sprint board into the Obsidian vault.
+  Use when the user says "sprint snapshot", "snapshot the sprint", "capture sprint state",
+  "sprint planner", "scrum board snapshot", or invokes /sprint-snapshot.
 codex-short-description: "Capture a point-in-time snapshot of a scrum team's current sprint board from Jira and…"
 related-skills:
   - sprint-plan
@@ -324,14 +327,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/sprint-snapshot.md` and/or the workspace-local
-`.ink-and-agency/learnings/sprint-snapshot.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/sprint-snapshot.md` (workspace-local
+`.ink-and-agency/learnings/sprint-snapshot.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

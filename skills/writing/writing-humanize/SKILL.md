@@ -1,13 +1,11 @@
 ---
 name: writing-humanize
 version: 2.6.0
-description: |
-  Remove signs of AI-generated writing from text. Use when editing or reviewing
-  text to make it sound more natural and human-written. Based on Wikipedia's
-  comprehensive "Signs of AI writing" guide. Detects and fixes patterns including:
-  inflated symbolism, promotional language, superficial -ing analyses, vague
-  attributions, em dash overuse, rule of three, AI vocabulary words, passive
-  voice, negative parallelisms, and filler phrases.
+description: >
+  Remove signs of AI-generated writing — inflated symbolism, promotional language, vague
+  attributions, em dash overuse, rule of three, AI vocabulary, negative parallelisms,
+  filler. Use when editing or reviewing text to make it read as human-written.
+codex-short-description: "Remove signs of AI-generated writing from text"
 license: MIT
 compatibility: claude-code codex opencode
 allowed-tools:
@@ -196,14 +194,8 @@ Key insight from Wikipedia: "LLMs use statistical algorithms to guess what shoul
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/writing-humanize.md` and/or the workspace-local
-`.ink-and-agency/learnings/writing-humanize.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/writing-humanize.md` (workspace-local
+`.ink-and-agency/learnings/writing-humanize.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

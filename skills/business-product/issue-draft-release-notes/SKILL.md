@@ -2,15 +2,10 @@
 name: issue-draft-release-notes
 codex-short-description: "Draft a customer-facing release note for a Jira ticket from ticket + MR context"
 description: >
-  Draft a customer-facing release note for a Jira ticket by gathering the ticket
-  context (summary, description, type, fix version, comments) and any linked
-  GitLab merge requests / code changes, then synthesizing a clear, audience-
-  appropriate release note. Runs a clarity-council quality pass over the draft.
-  Read-only by default; the user may opt in at the end to publish the note as a
-  Jira comment (or into a Release Notes field if one exists). Use when user says
-  "draft release notes", "write a release note", "release note for [TICKET-KEY]",
-  "what changed in this ticket", or invokes /issue-draft-release-notes with a
-  ticket key.
+  Draft a customer-facing release note for a Jira ticket from its context and linked merge
+  requests. Read-only unless the user opts in to publish. Use when the user says "draft
+  release notes", "write a release note", "release note for [TICKET-KEY]", or invokes
+  /issue-draft-release-notes.
 allowed-tools:
   - Read
   - Bash
@@ -162,14 +157,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/issue-draft-release-notes.md` and/or the workspace-local
-`.ink-and-agency/learnings/issue-draft-release-notes.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/issue-draft-release-notes.md` (workspace-local
+`.ink-and-agency/learnings/issue-draft-release-notes.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

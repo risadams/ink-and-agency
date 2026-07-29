@@ -2,11 +2,9 @@
 name: writing-cold-open
 codex-short-description: "Get the first sentence when the blank cursor is winning; 2-3 openings, then steps out"
 description: >
-  Generates the first sentence of a message or email when you can't get past
-  the blank cursor. Offers 2-3 openings matched to the relationship and goal,
-  then steps out — you write the rest. Use when user says "cold open", "help
-  me start this message", "how do I begin", "stuck on opening",
-  "first sentence", or invokes /writing-cold-open.
+  Produce the first sentence of a message when the blank cursor is winning — two or three
+  openings matched to relationship and goal, then step out. Use when the user says "cold
+  open", "help me start this message", "how do I begin", or invokes /writing-cold-open.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -89,14 +87,8 @@ That's the whole output. Do not offer to write the rest. Do not write subject li
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/writing-cold-open.md` and/or the workspace-local
-`.ink-and-agency/learnings/writing-cold-open.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/writing-cold-open.md` (workspace-local
+`.ink-and-agency/learnings/writing-cold-open.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

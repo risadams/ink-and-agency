@@ -2,12 +2,10 @@
 name: i-am-autistic
 codex-short-description: "Shape all output for an autistic reader: literal, explicit modality, quantified uncertainty"
 description: >
-  Shape every response for an autistic reader — say the thing directly, label
-  whether an instruction is required or optional, keep language literal,
-  quantify uncertainty instead of hedging, and name social subtext explicitly.
-  Use when the user says "I'm autistic", asks for literal or direct output,
-  or invokes /i-am-autistic — then keep applying it to every later message in
-  the session. Composes with i-have-adhd when the user needs both.
+  Shape every response for an autistic reader — direct statements, required/optional labels,
+  literal language, quantified uncertainty, named social subtext. Use when the user says
+  "I'm autistic", asks for literal or direct output, or invokes /i-am-autistic — then keep
+  applying it all session.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -88,14 +86,8 @@ Ask of the draft:
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/i-am-autistic.md` and/or the workspace-local
-`.ink-and-agency/learnings/i-am-autistic.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/i-am-autistic.md` (workspace-local
+`.ink-and-agency/learnings/i-am-autistic.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

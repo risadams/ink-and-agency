@@ -2,12 +2,9 @@
 name: hyperfocus-exit
 codex-short-description: "Park a deep session before an interrupt, so re-entry is cheap instead of impossible"
 description: >
-  Stop a deep work session on purpose without losing the thread — captures what
-  is only in your head, writes a park file, and drops a PARKED breadcrumb at the
-  exact line. The inverse of hyperfocus-recovery, which reads what this writes.
-  Use when the user says "I have to stop", "meeting in 10", "park this", "save
-  my place", "hyperfocus exit", "I'm being pulled away", or invokes
-  /hyperfocus-exit.
+  Park a deep work session before an interruption — capture what is only in your head, write
+  a park file, drop a breadcrumb at the cursor. Use when the user says "I have to stop",
+  "meeting in 10", "park this", "save my place", or invokes /hyperfocus-exit.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -120,14 +117,8 @@ Under 5 lines. The user is already walking away.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/hyperfocus-exit.md` and/or the workspace-local
-`.ink-and-agency/learnings/hyperfocus-exit.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/hyperfocus-exit.md` (workspace-local
+`.ink-and-agency/learnings/hyperfocus-exit.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

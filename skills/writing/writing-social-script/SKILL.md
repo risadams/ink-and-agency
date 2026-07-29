@@ -2,12 +2,10 @@
 name: writing-social-script
 codex-short-description: "Generate a script for a dreaded social scenario, with phrasings + an exit line"
 description: >
-  Generate a script for a specific social scenario you're dreading: declining
-  a meeting, asking for a deadline extension, following up on silence, leaving
-  a party early, asking for help, setting a boundary. Offers 2-3 phrasings
-  from direct to softened. Use when user says "script for", "help me say",
-  "how do I tell them", "I need to ask", "I need to decline", "social script",
-  or invokes /writing-social-script.
+  Generate a script for a dreaded social scenario — declining, asking for an extension,
+  following up, setting a boundary — in two or three phrasings from direct to softened. Use
+  when the user says "script for", "help me say", "how do I tell them", or invokes /writing-
+  social-script.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -86,14 +84,8 @@ If the conversation goes sideways (pushback, guilt-trip, unexpected escalation),
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/writing-social-script.md` and/or the workspace-local
-`.ink-and-agency/learnings/writing-social-script.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/writing-social-script.md` (workspace-local
+`.ink-and-agency/learnings/writing-social-script.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

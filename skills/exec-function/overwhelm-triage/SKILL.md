@@ -2,12 +2,10 @@
 name: overwhelm-triage
 codex-short-description: "Dump everything that's on fire, get back exactly one thing to do"
 description: >
-  Take an unstructured dump of everything competing for attention and return
-  exactly one thing to do now, with the rest explicitly parked and dated.
-  Counters the paralysis that comes from ranking eleven items by importance.
-  Use when the user says "everything is on fire", "I'm overwhelmed", "too much
-  going on", "I don't know what to do first", "help me pick", "triage this",
-  or invokes /overwhelm-triage.
+  Turn an unstructured dump of everything competing for attention into exactly one thing to
+  do now, with the rest parked and dated. Use when the user says "everything is on fire",
+  "I'm overwhelmed", "too much going on", "I don't know what to do first", or invokes
+  /overwhelm-triage.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -99,14 +97,8 @@ The user is drowning in options. Adding personas adds options. Run inline, alway
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/overwhelm-triage.md` and/or the workspace-local
-`.ink-and-agency/learnings/overwhelm-triage.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/overwhelm-triage.md` (workspace-local
+`.ink-and-agency/learnings/overwhelm-triage.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

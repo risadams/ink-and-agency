@@ -1,12 +1,9 @@
 ---
 name: writing-apology-calibrator
 description: >
-  Drafted apology in, calibrated apology out. Strips reflexive self-blame
-  and over-apologizing that masking trains in, while keeping genuine
-  accountability for things the user actually owes. Use when user says
-  "calibrate this apology", "am I over-apologizing", "apology check",
-  "did I say sorry too much", "is this too much", or invokes
-  /writing-apology-calibrator.
+  Calibrate a drafted apology — strip reflexive over-apology, keep warranted accountability.
+  Use when the user says "calibrate this apology", "am I over-apologizing", "apology check",
+  "did I say sorry too much", or invokes /writing-apology-calibrator.
 version: 1.0.0
 license: MIT
 compatibility: claude-code codex opencode
@@ -91,14 +88,8 @@ A few sentences explaining the *pattern* (not the specific lines) — what refle
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/writing-apology-calibrator.md` and/or the workspace-local
-`.ink-and-agency/learnings/writing-apology-calibrator.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/writing-apology-calibrator.md` (workspace-local
+`.ink-and-agency/learnings/writing-apology-calibrator.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

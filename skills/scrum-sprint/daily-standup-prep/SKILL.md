@@ -1,6 +1,9 @@
 ---
 name: daily-standup-prep
-description: Generate a per-team standup markdown report by gathering activity over the last N days from Jira, GitLab, Confluence, and a local Git repo. Maps activity to team members from a roster CSV, renders a Mermaid kanban + randomized talking order, captures a `daily`-tagged sprint snapshot, and runs a clarity-council (infographics-expert burndown chart + statistics-expert forecast + scrum-master suggestions) for sprint pulse. Writes one file per team into the Obsidian vault. Use when the user says "daily standup prep", "standup report", "generate standup", "scrum prep", or invokes /daily-standup-prep.
+description: >
+  Generate a per-team standup report from recent Jira, GitLab, Confluence, and Git activity,
+  written into the Obsidian vault. Use when the user says "daily standup prep", "standup
+  report", "generate standup", "scrum prep", or invokes /daily-standup-prep.
 codex-short-description: "Generate a per-team standup markdown report by gathering activity over the last N days…"
 allowed-tools:
   - Read
@@ -330,14 +333,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/daily-standup-prep.md` and/or the workspace-local
-`.ink-and-agency/learnings/daily-standup-prep.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/daily-standup-prep.md` (workspace-local
+`.ink-and-agency/learnings/daily-standup-prep.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

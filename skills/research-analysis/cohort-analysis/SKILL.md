@@ -1,6 +1,10 @@
 ---
 name: cohort-analysis
-description: Use when the user wants to analyze retention, cohort behavior, engagement trends, or understand how different user groups perform over time. Triggers on: 'cohort analysis', 'retention analysis', 'user retention', 'cohort retention', 'week 1 retention', 'retention curve'.
+description: >
+  Use when the user wants to analyze retention, cohort behavior, engagement trends, or
+  understand how different user groups perform over time. Triggers on: 'cohort analysis',
+  'retention analysis', 'user retention', 'cohort retention', 'week 1 retention', 'retention
+  curve'.
 codex-short-description: "Analyze retention, cohort behavior, engagement trends, or understand how different user…"
 allowed-tools:
   - Read
@@ -14,123 +18,54 @@ related-skills:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-You are an expert product analyst specializing in cohort analysis and retention. Your job is to help teams understand how groups of users behave over time — identifying retention trends, product improvements, and degradation signals before it's too late to act.
 
-## Types of Cohorts
+# Cohort Analysis
 
-### Acquisition Cohorts
+You track how groups of users behave over time. The technique's whole value is separating real
+change from composition change.
 
-Group users by when they joined (signup week/month).
-Use for: Is the product getting better over time? Are newer cohorts retaining better?
+## Define the cohort and the event precisely
 
-### Behavioral Cohorts
+Cohort by acquisition date, first-purchase date, or plan — each answers a different question.
+"Retained" must be a specific event in a specific window. Analyses that skip this produce
+numbers nobody can reconcile against anything else.
 
-Group users by behavior (e.g., users who used Feature X in first 7 days).
-Use for: What behaviors predict retention? What's the activation metric?
+## Equal observation windows or the trend is an artifact
 
-### Segment Cohorts
+A cohort from last month has not had time to reach month three. Comparing incomplete cohorts to
+complete ones produces a decline that does not exist — the most common cohort-analysis error.
+Truncate to the window every cohort has actually had.
 
-Group users by company size, plan type, or acquisition channel.
-Use for: Which segments retain best? Who is the ideal customer?
+## Look for the composition explanation first
 
-## Retention Metrics
+A retention change usually reflects a change in who was acquired, not a change in the product. A
+marketing push into a cheaper channel drags the cohort down while nothing about the product
+moved. Segment by channel, plan, or geography before concluding anything about product changes.
 
-### N-Day Retention
+## Separate the curve's shape from its level
 
-"What % of users who joined on Day 0 were active on Day N?"
+Early drop-off, the plateau it settles to, and whether it plateaus at all are different findings
+with different responses. A cohort that never flattens has no retained base regardless of its
+month-one number.
 
-- Day 1 retention: Did they come back the next day?
-- Day 7 retention: Did they return after a week?
-- Day 30 retention: Do they still see value after a month?
+## Absolute counts alongside rates
 
-### Rolling Retention
+A retention rate improving while the cohort shrinks may be selection, not improvement. Show the
+denominator.
 
-"What % of users who joined in week X were active in week Y or any later week?"
+## Reporting
 
-- Measures "did they ever come back after week N?"
-- Better for weekly/monthly-use apps
+State the cohort and event definitions, the observation window, the curve with counts, the
+segment breakdown, and whether an observed change is composition or behavior.
 
-## Retention Curve Diagnosis
-
-```
-Healthy: Flattens asymptotically
-         |████
-         |   █
-         |    ███████████████  ← holds at some % forever
-         +---------------------- time
-
-Dying:   Continues to slope toward zero
-         |████
-         |   ████
-         |       ████
-         |           ████▼   ← approaching 0
-         +---------------------- time
-```
-
-If the retention curve approaches zero, there is a product-market fit problem — not a growth problem. More acquisition won't fix it.
-
-## Activation Analysis (Finding the "Aha Moment")
-
-Find behaviors that correlate with long-term retention:
-
-1. Identify users with high 30-day retention
-2. What did they do in their first 7 days that low-retaining users did NOT do?
-3. That behavior = your activation metric candidate
-
-Classic examples:
-
-- Facebook: Add 7 friends in 10 days
-- Slack: Send 2,000 messages as a team
-- Twitter: Follow 30 users
-
-## Cohort Retention Table Format
-
-```
-Cohort     | Week 0 | Week 1 | Week 2 | Week 4 | Week 8
------------|--------|--------|--------|--------|-------
-Jan Cohort | 100%   | 42%    | 31%    | 24%    | 21%
-Feb Cohort | 100%   | 45%    | 34%    | 27%    | 24%  ← improving
-Mar Cohort | 100%   | 48%    | 37%    | 30%    | 26%  ← improving
-```
-
-Improving retention over time = product improvements are working.
-
-## Actionable Outputs from Cohort Analysis
-
-1. **Retention problem diagnosis**: Where does the curve drop fastest?
-2. **Activation metric identification**: What behavior predicts retention?
-3. **Product improvement tracking**: Are changes actually moving retention?
-4. **Segment comparison**: Which customer type retains best?
-
-## Output Format
-
-Deliver:
-
-- Cohort retention table (or structure to build one)
-- Retention curve shape diagnosis (healthy / declining / dying)
-- Key drop-off points identified with timing
-- Activation metric hypothesis with supporting behavioral data
-- Product recommendations ranked by expected retention impact
-
-## Works well with
-
-- Combine with **data-researcher** for data extraction
-- Use findings to inform **product-manager** roadmap priorities
-- Feed activation insights to **ux-researcher** for qualitative follow-up
-- Pair with **market-researcher** for segment-level ICP refinement
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).
 
 <!-- self-evolve:start -->
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/cohort-analysis.md` and/or the workspace-local
-`.ink-and-agency/learnings/cohort-analysis.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/cohort-analysis.md` (workspace-local
+`.ink-and-agency/learnings/cohort-analysis.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

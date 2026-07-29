@@ -2,11 +2,10 @@
 name: issue-feature-breakdown
 codex-short-description: "Gather Jira/Confluence context + council pass into an actionable breakdown plan"
 description: >
-  Analyze a Jira ticket by gathering full context from Jira and Confluence,
-  following linked tickets, then running a clarity-council to identify gaps
-  and ambiguities. Produces an actionable breakdown plan. All actions are
-  read-only. Use when user says "break down this feature", "analyze this
-  ticket", "feature breakdown", or provides a Jira ticket key for analysis.
+  Analyze a Jira ticket into an actionable breakdown, following linked tickets and
+  Confluence context to surface gaps and ambiguities. Read-only. Use when the user says
+  "break down this feature", "analyze this ticket", "feature breakdown", or provides a
+  ticket key for analysis.
 related-skills:
   - clarity-council
   - business-analyst
@@ -121,14 +120,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/issue-feature-breakdown.md` and/or the workspace-local
-`.ink-and-agency/learnings/issue-feature-breakdown.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/issue-feature-breakdown.md` (workspace-local
+`.ink-and-agency/learnings/issue-feature-breakdown.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

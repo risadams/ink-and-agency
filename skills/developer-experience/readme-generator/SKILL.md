@@ -1,12 +1,9 @@
 ---
 name: readme-generator
 description: >
-  Write, overhaul, or review a project README that is accurate to the repository
-  and easy for a human to read — deep codebase scan for exact commands and
-  config, a best-practice section ladder, and a pass/fail review rubric. Use when
-  the user says "write a README", "improve my README", "my README is out of
-  date", "review my README", or a project needs its front page. Commits or pushes
-  only when explicitly asked.
+  Write, overhaul, or review a project README that is accurate to the repository and
+  readable by a human. Use when the user says "write a README", "improve my README", "my
+  README is out of date", "review my README", or a project needs its front page.
 codex-short-description: "Write, overhaul, or review a README that is accurate to the repo and readable by humans"
 allowed-tools:
   - Read
@@ -115,14 +112,8 @@ only on an explicit instruction.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/readme-generator.md` and/or the workspace-local
-`.ink-and-agency/learnings/readme-generator.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/readme-generator.md` (workspace-local
+`.ink-and-agency/learnings/readme-generator.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

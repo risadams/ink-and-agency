@@ -1,6 +1,10 @@
 ---
 name: sprint-plan
-description: Convert the start-of-sprint canvas into a planning markdown report. Use when the user says "sprint plan", "sprint planning report", "convert sprint plan to markdown", or invokes /sprint-plan. Produces a sprint-goal summary, committed scope (carry-over vs new commit), capacity vs commitment with WIP-saturation risk, observations, and risks; auto-runs a clarity-council pass and writes a date-stamped report with a `-latest` pointer.
+description: >
+  Convert the start-of-sprint canvas into a planning report — committed scope, capacity vs
+  commitment, WIP-saturation risk, observations, risks. Use when the user says "sprint
+  plan", "sprint planning report", or invokes /sprint-plan.
+codex-short-description: "Convert the start-of-sprint canvas into a planning report"
 related-skills:
   - sprint-snapshot
   - clarity-council
@@ -338,14 +342,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/sprint-plan.md` and/or the workspace-local
-`.ink-and-agency/learnings/sprint-plan.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/sprint-plan.md` (workspace-local
+`.ink-and-agency/learnings/sprint-plan.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

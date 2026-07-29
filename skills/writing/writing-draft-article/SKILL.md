@@ -1,6 +1,9 @@
 ---
 name: writing-draft-article
-description: Guide the user from raw idea, topic, or draft to a finished, polished article through relentless questioning and iterative writing. Supports blog posts, social media posts, and long-form prose. Delegates to sibling skills (writing-humanize, writing-shape, writing-beats, writing-fragments) when appropriate. Use when the user wants to write something from scratch and have it completed.
+description: >
+  Guide the user from raw idea or draft to a finished article through relentless questioning
+  and iterative writing. Use when the user wants to write something from scratch and have it
+  completed.
 codex-short-description: "Guide the user from raw idea, topic, or draft to a finished, polished article through…"
 related-skills:
   - writing-shape
@@ -265,14 +268,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/writing-draft-article.md` and/or the workspace-local
-`.ink-and-agency/learnings/writing-draft-article.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/writing-draft-article.md` (workspace-local
+`.ink-and-agency/learnings/writing-draft-article.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

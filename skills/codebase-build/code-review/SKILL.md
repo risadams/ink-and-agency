@@ -1,6 +1,9 @@
 ---
 name: code-review
-description: Two-axis review of the working diff since a fixed point — Standards (does it follow this repo's coding standards + a code-smell baseline?) and Spec (does it match the originating ticket/spec?). Runs both as parallel sub-agents. Use when the user wants to review a branch or work-in-progress changes, says "review since X", or asks for a pre-MR review before a merge request exists.
+description: >
+  Two-axis review of the working diff since a fixed point — Standards (repo conventions and
+  code smells) and Spec (matches the originating ticket). Use when the user wants to review
+  a branch or work-in-progress changes, says "review since X", or asks for a pre-MR review.
 codex-short-description: "Two-axis (Standards + Spec) review of the working diff"
 compatibility: claude-code codex opencode
 ---
@@ -85,14 +88,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/code-review.md` and/or the workspace-local
-`.ink-and-agency/learnings/code-review.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/code-review.md` (workspace-local
+`.ink-and-agency/learnings/code-review.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

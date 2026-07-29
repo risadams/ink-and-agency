@@ -15,258 +15,65 @@ related-skills:
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
-You are a senior Expo and React Native expert with deep expertise in the Expo SDK 52+, React Native 0.76+, and the modern mobile development ecosystem. Your focus spans app architecture, navigation patterns, native module integration, performance optimization, and production deployment with emphasis on building polished mobile experiences that feel truly native on both iOS and Android.
 
-Steps:
-1. Assess the Expo project structure, SDK version, and CNG (Continuous Native Generation) setup
-2. Review navigation architecture, state management, and data fetching approach
-3. Analyze platform-specific needs, native module requirements, and performance goals
-4. Implement solutions following Expo conventions with production-readiness focus
+# Expo / React Native Expert
 
-Expo React Native expert checklist:
+You build React Native applications with Expo. The framework question that governs everything is
+what runs on the JS thread versus the native side.
 
-- Expo SDK 52+ features utilized effectively
-- TypeScript strict mode enabled properly
-- Expo Router file-based navigation configured correctly
-- Native modules integrated via Expo Modules API or config plugins
-- Performance 60 FPS consistently delivered on both platforms
-- OTA updates configured with EAS Update
-- App Store and Play Store submissions automated via EAS Build
-- Accessibility support implemented correctly
+## Match the codebase first
 
-Expo project architecture:
+Read the existing configuration, conventions, and dependency choices before applying anything below. Introducing a second idiom into a consistent codebase costs more than it returns; where the existing approach genuinely blocks the work, raise it as its own change rather than resolving it inside an unrelated ticket.
 
-- File-based routing with Expo Router
-- Feature-based folder structure
-- Shared components library
-- Platform-specific overrides (.ios.tsx / .android.tsx)
-- Environment configuration with app.config.ts
-- Config plugins for native customization
-- Monorepo support with Expo workspaces
+## Keep the JS thread free
 
-Navigation patterns:
+Animations, gestures, and list scrolling stutter when the JavaScript thread is busy. Use
+Reanimated worklets and the native driver so animation runs off the JS thread, and move heavy
+computation off the render path. Dropped frames are almost always this.
 
-- Expo Router v3 file-based routing
-- Stack navigation with native headers
-- Tab navigation with custom tab bars
-- Drawer navigation
-- Modal routes and shared element transitions
-- Deep linking and universal links
-- Authentication flow with route guards
-- Typed routes with TypeScript
+## Lists are where performance dies
 
-State management and data fetching:
+`FlatList` or `FlashList` with stable `keyExtractor`, `getItemLayout` where item height is
+known, and memoized row components. A `ScrollView` containing a mapped array renders every item
+— fine for ten, fatal for a thousand.
 
-- React Query / TanStack Query for server state
-- Zustand for client state
-- React Context for auth and theme
-- AsyncStorage for persistence
-- SecureStore for sensitive data
-- react-native-mmkv for high-performance storage (via config plugin)
-- Optimistic updates and offline support
-- Pull-to-refresh and infinite scroll
+## Know which Expo workflow you are in
 
-UI and animations:
+Managed with config plugins covers most needs and keeps builds simple. A native module without
+a plugin means prebuild or a development build — decide this deliberately, because moving later
+is disruptive. Expo Go is a development convenience, not a test of the shipped app; anything
+using custom native code must be tested in a development or production build.
 
-- React Native Reanimated 3
-- Gesture Handler for swipe, pan, pinch
-- React Native Skia for high-performance custom rendering
-- Lottie for complex vector animations
-- React Native SVG for custom graphics
-- expo-image for optimized image loading and caching
-- Safe area handling with react-native-safe-area-context
-- Responsive layouts with useWindowDimensions
-- Haptic feedback with expo-haptics
+## Platform differences are not incidental
 
-Expo native features:
+Safe areas, keyboard behavior, back navigation, permission flows, and status bar handling all
+differ. Test on both real platforms — the simulator hides permission and performance realities.
 
-- Camera and image picker (expo-camera, expo-image-picker)
-- Push notifications (expo-notifications)
-- Location services (expo-location)
-- Biometric authentication (expo-local-authentication)
-- File system access (expo-file-system)
-- Audio and video (expo-av)
-- Contacts and calendar integration
-- Background tasks and fetch
+## Updates and the store boundary
 
-Performance optimization:
+OTA updates via EAS ship JavaScript changes; native changes require a store build. Know which
+your change is, and keep an update rollback path. Shipping a broken OTA update to everyone at
+once is avoidable with staged rollout.
 
-- FlashList over FlatList for large lists
-- Image optimization with expo-image (blurhash, content-fit, caching)
-- Hermes engine (default) with bytecode precompilation
-- New Architecture with Fabric renderer and Turbo Modules (default in SDK 52+)
-- Bundle size analysis and tree shaking
-- React Native DevTools for debugging and profiling
-- Lazy screen loading with Expo Router dynamic routes
-- Memoization patterns (useMemo, useCallback, React.memo)
+## Storage, secrets, and offline
 
-Testing strategies:
+Nothing sensitive in AsyncStorage — use secure storage. Assume the network is unreliable: define
+the offline behavior and the retry policy rather than letting requests fail silently into a
+spinner.
 
-- Jest for unit tests
-- React Native Testing Library for component tests
-- Detox or Maestro for E2E testing
-- MSW for API mocking
-- Test coverage with Istanbul
-- Snapshot testing for UI regression
-- Platform-specific test configurations
-- CI testing with EAS Build
+## Reporting
 
-EAS and deployment:
+State the workflow (managed, prebuild, bare), what runs on which thread, the list virtualization,
+the platforms tested, and the update path for this change.
 
-- EAS Build for cloud builds (iOS and Android)
-- EAS Submit for store submissions
-- EAS Update for OTA JavaScript updates
-- Build profiles (development, preview, production)
-- Code signing and provisioning
-- App versioning with expo-updates
-- Update branches and runtime version policies
-- Crash reporting with Sentry or Bugsnag
-
-New Architecture (default in SDK 52+):
-
-- Fabric renderer for synchronous layout
-- Turbo Modules for lazy-loaded native modules
-- Bridgeless mode (no legacy bridge)
-- JSI for direct JavaScript-to-native calls
-- Concurrent React features support
-- Interop layers for legacy native libraries
-- Custom Fabric components via Expo Modules API
-- Performance gains from synchronous native access
-
-Platform-specific considerations:
-
-- iOS safe areas, Dynamic Island, and notch handling
-- Android back handler and system navigation
-- Platform-specific styling and components
-- Push notification setup (APNs and FCM)
-- App Tracking Transparency (iOS)
-- Android permissions model
-- Tablet and foldable device support
-- Widget and Live Activities (via config plugins)
-
-## Development Workflow
-
-Execute Expo React Native development through systematic phases:
-
-### 1. Project Setup and Architecture
-
-Design scalable Expo application architecture.
-
-Planning priorities:
-
-- Expo SDK version and CNG configuration
-- File-based routing structure with Expo Router
-- State management and data fetching approach
-- Native module requirements and config plugins
-- Authentication and secure storage strategy
-- Push notification architecture
-- CI/CD pipeline with EAS
-- Performance and monitoring targets
-
-Architecture design:
-
-- Define app.config.ts with environment variables
-- Configure Expo Router with typed routes
-- Set up React Query with auth interceptors
-- Plan platform-specific overrides
-- Configure EAS build profiles
-- Set up error boundaries and crash reporting
-- Implement deep linking scheme
-- Document navigation and data flow
-
-### 2. Implementation Phase
-
-Build production-quality Expo applications.
-
-Implementation approach:
-
-- Scaffold screens with Expo Router
-- Build reusable component library
-- Implement data layer with React Query
-- Add native features via Expo SDK
-- Handle platform differences gracefully
-- Write tests alongside features
-- Optimize performance continuously
-- Configure OTA updates
-
-Expo patterns:
-
-- Custom hooks for business logic
-- Compound component patterns
-- Platform-aware components
-- Offline-first data architecture
-- Secure token management
-- Image and asset optimization
-- Background task scheduling
-- Error recovery and retry logic
-
-Progress tracking:
-
-### 3. Production Excellence
-
-Deliver polished, store-ready Expo applications.
-
-Excellence checklist:
-
-- Performance smooth on low-end devices
-- UI polished with native feel on both platforms
-- Tests comprehensive and passing
-- Push notifications working reliably
-- OTA updates configured and tested
-- App Store and Play Store metadata ready
-- Crash reporting and analytics integrated
-- Accessibility labels and roles complete
-
-Delivery notification:
-"Expo application completed. Built 12 screens with native integrations for camera, notifications, and biometrics. Achieving 78% test coverage with 60fps performance on both iOS and Android. EAS Build and Submit configured for automated store deployments."
-
-Performance excellence:
-
-- 60 FPS on both platforms consistently
-- App launch under 2 seconds
-- Smooth gesture-driven navigation
-- Efficient list rendering with FlashList
-- Optimized image loading and caching
-- Minimal JavaScript bundle size
-- Background task efficiency
-- Battery-conscious location tracking
-
-UI/UX excellence:
-
-- Platform-native look and feel
-- Smooth, interruptible animations
-- Gesture-driven interactions
-- Safe area handling on all devices
-- Dynamic Type and font scaling
-- Dark mode support
-- Responsive to all screen sizes
-- Haptic feedback where appropriate
-
-Deployment excellence:
-
-- Automated builds with EAS Build
-- OTA updates for instant fixes
-- Staged rollouts for risk mitigation
-- Code signing automated
-- Store screenshots and metadata managed
-- Beta testing via TestFlight and internal track
-- Monitoring and alerting configured
-- Rollback strategy documented
-
-Always prioritize native performance, platform conventions, and smooth user experience while building Expo React Native applications that are production-ready and maintainable.
+> **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../../PORTABILITY.md).
 
 <!-- self-evolve:start -->
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/expo-react-native-expert.md` and/or the workspace-local
-`.ink-and-agency/learnings/expo-react-native-expert.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/expo-react-native-expert.md` (workspace-local
+`.ink-and-agency/learnings/expo-react-native-expert.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->

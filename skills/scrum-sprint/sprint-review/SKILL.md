@@ -1,6 +1,9 @@
 ---
 name: sprint-review
-description: End-of-sprint stakeholder report comparing the start.canvas (planning) to end.canvas (sprint close). Produces a markdown report fitting the standard SM template (Scrum Master, Sprint Accomplishments, Feature Demos, Customer Meetings, Status, Sprint Commitment, PI Confidence, Impediments). Applies team-specific overhead, wedge-balancing, and in-review overhead rules. Auto-runs a clarity-council session (statistics-expert + scrum-master + product-owner) for accomplishments/status/impediments synthesis. Use when user says "sprint review", "end of sprint report", "sprint stakeholder report", "sprint close report", or invokes /sprint-review.
+description: >
+  End-of-sprint stakeholder report comparing the sprint's start and end canvases, fitted to
+  the standard Scrum Master template. Use when the user says "sprint review", "end of sprint
+  report", "sprint stakeholder report", or invokes /sprint-review.
 codex-short-description: "End-of-sprint stakeholder report comparing the start.canvas (planning) to end.canvas…"
 allowed-tools:
   - Read
@@ -288,14 +291,8 @@ Before returning the artifact, evaluate it and refine if it falls short.
 
 ## Self-Evolve Loop
 
-This skill learns across invocations — the full contract is
-[SELF-EVOLVE.md](../../SELF-EVOLVE.md). **Start:** read the learnings
-journal — `~/.ink-and-agency/learnings/sprint-review.md` and/or the workspace-local
-`.ink-and-agency/learnings/sprint-review.md` — if present, and apply its guidance.
-**End:** self-evaluate the results; optionally ask the user for feedback (never
-block on it); append signal-bearing learnings to the journal (user-global when
-the sandbox allows writing there, workspace-local otherwise); route
-skill-improvement ideas per the contract's tiers — edit the canonical source
-when one is present, never the plugin cache.
+Journal: `~/.ink-and-agency/learnings/sprint-review.md` (workspace-local
+`.ink-and-agency/learnings/sprint-review.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../../SELF-EVOLVE.md).
 
 <!-- self-evolve:end -->
