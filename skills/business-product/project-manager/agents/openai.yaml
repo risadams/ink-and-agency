@@ -1,4 +1,0 @@
-# Generated from skills/business-product/project-manager/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Project Manager"
-  short_description: "Plan projects, track execution, manage risk, and coordinate stakeholders"

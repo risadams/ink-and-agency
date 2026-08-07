@@ -1,4 +1,0 @@
-# Generated from skills/data-ai/prompt-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Prompt Engineer"
-  short_description: "Design, optimize, test, and evaluate production LLM prompts"

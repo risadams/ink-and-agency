@@ -1,0 +1,4 @@
+# Generated from skills/writing-shape/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Writing Shape"
+  short_description: "Shape raw notes into an article, paragraph by paragraph, in conversation"

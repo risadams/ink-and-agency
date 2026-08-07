@@ -1,0 +1,4 @@
+# Generated from skills/python-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Python Pro"
+  short_description: "Type-safe production Python: web APIs, async patterns, full type coverage"

@@ -1,0 +1,4 @@
+# Generated from skills/sales-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Sales Engineer"
+  short_description: "Technical pre-sales: solution architecture, POCs, and technical demos"

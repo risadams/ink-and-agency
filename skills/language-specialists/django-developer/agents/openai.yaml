@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/django-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Django Developer"
-  short_description: "Build Django 4+ apps and REST APIs; modernize with async views"

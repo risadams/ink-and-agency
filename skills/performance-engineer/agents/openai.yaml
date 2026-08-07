@@ -1,0 +1,4 @@
+# Generated from skills/performance-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Performance Engineer"
+  short_description: "Find and eliminate bottlenecks in applications, databases, and infrastructure"

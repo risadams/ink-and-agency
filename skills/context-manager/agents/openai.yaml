@@ -1,0 +1,4 @@
+# Generated from skills/context-manager/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Context Manager"
+  short_description: "Manage shared state, retrieval, and synchronization across multiple agents"

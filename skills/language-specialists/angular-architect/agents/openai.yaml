@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/angular-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Angular Architect"
-  short_description: "Architect enterprise Angular 15+ apps: state, RxJS, micro-frontends, performance"

@@ -1,4 +1,0 @@
-# Generated from skills/infrastructure/terraform-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Terraform Engineer"
-  short_description: "Build and scale Terraform IaC: modules, multi-cloud, enterprise state management"

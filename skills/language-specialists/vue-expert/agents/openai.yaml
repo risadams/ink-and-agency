@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/vue-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Vue Expert"
-  short_description: "Build Vue 3 apps with Composition API mastery and reactivity optimization"

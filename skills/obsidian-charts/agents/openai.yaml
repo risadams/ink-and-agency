@@ -1,0 +1,4 @@
+# Generated from skills/obsidian-charts/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Obsidian Charts"
+  short_description: "Build Chart.js charts in Obsidian notes from inline series, tables, or Dataview"

@@ -1,0 +1,4 @@
+# Generated from skills/meeting-decompression/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Meeting Decompression"
+  short_description: "Process a meeting dump: separate facts, action items, and social ambiguities"

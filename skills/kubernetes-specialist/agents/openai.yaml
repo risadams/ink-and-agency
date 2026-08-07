@@ -1,0 +1,4 @@
+# Generated from skills/kubernetes-specialist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Kubernetes Specialist"
+  short_description: "Design, deploy, and troubleshoot Kubernetes clusters and production workloads"

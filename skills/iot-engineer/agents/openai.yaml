@@ -1,0 +1,4 @@
+# Generated from skills/iot-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Iot Engineer"
+  short_description: "Design and deploy IoT solutions: device management, edge computing, cloud integration"

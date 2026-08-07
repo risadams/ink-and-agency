@@ -1,0 +1,4 @@
+# Generated from skills/writing-apology-calibrator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Writing Apology Calibrator"
+  short_description: "Calibrate a drafted apology — strip reflexive over-apology, keep warranted accountability"

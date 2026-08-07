@@ -1,4 +1,0 @@
-# Generated from skills/developer-experience/readme-generator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Readme Generator"
-  short_description: "Write, overhaul, or review a README that is accurate to the repo and readable by humans"

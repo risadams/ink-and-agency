@@ -1,4 +1,0 @@
-# Generated from skills/quality-security/error-detective/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Error Detective"
-  short_description: "Correlate errors across services, find root causes, prevent recurrence"

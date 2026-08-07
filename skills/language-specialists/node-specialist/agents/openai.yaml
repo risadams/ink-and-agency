@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/node-specialist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Node Specialist"
-  short_description: "Build, optimize, and debug Node.js APIs, CLIs, and microservices"

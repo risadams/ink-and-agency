@@ -1,0 +1,4 @@
+# Generated from skills/search-specialist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Search Specialist"
+  short_description: "Locate precise information across sources with advanced search strategies"

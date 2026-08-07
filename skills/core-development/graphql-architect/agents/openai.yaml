@@ -1,4 +1,0 @@
-# Generated from skills/core-development/graphql-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Graphql Architect"
-  short_description: "Design or evolve GraphQL schemas, federation, and query performance across services"

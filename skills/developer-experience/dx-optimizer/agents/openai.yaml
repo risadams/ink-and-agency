@@ -1,4 +1,0 @@
-# Generated from skills/developer-experience/dx-optimizer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Dx Optimizer"
-  short_description: "Optimize developer workflow: build times, feedback loops, testing efficiency"

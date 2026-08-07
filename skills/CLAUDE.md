@@ -10,26 +10,25 @@ This is a **Claude Skills Pack** — a collection of prompt-based skill definiti
 
 ## Structure
 
-Skills are organized into **category subfolders**. Codex discovers them recursively (any
-`SKILL.md` at any depth is a skill); **Claude Code does not** — it loads only the skill folders
-enumerated in the `skills` array of `.claude-plugin/plugin.json`, which is generated from the full
-`SKILL.md` set by `convert-agents-to-codex.ps1`. So a new skill in any category is picked up on the
-next regenerate; do not hand-edit that array. See [CATEGORIES.md](CATEGORIES.md) for the 15
-categories and the full index. The `clarity-council` skill sits at the top level of `skills/` (not
-inside a category) as a featured skill many others delegate to.
+The layout is **flat** — one folder per skill, directly under `skills/`. Agent Plugins 1.0.0
+requires it: conformant hosts look at the immediate children of `skills/` and must not search
+deeper, so a nested `SKILL.md` would simply never be found. Category is a `category:` frontmatter
+field instead; see [CATEGORIES.md](CATEGORIES.md) for the 15 buckets and the full index. Claude Code
+also reads the `skills` array in `.claude-plugin/plugin.json`, generated from the tree by
+`convert-agents-to-codex.ps1` — do not hand-edit it.
 
 ```text
-<category>/<name>/SKILL.md        # Skill entry point (YAML frontmatter + instructions)
-<category>/<name>/*.md            # Supporting docs, formats, or deep-dive modules
-<category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED)
-clarity-council/                  # featured top-level skill (reads persona/)
+<name>/SKILL.md                   # Skill entry point (YAML frontmatter + instructions)
+<name>/*.md                       # Supporting docs, formats, or deep-dive modules
+<name>/agents/openai.yaml         # Codex picker metadata (GENERATED)
+clarity-council/                  # featured skill (reads persona/)
 persona/                          # shared council persona contracts (reference docs, not skills)
 persona/PERSONAS.md               #   persona index; persona/GROUPS.md = pre-made panels
 ```
 
-The skill **name** (invocation id) is the leaf folder and is independent of its category — moving a
-skill between categories does not change how it's invoked, but cross-skill relative links encode the
-category path, so fix those if you move one.
+The skill **name** (invocation id) is the folder name and is independent of its category —
+recategorizing is a one-line frontmatter edit that moves no files and breaks no links. Cross-skill
+relative links are a single hop: `../<name>/`.
 
 ## Skill format
 
@@ -37,6 +36,7 @@ Each `SKILL.md` begins with YAML frontmatter:
 
 ```yaml
 name: skill-name
+category: writing                      # required — a bucket from CATEGORIES.md (or 'featured')
 description: >
   When to trigger this skill. Use "when user says X" or "Use when Y."
   Keep to 1-2 sentences.
@@ -246,7 +246,7 @@ never hand-edit a footer.
 
 ## Adding a new skill
 
-1. Create `<category>/<name>/SKILL.md` under one of the categories in [CATEGORIES.md](CATEGORIES.md), with proper YAML frontmatter (name, description). The `name` must equal the leaf folder `<name>` and be globally unique across all categories.
+1. Create `<name>/SKILL.md` directly under `skills/` — never nested deeper, or conformant hosts won't discover it. Frontmatter needs `name`, `description`, and a `category` from [CATEGORIES.md](CATEGORIES.md). The `name` must equal the folder name and be globally unique.
 2. Add a row to the **Skills inventory** table above in this file — **but only for public skills**. If the skill lives under `_private/` (junction in the root), skip the inventory row and add it to `.gitignore` instead. (README.md links to the inventory — do not duplicate it there.)
 3. Keep supporting docs inside the skill folder.
 4. Each skill should have a README.md that expands on the instructions in `SKILL.md` with examples, edge cases, and troubleshooting tips. Link to it from `SKILL.md` if needed.

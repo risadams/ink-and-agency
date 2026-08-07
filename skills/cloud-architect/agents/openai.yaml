@@ -1,0 +1,4 @@
+# Generated from skills/cloud-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Cloud Architect"
+  short_description: "Design, evaluate, or optimize cloud infrastructure architecture at scale"

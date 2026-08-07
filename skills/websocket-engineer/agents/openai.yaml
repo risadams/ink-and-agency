@@ -1,0 +1,4 @@
+# Generated from skills/websocket-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Websocket Engineer"
+  short_description: "Build real-time bidirectional features with WebSockets and Socket.IO at scale"

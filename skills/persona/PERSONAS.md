@@ -3,7 +3,7 @@
 The council resolves a persona name in two steps:
 
 1. **Local lens file** — if `<name>.md` exists in this folder, use it (Soul / Voice / Decision Lens).
-2. **Top-level specialist skill** — otherwise, if a `skills/<category>/<name>/SKILL.md` exists with a
+2. **Top-level specialist skill** — otherwise, if a `skills/<name>/SKILL.md` exists with a
    **## Council Persona Lens** section, adopt that as the persona's lens.
 
 Advisory roles — the ones you *consult for judgment* rather than *run to produce an artifact* — live
@@ -69,9 +69,9 @@ carries a **## Council Persona Lens** section (Decision Lens, Preferred Framewor
 Failure Modes, Escalation Conditions) that is the persona contract to read; the rest of the skill is
 implementation guidance.
 
-- `data-engineer` → [`skills/data-ai/data-engineer/`](../data-ai/data-engineer/)
-- `devops-engineer` → [`skills/infrastructure/devops-engineer/`](../infrastructure/devops-engineer/)
-- `technical-writer` → [`skills/business-product/technical-writer/`](../business-product/technical-writer/)
+- `data-engineer` → [`skills/data-engineer/`](../data-engineer/)
+- `devops-engineer` → [`skills/devops-engineer/`](../devops-engineer/)
+- `technical-writer` → [`skills/technical-writer/`](../technical-writer/)
 
 ## Adding a Persona
 

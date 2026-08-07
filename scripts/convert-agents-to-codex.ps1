@@ -16,8 +16,11 @@
                                        disable-model-invocation: true), the
                                        policy.allow_implicit_invocation: false
                                        that pairs with it
-      plugin.json                      Codex plugin manifest at the repo root,
-                                       bundling ./skills/
+      plugin.json                      Agent Plugins 1.0.0 manifest at the repo
+                                       root (agent-plugins.org). Strictly closed
+                                       schema: host-specific metadata rides in
+                                       `extensions` under a reverse-domain
+                                       namespace, never as a top-level field.
       CLAUDE.md                        mirror of AGENTS.md so Claude Code
                                        maintainers auto-load the same guidance
                                        (avoids a git symlink, which breaks on
@@ -116,19 +119,32 @@ function Get-ShortDescription {
 
 $errors = @()
 
-# --- Per-skill Codex metadata: skills/**/<name>/agents/openai.yaml --------
+# --- Per-skill Codex metadata: skills/<name>/agents/openai.yaml -----------
 # Hand-authored SKILL.md is the source of truth; this derives the Codex picker
 # metadata beside it. User-invoked skills (disable-model-invocation: true) also
 # get policy.allow_implicit_invocation: false so Codex keeps them out of the
-# model's reach, matching Claude Code. Skills are organized into category
-# subfolders (skills/<category>/<name>/SKILL.md); this walk is recursive so any
-# SKILL.md at any depth is a skill. This same set drives the enumerated `skills`
-# array we write into .claude-plugin/plugin.json below (Claude Code does not
-# discover recursively, so it needs every folder listed). The 'agents' subfolder
-# we generate is excluded so we never treat generated output as a skill.
+# model's reach, matching Claude Code.
+#
+# Discovery is deliberately FLAT: Agent Plugins 1.0.0 (§7.1) fixes skills at the
+# immediate children of skills/ and states clients "MUST NOT recursively search
+# deeper descendants". A SKILL.md nested any deeper is invisible to conformant
+# hosts, so we treat one as a hard error rather than silently shipping a skill
+# nobody can invoke. The category a skill belongs to lives in its `category:`
+# frontmatter field, not in its path.
 $skillYamlCount = 0
-$skillMdFiles = Get-ChildItem -Path $skillsDir -Recurse -Filter 'SKILL.md' -File |
-Sort-Object FullName
+$skillMdFiles = Get-ChildItem -Path $skillsDir -Directory |
+    ForEach-Object { Join-Path $_.FullName 'SKILL.md' } |
+    Where-Object { Test-Path $_ } |
+    ForEach-Object { Get-Item $_ } |
+    Sort-Object FullName
+
+# Guard: nothing may hide below the flat layer (excluding the agents/ folders we
+# generate ourselves, which never contain a SKILL.md).
+$nested = @(Get-ChildItem -Path $skillsDir -Recurse -Filter 'SKILL.md' -File |
+    Where-Object { $_.Directory.Parent.FullName -ne $skillsDir })
+foreach ($n in $nested) {
+    $errors += "$([IO.Path]::GetRelativePath($RepoRoot, $n.FullName) -replace '\\','/'): SKILL.md nested below skills/<name>/ -- Agent Plugins clients will not discover it"
+}
 
 foreach ($skillMdFile in $skillMdFiles) {
     $skill = $skillMdFile.Directory
@@ -204,12 +220,28 @@ else {
 # Count skills (informational): every SKILL.md anywhere under skills/
 $skillCount = @($skillMdFiles).Count
 
-# Codex plugin manifest (root plugin.json). Official schema: plugins bundle
-# skills / apps / MCP servers via directory-path fields. This pack is skills-only,
-# so it bundles ./skills/. Metadata mirrors .claude-plugin/plugin.json.
+# Root plugin.json -- Agent Plugins 1.0.0 manifest (https://agent-plugins.org).
+# This is the portable manifest every conformant host reads: Codex, Claude Code,
+# Cursor, Copilot, Kiro, VS Code.
+#
+# The schema is CLOSED: $schema, name, version, description, author, homepage,
+# repository, license, keywords, extensions -- and nothing else. Two consequences
+# for this pack:
+#
+#   * No top-level `skills` key. Under Agent Plugins the location is fixed at
+#     skills/ (§6.1), and Codex's own `skills` field is documented as a
+#     supplement to default discovery rather than a replacement -- so the flat
+#     skills/<name>/ layout is found by every host without declaring it.
+#   * Codex's `interface` presentation block moves under `extensions` in its
+#     reverse-domain namespace (§8.1), which is exactly what that field is for.
+#     Hosts ignore namespaces they do not implement.
+#
+# Metadata mirrors .claude-plugin/plugin.json, which stays the version source of
+# truth so the Claude Code and Agent Plugins manifests can never diverge.
 $claudeManifest = Get-Content (Join-Path $RepoRoot '.claude-plugin/plugin.json') -Raw | ConvertFrom-Json
 
 $manifestObj = [ordered]@{
+    '$schema'   = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
     name        = $claudeManifest.name
     version     = $claudeManifest.version
     description = $claudeManifest.description
@@ -221,22 +253,28 @@ $manifestObj = [ordered]@{
     repository  = $claudeManifest.repository
     license     = $claudeManifest.license
     keywords    = @($claudeManifest.keywords)
-    skills      = './skills/'
-    interface   = [ordered]@{
-        displayName      = 'Ink and Agency'
-        shortDescription = 'Writing, sprint, and decision-support skills plus a persona council.'
+    extensions  = [ordered]@{
+        'com.openai.codex' = [ordered]@{
+            interface = [ordered]@{
+                displayName      = 'Ink and Agency'
+                shortDescription = 'Writing, sprint, and decision-support skills plus a persona council.'
+                developerName    = $claudeManifest.author.name
+                category         = 'Productivity'
+                websiteURL       = $claudeManifest.homepage
+            }
+        }
     }
 }
 # Normalize to LF so output is byte-identical on Windows and Linux (CI sync check)
 $json = ($manifestObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
 [IO.File]::WriteAllText($manifest, $json + "`n", [Text.UTF8Encoding]::new($false))
 
-# Claude Code plugin manifest (.claude-plugin/plugin.json). Unlike Codex, Claude
-# Code does NOT discover skills recursively -- with no `skills` key it only finds
-# SKILL.md one level under skills/, so category-nested skills go missing. Fix: it
-# needs every skill folder enumerated. We regenerate ONLY that `skills` array from
-# the same SKILL.md set (so it can never drift); all other keys are hand-authored
-# in this file and preserved in place. Paths are ./skills/<category>/<name>.
+# Claude Code plugin manifest (.claude-plugin/plugin.json). Claude Code finds
+# SKILL.md one level under skills/, which the flat layout now satisfies on its
+# own -- but we keep the array enumerated and regenerated so the manifest states
+# the roster explicitly and can never drift from the tree. We regenerate ONLY the
+# `skills` array; all other keys are hand-authored here and preserved in place.
+# Paths are ./skills/<name>.
 $skillFolderPaths = @($skillMdFiles | ForEach-Object {
         './' + ([IO.Path]::GetRelativePath($RepoRoot, $_.Directory.FullName) -replace '\\', '/')
     } | Sort-Object)
@@ -254,7 +292,7 @@ $claudeJson = ($claudeObj | ConvertTo-Json -Depth 5) -replace "`r`n", "`n"
 Write-Host ""
 Write-Host "Generated $skillYamlCount skill openai.yaml files in skills/*/agents/" -ForegroundColor Green
 Write-Host "Mirrored AGENTS.md -> CLAUDE.md" -ForegroundColor Green
-Write-Host "Manifest plugin.json written ($skillCount skills bundled via ./skills/)" -ForegroundColor Green
+Write-Host "Manifest plugin.json written (Agent Plugins 1.0.0; $skillCount skills at skills/<name>/)" -ForegroundColor Green
 Write-Host "Manifest .claude-plugin/plugin.json written ($($skillFolderPaths.Count) skills enumerated)" -ForegroundColor Green
 
 if ($errors.Count -gt 0) {

@@ -1,4 +1,0 @@
-# Generated from skills/quality-security/test-automator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Test Automator"
-  short_description: "Build automated test frameworks and integrate testing into CI/CD"

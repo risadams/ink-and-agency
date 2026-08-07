@@ -1,0 +1,4 @@
+# Generated from skills/powershell-module-architect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Powershell Module Architect"
+  short_description: "Architect PowerShell modules, profile systems, and cross-version automation"

@@ -1,4 +1,0 @@
-# Generated from skills/exec-function/hyperfocus-exit/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Hyperfocus Exit"
-  short_description: "Park a deep session before an interrupt, so re-entry is cheap instead of impossible"

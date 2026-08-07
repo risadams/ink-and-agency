@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/flutter-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Flutter Expert"
-  short_description: "Cross-platform Flutter 3+ apps: custom UI, state management, native integration"

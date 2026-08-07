@@ -1,4 +1,0 @@
-# Generated from skills/infrastructure/incident-responder/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Incident Responder"
-  short_description: "Respond to active breaches and outages: contain, preserve evidence, recover"

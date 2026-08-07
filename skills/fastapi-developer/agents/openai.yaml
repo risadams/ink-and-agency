@@ -1,0 +1,4 @@
+# Generated from skills/fastapi-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Fastapi Developer"
+  short_description: "Async Python APIs with FastAPI, Pydantic v2, and high-performance ASGI"

@@ -58,7 +58,7 @@ Skill: clarity-council (mode: multi)
 
 ## How it works
 
-The skill loads persona contracts from its own [`skills/persona/`](../../persona/) library,
+The skill loads persona contracts from its own [`skills/persona/`](../persona/) library,
 generates perspective-specific responses with explicit assumptions, and (in multi/iterative modes)
 synthesizes across viewpoints. Output is structured markdown so downstream consumers (other skills,
 dashboards) can parse it reliably.
@@ -72,7 +72,7 @@ dashboards) can parse it reliably.
 - **Decision/problem** — required.
 - **Context** — background, constraints, prior decisions.
 - **Personas** — which experts to consult (defaults apply per mode).
-- **Persona groups** — pre-made panels from [`skills/persona/GROUPS.md`](../../persona/GROUPS.md).
+- **Persona groups** — pre-made panels from [`skills/persona/GROUPS.md`](../persona/GROUPS.md).
 - **Depth** — `brief` / `standard` / `deep`.
 - **Iterative state** — sessionId, turn, history (iterative mode only).
 
@@ -117,7 +117,7 @@ Every response includes:
 A: single if you want one expert; multi if you need synthesis; iterative if constraints evolve.
 
 **Q: Can I add custom personas?**
-A: Yes. Add a persona contract file to [`skills/persona/`](../../persona/) and reference it
+A: Yes. Add a persona contract file to [`skills/persona/`](../persona/) and reference it
 (e.g. "convene with my-custom-persona and senior-architect").
 
 **Q: How is this different from grill-me?**
@@ -130,16 +130,16 @@ don't break.
 
 ## Related skills
 
-- **[grill-me](../../research-analysis/grill-me/)** — stress-tests *your* plan; the council collects *other* opinions
-- **[grill-with-docs](../../research-analysis/grill-with-docs/)** — like grill-me but anchored to project docs
-- **[idea-generate](../../research-analysis/idea-generate/)** — uses the council to diverge on options
-- **[issue-triage](../../business-product/issue-triage/)** · **[issue-feature-breakdown](../../business-product/issue-feature-breakdown/)** ·
-  **[issue-estimate-sp](../../business-product/issue-estimate-sp/)** — invoke the council in multi mode
+- **[grill-me](../grill-me/)** — stress-tests *your* plan; the council collects *other* opinions
+- **[grill-with-docs](../grill-with-docs/)** — like grill-me but anchored to project docs
+- **[idea-generate](../idea-generate/)** — uses the council to diverge on options
+- **[issue-triage](../issue-triage/)** · **[issue-feature-breakdown](../issue-feature-breakdown/)** ·
+  **[issue-estimate-sp](../issue-estimate-sp/)** — invoke the council in multi mode
 
 ## Files
 
 - **[SKILL.md](SKILL.md)** — skill entry point (all three modes)
 - **[EXAMPLES.md](EXAMPLES.md)** — worked invocations
-- **[skills/persona/PERSONAS.md](../../persona/PERSONAS.md)** — full persona index
-- **[skills/persona/GROUPS.md](../../persona/GROUPS.md)** — pre-made persona panels
-- **[skills/persona/](../../persona/)** — individual persona contracts (30 personas)
+- **[skills/persona/PERSONAS.md](../persona/PERSONAS.md)** — full persona index
+- **[skills/persona/GROUPS.md](../persona/GROUPS.md)** — pre-made persona panels
+- **[skills/persona/](../persona/)** — individual persona contracts (30 personas)

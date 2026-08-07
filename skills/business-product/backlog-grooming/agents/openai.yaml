@@ -1,4 +1,0 @@
-# Generated from skills/business-product/backlog-grooming/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Backlog Grooming"
-  short_description: "Use when the user needs to groom, refine, or clean up a product backlog"

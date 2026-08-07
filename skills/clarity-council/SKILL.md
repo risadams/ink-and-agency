@@ -1,5 +1,6 @@
 ---
 name: clarity-council
+category: featured
 description: Facilitates structured single-persona or multi-persona consultation for strategy, product, engineering, operations, and risk decisions. Use when the user requests a council, multiple perspectives, persona advice, tradeoff analysis, or iterative clarification and debate.
 codex-short-description: "Structured single- or multi-persona consultation for hard decisions"
 related-skills:

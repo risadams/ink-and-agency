@@ -1,4 +1,0 @@
-# Generated from skills/business-product/issue-suggest-component/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Issue Suggest Component"
-  short_description: "Suggest Jira components for one ticket or sweep a project, confirming before changes"

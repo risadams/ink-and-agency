@@ -1,0 +1,6 @@
+# Generated from skills/handoff/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Handoff"
+  short_description: "Compact the current conversation into a handoff document for another agent to pick up"
+policy:
+  allow_implicit_invocation: false

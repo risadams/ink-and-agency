@@ -1,4 +1,0 @@
-# Generated from skills/core-development/backend-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Backend Developer"
-  short_description: "Build server-side APIs, microservices, and production-ready backend systems"

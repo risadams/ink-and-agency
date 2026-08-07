@@ -1,4 +1,0 @@
-# Generated from skills/codebase-build/codebase-improve-architecture/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Codebase Improve Architecture"
-  short_description: "Find refactoring and architecture-deepening opportunities in a codebase"

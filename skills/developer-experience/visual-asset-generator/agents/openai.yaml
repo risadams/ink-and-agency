@@ -1,4 +1,0 @@
-# Generated from skills/developer-experience/visual-asset-generator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Visual Asset Generator"
-  short_description: "Generate app icons, favicons, OG images, logos, and social media assets"

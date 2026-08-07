@@ -1,4 +1,0 @@
-# Generated from skills/specialized-domains/blockchain-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Blockchain Developer"
-  short_description: "Build and audit smart contracts, DApps, and protocols in Solidity"

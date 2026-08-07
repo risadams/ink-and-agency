@@ -1,4 +1,0 @@
-# Generated from skills/specialized-domains/quant-analyst/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Quant Analyst"
-  short_description: "Quantitative strategies, backtesting, derivatives pricing, and portfolio risk"

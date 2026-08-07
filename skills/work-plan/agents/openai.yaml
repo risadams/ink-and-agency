@@ -1,0 +1,6 @@
+# Generated from skills/work-plan/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Work Plan"
+  short_description: "Map oversized work as decision tickets and resolve them one session at a time"
+policy:
+  allow_implicit_invocation: false

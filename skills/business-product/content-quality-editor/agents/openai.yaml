@@ -1,4 +1,0 @@
-# Generated from skills/business-product/content-quality-editor/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Content Quality Editor"
-  short_description: "Strip AI writing patterns and quality-check content before publishing"

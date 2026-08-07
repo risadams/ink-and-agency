@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/rails-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Rails Expert"
-  short_description: "Build or modernize Rails apps: APIs, Hotwire, real-time, background jobs, deploys"

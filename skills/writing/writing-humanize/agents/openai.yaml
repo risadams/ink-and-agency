@@ -1,4 +1,0 @@
-# Generated from skills/writing/writing-humanize/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Writing Humanize"
-  short_description: "Remove signs of AI-generated writing from text"

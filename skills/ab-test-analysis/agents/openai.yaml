@@ -1,0 +1,4 @@
+# Generated from skills/ab-test-analysis/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Ab Test Analysis"
+  short_description: "Analyze A/B results: p-values, significance, and ship/no-ship decisions"

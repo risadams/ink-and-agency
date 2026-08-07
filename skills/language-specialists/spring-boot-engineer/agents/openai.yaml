@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/spring-boot-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Spring Boot Engineer"
-  short_description: "Enterprise Spring Boot 3+: microservices, cloud-native, reactive patterns"

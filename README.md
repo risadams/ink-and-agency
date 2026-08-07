@@ -2,12 +2,12 @@
 
 ![Ink and Agency Skill Pack](docs/assets/skills-banner.svg)
 
-A **skills plugin** for **Claude Code and OpenAI Codex** — one installable unit, one primitive (skills):
+An **[Agent Plugins](https://agent-plugins.org) 1.0.0** plugin — one installable unit, one primitive (skills), readable by any conformant host: Claude Code, OpenAI Codex, Cursor, GitHub Copilot, Kiro, VS Code.
 
 - **Ink** — workflow skills: writing, sprint/Scrum, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all.
 - **Agency** — ~138 specialist skills (language/framework experts, infra, data/AI, security, product, and more — formerly subagents), plus the `clarity-council` skill and its library of 46 advisory personas for multi-perspective decisions (single / multi / iterative modes).
 
-**200 skills total.** Everything lives under `skills/` and ships in the one bundle both hosts read. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so Codex — which can't bundle agents — gets the full library.)
+**204 skills total**, one folder each directly under `skills/` — the flat layout Agent Plugins fixes for skill discovery, so every host finds the same set without host-specific configuration. Each skill declares its browsing category in frontmatter; [CATEGORIES.md](skills/CATEGORIES.md) is the index. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so the whole library ships in the one bundle.)
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
 
@@ -21,17 +21,17 @@ ink-and-agency/
 ├── .agents/
 │   └── plugins/
 │       └── marketplace.json     # Codex marketplace catalog
-├── plugin.json                  # Codex plugin manifest (GENERATED — do not edit)
+├── plugin.json                  # Agent Plugins 1.0.0 manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
 ├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
-├── skills/                      # 200 skills in 15 category folders (shared by both hosts)
-│   ├── <category>/<name>/SKILL.md         # canonical skill (Codex walks recursively; Claude Code loads via the generated skills[] in .claude-plugin/plugin.json)
-│   ├── <category>/<name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
-│   ├── language-specialists/    #   e.g. python-pro, rust-engineer, typescript-pro
-│   ├── infrastructure/          #   e.g. kubernetes-specialist, terraform-engineer
-│   ├── clarity-council/         # the persona council — a featured top-level skill w/ bundled personas
+├── skills/                      # 204 skills, flat — one folder each (shared by every host)
+│   ├── <name>/SKILL.md          # canonical skill; `category:` frontmatter is the browsing bucket
+│   ├── <name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
+│   ├── python-pro/              #   e.g. language-specialists
+│   ├── kubernetes-specialist/   #   e.g. infrastructure
+│   ├── clarity-council/         # the persona council — featured skill w/ bundled personas
 │   ├── persona/                 # shared council persona contracts (reference docs, not skills)
-│   ├── ... (15 categories — see CATEGORIES.md)
+│   ├── ... (see CATEGORIES.md for all 204 grouped by category)
 │   ├── CATEGORIES.md            # Browsable index of all skills by category
 │   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)
 │   ├── PORTABILITY.md           # How to interpret Claude tool names on other hosts
@@ -61,7 +61,7 @@ ink-and-agency/
 
 ![Skill Map](docs/assets/skill-map.svg)
 
-The full inventory lives in **[skills/CLAUDE.md](skills/CLAUDE.md#skills-inventory)** — the source of truth for the skill list and descriptions. Skills are grouped into category folders; see **[skills/CATEGORIES.md](skills/CATEGORIES.md)** for the full index.
+The full inventory lives in **[skills/CLAUDE.md](skills/CLAUDE.md#skills-inventory)** — the source of truth for the skill list and descriptions. Skills are grouped by their `category:` frontmatter; see **[skills/CATEGORIES.md](skills/CATEGORIES.md)** for the full index.
 
 ## Install
 
@@ -74,7 +74,7 @@ Add the marketplace once, then install the plugin:
 /plugin install ink-and-agency
 ```
 
-This installs all 200 skills. Or load locally for development (no marketplace, picks up your working copy):
+This installs all 204 skills. Or load locally for development (no marketplace, picks up your working copy):
 
 ```sh
 claude --plugin-dir /path/to/ink-and-agency

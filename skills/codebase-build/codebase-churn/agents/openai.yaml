@@ -1,4 +1,0 @@
-# Generated from skills/codebase-build/codebase-churn/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Codebase Churn"
-  short_description: "SVG treemap of git churn to find unstable, bug-prone files"

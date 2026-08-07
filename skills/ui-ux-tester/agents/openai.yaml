@@ -1,0 +1,4 @@
+# Generated from skills/ui-ux-tester/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Ui Ux Tester"
+  short_description: "Exhaustive UI/UX testing from documented user flows with defect reporting"

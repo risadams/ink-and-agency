@@ -1,4 +1,0 @@
-# Generated from skills/quality-security/gdpr-ccpa-compliance/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Gdpr Ccpa Compliance"
-  short_description: "Understand GDPR or CCPA compliance, review data practices, or assess privacy requirements"

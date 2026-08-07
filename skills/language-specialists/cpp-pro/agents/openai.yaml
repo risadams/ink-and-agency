@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/cpp-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Cpp Pro"
-  short_description: "Modern C++20/23: templates, zero-overhead abstractions, systems programming"

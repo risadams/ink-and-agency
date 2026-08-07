@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/elixir-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Elixir Expert"
-  short_description: "Fault-tolerant Elixir systems: OTP, GenServer, and Phoenix real-time apps"

@@ -1,4 +1,0 @@
-# Generated from skills/obsidian/obsidian-vault/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Obsidian Vault"
-  short_description: "Search, create, and manage notes in the Obsidian vault with wikilinks and index notes"

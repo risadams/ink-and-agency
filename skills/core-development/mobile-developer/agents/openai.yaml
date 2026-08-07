@@ -1,4 +1,0 @@
-# Generated from skills/core-development/mobile-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Mobile Developer"
-  short_description: "Build native and cross-platform iOS/Android apps (React Native, Flutter)"

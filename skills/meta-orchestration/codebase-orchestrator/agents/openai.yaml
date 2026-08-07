@@ -1,4 +1,0 @@
-# Generated from skills/meta-orchestration/codebase-orchestrator/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Codebase Orchestrator"
-  short_description: "Govern repo-wide refactors with risk ranking, diff previews, and approval gates"

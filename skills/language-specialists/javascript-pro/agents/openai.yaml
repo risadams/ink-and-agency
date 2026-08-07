@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/javascript-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Javascript Pro"
-  short_description: "Modern JavaScript for browser, Node, and full-stack: ES2023+, async, performance"

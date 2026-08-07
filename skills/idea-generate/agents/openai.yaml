@@ -1,0 +1,4 @@
+# Generated from skills/idea-generate/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Idea Generate"
+  short_description: "Helps users generate, refine, and stress-test ideas from loose topics"

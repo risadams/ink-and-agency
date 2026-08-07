@@ -1,4 +1,0 @@
-# Generated from skills/business-product/business-analyst/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Business Analyst"
-  short_description: "Analyze business processes, gather requirements, and find process improvements"

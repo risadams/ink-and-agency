@@ -1,0 +1,4 @@
+# Generated from skills/nextjs-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Nextjs Developer"
+  short_description: "Next.js 14+: App Router, server components and actions, Core Web Vitals, SEO"

@@ -1,4 +1,0 @@
-# Generated from skills/specialized-domains/payment-integration/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Payment Integration"
-  short_description: "Integrate payment gateways with PCI compliance and fraud prevention"

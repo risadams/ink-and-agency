@@ -1,4 +1,0 @@
-# Generated from skills/meta-orchestration/defuddle/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Defuddle"
-  short_description: "Extract clean markdown from web pages via Defuddle CLI, stripping clutter"

@@ -1,4 +1,0 @@
-# Generated from skills/core-development/ui-designer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Ui Designer"
-  short_description: "Design visual interfaces, design systems, and accessible component libraries"

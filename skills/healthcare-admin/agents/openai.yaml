@@ -1,0 +1,4 @@
+# Generated from skills/healthcare-admin/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Healthcare Admin"
+  short_description: "Healthcare ops: revenue cycle, HIPAA audits, coding, cost reports, payer contracts"

@@ -1,0 +1,4 @@
+# Generated from skills/daily-standup-prep/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Daily Standup Prep"
+  short_description: "Per-team standup report from Jira, GitLab, Confluence, and Git activity"

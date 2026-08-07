@@ -1,0 +1,4 @@
+# Generated from skills/issue-draft-release-notes/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Issue Draft Release Notes"
+  short_description: "Draft a customer-facing release note for a Jira ticket from ticket + MR context"

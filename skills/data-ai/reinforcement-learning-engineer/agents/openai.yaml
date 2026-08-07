@@ -1,4 +1,0 @@
-# Generated from skills/data-ai/reinforcement-learning-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Reinforcement Learning Engineer"
-  short_description: "Design RL environments, train agents, and deploy decision-making systems"

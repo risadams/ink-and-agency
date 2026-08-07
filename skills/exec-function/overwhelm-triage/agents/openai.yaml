@@ -1,4 +1,0 @@
-# Generated from skills/exec-function/overwhelm-triage/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Overwhelm Triage"
-  short_description: "Dump everything that's on fire, get back exactly one thing to do"

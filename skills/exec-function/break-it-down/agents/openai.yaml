@@ -1,4 +1,0 @@
-# Generated from skills/exec-function/break-it-down/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Break It Down"
-  short_description: "Decode messages into plain language with tone and intent analysis"

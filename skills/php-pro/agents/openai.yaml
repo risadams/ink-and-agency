@@ -1,0 +1,4 @@
+# Generated from skills/php-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Php Pro"
+  short_description: "PHP 8.3+ with strict typing and enterprise frameworks (Laravel, Symfony)"

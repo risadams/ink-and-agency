@@ -1,0 +1,4 @@
+# Generated from skills/react-specialist/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "React Specialist"
+  short_description: "Optimize React apps and apply advanced React 18+ features and state patterns"

@@ -1,0 +1,4 @@
+# Generated from skills/postgres-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Postgres Pro"
+  short_description: "Tune PostgreSQL performance, replication, high availability, and backups"

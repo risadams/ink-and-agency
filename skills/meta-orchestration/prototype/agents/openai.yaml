@@ -1,4 +1,0 @@
-# Generated from skills/meta-orchestration/prototype/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Prototype"
-  short_description: "Build a throwaway prototype to answer a design question"

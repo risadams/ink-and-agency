@@ -1,4 +1,0 @@
-# Generated from skills/specialized-domains/embedded-systems/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Embedded Systems"
-  short_description: "Firmware for constrained microcontrollers, RTOS, and real-time systems"

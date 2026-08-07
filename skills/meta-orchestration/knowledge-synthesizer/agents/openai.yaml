@@ -1,4 +1,0 @@
-# Generated from skills/meta-orchestration/knowledge-synthesizer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Knowledge Synthesizer"
-  short_description: "Extract validated patterns and insights across workflows and past runs"

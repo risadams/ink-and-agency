@@ -1,0 +1,4 @@
+# Generated from skills/powershell-5.1-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Powershell 5.1 Expert"
+  short_description: "PowerShell 5.1 automation with RSAT: Active Directory, DNS, DHCP, GPO"

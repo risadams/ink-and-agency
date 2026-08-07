@@ -1,0 +1,4 @@
+# Generated from skills/gradle-expert/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Gradle Expert"
+  short_description: "Build, configure, and optimize Gradle projects and multi-module builds"

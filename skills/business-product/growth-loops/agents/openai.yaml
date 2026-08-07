@@ -1,4 +1,0 @@
-# Generated from skills/business-product/growth-loops/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Growth Loops"
-  short_description: "Design a growth loop, understand PLG mechanics, or build sustainable acquisition"

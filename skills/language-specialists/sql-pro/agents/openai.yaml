@@ -1,4 +1,0 @@
-# Generated from skills/language-specialists/sql-pro/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Sql Pro"
-  short_description: "Optimize SQL queries and schemas across PostgreSQL, MySQL, SQL Server, Oracle"

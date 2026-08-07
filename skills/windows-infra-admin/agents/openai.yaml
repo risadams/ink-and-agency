@@ -1,0 +1,4 @@
+# Generated from skills/windows-infra-admin/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Windows Infra Admin"
+  short_description: "Manage Windows Server, Active Directory, DNS, DHCP, and Group Policy safely"

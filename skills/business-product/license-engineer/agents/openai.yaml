@@ -1,4 +1,0 @@
-# Generated from skills/business-product/license-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "License Engineer"
-  short_description: "Software licensing systems: OSI selection, dependency compliance, risk monitoring"

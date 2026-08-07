@@ -1,4 +1,0 @@
-# Generated from skills/developer-experience/cli-developer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "CLI Developer"
-  short_description: "Build command-line tools with intuitive commands and cross-platform support"

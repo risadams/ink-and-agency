@@ -1,0 +1,4 @@
+# Generated from skills/sre-engineer/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Sre Engineer"
+  short_description: "Establish SLOs and error budgets, reduce toil, design fault-tolerant systems"

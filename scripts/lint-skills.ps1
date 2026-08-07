@@ -6,7 +6,13 @@
 .DESCRIPTION
     The pack is skills-only. This validates skill YAML frontmatter and folder
     consistency:
-      - required fields: name, description
+      - required fields: name, description, category
+      - layout is flat (skills/<name>/SKILL.md) per Agent Plugins 1.0.0 §7.1;
+        a SKILL.md nested any deeper is an error because conformant clients
+        must not search below the immediate children of skills/
+      - category resolves to one of the buckets in skills/CATEGORIES.md
+      - the root plugin.json conforms to the closed Agent Plugins manifest
+        schema, and mcp.json (if present) targets the matching spec version
       - name is lowercase kebab-case (dots allowed) and matches its folder
       - description length bounds (>= 10 error, > 800 warn, > 1024 error)
       - description carries trigger phrasing (use when / when user / triggers on)
@@ -46,6 +52,16 @@ $ErrorActionPreference = 'Stop'
 
 $ValidTools = @('Read', 'Write', 'Edit', 'Bash', 'Glob', 'Grep', 'WebFetch', 'WebSearch', 'AskUserQuestion', 'Agent', 'Skill', 'TodoWrite', 'NotebookEdit', 'WebFetch')
 $ValidRecurrence = @('daily', 'weekly', 'on-demand', 'none')
+# The 15 browsability categories from skills/CATEGORIES.md, plus 'featured' for
+# skills promoted out of a category (clarity-council). Categories used to be
+# folders; the flat Agent Plugins layout makes them frontmatter instead.
+$ValidCategories = @(
+    'business-product', 'codebase-build', 'core-development', 'data-ai',
+    'developer-experience', 'exec-function', 'infrastructure',
+    'language-specialists', 'meta-orchestration', 'obsidian',
+    'quality-security', 'research-analysis', 'scrum-sprint',
+    'specialized-domains', 'writing', 'featured'
+)
 
 $errors = @()
 $warnings = @()
@@ -99,11 +115,20 @@ function Get-Frontmatter {
 }
 
 # Pass 1: collect all skill folder names (for related-skills resolution).
-# Skills live in category subfolders (skills/<category>/<name>/SKILL.md), so
-# discovery is RECURSIVE: each SKILL.md's parent directory is a skill.
-$skillDirs = Get-ChildItem -Path $SkillsPath -Recurse -Filter 'SKILL.md' -File |
-    ForEach-Object { $_.Directory } |
+# Layout is FLAT -- skills/<name>/SKILL.md -- because Agent Plugins 1.0.0 §7.1
+# fixes skills at the immediate children of skills/ and forbids conformant
+# clients from searching deeper. A skill's category is frontmatter, not path.
+$skillDirs = Get-ChildItem -Path $SkillsPath -Directory |
+    Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') } |
     Sort-Object Name
+
+# Anything deeper is invisible to conformant hosts -- fail loudly rather than
+# ship a skill nobody can invoke.
+$nested = @(Get-ChildItem -Path $SkillsPath -Recurse -Filter 'SKILL.md' -File |
+    Where-Object { $_.Directory.Parent.FullName -ne (Resolve-Path $SkillsPath).Path })
+foreach ($n in $nested) {
+    Add-Error "$($n.Directory.Name) : SKILL.md nested below skills/<name>/ - Agent Plugins clients will not discover it (move it to skills/$($n.Directory.Name)/)"
+}
 $allSkillNames = @{}
 foreach ($d in $skillDirs) { $allSkillNames[$d.Name] = $true }
 
@@ -132,6 +157,15 @@ foreach ($dir in $skillDirs) {
     if ($name -ne $folder) {
         Add-Error "$folder : name field '$name' does not match folder"
     }
+    # category: browsability bucket (drives skills/CATEGORIES.md); required
+    # because the flat layout no longer encodes it in the path
+    if (-not $fm['category']) {
+        Add-Error "$folder : Missing required field 'category' (one of: $($ValidCategories -join ', '))"
+    }
+    elseif ($fm['category'] -notin $ValidCategories) {
+        Add-Error "$folder : Invalid category '$($fm['category'])' (must be: $($ValidCategories -join ', '))"
+    }
+
     # description bounds: >=10 error, >800 soft warn, >1024 hard error
     # (1024 is the validator-backed MAX_DESCRIPTION_LENGTH ceiling)
     if ($fm['description']) {
@@ -243,6 +277,61 @@ foreach ($dir in $skillDirs) {
 
     Add-Ok "$folder : Valid"
     $validSkills += $folder
+}
+
+# --- Agent Plugins 1.0.0 manifest conformance -----------------------------
+# The root plugin.json is the portable manifest every conformant host reads
+# (Codex, Claude Code, Cursor, Copilot, Kiro, VS Code). Its schema is CLOSED, so
+# a stray top-level key is a conformance failure, not a warning. Regenerate with
+# scripts/convert-agents-to-codex.ps1 rather than hand-editing.
+$AgentPluginsSchema = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
+$AllowedManifestKeys = @('$schema', 'name', 'version', 'description', 'author',
+    'homepage', 'repository', 'license', 'keywords', 'extensions')
+
+$manifestPath = Join-Path (Split-Path -Parent $SkillsPath) 'plugin.json'
+if (-not (Test-Path $manifestPath)) {
+    Add-Error "plugin.json : missing at repo root - Agent Plugins requires a manifest there"
+}
+else {
+    try { $mf = Get-Content $manifestPath -Raw | ConvertFrom-Json } catch { $mf = $null; Add-Error "plugin.json : not valid JSON" }
+    if ($mf) {
+        $keys = @($mf.PSObject.Properties.Name)
+        foreach ($k in $keys) {
+            if ($k -notin $AllowedManifestKeys) {
+                Add-Error "plugin.json : top-level field '$k' is not in the closed Agent Plugins schema (host-specific data belongs under extensions.<reverse.domain>)"
+            }
+        }
+        if ($mf.'$schema' -ne $AgentPluginsSchema) {
+            Add-Error "plugin.json : `$schema must be '$AgentPluginsSchema'"
+        }
+        if (-not $mf.name) { Add-Error "plugin.json : missing required field 'name'" }
+        elseif ($mf.name -notmatch '^(?!.*(?:--|\.\.))[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$' -or $mf.name.Length -gt 64) {
+            Add-Error "plugin.json : name '$($mf.name)' violates the Agent Plugins name constraints (lowercase alphanumeric, '-' and '.', no doubles, 1-64 chars)"
+        }
+        if ($mf.extensions) {
+            foreach ($ns in @($mf.extensions.PSObject.Properties.Name)) {
+                if ($ns -notmatch '^[a-z0-9]+(\.[a-z0-9-]+)+$') {
+                    Add-Warning "plugin.json : extension namespace '$ns' is not a reverse-domain identifier"
+                }
+            }
+        }
+    }
+}
+
+# mcp.json is optional (§6.2: an absent fixed location is not an error), but if
+# present it must target the matching spec version.
+$mcpPath = Join-Path (Split-Path -Parent $SkillsPath) 'mcp.json'
+if (Test-Path $mcpPath) {
+    try { $mcp = Get-Content $mcpPath -Raw | ConvertFrom-Json } catch { $mcp = $null; Add-Error "mcp.json : not valid JSON" }
+    if ($mcp) {
+        if ($mcp.'$schema' -ne 'https://agent-plugins.org/schemas/1.0.0/mcp.schema.json') {
+            Add-Error "mcp.json : `$schema must be the 1.0.0 mcp schema and match plugin.json's spec version"
+        }
+        if ($null -eq $mcp.mcpServers) { Add-Error "mcp.json : missing required field 'mcpServers'" }
+        foreach ($k in @($mcp.PSObject.Properties.Name)) {
+            if ($k -notin @('$schema', 'mcpServers')) { Add-Error "mcp.json : unexpected top-level field '$k'" }
+        }
+    }
 }
 
 Write-Host ""

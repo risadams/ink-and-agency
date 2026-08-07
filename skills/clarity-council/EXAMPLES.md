@@ -87,7 +87,7 @@ Depth: standard
 ```
 
 **What happens**: expands the `technical-focus` group (from
-[skills/persona/GROUPS.md](../../persona/GROUPS.md)) into senior-architect, senior-developer,
+[skills/persona/GROUPS.md](../persona/GROUPS.md)) into senior-architect, senior-developer,
 tech-lead, qa-engineer, devops-engineer, security-expert, devils-advocate. Consults all, synthesizes.
 
 ### Example 2c: Custom persona selection
@@ -286,5 +286,5 @@ All three modes accept these optional fields:
 ## See also
 
 - [SKILL.md](SKILL.md) — the skill entry point (all three modes)
-- [skills/persona/PERSONAS.md](../../persona/PERSONAS.md) — full persona index
-- [skills/persona/GROUPS.md](../../persona/GROUPS.md) — pre-made persona panels
+- [skills/persona/PERSONAS.md](../persona/PERSONAS.md) — full persona index
+- [skills/persona/GROUPS.md](../persona/GROUPS.md) — pre-made persona panels

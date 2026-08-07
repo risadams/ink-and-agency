@@ -1,4 +1,0 @@
-# Generated from skills/obsidian/obsidian-markdown/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Obsidian Markdown"
-  short_description: "Write Obsidian Flavored Markdown: wikilinks, embeds, callouts, properties"

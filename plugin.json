@@ -1,4 +1,5 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ink-and-agency",
   "version": "1.6.0",
   "description": "Skills for writing, sprint work, and neurodivergent-friendly workflows (ink), plus a library of specialist skills and a persona council for multi-perspective decisions (agency).",
@@ -18,9 +19,15 @@
     "decision-making",
     "neurodivergent"
   ],
-  "skills": "./skills/",
-  "interface": {
-    "displayName": "Ink and Agency",
-    "shortDescription": "Writing, sprint, and decision-support skills plus a persona council."
+  "extensions": {
+    "com.openai.codex": {
+      "interface": {
+        "displayName": "Ink and Agency",
+        "shortDescription": "Writing, sprint, and decision-support skills plus a persona council.",
+        "developerName": "Ris Adams",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/risadams/ink-and-agency"
+      }
+    }
   }
 }
