@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ink-and-agency",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Skills for writing, sprint work, and neurodivergent-friendly workflows (ink), plus a library of specialist skills and a persona council for multi-perspective decisions (agency).",
   "author": {
     "name": "Ris Adams",
