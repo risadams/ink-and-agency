@@ -1,0 +1,4 @@
+# Generated from skills/writing-for-agents/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Writing for Agents"
+  short_description: "How to write documents agents consume: skills, AGENTS.md, pointer docs"

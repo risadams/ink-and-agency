@@ -5,7 +5,7 @@ fixes skill discovery at the immediate children of `skills/`. Categories are a b
 declared in each skill's `category:` frontmatter field, not a folder path, so recategorizing
 a skill moves nothing and breaks no links.
 
-**204 skills across 15 categories**, plus the featured [`clarity-council`](clarity-council/) skill.
+**210 skills across 15 categories**, plus the featured [`clarity-council`](clarity-council/) skill.
 
 > **Featured:** [`clarity-council`](clarity-council/) carries `category: featured` rather than one of
 > the 15 below — it's the persona-consultation engine that many other skills delegate to, and it ships
@@ -39,12 +39,13 @@ Product delivery, issue management, and go-to-market.
 - [`technical-writer`](technical-writer/) — Use when you need to create, improve, or maintain technical documentation including API references, user guides, SDK documentation, and gett
 - [`wordpress-master`](wordpress-master/) — Use when you need to architect, optimize, or troubleshoot WordPress implementations ranging from custom theme/plugin development to enterpri
 
-## Codebase & Build &nbsp;`codebase-build` (8)
+## Codebase & Build &nbsp;`codebase-build` (9)
 
 Understand, review, debug, and build a codebase (the implement/tdd loop).
 
 - [`code-review`](code-review/) — Two-axis review of the working diff since a fixed point — Standards (does it follow this repo's coding standards + a code-smell baseline?) a
 - [`codebase-churn`](codebase-churn/) — Analyze a git repository's history and produce an SVG treemap of file churn — area = lines changed, color = commit frequency.
+- [`codebase-design`](codebase-design/) — Shared vocabulary and principles for designing deep modules — a lot of behaviour behind a small interface, placed at a clean seam.
 - [`codebase-explain`](codebase-explain/) — Tell the agent to explain code with broader context and a higher-level perspective.
 - [`codebase-improve-architecture`](codebase-improve-architecture/) — Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/.
 - [`codebase-plan-refactor`](codebase-plan-refactor/) — Create a detailed refactor plan with tiny commits via user interview, then file it as an issue.
@@ -84,7 +85,7 @@ Data engineering, ML, AI, analytics, and LLM work.
 - [`prompt-engineer`](prompt-engineer/) — Use when you need to design, optimize, test, or evaluate prompts for large language models in production systems.
 - [`reinforcement-learning-engineer`](reinforcement-learning-engineer/) — Use when designing RL environments, training agents with reward optimization, implementing policy gradient methods, or deploying decision-ma
 
-## Developer Experience &nbsp;`developer-experience` (17)
+## Developer Experience &nbsp;`developer-experience` (18)
 
 Tooling, build, CLI, docs, refactoring, and Git workflow.
 
@@ -105,8 +106,9 @@ Tooling, build, CLI, docs, refactoring, and Git workflow.
 - [`slack-expert`](slack-expert/) — Use when developing Slack applications, implementing Slack API integrations, or reviewing Slack bot code for security and best practices.
 - [`tooling-engineer`](tooling-engineer/) — Use when you need to build or enhance developer tools including CLIs, code generators, build tools, and IDE extensions.
 - [`visual-asset-generator`](visual-asset-generator/) — Use when you need to generate production-ready visual assets for a project — app icons, favicons, OG images, logos, wordmarks, or social med
+- [`wizard`](wizard/) — Generate an interactive bash wizard that walks a human step by step through a manual procedure.
 
-## Executive Function &nbsp;`exec-function` (13)
+## Executive Function &nbsp;`exec-function` (14)
 
 Neurodivergent-friendly executive-function support.
 
@@ -123,6 +125,7 @@ Neurodivergent-friendly executive-function support.
 - [`rejection-sensitivity-check`](rejection-sensitivity-check/) — Paste a message that stung; get a calibrated read on whether it's actually critical or neutral-but-terse.
 - [`task-initiation`](task-initiation/) — You know what to do but can't start.
 - [`time-reality-check`](time-reality-check/) — Counter time blindness — you say "20 minutes" but it'll take 2 hours.
+- [`wait-what`](wait-what/) — Fire this the moment a message doesn't land — the agent re-pitches it in plain language with the context you were missing.
 
 ## Infrastructure &nbsp;`infrastructure` (16)
 
@@ -183,7 +186,7 @@ Language- and framework-specific experts.
 - [`typescript-pro`](typescript-pro/) — Use when implementing TypeScript code requiring advanced type system patterns, complex generics, type-level programming, or end-to-end type 
 - [`vue-expert`](vue-expert/) — Use when building Vue 3 applications that require Composition API mastery, reactivity optimization, or Nuxt 3 development with enterprise-sc
 
-## Meta-Orchestration &nbsp;`meta-orchestration` (20)
+## Meta-Orchestration &nbsp;`meta-orchestration` (22)
 
 Multi-agent coordination, planning, and the plan→spec→tickets build pipeline.
 
@@ -198,6 +201,7 @@ Multi-agent coordination, planning, and the plan→spec→tickets build pipeline
 - [`knowledge-synthesizer`](knowledge-synthesizer/) — Use when you need to extract actionable patterns from agent interactions, synthesize insights across multiple workflows, and enable organiza
 - [`multi-agent-coordinator`](multi-agent-coordinator/) — Use when coordinating multiple concurrent agents that need to communicate, share state, synchronize work, and handle distributed failures ac
 - [`performance-monitor`](performance-monitor/) — Use when establishing observability infrastructure to track system metrics, detect performance anomalies, and optimize resource usage across
+- [`plan-to-questionnaire`](plan-to-questionnaire/) — Turn a decision you can't answer alone into a Markdown questionnaire for the one person who can.
 - [`plan-to-spec`](plan-to-spec/) — Synthesize the current conversation into a spec (PRD) and stage it as a local file.
 - [`plan-to-tickets`](plan-to-tickets/) — Break a spec, plan, or the current conversation into a local, numbered, spec-kit-style task list of tracer-bullet vertical slices with expli
 - [`prototype`](prototype/) — Build a throwaway prototype to answer a design question.
@@ -207,6 +211,7 @@ Multi-agent coordination, planning, and the plan→spec→tickets build pipeline
 - [`teach`](teach/) — Teach the user a new skill or concept, within this workspace.
 - [`work-plan`](work-plan/) — Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve th
 - [`workflow-orchestrator`](workflow-orchestrator/) — Use when you need to design, implement, or optimize complex business process workflows with multiple states, error handling, and transaction
+- [`writing-for-agents`](writing-for-agents/) — Reference for writing any document an agent consumes — a skill, an AGENTS.md or CLAUDE.md, a doc reached by a pointer.
 
 ## Obsidian &nbsp;`obsidian` (6)
 
@@ -237,7 +242,7 @@ Testing, security auditing, compliance, and performance.
 - [`test-automator`](test-automator/) — Use when you need to build, implement, or enhance automated test frameworks, create test scripts, or integrate testing into CI/CD pipelines.
 - [`ui-ux-tester`](ui-ux-tester/) — Use when you need exhaustive UI and UX functionality testing driven by documented user flows, with browser or desktop interaction tooling an
 
-## Research & Analysis &nbsp;`research-analysis` (11)
+## Research & Analysis &nbsp;`research-analysis` (12)
 
 Research, decision support, and idea work. (The [`clarity-council`](clarity-council/) skill — which
 many of these delegate to — lives at the top level; see the callout at the top of this file.)
@@ -245,6 +250,7 @@ many of these delegate to — lives at the top level; see the callout at the top
 - [`ab-test-analysis`](ab-test-analysis/) — Use when the user wants to analyze A/B test results, interpret p-values, determine statistical significance, or make a ship/no-ship decision
 - [`cohort-analysis`](cohort-analysis/) — Use when the user wants to analyze retention, cohort behavior, engagement trends, or understand how different user groups perform over time.
 - [`data-researcher`](data-researcher/) — Use when you need to discover, collect, and validate data from multiple sources to fuel analysis and decision-making.
+- [`domain-modeling`](domain-modeling/) — Actively build and sharpen a project's domain model — challenge fuzzy terms, stress-test with scenarios, write CONTEXT.md and ADRs inline.
 - [`first-principles-thinking`](first-principles-thinking/) — Use when the user wants to challenge assumptions, break down a complex problem from scratch, or approach something with first principles rea
 - [`grill-me`](grill-me/) — Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree.
 - [`grill-with-docs`](grill-with-docs/) — Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, A

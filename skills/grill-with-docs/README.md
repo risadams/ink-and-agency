@@ -162,8 +162,8 @@ The skill follows the [grill-me](../grill-me/) discipline (one question at a tim
 2. **Challenge against the glossary** — when the user uses a term that conflicts with `CONTEXT.md`, call it out immediately.
 3. **Sharpen fuzzy language** — when the user uses vague or overloaded terms, propose a precise canonical term.
 4. **Cross-reference with code** — when the user states how something works, verify against the code; surface contradictions.
-5. **Update CONTEXT.md inline** — when a term is resolved, append it (with user confirmation) using the format in [CONTEXT-FORMAT.md](CONTEXT-FORMAT.md). Don't batch.
-6. **Offer ADRs sparingly** — only when all three criteria hold (hard to reverse, surprising without context, real tradeoff). Use the format in [ADR-FORMAT.md](ADR-FORMAT.md).
+5. **Update CONTEXT.md inline** — when a term is resolved, append it (with user confirmation) using the format in [CONTEXT-FORMAT.md](../domain-modeling/CONTEXT-FORMAT.md). Don't batch.
+6. **Offer ADRs sparingly** — only when all three criteria hold (hard to reverse, surprising without context, real tradeoff). Use the format in [ADR-FORMAT.md](../domain-modeling/ADR-FORMAT.md).
 
 File-creation rules:
 
@@ -201,5 +201,5 @@ A: Yes. The skill will start from scratch. Be prepared for it to spend the first
 ## Files
 
 - **[SKILL.md](SKILL.md)** — Skill entry point (grilling discipline + docs behaviors)
-- **[CONTEXT-FORMAT.md](CONTEXT-FORMAT.md)** — How to structure a `CONTEXT.md` glossary entry
-- **[ADR-FORMAT.md](ADR-FORMAT.md)** — Architecture Decision Record template
+- **[CONTEXT-FORMAT.md](../domain-modeling/CONTEXT-FORMAT.md)** — How to structure a `CONTEXT.md` glossary entry
+- **[ADR-FORMAT.md](../domain-modeling/ADR-FORMAT.md)** — Architecture Decision Record template

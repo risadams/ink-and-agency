@@ -55,7 +55,8 @@ grill-with-docs / grill-me ──> work-plan ──> plan-to-spec ──> plan-t
                                  decisions)      publish opt-in)    push opt-in)       ticket)         gate)
 ```
 
-- **`/grill-with-docs`** — sharpen an idea by interview *against the codebase*, leaving a paper trail (CONTEXT.md, ADRs). Use `/grill-me` when there's no codebase.
+- **`/grill-with-docs`** — sharpen an idea by interview *against the codebase*, leaving a paper trail (CONTEXT.md, ADRs) via **`/domain-modeling`**. Use `/grill-me` when there's no codebase.
+- **`/plan-to-questionnaire`** — the branch for when the blocker isn't thinking but *knowing*: turn the unanswerable part into a questionnaire for the one person who holds the answer, then resume the flow with what comes back.
 - **`/work-plan`** — chart a large effort as a map of decision tickets; resolve one decision per session. Fires **`/research`** subagents for research-type tickets and **`/prototype`** for prototype-type ones.
 - **`/prototype`** — settle a design question with throwaway code before committing to a build: a hand-driven TUI over a pure logic module (state models), or N structurally different UI variants behind one switcher. Answers the question, then gets thrown away — only the decision moves forward.
 - **`/plan-to-spec`** — once the design is settled, synthesize the conversation into a spec (PRD) staged as a local `spec.md` (spec-kit style). No interview — just write-up. Publishing to Confluence is opt-in, on request.
@@ -85,6 +86,8 @@ codebase-explain ──> codebase-churn ──> codebase-improve-architecture
 ```
 
 Plus **`/debug`** (six-phase diagnosis loop for a specific bug) and **`/codebase-plan-refactor`** (incremental refactor RFC → GitHub issue).
+
+Underneath all of them: **`/codebase-design`** supplies the deep-module vocabulary (module, interface, depth, seam, adapter) and **`/domain-modeling`** supplies the project's own words. Neither is an entry point — they're the language the others speak.
 
 ## Merge / branch flow
 
@@ -127,6 +130,7 @@ These fire when a specific state hits, not in sequence:
 | Post-meeting overload | **`/meeting-decompression`** |
 | "What does this message actually mean?" | **`/break-it-down`** |
 | An idea is derailing today's focus | **`/interest-capture`** |
+| That message just didn't land | **`/wait-what`** |
 
 Two of them are **modes, not moments** — they reshape every response for the rest of the session rather than answering one situation: **`/i-have-adhd`** (next action first, state restated each turn, no preamble) and **`/i-am-autistic`** (direct, modality-labeled, literal, quantified uncertainty). They compose; resolve conflicts safety → explicitness → brevity. Make either permanent with a pointer line in `CLAUDE.md`; see [Making it permanent](i-have-adhd/README.md#making-it-permanent).
 
@@ -146,6 +150,18 @@ Not entry points; other skills invoke them.
 - **`/research`** — background primary-source investigation; fired by `work-plan`.
 - **`/handoff`** — compact a session for a fresh agent to pick up (crosses between any flows).
 - **The `obsidian-*` skills** — vault read/write; invoked by anything that persists notes.
+- **`/codebase-design`**, **`/domain-modeling`** — the architecture and domain vocabularies the codebase and planning flows both speak.
+- **`/writing-for-agents`** — how to write anything an agent reads; consulted whenever a skill or `AGENTS.md` is authored (with **`/skill-create`** for the scaffolding).
+
+## Setup / one-off procedures
+
+```text
+wizard ──> scripts/setup-*.sh ──> (human runs it)
+ (scope the manual steps,          credentials captured, .env written,
+  author the stages)               CI secrets set
+```
+
+**`/wizard`** covers the steps only a human can do — clicking through a third-party dashboard, revealing a key, running a one-off cutover. If no human judgement is required, automate it instead.
 
 ---
 

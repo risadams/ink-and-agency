@@ -1,0 +1,4 @@
+# Generated from skills/wizard/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Wizard"
+  short_description: "Generate a bash wizard that walks a human through a manual procedure"

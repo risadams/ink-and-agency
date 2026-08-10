@@ -1,0 +1,6 @@
+# Generated from skills/wait-what/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Wait What"
+  short_description: "That last message didn't land — re-pitch it in plain language"
+policy:
+  allow_implicit_invocation: false

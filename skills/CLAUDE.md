@@ -183,6 +183,7 @@ never hand-edit a footer.
 | clarity-council | Persona-based consultation (single/multi-persona, iterative) |
 | code-review | Two-axis review of the working diff since a fixed point — Standards (repo conventions + Fowler code-smell baseline) and Spec (matches the originating ticket) — run as parallel sub-agents, reported side by side, never merged. Pre-MR counterpart to mr-review |
 | codebase-churn | Git-history treemap (SVG): area = lines changed, color = commit frequency — find unstable, bug-prone files |
+| codebase-design | Deep-module design vocabulary — module, interface, depth, seam, adapter, leverage, locality — plus DEEPENING.md (dependency categories, seam discipline) and INTERFACE-DESIGN.md (design-it-twice). Reference skill: the single source of the language codebase-improve-architecture, codebase-plan-refactor, and tdd all speak |
 | codebase-explain | High-level context and module mapping for unfamiliar code areas |
 | codebase-improve-architecture | Find refactor/deepening opportunities, informed by CONTEXT.md and ADRs |
 | codebase-plan-refactor | Build incremental refactor plan via interview → file as GitHub issue |
@@ -190,6 +191,7 @@ never hand-edit a footer.
 | daily-standup-prep | Per-team standup report: gathers Jira/GitLab/Confluence/Git activity over N days, maps to roster, renders Mermaid kanban + talking order, writes to vault |
 | debug | Six-phase diagnosis loop for hard bugs and performance regressions: build a tight red-capable feedback loop first, then reproduce/minimise → ranked falsifiable hypotheses → one-variable instrumentation → fix + regression test → cleanup + post-mortem. Hands off to codebase-improve-architecture when the root cause is architectural |
 | defuddle | Extract clean markdown from web pages via Defuddle CLI (use instead of WebFetch for HTML) |
+| domain-modeling | Active domain-model discipline: challenge terms against the glossary, sharpen fuzzy language, stress-test with scenarios, write CONTEXT.md and ADRs inline. Owns CONTEXT-FORMAT.md + ADR-FORMAT.md; grill-with-docs runs the interview half |
 | energy-budget | Spoon-theory accounting for the calendar: score today's load, flag burnout risk, suggest defers. Council: personal-assistant + psychologist |
 | good-morning | Morning kickoff wrapper: runs sprint-snapshot (daily tag) → daily-standup-prep (with burndown) → daily-briefing (report only, no focus blocks). Idempotent — overwrites today's artifacts on re-run |
 | grill-me | Stress-test plans through iterative questioning |
@@ -218,6 +220,7 @@ never hand-edit a footer.
 | obsidian-cli | Interact with Obsidian vaults via CLI: notes, tasks, properties; supports plugin/theme dev |
 | obsidian-markdown | Create and edit Obsidian Flavored Markdown (wikilinks, callouts, frontmatter, embeds) |
 | obsidian-vault | Search, create, and manage notes in the Obsidian vault with wikilinks and index notes |
+| plan-to-questionnaire | Turn a decision the user can't answer alone into a Markdown questionnaire for the person who can — grills the *send* (recipient + what's needed back), never the subject. Writes `plan-to-questionnaire-<slug>.md`. `disable-model-invocation` — explicit invoke only |
 | plan-to-spec | Synthesize a settled design discussion into a spec (PRD) staged as a local `spec.md` (spec-kit style, numbered feature folder) — no interview, just write-up. Publishing to Confluence is opt-in, on request. Bridges grill/work-plan → tickets. `disable-model-invocation` — explicit invoke only |
 | plan-to-tickets | Break a spec/plan/conversation into a local numbered `tasks.md` (spec-kit style: tracer-bullet vertical slices, explicit dependencies, `[P]` markers). Pushing to Jira as tickets with native "Blocks" links is opt-in, on request. Handles wide refactors via expand–contract. `disable-model-invocation` — explicit invoke only |
 | prototype | Build throwaway code that answers one design question, then keep only the answer. Two branches: a hand-driven TUI over a pure logic module (state models), or N structurally different UI variants on one route behind a `?variant=` switcher. Resolves `work-plan`'s prototype-type decision tickets |
@@ -232,12 +235,15 @@ never hand-edit a footer.
 | tdd | Test-driven development: the red → green loop and the rules that make its tests worth keeping (behaviour through public interfaces, pre-agreed seams, vertical slices). Reference primitive; drives implement's test-first phase. tests.md + mocking.md |
 | teach | Turn the current directory into a stateful, multi-session teaching workspace (MISSION / RESOURCES / learning-records / HTML lessons / reusable assets). Grounds every lesson in the user's mission, cites trusted resources over parametric knowledge, designs for storage strength (retrieval, spacing, interleaving) within the zone of proximal development. `disable-model-invocation` — explicit invoke only |
 | time-reality-check | Counter time blindness with a calibrated three-point estimate (best/likely/worst) accounting for setup, interruptions, re-entry. Council: statistics-expert + devils-advocate |
+| wait-what | Fire it the moment a message doesn't land: same message re-pitched with a run-up, in ASD-STE100 Simplified Technical English, using CONTEXT.md vocabulary. No apology, no redo. `disable-model-invocation` — explicit invoke only |
 | which-skill | Router over the pack: describe a situation, get the one skill (or flow) that fits, why, and the exact command — the cure for remembering 61 skills. Reads FLOWS.md. `disable-model-invocation` — explicit invoke only |
+| wizard | Generate an interactive bash wizard walking a human through a manual procedure (credentials, dashboards, one-off cutovers). Ships template.sh — the shared library (progress, confirm gates, WSL-aware URL opening, hidden entry, idempotent .env upserts, gh secret writes); the skill only scopes and authors stages |
 | work-plan | Plan work too big for one session (and too foggy to see the route) as a shared map of decision tickets on the issue tracker (work-plan): name the destination, chart the frontier + fog of war, resolve one decision ticket per session (research/prototype/grilling/task) until the way is clear. Plans decisions, not the build. `disable-model-invocation` — explicit invoke only |
 | writing-apology-calibrator | Calibrate a drafted apology: strip reflexive over-apology, keep warranted accountability. Council: psychologist + devils-advocate |
 | writing-beats | Shape an article as a journey of beats, choose-your-own-adventure style |
 | writing-cold-open | Produce just the first sentence of a message when the blank cursor is winning. Three openings (direct/warm/contextual), then steps out |
 | writing-draft-article | Guide from raw idea/draft to a finished, polished article through iterative questioning |
+| writing-for-agents | Reference for writing documents an agent consumes — context pointers, the two loads, information hierarchy/progressive disclosure, completion criteria, leading words, pruning. SKILL-MECHANICS.md covers the skill-specific branch (invocation choice, router skills) |
 | writing-fragments | Mine the user for raw writing fragments before imposing structure |
 | writing-humanize | Remove signs of AI-generated writing from text |
 | writing-shape | Shape raw material into an article paragraph by paragraph through a conversational session |

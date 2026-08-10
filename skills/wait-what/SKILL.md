@@ -1,0 +1,36 @@
+---
+name: wait-what
+category: exec-function
+description: Stop — that last message didn't land. Re-pitch it in plain language with the context I'm missing.
+disable-model-invocation: true
+codex-short-description: "That last message didn't land — re-pitch it in plain language"
+related-skills:
+  - break-it-down
+  - codebase-explain
+  - domain-modeling
+loop-eligible: false
+compatibility: claude-code codex opencode
+---
+
+# Wait, What
+
+Wait — I don't understand where you've got to here. Re-pitch that.
+
+- Give me a little bit of context first: what problem you were solving and where in the work you are.
+- Talk in ASD-STE100 Simplified Technical English — short sentences, one idea each, plain words.
+- Use the ubiquitous language from `CONTEXT.md` for domain terms, and spell out any term that isn't in it.
+- Don't apologise, don't re-run the work, and don't add anything new — this is the same message, pitched again.
+
+If you genuinely can't tell which part didn't land, re-pitch the whole thing and ask me one question at the end about where it broke.
+
+> **Host portability:** this skill is a re-explanation prompt — no host-specific tools. See [PORTABILITY.md](../PORTABILITY.md).
+
+<!-- self-evolve:start -->
+
+## Self-Evolve Loop
+
+Journal: `~/.ink-and-agency/learnings/wait-what.md` (workspace-local
+`.ink-and-agency/learnings/wait-what.md` where the sandbox confines writes). Read it
+first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
+
+<!-- self-evolve:end -->

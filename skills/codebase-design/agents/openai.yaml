@@ -1,0 +1,4 @@
+# Generated from skills/codebase-design/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Codebase Design"
+  short_description: "Deep-module design vocabulary: interfaces, seams, adapters, depth"

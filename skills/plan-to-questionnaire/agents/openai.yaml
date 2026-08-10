@@ -1,0 +1,6 @@
+# Generated from skills/plan-to-questionnaire/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Plan to Questionnaire"
+  short_description: "Turn a decision you can't answer alone into a questionnaire"
+policy:
+  allow_implicit_invocation: false

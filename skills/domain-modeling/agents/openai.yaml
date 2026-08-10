@@ -1,0 +1,4 @@
+# Generated from skills/domain-modeling/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Domain Modeling"
+  short_description: "Sharpen domain terminology and record it in CONTEXT.md and ADRs"

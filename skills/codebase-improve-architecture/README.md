@@ -19,7 +19,7 @@ Invoke this skill by:
 
 ## What it does
 
-The skill explores the codebase looking for shallow modules, friction points, and untested seams; presents a numbered list of deepening candidates; lets the user pick one; then drops into a grilling conversation to design the deepened module. Side effects happen *inline*: domain terms get added to `CONTEXT.md`, rejected candidates with load-bearing reasons get recorded as ADRs, and alternative interfaces are explored via [INTERFACE-DESIGN.md](INTERFACE-DESIGN.md). It does **not** apply refactors automatically — the design conversation is the deliverable.
+The skill explores the codebase looking for shallow modules, friction points, and untested seams; presents a numbered list of deepening candidates; lets the user pick one; then drops into a grilling conversation to design the deepened module. Side effects happen *inline*: domain terms get added to `CONTEXT.md`, rejected candidates with load-bearing reasons get recorded as ADRs, and alternative interfaces are explored via [INTERFACE-DESIGN.md](../codebase-design/INTERFACE-DESIGN.md). It does **not** apply refactors automatically — the design conversation is the deliverable.
 
 ### Inputs
 
@@ -93,7 +93,7 @@ What this skill will NOT do, or what to avoid:
 
 - ❌ **Apply refactors automatically.** The skill is a design tool. Implementing the refactor is a separate task — usually one for [codebase-plan-refactor](../codebase-plan-refactor/) followed by careful incremental commits.
 - ❌ **Suggest a refactor with no callers.** Per the deletion test: a module that doesn't simplify anything when deepened isn't worth deepening. The skill skips suggestions that fail this test.
-- ❌ **Use generic vocabulary when the domain has its own.** "Service," "component," "API," "boundary" — all banned. The skill uses Module, Interface, Implementation, Seam, Adapter (see [LANGUAGE.md](LANGUAGE.md)) and the project's domain terms from `CONTEXT.md`.
+- ❌ **Use generic vocabulary when the domain has its own.** "Service," "component," "API," "boundary" — all banned. The skill uses Module, Interface, Implementation, Seam, Adapter (see [codebase-design](../codebase-design/)) and the project's domain terms from `CONTEXT.md`.
 - ❌ **Re-propose ADR-rejected candidates as if new.** When a candidate contradicts an ADR, the skill flags it explicitly and only surfaces it if there's a load-bearing reason to re-open the discussion.
 
 ## Examples
@@ -147,9 +147,9 @@ The skill follows a 3-phase process:
 
 1. **Explore** — reads `CONTEXT.md` and any `docs/adr/` first; then uses `Agent(subagent_type=Explore)` to walk the codebase organically. Notes friction: deep concepts requiring many small modules to understand, shallow modules where interface ≈ implementation, pure-function extractions that lost locality, tightly-coupled leaks across seams, untested or hard-to-test areas.
 2. **Present candidates** — numbered list, each with files / problem / solution / benefits. Uses Module/Interface/Implementation/Seam/Adapter vocabulary plus the project's domain terms. Flags ADR conflicts explicitly. Asks the user which to explore.
-3. **Grilling loop** — drops into design conversation for the selected candidate. Walks constraints, dependencies, the deepened module's shape, what survives, what tests look like. Side effects inline: append to `CONTEXT.md`, draft ADR if user rejects, explore interfaces via [INTERFACE-DESIGN.md](INTERFACE-DESIGN.md).
+3. **Grilling loop** — drops into design conversation for the selected candidate. Walks constraints, dependencies, the deepened module's shape, what survives, what tests look like. Side effects inline: append to `CONTEXT.md`, draft ADR if user rejects, explore interfaces via [INTERFACE-DESIGN.md](../codebase-design/INTERFACE-DESIGN.md).
 
-Key principles (full list in [LANGUAGE.md](LANGUAGE.md)):
+Key principles (full list in [codebase-design](../codebase-design/)):
 
 - **Deletion test**: imagine deleting the module. If complexity vanishes, it was a pass-through. If complexity reappears across N callers, it was earning its keep.
 - **The interface is the test surface.**
@@ -158,10 +158,10 @@ Key principles (full list in [LANGUAGE.md](LANGUAGE.md)):
 ## FAQ
 
 **Q: What is "deepening"?**
-A: Increasing the leverage at the interface — more behavior behind a smaller, simpler API. The opposite of "extracting a tiny module just because we can." See [DEEPENING.md](DEEPENING.md) and [LANGUAGE.md](LANGUAGE.md).
+A: Increasing the leverage at the interface — more behavior behind a smaller, simpler API. The opposite of "extracting a tiny module just because we can." See [DEEPENING.md](../codebase-design/DEEPENING.md) and [codebase-design](../codebase-design/).
 
 **Q: Why ban words like "service" and "boundary"?**
-A: They're overloaded and drift in meaning. Module, Interface, Seam, Adapter have precise definitions in [LANGUAGE.md](LANGUAGE.md). Using them consistently makes the design conversation portable across reviewers.
+A: They're overloaded and drift in meaning. Module, Interface, Seam, Adapter have precise definitions in [codebase-design](../codebase-design/). Using them consistently makes the design conversation portable across reviewers.
 
 **Q: What if there's no CONTEXT.md?**
 A: The skill will offer to start one as terms emerge during the grilling loop. You can also draft one upfront with [grill-with-docs](../grill-with-docs/).
@@ -178,10 +178,15 @@ A: Only when the user rejects a candidate with a *load-bearing* reason — one t
 - **[codebase-explain](../codebase-explain/)** — run first to orient if you don't know the area well.
 - **[grill-with-docs](../grill-with-docs/)** — for drafting `CONTEXT.md` and `docs/adr/` artifacts. The grilling conversation in this skill follows the same discipline.
 - **[codebase-plan-refactor](../codebase-plan-refactor/)** — once a deepening is designed, this skill builds an incremental commit plan for the implementation.
+- **[codebase-design](../codebase-design/)** — the vocabulary and principles this skill speaks. It owns the glossary, `DEEPENING.md`, and `INTERFACE-DESIGN.md`; this skill supplies the scan and the grilling loop.
+- **[domain-modeling](../domain-modeling/)** — owns `CONTEXT.md` and the ADR discipline this skill triggers inline.
 
 ## Files
 
-- **[SKILL.md](SKILL.md)** — Skill entry point (instructions Claude follows)
-- **[DEEPENING.md](DEEPENING.md)** — What deepening means with examples
-- **[INTERFACE-DESIGN.md](INTERFACE-DESIGN.md)** — Tools for exploring alternative interfaces during the grilling loop
-- **[LANGUAGE.md](LANGUAGE.md)** — Full vocabulary glossary (Module, Interface, Seam, Adapter, etc.) and key principles
+- **[SKILL.md](SKILL.md)** — Skill entry point (instructions the agent follows)
+
+Shared reference lives in the skills that own it:
+
+- **[codebase-design/DEEPENING.md](../codebase-design/DEEPENING.md)** — dependency categories and seam discipline for a deepening
+- **[codebase-design/INTERFACE-DESIGN.md](../codebase-design/INTERFACE-DESIGN.md)** — exploring alternative interfaces during the grilling loop
+- **[domain-modeling/CONTEXT-FORMAT.md](../domain-modeling/CONTEXT-FORMAT.md)** and **[domain-modeling/ADR-FORMAT.md](../domain-modeling/ADR-FORMAT.md)** — formats for the artifacts written inline
