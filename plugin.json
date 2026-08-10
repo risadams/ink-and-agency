@@ -26,7 +26,10 @@
         "shortDescription": "Writing, sprint, and decision-support skills plus a persona council.",
         "developerName": "Ris Adams",
         "category": "Productivity",
-        "websiteURL": "https://github.com/risadams/ink-and-agency"
+        "websiteURL": "https://github.com/risadams/ink-and-agency",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png",
+        "brandColor": "#CB0162"
       }
     }
   }

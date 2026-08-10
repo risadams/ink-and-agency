@@ -20,6 +20,8 @@ The portable manifest is the root `plugin.json`. Its schema is **closed** — te
 | `plugin.json` (root) | **Generated** — the Agent Plugins 1.0.0 manifest. Closed schema; version and metadata mirror `.claude-plugin/plugin.json` |
 | `CLAUDE.md` (root) | **Generated** — mirror of `AGENTS.md` so Claude Code maintainers auto-load the same guidance |
 | `.claude-plugin/plugin.json` | Claude Code plugin manifest and the **version source of truth**; metadata hand-maintained, the `skills` array **generated** from the tree |
+| `assets/logo.svg` | Brand mark, source of truth. Not referenced by any manifest — it renders correctly only in a browser engine (`feTurbulence`/`feDisplacementMap` filters plus `mix-blend-mode: multiply`) |
+| `assets/logo.png` | **Generated** from `logo.svg` — 512×512, transparent, trimmed and centered for icon use. What the Codex `interface` block (`logo`, `composerIcon`) points at; `brandColor` there is the mark's rose `#CB0162`. Claude Code's plugin and marketplace schemas define no icon field, so the mark surfaces only in hosts implementing that namespace. Regenerate by rendering the SVG in a headless browser at 3× (ImageMagick's own SVG reader drops the filters), then `magick in.png -trim +repage -background none -gravity center -extent "%[fx:max(w,h)*1.16]x%[fx:max(w,h)*1.16]" -resize 512x512 -strip assets/logo.png` |
 | `mcp.json` (root) | Not present — the pack ships no MCP servers. Agent Plugins §6.2 treats an absent fixed location as normal, not an error |
 | `.claude-plugin/marketplace.json` | Claude Code marketplace catalog (hand-maintained; required by `/plugin marketplace add`) |
 | `.agents/plugins/marketplace.json` | Codex marketplace catalog (hand-maintained; required by `codex plugin marketplace add`) |

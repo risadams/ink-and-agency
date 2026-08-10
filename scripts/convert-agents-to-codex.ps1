@@ -261,6 +261,18 @@ $manifestObj = [ordered]@{
                 developerName    = $claudeManifest.author.name
                 category         = 'Productivity'
                 websiteURL       = $claudeManifest.homepage
+                # Brand presentation. Paths are plugin-relative and start with './'
+                # per Agent Plugins containment (SS4.1). Claude Code's manifest and
+                # marketplace schemas have no icon field, so the mark only surfaces
+                # in hosts that implement this namespace.
+                #
+                # PNG, not the SVG source: the mark leans on feTurbulence /
+                # feDisplacementMap and mix-blend-mode, which non-browser SVG
+                # rasterizers drop. assets/logo.png is a headless-Chrome render of
+                # assets/logo.svg -- see the assets row in AGENTS.md to regenerate.
+                logo             = './assets/logo.png'
+                composerIcon     = './assets/logo.png'
+                brandColor       = '#CB0162'
             }
         }
     }

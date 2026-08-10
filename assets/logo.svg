@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-hidden="true">
+  <defs>
+    <filter id="logo-wc" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="10"/>
+      <feGaussianBlur stdDeviation="0.4"/>
+    </filter>
+    <filter id="logo-wch" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="22"/>
+    </filter>
+  </defs>
+  <!-- teal bleed shadow -->
+  <g filter="url(#logo-wch)" style="mix-blend-mode:multiply">
+    <ellipse cx="108" cy="74" rx="22" ry="20" fill="#1a5b6e" opacity="0.55"/>
+  </g>
+  <g filter="url(#logo-wch)" style="mix-blend-mode:multiply">
+    <path d="M 92 118 Q 92 102 106 102 Q 120 102 120 118 Q 120 132 114 144 Q 110 154 104 166 Q 102 168 100 164 Q 94 154 92 144 Q 88 132 92 118 Z"
+          fill="#1a5b6e" opacity="0.55"/>
+  </g>
+  <!-- rose on top -->
+  <g filter="url(#logo-wc)" style="mix-blend-mode:multiply">
+    <ellipse cx="100" cy="66" rx="22" ry="20" fill="#CB0162"/>
+  </g>
+  <g filter="url(#logo-wch)" style="mix-blend-mode:multiply">
+    <path d="M 86 110 Q 86 92 100 92 Q 114 92 114 110 Q 114 126 108 140 Q 104 152 98 166 Q 96 168 94 162 Q 88 148 86 138 Q 82 124 86 110 Z"
+          fill="#CB0162"/>
+  </g>
+</svg>
