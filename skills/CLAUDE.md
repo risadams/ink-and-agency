@@ -236,7 +236,7 @@ never hand-edit a footer.
 | teach | Turn the current directory into a stateful, multi-session teaching workspace (MISSION / RESOURCES / learning-records / HTML lessons / reusable assets). Grounds every lesson in the user's mission, cites trusted resources over parametric knowledge, designs for storage strength (retrieval, spacing, interleaving) within the zone of proximal development. `disable-model-invocation` — explicit invoke only |
 | time-reality-check | Counter time blindness with a calibrated three-point estimate (best/likely/worst) accounting for setup, interruptions, re-entry. Council: statistics-expert + devils-advocate |
 | wait-what | Fire it the moment a message doesn't land: same message re-pitched with a run-up, in ASD-STE100 Simplified Technical English, using CONTEXT.md vocabulary. No apology, no redo. `disable-model-invocation` — explicit invoke only |
-| which-skill | Router over the pack: describe a situation, get the one skill (or flow) that fits, why, and the exact command — the cure for remembering 61 skills. Reads FLOWS.md. `disable-model-invocation` — explicit invoke only |
+| which-skill | Router over the pack: describe a situation, get the one skill (or flow) that fits, why, and the exact command — the cure for remembering the whole catalogue. Reads FLOWS.md. `disable-model-invocation` — explicit invoke only |
 | wizard | Generate an interactive bash wizard walking a human through a manual procedure (credentials, dashboards, one-off cutovers). Ships template.sh — the shared library (progress, confirm gates, WSL-aware URL opening, hidden entry, idempotent .env upserts, gh secret writes); the skill only scopes and authors stages |
 | work-plan | Plan work too big for one session (and too foggy to see the route) as a shared map of decision tickets on the issue tracker (work-plan): name the destination, chart the frontier + fog of war, resolve one decision ticket per session (research/prototype/grilling/task) until the way is clear. Plans decisions, not the build. `disable-model-invocation` — explicit invoke only |
 | writing-apology-calibrator | Calibrate a drafted apology: strip reflexive over-apology, keep warranted accountability. Council: psychologist + devils-advocate |
@@ -250,12 +250,30 @@ never hand-edit a footer.
 | writing-social-script | Generate a literal script for a dreaded social scenario. Three phrasings (direct/neutral/softened) + exit line. Council: psychologist + customer-advocate |
 | writing-tone-check | Pre-send tone reviewer: paste a draft, get a landing prediction (cold / passive-aggressive / over-apologetic) + rewrite suggestions. Sibling to break-it-down. Council: psychologist |
 
+## README shape
+
+Every skill ships a sibling `README.md` (lint warns without one). It is the human's page — `SKILL.md` is the agent's — so it carries the reasoning, the edge cases, and the honest limits that would be pure context load inside the skill itself. The sections that earn their place, in order:
+
+| Section | Carries |
+| :--- | :--- |
+| Why this exists | The failure mode the skill guards against |
+| Triggers | Phrasings that fire it, the slash command, and what invokes it automatically |
+| What it does / Inputs / Outputs | The mechanism, and the artifacts it leaves behind |
+| How to use it | One realistic transcript, not a feature list |
+| Routing table *(optional)* | "Which skill do I actually want?" — a two-column table against its nearest neighbours. Worth it wherever a skill is routinely confused with a sibling |
+| **It's working if** | **Observable signals the run went right** — what the user should *see*, not what the skill intends. This is the section that makes a skill checkable rather than aspirational; include at least one signal that catches the skill going off the rails |
+| Common questions *(optional)* | Real failure reports and the honest answer, including what deliberately isn't supported. A limitation stated here is worth more than one discovered mid-run |
+| Getting the most out of it / Anti-patterns | Usage judgement, then the ❌ list |
+| Related skills / Files / Host portability | Navigation and the portability note |
+
+"It's working if" and "Common questions" are the two sections a skill is most often missing. When adding either to an existing skill, write signals you have actually observed — an invented checklist is worse than none.
+
 ## Adding a new skill
 
 1. Create `<name>/SKILL.md` directly under `skills/` — never nested deeper, or conformant hosts won't discover it. Frontmatter needs `name`, `description`, and a `category` from [CATEGORIES.md](CATEGORIES.md). The `name` must equal the folder name and be globally unique.
 2. Add a row to the **Skills inventory** table above in this file — **but only for public skills**. If the skill lives under `_private/` (junction in the root), skip the inventory row and add it to `.gitignore` instead. (README.md links to the inventory — do not duplicate it there.)
 3. Keep supporting docs inside the skill folder.
-4. Each skill should have a README.md that expands on the instructions in `SKILL.md` with examples, edge cases, and troubleshooting tips. Link to it from `SKILL.md` if needed.
+4. Each skill should have a README.md following the **README shape** above — examples, edge cases, an "It's working if" checklist, and troubleshooting. Link to it from `SKILL.md` if needed.
 5. Each skill should be self-contained. If it depends on another skill, link to that skill's README for instructions instead of cross-referencing internal steps.
 6. If needed, the skill should have an examples.md with annotated code snippets for common use cases and edge cases. Link to it from the README.
 7. Run `pwsh ./scripts/add-self-evolve.ps1` so the new skill gets its Self-Evolve Loop footer (lint fails without it; opt out with `self-evolve: false` in frontmatter where end-of-run evaluation makes no sense).

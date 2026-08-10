@@ -18,6 +18,18 @@ Design **deep modules**: a lot of behaviour behind a small interface, placed at 
 
 This skill is **reference, not a procedure** — it holds the vocabulary that `codebase-improve-architecture`, `codebase-plan-refactor`, and `tdd` all speak. Read it when you need the definitions; those skills carry the process.
 
+## Stopping rule
+
+A reference has no checkpoints, no one-question-at-a-time gate, and no stopping condition of its own — so an agent pointed at it and told to "go" will improvise a process out of the most action-shaped content it can find (usually the parallel design pass in `INTERFACE-DESIGN.md`) and run a long way before asking anything.
+
+When this skill is invoked on its own: state the vocabulary that bears on the question, answer the design question asked, and stop. Reading files, surveying the codebase, and proposing refactors are **not** this skill's work.
+
+- Don't know *which* module to redesign yet? That's `codebase-improve-architecture` — the survey that finds candidates.
+- Want the design argued with rather than named? That's `grill-with-docs` or `grill-me`.
+- Have a concrete behaviour to build? That's `tdd`.
+
+Run one of those as the driver and let this skill sit underneath it as vocabulary.
+
 ## Glossary
 
 Use these terms exactly — don't substitute "component," "service," "API," or "boundary." Consistent language is the whole point.

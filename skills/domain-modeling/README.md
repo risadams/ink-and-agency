@@ -61,6 +61,43 @@ Skill: Then it isn't "invoice status" on the Order — it's a projection.
 - **Be opinionated in `_Avoid_`.** Recording the rejected synonym is what stops the term drifting back.
 - **Say no to most ADRs.** Three gates, all three required. An ADR trail nobody reads is worse than none.
 
+## Two artifacts, two bars
+
+Conflating them is where most of the trouble in this skill comes from.
+
+| | `CONTEXT.md` | `docs/adr/NNNN-slug.md` |
+| :--- | :--- | :--- |
+| Holds | Terms. What a thing **is**, in one or two sentences, with rejected synonyms under `_Avoid_` | One decision in one to three sentences: context, choice, reason |
+| Bar to write | A vague term became canonical | **All three**: hard to reverse, surprising without context, a real trade-off |
+| Written | Inline, the moment the term settles | Offered, never assumed |
+| Never holds | Implementation details, a spec, a scratch pad, general programming concepts | A diary of every choice made this session |
+
+## It's working if
+
+- It stops you mid-sentence to ask which of two things you meant, instead of picking one and moving on.
+- `CONTEXT.md` changes **during** the conversation, not in a burst at the end.
+- It refuses an ADR for something you could undo tomorrow — and says which of the three tests failed.
+- New entries define what a thing *is* and name the words you're giving up under `_Avoid_`.
+- It quotes your code back at you when your code and your sentence disagree.
+- **`CONTEXT.md` gets shorter about as often as it gets longer.**
+
+## Common questions
+
+**My `CONTEXT.md` has grown to hundreds of lines. What went wrong?**
+Size is the symptom; the disease is that the file absorbed implementation detail and decisions that were never glossary material. The fix is a direct instruction — "make my `CONTEXT.md` concise and remove implementation details" — not a split. Splitting a bloated file gives you several bloated files. Only reach for `CONTEXT-MAP.md` once the file is genuinely lean and still covers two domains a reader wouldn't want to hold at once.
+
+**A grilling session ran and `CONTEXT.md` is untouched. Why?**
+The pointer got skipped — an agent told to load "the grilling skills" reliably loads the interview half and silently drops the modelling half. Invoke `domain-modeling` by name alongside `grill-with-docs` rather than relying on the delegation.
+
+**It re-raised a naming question we settled months ago.**
+It cross-references the code, the committed `CONTEXT.md`, and the ADRs — not your issue tracker. A decision argued out in a closed ticket is invisible to it. Say it's settled and let it record the resolution; that's exactly the kind of thing an ADR is for.
+
+**Can I use my own ADR format?**
+The glossary half and the ADR half ship together, so a house ADR convention (different template, location, or numbering) will conflict with `ADR-FORMAT.md`. Override it in your repo's own agent docs, or fork the format file — the glossary discipline works either way.
+
+**Does a glossary earn its keep on a small project?**
+Not always. The payoff is upstream — naming and concept alignment — and it concentrates at naming boundaries: module names, table names, status enums, ticket titles, CLI commands. On a one-day build, skip it. And an unreviewed, agent-authored glossary is worse than none: it becomes confident-sounding lore that later sessions treat as truth.
+
 ## Anti-patterns
 
 - ❌ **Batching glossary updates to the end of the session.** They get lost, or get written from memory.

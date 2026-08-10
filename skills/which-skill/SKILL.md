@@ -9,7 +9,7 @@ compatibility: claude-code codex opencode
 
 # Which Skill
 
-You don't remember 61 skills, so ask.
+You don't remember every skill in the pack, so ask.
 
 Given the user's situation, name the **one skill** (or the **flow**) that fits, say why in a sentence, and give the exact invocation. If two fit, name both and the distinction. Don't run the skill — point at it and let the user invoke it.
 

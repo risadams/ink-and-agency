@@ -50,6 +50,12 @@ Break the work into **tracer-bullet** tasks:
 - Each slice fits in a single fresh context window.
 - Prefactoring goes first.
 
+**Test each slice with one question: what can I demo when this is done?** A task with no answer is a horizontal slice wearing a vertical name — "all the schema", "wire up the API" — and it's the failure this rule exists to prevent. Put the answer in the task as a *demo path* line.
+
+**Acceptance criteria must be able to fail.** For each criterion, name the observation that would show it false, and confirm it is false at the commit the implementer starts from. Three shapes recur and all three grade nothing: a criterion already true at the base commit, one that only another task's work can satisfy, and one that restates the request instead of deriving from the artifact.
+
+**Resist over-decomposition.** The default pull is toward atomic units, and twelve tickets for a three-line change is the common result. There is a floor: if the whole change fits in one fresh context window, it doesn't need slicing at all — say so and send the user straight to `implement`.
+
 Give each task its **blocking edges** — the tasks that must finish before it can start. A task with no blockers can start immediately, and independent tasks are marked `[P]` (parallelizable).
 
 **Wide refactors are the exception.** A **wide refactor** — one mechanical change (rename a column, retype a shared symbol) whose **blast radius** fans across the codebase — can't land green as a single vertical slice. Sequence it **expand–contract**: *expand* (add the new form beside the old, nothing breaks), *migrate* the call sites in batches sized by blast radius (per package/dir), each batch a task blocked by the expand and green because the old form still exists, then *contract* (delete the old form) in a task blocked by every migrate batch.

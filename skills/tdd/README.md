@@ -53,6 +53,16 @@ Skill: Seam confirmed. Red: test "10% coupon takes 10% off subtotal"
 - **Let expected values come from outside the code.** A known literal or worked example, never a value recomputed the way the implementation does it.
 - **Keep refactoring out of the loop.** Red→green is build-only; refactoring is the review stage's job.
 
+## It's working if
+
+- It names the seams it intends to test at — with what each catches, misses, and costs — and **waits**, before any test file exists.
+- One test appears, goes red, gets just enough code to pass, and only then does the next test appear. Not a batch of tests followed by a batch of code.
+- Test names read as capabilities ("user can checkout with valid cart"), not as internals ("checkout calls paymentService.process").
+- Expected values in assertions are literals you can trace to the spec, not values recomputed the way the code computes them.
+- Renaming an internal function breaks nothing in the suite.
+- Mocks appear only at external boundaries — the payment API, the clock — never around your own modules.
+- It tells you when a change doesn't earn the loop (config, glue, straight delegation) instead of writing a test that restates the implementation.
+
 ## Anti-patterns
 
 - ❌ **Implementation-coupled tests** — mocking internal collaborators or verifying through a side channel. The tell: breaks on refactor when behaviour didn't change.

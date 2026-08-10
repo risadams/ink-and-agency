@@ -34,6 +34,11 @@ Two lines, written down where the prototype lives, before any code:
 
 If the question can be settled by reading the existing code or running one command, do that instead and say so. The cheapest prototype is the one you didn't write.
 
+Two ways this skill gets reached for wrongly, both worth refusing out loud:
+
+- **The design is already settled.** "Prototype" reads as the obvious next step once tickets exist, but if you know what to build, the next step is `implement`, per ticket. A prototype answers a question that is genuinely open and that talking won't close.
+- **"Prototype the whole app."** That's a different artifact wearing this skill's name. A question has a stopping point; a whole application doesn't, so it becomes the production app by momentum — and code written under prototype rules (no tests, no error handling) ends up in front of users. If it's a demo, build it deliberately as a demo and say nothing in it is production. If it's a design question, cut it down to the question.
+
 ## Rules that apply to both
 
 1. **Throwaway from day one, and clearly marked as such.** Locate the prototype code close to where it will actually be used (next to the module or page it's prototyping for) so context is obvious — but name it so a casual reader can see it's a prototype, not production. For throwaway UI routes, obey whatever routing convention the project already uses; don't invent a new top-level structure.

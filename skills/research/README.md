@@ -65,6 +65,15 @@ Skill: Research done. Wrote docs/research/gitlab-mr-approvals-codeowners.md
 - **Treat the note as the artifact, not the chat summary.** The value is the cited file you can revisit and correct, not the one-line recap in the transcript.
 - **Trust the citations, verify the surprises.** If a claim matters and its source is a single link, open the link before you build on it.
 
+## It's working if
+
+- Your own session keeps going. If you're sitting watching it read, the delegation didn't happen.
+- **Exactly one** new background task appears. A second with a near-identical name is the nesting failure — stop it.
+- The question it went away with is narrow enough that "answered" is observable: one API, one behaviour, one version claim.
+- One new Markdown file shows up, in the folder the repo already uses for notes, and you're told the path.
+- Every claim carries a link, and following two at random lands you on an official doc, a spec, or the actual source — not someone's write-up of it.
+- You can make the decision you were stuck on from the file alone.
+
 ## Anti-patterns
 
 What this skill will NOT do, or what to avoid:

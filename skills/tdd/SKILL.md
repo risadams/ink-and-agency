@@ -24,7 +24,15 @@ A **seam** is the public boundary you test at: the interface where you observe b
 
 **Test only at pre-agreed seams.** Before writing any test, write down the seams under test and confirm them with the user. No test is written at an unconfirmed seam. You can't test everything — agreeing the seams up front is how testing effort lands on the critical paths and complex logic instead of every edge case.
 
-Ask: "What's the public interface, and which seams should we test?"
+**Present candidate seams with their trade-offs, never as a bare list of names.** A prompt that offers "the component seam, the route handler, or the integration seam" asks the user to choose between labels. For each candidate give:
+
+- **What it catches** — the class of bug a test here would fail on.
+- **What it misses** — what passes straight through it.
+- **What it costs** — rough speed and setup, and whether it survives a refactor of the code beneath it.
+
+Then recommend one and say why. Where the shape of the interface is itself the open question rather than where to test it, that's the [codebase-design](../codebase-design/) vocabulary — seam, depth, adapter — and worth settling first.
+
+**Not every change earns the loop.** Config, wiring, glue, type-only changes, and straight CRUD delegation have no independent source of truth to assert against, so a test written for them restates the implementation and lands you in the tautological anti-pattern below from the other direction. When a change looks like that, say so and propose the seam one level up — the behaviour the glue serves — or no test at all. That judgement is part of agreeing the seams, not a step to skip past.
 
 ## Anti-patterns
 

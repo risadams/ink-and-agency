@@ -97,15 +97,25 @@ _existing() {
 
 # ask KEY "Prompt" — read a value into $KEY. Offers the existing .env value as
 # a default on re-runs (Enter keeps it). Visible input (non-secret).
+#
+# Uses Readline (read -e) so arrow keys move the cursor. Without it, a plain
+# `read -r` inserts a literal ^[[D / ^[[C when you try to correct a typo, and
+# backspace is the only way back. Readline needs the prompt passed via -p to
+# track its width, and is skipped when stdin isn't a terminal.
 ask() {
-  local key="$1" prompt="$2" current input
+  local key="$1" prompt="$2" current input prompt_str
   current=$(_existing "$key" || true)
   if [[ -n "$current" ]]; then
-    printf '  %s%s%s %s[Enter keeps current]%s ' "$BOLD" "$prompt" "$RESET" "$DIM" "$RESET"
+    prompt_str="$(printf '  %s%s%s %s[Enter keeps current]%s' "$BOLD" "$prompt" "$RESET" "$DIM" "$RESET") "
   else
-    printf '  %s%s%s ' "$BOLD" "$prompt" "$RESET"
+    prompt_str="$(printf '  %s%s%s' "$BOLD" "$prompt" "$RESET") "
   fi
-  read -r input || true
+  if [[ -t 0 ]]; then
+    read -e -r -p "$prompt_str" input || true
+  else
+    printf '%s' "$prompt_str"
+    read -r input || true
+  fi
   [[ -z "$input" && -n "$current" ]] && input="$current"
   printf -v "$key" '%s' "$input"
 }

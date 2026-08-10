@@ -85,6 +85,17 @@ Skill: [work mode] Loaded the map. First frontier ticket:
 - **Refer to tickets by name.** A wall of `#42, #43, #44` is illegible; names read at a glance. The id rides inside the name's link — it never stands in for it.
 - **Rule things out of scope deliberately.** When a ticket turns out to sit past the destination, close it and leave one line in Out of scope — don't resolve it on the route.
 
+## It's working if
+
+- The destination is written down and agreed before a single ticket exists.
+- Every open ticket reads as a **question**. A ticket that reads "build the X" is either mis-typed or belongs downstream of the map.
+- You can look at the tracker and see which tickets are takeable without opening the map — that's the frontier rendering itself.
+- A session resolves one ticket, posts the answer, closes it, adds one line to *Decisions so far*, and stops.
+- **Not yet specified** shrinks over time; fog that graduates into a ticket disappears from that section rather than living in both.
+- No production code appears during a session — and no execution licence appears in the Notes that you didn't put there.
+- A prototype ticket comes back with the artifact and an observation, and stays open until *you* pick the winner.
+- When the opening pass turns up no fog, it tells you the effort is small enough to skip the map.
+
 ## Anti-patterns
 
 What this skill will NOT do, or what to avoid:

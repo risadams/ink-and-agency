@@ -81,6 +81,14 @@ Skill: Q5: Who owns the IdP relationship after launch? My recommendation:
 - **Let the skill explore the codebase.** When a question references how something currently works, the skill will look it up rather than ask. Don't preempt with "well, currently we do X" — let the skill verify.
 - **Stop when you have enough.** The skill walks the tree until you signal "enough." That's a real signal — not a milestone, just a point where the remaining branches feel lower-stakes than what you've covered.
 
+## It's working if
+
+- Questions arrive one at a time and wait for you, rather than landing as a list you're expected to batch-answer.
+- Every question comes with its recommended answer, so you can agree in one word when it's right.
+- Questions the codebase could answer got answered by reading the codebase instead of being asked of you.
+- The questions get more specific as you go — later ones depend on what earlier answers ruled out.
+- It stops when the decision tree is resolved, rather than continuing to find things to ask.
+
 ## Anti-patterns
 
 What this skill will NOT do, or what to avoid:

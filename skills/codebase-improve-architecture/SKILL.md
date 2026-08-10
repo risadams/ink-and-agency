@@ -30,7 +30,9 @@ This skill is _informed_ by the project's domain model. The domain language give
 
 Read the project's domain glossary and any ADRs in the area you're touching first.
 
-Then use the Agent tool with `subagent_type=Explore` to walk the codebase. Don't follow rigid heuristics — explore organically and note where you experience friction:
+**Bias the scan toward code that is actually moving.** Unless the user points you at a specific area, read recent commit history first and weight the walk toward paths that change often — a deepening in code nobody touches is a refactor that never gets cashed in. (`codebase-churn` produces exactly this ranking if you want it precisely.)
+
+Then walk the codebase, dispatching parallel read-only exploration agents where the host provides them and reading directly where it doesn't — the scan is less thorough without them, not invalid. Don't follow rigid heuristics — explore organically and note where you experience friction:
 
 - Where does understanding one concept require bouncing between many small modules?
 - Where are modules **shallow** — interface nearly as complex as the implementation?
@@ -48,12 +50,21 @@ Present a numbered list of deepening opportunities. For each candidate:
 - **Problem** — why the current architecture is causing friction
 - **Solution** — plain English description of what would change
 - **Benefits** — explained in terms of locality and leverage, and also in how tests would improve
+- **Strength** — `Strong` (the deletion test passes clearly and the friction is real), `Worth exploring` (payoff depends on where the code is going next), or `Speculative` (surfaced for completeness)
+
+Close with a **top recommendation** — the one you'd tackle first.
+
+A skill built to output findings will always find some, so the strength labels are how you say "nothing here": if every candidate is `Speculative`, state plainly that the area looks healthy rather than promoting the least-weak card.
 
 **Use CONTEXT.md vocabulary for the domain, and [codebase-design](../codebase-design/) vocabulary for the architecture.** If `CONTEXT.md` defines "Order," talk about "the Order intake module" — not "the FooBarHandler," and not "the Order service."
 
 **ADR conflicts**: if a candidate contradicts an existing ADR, only surface it when the friction is real enough to warrant revisiting the ADR. Mark it clearly (e.g. _"contradicts ADR-0007 — but worth reopening because…"_). Don't list every theoretical refactor an ADR forbids.
 
-Do NOT propose interfaces yet. Ask the user: "Which of these would you like to explore?"
+**Stop here.** Do not propose interfaces, do not start designing, and do not begin interrogating the user about the first candidate. Ask: "Which of these would you like to explore?" and wait.
+
+This is the step that fails in practice: the survey collapses into an hour of questions about one idea the agent liked, and the user never sees the list they came for. The report is the deliverable of step 2; the grilling in step 3 is a separate, opt-in phase over a candidate the *user* chose. If the user says they only want the report, deliver it and stop — that's a complete run, not an abandoned one.
+
+**One candidate per session.** Working several in one conversation fills the context with the survey, the grilling, the domain-model edits, and the code all at once. Take the chosen one through to a decision, then start fresh — or file the rest as tickets to pick up independently.
 
 ### 3. Grilling loop
 

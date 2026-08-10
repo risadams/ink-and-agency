@@ -60,6 +60,34 @@ Skill: Your description's first branch is "use when refactoring" — and three
 - **Disclose by branch.** Inline what every run needs; push behind a pointer what only some runs reach.
 - **Delete whole sentences.** When a line fails the no-op test, trimming its words keeps the load and loses the meaning.
 
+## It's working if
+
+- The document gets **shorter** as it gets better, and you're surprised how little is left.
+- You can point at a leading word and watch it doing work in more than one place.
+- Nothing is stated twice, in any form. Duplication is the most reliable sign a document was never tested.
+- Reference only one branch needs sits behind a pointer rather than in the main file.
+- A failing document can be diagnosed by name — "that's sediment", "that's a no-op", "that pointer has two branches collapsed into one" — before anyone proposes a fix.
+
+## Common questions
+
+**"Writing for agents" — so the agent does the writing?**
+The other way round. You're the author; the agent is the reader. That's the difficulty of the genre: you're writing for a reader who has already read everything, so explanation is waste and precision is the entire job.
+
+**Can't I just ask an agent to write the skill for me?**
+You can, and it'll be verbose. Left alone a model explains what it already knows, and it won't apply the no-op test or reach for a leading word unprompted. Its default move is explanation; this reference's default move is deletion. Most of the value lands on a draft you already have, not on a blank file.
+
+**I asked an agent to trim a document and it cut the functionality.**
+Agents told to "streamline" optimise for length, because length is what they can see. The no-op test is behavioural, not aesthetic: delete the line, ask whether behaviour changed. And delete whole sentences rather than trimming words out of them.
+
+**My skill only works on the exact task I built it from.**
+The common route — do the work once, then have the agent write it up — over-indexes on that run, and the exemplars come out too specific. Keep the run as evidence, then abstract deliberately: strip what belonged to that repo and those files, and write for the class of task.
+
+**Should this material live in `CLAUDE.md` or behind a pointer?**
+Ask which load you want to pay. `CLAUDE.md` loads every session unconditionally; material behind a pointer costs only the pointer's line until it fires. Anything that applies in one context out of ten is paying context load the other nine.
+
+**Do I need to rewrite documents for each new model?**
+Mostly no — and over-fitting to one model is its own trap. A new model usually warrants another no-op pass, not a rewrite.
+
 ## Anti-patterns
 
 - ❌ **Steering by prohibition.** "Don't use em dashes" activates em dashes. State the positive target.

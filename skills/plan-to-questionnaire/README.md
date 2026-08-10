@@ -53,6 +53,45 @@ Skill: Written to plan-to-questionnaire-db-migration.md — 9 questions in
 - **Send it before the meeting.** Async gets you considered answers; the meeting then covers only what came back thin.
 - **Keep the file.** A filled questionnaire is a primary source — feed it straight into `plan-to-spec`.
 
+## Where are the answers, actually?
+
+That question picks the skill:
+
+| The answers are in… | Reach for |
+| :--- | :--- |
+| Your own head, unsharpened | [grill-me](../grill-me/) |
+| The codebase | [grill-with-docs](../grill-with-docs/) |
+| Someone else's head | `plan-to-questionnaire` |
+| Nobody's head yet — the question needs something to react to | [prototype](../prototype/) |
+
+## It's working if
+
+- It asks about the recipient and about what you need back, then **stops asking**. A question about the subject itself is the skill off the rails.
+- Every item you named as "what I need back" is traceable to a question in the file.
+- The questions read as aimed at what the *recipient* knows, not as your own open questions copied down verbatim.
+- You could hand the file to someone who wasn't in the conversation and they'd know why they got it and by when to reply.
+- What comes back is usable input for a new grilling round, rather than a fresh set of questions.
+
+## Common questions
+
+**Does it read my grilling session and extract the questions from it?**
+Not as a step of its own — there's no ingest phase. What makes it work after a grilling session is running it in the **same conversation**, so that session is already in context and the drafting can draw on it. Start it fresh and it knows nothing about the grilling; you'll be re-supplying the topic when you answer "what do you need back?".
+
+**The answers live with three different people. Can it split by recipient?**
+No. Step 1 asks for *the* recipient, singular, and the tone and context of the whole document are pitched at them. Run it three times.
+
+**Does it skip questions based on earlier answers?**
+No. The output is static: themed groups, most-important-first, every question live. Branching would require planning every question ahead of every answer, which is exactly where models plan badly.
+
+**What if the recipient doesn't know either?**
+The document asks for "I don't know" and partial answers explicitly. A flagged uncertainty is worth more than a guess — once it's back in your context, a vague answer and a confidently wrong one look identical.
+
+**Does it send it anywhere?**
+No. It writes a Markdown file and tells you the path. Delivery is yours: a ticket, a Slack thread, an email attachment, or a shared screen.
+
+**Isn't this just `grill-me` in batch mode?**
+Different axis. `grill-me` is about how fast *you* can be mined; this is about whose head the answers are in.
+
 ## Anti-patterns
 
 - ❌ **Questions only you can answer.** If the recipient can't know it, it doesn't belong in their document.

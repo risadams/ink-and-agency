@@ -62,6 +62,16 @@ Skill: Fixed point main resolves; 4 commits, non-empty diff. Spec: PRJ-1490
 - **Read the axes separately.** That's the design. Don't ask "which is the one big problem" — each axis has its own worst finding.
 - **Treat baseline smells as judgement calls.** They're labelled heuristics ("possible…"), and a documented repo standard always overrides them.
 
+## It's working if
+
+- It refuses to start on a bad ref or an empty diff, before either sub-agent is spawned.
+- It tells you when your working tree is dirty, rather than silently reviewing only what's committed.
+- The report arrives as two separate blocks under `## Standards` and `## Spec` — never one merged, re-ranked list.
+- Every Standards finding cites either a rule in one of your repo's files or one of the twelve named smells, with the hunk quoted; every Spec finding quotes a line of the spec.
+- The closing summary gives a worst issue *per axis* and declines to pick an overall winner.
+- With no spec available, the Spec block says so instead of listing requirements it inferred from the code.
+- Two sub-agents run. If the agent count climbs past that, the anti-recursion line in the briefs isn't landing — stop the run.
+
 ## Anti-patterns
 
 - ❌ **Confusing it with `mr-review`.** This is pre-MR, two-axis, working-diff. `mr-review` is post-MR process gating.

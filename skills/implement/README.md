@@ -74,6 +74,16 @@ Skill: Run plan (auto-detected: prototype):
 - **Confirm the seams when test-first is on.** The run plan pulls `/tdd`'s seam agreement forward — that's your chance to aim the testing effort.
 - **Read the skip line in the close-out.** "Skipped: tests" is a decision you made; the report makes it visible so it's never a surprise later.
 
+## It's working if
+
+- The run plan arrives first, with every phase named on or off, and nothing starts until you approve it.
+- It echoes the resolved work item **and its title** back before building — so a mis-resolved `#2` fails in front of you.
+- You can see an actual `/tdd` invocation in the trace, not just tests appearing in the diff.
+- Typechecks and single test files run repeatedly during the run; the full suite runs once near the end.
+- The review runs against a commit, not an uncommitted tree — a "clean" review of an empty diff is the tell.
+- The diff is one work item's worth of change: a vertical slice through every layer, not several tickets swept together.
+- The close-out names every skipped phase, and says plainly that the ticket is still open when Track didn't move it.
+
 ## Anti-patterns
 
 - ❌ **Building before the plan is approved.** The run plan is the one mandatory checkpoint — Phase 2 never starts before you sign off on Phase 1.

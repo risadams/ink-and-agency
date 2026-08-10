@@ -78,6 +78,17 @@ You: yeah we touched the streamer. go with #1.
 - **Show the ranked hypotheses before testing.** The user often re-ranks instantly ("we just deployed #3") — a five-second checkpoint that can save an hour. Don't block on it if they're away.
 - **Raise the reproduction rate for flaky bugs.** The goal isn't a clean repro, it's a *debuggable* one. Loop the trigger, parallelise, add stress until a 1% flake becomes a 50% one.
 
+## It's working if
+
+- It shows you a command and its **red output** before it offers a single theory. Theory first means the skill isn't running.
+- It matched the weight to the question: a one-line answer for a one-line question, the full loop only for a bug that resisted a first look.
+- The failure it reproduces is the one you reported, not a nearby one it found on the way.
+- It shrinks the repro before it starts guessing, and can say why each remaining piece is load-bearing.
+- You see 3-5 ranked hypotheses, each with a falsifiable prediction, before any of them is tested.
+- It states the root cause and the evidence for it before writing the fix.
+- Every debug log carries a tag like `[DEBUG-a4f2]`, and a grep for it comes back empty when the run declares done.
+- When no correct seam exists to lock the bug down, it says so plainly instead of writing a shallow test.
+
 ## Anti-patterns
 
 What this skill will NOT do, or what to avoid:

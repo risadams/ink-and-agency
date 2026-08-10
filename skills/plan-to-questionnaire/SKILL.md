@@ -16,7 +16,15 @@ compatibility: claude-code codex opencode
 
 Turn something the user can't answer alone into a **questionnaire** — a Markdown document they hand to one person to fill in async, or fill out together over a meeting. The recipient holds knowledge the user lacks; the questionnaire pulls it out of them.
 
-**Grill the send, not the subject.** Interview the user only about the *send*, which they can always answer: who it goes to, and what they need back. The questions in the document then target the **gap** between what the recipient knows and what the user needs.
+**Grill the send, not the subject.** Interview the user only about the *send*, which they can always answer: who it goes to, and what they need back. Interviewing them about the topic is pointless here — not knowing the topic is why they're writing to someone else. The questions in the document then target the **gap** between what the recipient knows and what the user needs.
+
+## Scope
+
+Three deliberate limits. Say so plainly rather than improvising past them:
+
+- **No ingest phase.** This skill doesn't read a transcript or a file and extract questions from it. What makes it work after a grilling session is running it in the *same conversation*, so that session is already in context and the drafting can draw on it. Invoked fresh, it knows only what the user answers in the two exchanges below — say so and ask for the topic.
+- **One recipient per run.** Step 1 asks for *the* recipient, singular; the tone and context of the whole document are pitched at them. Three people holding three parts of the answer means three runs, not one document with per-role sections.
+- **No branching.** The output is a static document — themed groups, most-important-first, every question live. Not a tree that skips section D based on the answer to A.
 
 ## Process
 

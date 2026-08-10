@@ -67,6 +67,17 @@ Skill: Project PRJ, issue type Task — confirm?   [you: yes]
 - **Work the local file first.** `tasks.md` is diffable and editable — refine it, hand it to `/implement`, and only push to Jira when you actually want tickets on the board.
 - **Name wide refactors explicitly.** A rename with a big blast radius shouldn't be a tracer bullet — say so, and let the skill sequence expand–contract.
 
+## It's working if
+
+- Every ticket answers "what can I demo when this is done?" — and the answer is behaviour, not a layer.
+- The list comes back numbered, with a *Blocked by* line on each, before anything is published.
+- The ticket at the top has no blockers and can be started immediately.
+- Every acceptance criterion is false at the base commit. One that's already true grades nothing.
+- Nothing in a ticket body is a file path or a line number, except a snippet a prototype produced.
+- Each ticket reads like something a fresh session could finish without you in the room.
+- Prefactoring, where it found any, is at the front of the order rather than mixed into feature tickets.
+- It pushed back when the change was small enough to skip slicing entirely.
+
 ## Anti-patterns
 
 - ❌ **Creating Jira tickets by default.** Local-first — a remote write happens only when you ask and confirm project + issue type.

@@ -79,6 +79,16 @@ The handoff is ready to share with the next agent, or to paste into a GitHub iss
 - **Link to artifacts, don't summarize them.** If there's a design doc or an issue, let the handoff reference the path. The agent can read it themselves.
 - **Don't include sensitive data in the conversation.** If you must discuss an API key or token, the skill will try to redact it, but it's better not to paste it in chat at all.
 
+## It's working if
+
+- The document is a small fraction of the conversation, and specs, issues and diffs appear as paths and URLs rather than copied text.
+- You can read it cold, without the original session open, and know what to do next.
+- Claims the session never verified are marked as assumptions, not stated as facts.
+- The fresh agent starts working instead of asking you to re-explain the setup.
+- The suggested-skills section names the skill you'd have reached for yourself.
+- The full path is the last thing printed, with a word about copying it somewhere durable if the pickup isn't soon.
+- Nothing in it is a key, a token, or a password.
+
 ## Anti-patterns
 
 - ❌ **Handing off without committing or saving.** A handoff that references uncommitted work is useless to the next agent. Commit first.

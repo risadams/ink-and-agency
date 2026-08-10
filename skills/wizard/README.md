@@ -62,6 +62,41 @@ Skill: Written to scripts/setup-dev.sh. Run it with: bash scripts/setup-dev.sh
 - **Re-run it freely.** `.env` writes are idempotent and existing values offer themselves as defaults, so Ctrl-C and resume is safe.
 - **Commit the ones you'll run again.** A wizard linked from the README is onboarding that can't drift out of sync with the code the way prose does.
 
+## Where each captured value lands
+
+Scoping settles this per value, before any script exists:
+
+| Destination | When |
+| :--- | :--- |
+| `.env` only | Local dev needs it, CI doesn't |
+| CI secret | CI reads it, and it's sensitive |
+| CI variable | CI reads it, and it's public |
+| Both | Local dev and CI both need it |
+| Nowhere | The stage is a pure action — a switch flipped, a plan upgraded |
+
+## It's working if
+
+- You're shown an ordered stage list, and the values each stage produces, and asked to confirm — **before any script exists**.
+- Every URL is opened before the value from that page is asked for. You're never asked to paste something you haven't been sent to fetch.
+- Secrets are typed blind. Nothing sensitive echoes into your scrollback.
+- Each stage fits one screen. Nothing you still need has scrolled away.
+- Ctrl-C and re-run picks up where you left off, offering already-saved values as defaults.
+- The final screen lists what it wrote, and separately what it couldn't do and you must finish by hand.
+
+## Common questions
+
+**Do my API keys end up in the model's context?**
+No. The agent writes the script; it never runs it. You run it yourself, and it captures the key with hidden terminal entry and writes it straight to `.env` or the CI secret store. The model isn't connected to the running wizard. The one caveat: that holds for values the *wizard* captures. A key you paste into the chat while scoping is in the context like any other pasted text.
+
+**Can I go back and fix a value I mistyped?**
+Not mid-run — stages move forward only. Re-running is cheap by design: anything already in `.env` is offered back as a default, so you press Enter through the stages you got right and retype the one you didn't. Within a prompt, arrow keys and backspace both work; this fork's `ask` helper uses Readline (`read -e`), which upstream's does not — there, a left-arrow inserts a literal `^[[D`.
+
+**Does it know what I've already set up?**
+It reads the *repo* before it asks — `.env` files, compose files, framework config, the `secrets.*` references in CI — so it scopes to values that are genuinely missing. It does not check the third-party service. If you created the account but never saved the key, it still sends you to the dashboard.
+
+**Where does it sit in the workflow?**
+Nowhere fixed. It's a standalone, not a chain step — the trigger is a manual procedure showing up, which can happen before you start, mid-build, or long after ship. It also works as a discovery tool: scoping surfaces the hidden prerequisites of a task before you commit to the work.
+
 ## Anti-patterns
 
 - ❌ **Hand-editing the library above the `STAGES` marker.** Consistency across wizards is the point; author below the marker.

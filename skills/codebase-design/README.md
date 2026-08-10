@@ -44,6 +44,35 @@ Supplies definitions and principles. It does not scan a codebase, propose candid
 - **Apply the deletion test out loud.** "If I delete this, does complexity vanish or reappear across callers?" settles most shallow-module arguments in one sentence.
 - **Name the module in the domain's language.** Depth without a domain-accurate name is a module nobody can find — see [domain-modeling](../domain-modeling/).
 
+## Which skill do you actually want?
+
+| The problem | The skill |
+| :--- | :--- |
+| The shape of one module — its interface, its seam, its depth | `codebase-design` |
+| The *words of the domain* — "account" means three things | [domain-modeling](../domain-modeling/) |
+| You don't yet know *which* module to redesign | [codebase-improve-architecture](../codebase-improve-architecture/) — the survey that finds candidates |
+| You want the design argued with, not just named | [grill-with-docs](../grill-with-docs/) |
+| There's a concrete behaviour to build, with tests that survive a refactor | [tdd](../tdd/) |
+
+## It's working if
+
+- The design conversation stops producing "component", "service" and "boundary", and starts producing "module", "interface" and "seam".
+- Someone can point at a proposed extraction and say whether it passes the deletion test, without hedging.
+- A proposed seam comes with a *second* adapter named, not just the first.
+- Discussion of an interface covers invariants, ordering and error modes — not only the type signature.
+- **Invoking it doesn't start a session.** If the agent begins reading files and proposing refactors off `/codebase-design` alone, it has mistaken the reference for a driver — see the stopping rule in `SKILL.md`.
+
+## Common questions
+
+**How do I stop a stray import reaching past the interface?**
+This skill doesn't answer that — it defines what a deep module *is*, not how to enforce one. Enforcement is a tooling choice: a class or closure that keeps the implementation private, a package boundary in a monorepo, or an import linter (dependency-cruiser and equivalents) that forbids paths bypassing the entry point. Pick one deliberately; without it, humans and agents both erode the interface over time.
+
+**Isn't this really a file-structure convention — folders, barrel files, feature slices?**
+No, and the glossary defines **module** as scale-agnostic on purpose. The file system is a useful hint about where modules sit, but you can have shallow modules with an immaculate folder tree and deep ones with a flat directory. Depth is a property of the interface.
+
+**Why not Ousterhout's own definition of depth?**
+His is a ratio of implementation lines to interface lines, which rewards padding the implementation. Depth-as-leverage measures the thing you actually want: behaviour exercised per unit of interface learned.
+
 ## Anti-patterns
 
 - ❌ **Measuring depth as lines-of-implementation over lines-of-interface.** That rewards padding. Depth is leverage at the interface.

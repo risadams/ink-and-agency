@@ -68,11 +68,18 @@ When domain relationships are being discussed, stress-test them with specific sc
 
 When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible — which is right?"
 
+**What this checks, and what it doesn't.** The code, the committed `CONTEXT.md`, and the ADRs — nothing else. A naming collision that was argued out and deliberately settled in a closed ticket months ago will be surfaced as if it were new, because the tracker isn't read. When the user says "we settled this," take it as settled and offer to record the resolution rather than re-litigating it.
+
 ### Update CONTEXT.md inline
 
-When a term is resolved, update `CONTEXT.md` right there. Don't batch these up — capture them as they happen. Use the format in [CONTEXT-FORMAT.md](CONTEXT-FORMAT.md).
+When a term is resolved, update `CONTEXT.md` right there. Don't batch these up — capture them as they happen. Use the format in [CONTEXT-FORMAT.md](CONTEXT-FORMAT.md). The batched version is a summary of a session; the inline version is the session's actual output.
 
-`CONTEXT.md` is a glossary and nothing else. Keep it free of implementation details; it is not a spec, a scratch pad, or a home for implementation decisions.
+**`CONTEXT.md` is a glossary and nothing else.** This is the rule that breaks in the field: "write it to `CONTEXT.md`" reads as permission to persist every answer the user gives, and the file grows into a running spec. Write a term only when it clears both bars:
+
+1. It names a concept **specific to this domain** — not a general programming concept (timeout, retry, error type) however heavily the project uses it.
+2. The entry says what the thing **is**, in one or two sentences, with the rejected synonyms under `_Avoid_`.
+
+Everything else — schemas, endpoints, decisions, open questions, session notes — belongs somewhere that isn't this file. A healthy `CONTEXT.md` gets shorter about as often as it gets longer; if it's past a few hundred lines, it has absorbed material that was never glossary content, and the repair is a pass that strips implementation detail rather than a split into more files.
 
 ### Offer ADRs sparingly
 
@@ -93,6 +100,7 @@ Before ending a modelling pass, check the artifacts against what the session act
 3. **Rejected words are recorded** — each term carries the `_Avoid_` list that keeps the language opinionated.
 4. **No general programming concepts** — timeouts, retries, and error types are not domain terms.
 5. **Each ADR passes all three gates** — hard to reverse, surprising without context, a real trade-off.
+6. **The file didn't just grow** — anything added that isn't a term, and anything already there that stopped being one, comes back out in the same pass.
 
 If two or more fail, fix the artifacts and re-check. Cap at two passes.
 

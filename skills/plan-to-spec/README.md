@@ -63,6 +63,15 @@ Skill: Space PP, under the "Specs" parent — confirm?   [you: yes]
 - **Check the seams.** The seam sketch is the one point it pauses for you — a wrong seam here propagates into the tasks and the tests.
 - **Publish deliberately.** The local spec is the source of truth; push to Confluence only when you want a shareable copy, and the local file records the link so the two stay reconciled.
 
+## It's working if
+
+- It starts writing rather than opening a fresh round of questions — the thinking was supposed to be done upstream.
+- It puts the test seams to you before it writes, and proposes as few as it can get away with.
+- It comes back in your project's nouns, not generic product-management boilerplate.
+- Every decision in it is one you can remember making. Nothing was invented to fill a section.
+- The out-of-scope section has real things in it — what you refused is usually the most useful part of the page.
+- It tells you when the work is small enough not to need a spec at all.
+
 ## Anti-patterns
 
 - ❌ **Publishing to Confluence by default.** Local-first is the whole point — a remote write happens only when you ask and confirm the destination.

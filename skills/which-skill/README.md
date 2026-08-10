@@ -58,7 +58,7 @@ Skill: Flow: plan-a-big-effort.
 ## Anti-patterns
 
 - ❌ **Running the target skill for you.** It points and steps out; you invoke. (It can't fire user-invoked skills anyway — nothing can but the human.)
-- ❌ **Listing all 61 skills.** It names the *one* that fits, plus at most one sibling — a menu dump defeats the purpose.
+- ❌ **Listing the whole catalogue.** It names the *one* that fits, plus at most one sibling — a menu dump defeats the purpose.
 - ❌ **Guessing when nothing fits.** If no skill matches, it says so and suggests `/skill-create`.
 
 ## Related skills

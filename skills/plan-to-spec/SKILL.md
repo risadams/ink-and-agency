@@ -13,6 +13,14 @@ Turn the **current conversation** and codebase understanding into a spec, and **
 
 **Local-first.** The spec is written to local storage by default. It is **never** pushed to Confluence (or any remote) without the user explicitly asking, and never without confirming the destination first. The local file is the source of truth; Confluence is an optional downstream copy.
 
+**Does this work need a spec at all?** The spec earns its step on multi-session work, where tickets are disposable and it stays as the one place the reasoning lives. On a change that fits a single session it buys nothing and adds a synthesis step for the model to drift in — say so and send the user straight to `implement`.
+
+**Stay in this conversation.** Run `plan-to-tickets` in the same window rather than clearing or compacting between them: a large spec can outgrow what a remote page serves back cleanly, and re-fetching it in chunks is where the next step silently truncates.
+
+**Architectural work fits the template badly.** A refactor or a module-boundary change written as user stories produces stories nobody asked for around decisions that are really about interfaces and invariants. Lean on the implementation-decisions and testing-decisions sections instead, and let the durable calls land as ADRs via `grill-with-docs` rather than making the spec carry them.
+
+**It won't check the tracker for you.** The spec respects the ADRs covering the area, but nothing searches for overlapping issues already filed — a spec can quietly duplicate work in flight. Where the area is busy, search first.
+
 ## Process
 
 ### 1. Resolve the staging location

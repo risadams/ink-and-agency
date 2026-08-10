@@ -28,6 +28,8 @@ Whatever the user said is the fixed point — a commit SHA, branch name, tag, `m
 
 Confirm the fixed point resolves (`git rev-parse <fixed-point>`) and the diff is non-empty **before** spawning sub-agents — a bad ref or empty diff should fail here, not inside them.
 
+**Committed work only.** `...HEAD` is measured from the merge-base and excludes staged and working-tree changes, so anything not yet committed is invisible to both axes. Check `git status --porcelain` first; if the tree is dirty, say which files are unreviewed and offer to commit (or review `HEAD` plus a separate pass over the working tree) rather than silently reviewing a subset of the work.
+
 ### 2. Identify the spec source
 
 In order: (1) issue references in commit messages (`PRJ-123`, `Closes #45`, GitLab `!67`) — fetch via Jira/GitLab MCP; (2) a path the user passed; (3) a spec under `docs/`, `specs/`, or a Confluence page matching the branch/feature; (4) if nothing, ask. If there's no spec, the Spec axis skips and reports "no spec available".
@@ -57,6 +59,8 @@ Each smell reads *what it is* → *how to fix*:
 ### 4. Spawn both sub-agents in parallel
 
 Send a single message with two `Agent` (`general-purpose`) calls.
+
+**End both briefs with:** *"Perform this review directly. Do not invoke the `code-review` skill and do not spawn further agents."* Without it a sub-agent can rediscover this skill from its own listing and fan out again, and the recursion compounds — it is the one failure here that gets expensive rather than merely wrong.
 
 **Standards sub-agent** — include the full diff command + commit list, the standards-source files from step 3, **plus the smell baseline pasted in full** (the sub-agent has no other access to it). Brief: *"Report — per file/hunk where relevant — (a) every place the diff violates a documented standard: cite the standard; and (b) any baseline smell: name it and quote the hunk. Distinguish hard violations from judgement calls — documented breaches can be hard, baseline smells are always judgement calls, and a documented repo standard overrides the baseline. Skip anything tooling enforces. Under 400 words."*
 

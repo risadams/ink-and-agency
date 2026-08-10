@@ -11,6 +11,18 @@ A discipline for hard bugs. Skip phases only when explicitly justified.
 
 When exploring the codebase, read `CONTEXT.md` (if it exists) to get a clear mental model of the relevant modules, and check ADRs in the area you're touching.
 
+## Is this a job for the loop?
+
+The six phases are heavy on purpose, and the common failure is firing them at a question that wanted a sentence. Before Phase 1, decide which of these the user is asking for:
+
+- **A direct answer** — "why does this throw?", "what does this error mean?", a described symptom with an obvious cause. Answer it. Say the loop is available if the answer doesn't hold.
+- **A first look** — one plausible cause, checked against the code, in a couple of minutes. Do that, and escalate only if it doesn't land.
+- **A diagnosis** — the bug already resisted a first look, is intermittent, is a regression between two known-good states, or has cost real time. This is the skill; start at Phase 1.
+
+Constructing a mock reproduction for a question the user wanted answered in one message is the failure mode, not thoroughness. Escalate deliberately, and say you're escalating.
+
+**Redaction is yours.** The phases below ask you to paste commands and their output, and to request artifacts — HAR files, log dumps, request captures. None of that is sanitised for you: strip credentials, tokens, cookies, and personal data before pasting, and before anything goes into a ticket, a commit, or an MR.
+
 ## Phase 1 — Build a feedback loop
 
 **This is the skill.** Everything else is mechanical. If you have a **tight** pass/fail signal for the bug — one that goes red on _this_ bug — you will find the cause; bisection, hypothesis-testing, and instrumentation all just consume it. If you don't have one, no amount of staring at code will save you.
@@ -108,6 +120,8 @@ Tool preference:
 **Perf branch.** For performance regressions, logs are usually wrong. Instead: establish a baseline measurement (timing harness, `performance.now()`, profiler, query plan), then bisect. Measure first, fix second.
 
 ## Phase 5 — Fix + regression test
+
+**State the root cause before you write anything.** One or two sentences: which hypothesis survived, and the evidence from Phase 4 that confirmed it. Instrumentation proving a prediction is not the same as agreement about the cause, and this is the last cheap moment to be wrong — a fix built on a mis-read probe is a second bug wearing the first one's clothes. Where the user is present, pause here for their agreement; where they aren't, write the root cause down and proceed on it.
 
 Write the regression test **before the fix** — but only if there is a **correct seam** for it.
 

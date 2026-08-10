@@ -26,13 +26,27 @@ If a question can be answered by exploring the codebase, explore the codebase in
 
 ## Domain awareness
 
-This is the grilling half. The domain-model half — where `CONTEXT.md` and `docs/adr/` live, how to challenge terms against the glossary, and when a decision earns an ADR — is the [domain-modeling](../domain-modeling/) skill. Read it at the start of the session and run its discipline **inline** as the interview goes:
+This is the grilling half. The domain-model half — where `CONTEXT.md` and `docs/adr/` live, how to challenge terms against the glossary, and when a decision earns an ADR — is the [domain-modeling](../domain-modeling/) skill.
+
+**Invoke `domain-modeling` by name at the start of the session**, before the first question. This pointer is the reliability weak spot: an agent told to load "the grilling skills" reliably loads the interview half and silently skips the modelling half, and the tell is a session that ends with `CONTEXT.md` untouched. Load it explicitly, then run its discipline **inline** as the interview goes:
 
 - **Look for the artifacts during codebase exploration.** A root `CONTEXT.md` (single context) or a `CONTEXT-MAP.md` pointing at several; ADRs under `docs/adr/`. Create either lazily — only when you have something to write.
 - **Challenge every term against the glossary**, sharpen fuzzy language, and stress-test relationships with concrete edge-case scenarios.
 - **Cross-reference claims with the code**, and surface contradictions the moment you find one.
 - **Write resolved terms to `CONTEXT.md` right there** — never batched — using [CONTEXT-FORMAT.md](../domain-modeling/CONTEXT-FORMAT.md).
 - **Offer an ADR only when all three gates hold** (hard to reverse, surprising without context, a real trade-off), using [ADR-FORMAT.md](../domain-modeling/ADR-FORMAT.md).
+
+## Closing the session
+
+Most of what gets settled here lands in **neither** artifact: the glossary takes terms, ADRs take the rare three-gate decision, and everything else — ordering guarantees, negative requirements, numeric defaults, the reasoning behind each choice — exists only in this conversation. A session that produces a sharper glossary and zero ADRs worked as designed, but the bulk of the value is still in the context window.
+
+So don't end on "let me know what you'd like next". Close with the state and the next move:
+
+1. What landed on disk — terms written, ADRs offered and taken.
+2. What was settled but written nowhere, listed explicitly.
+3. **The next step, in this same conversation**: `plan-to-spec` synthesises what's here into a spec without re-interviewing. Small enough to build now? `implement`. Blocked on someone else's knowledge? `plan-to-questionnaire`.
+
+Clearing this conversation without doing one of those loses the decisions.
 
 </supporting-info>
 

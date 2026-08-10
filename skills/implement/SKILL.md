@@ -60,7 +60,7 @@ Run only the **on** phases, in order, honouring each tuning:
 
 - **Test-first on** → work in **vertical slices** via `/tdd`: one seam, one failing test, minimal code to pass, repeat. Off → build the slice directly.
 - **Verify on** → typecheck and run single test files as you go; run the full suite once at the end. Off → skip (and don't invent a test command that doesn't exist).
-- **Review on** → run `/code-review` against the branch point once the build is green. Off → skip.
+- **Review on** → **commit first, then** run `/code-review` against the branch point once the build is green. `code-review` diffs `<fixed-point>...HEAD`, which excludes staged and working-tree changes — reviewing before any commit exists hands both axes an empty diff and produces a clean report of nothing. Where Track is `nothing`, make an interim commit for the review and say so, or skip Review; don't run it against uncommitted work.
 - **Track** → per the tuning: `commit only` stops at a commit on the current branch; `MR` also drafts one (delegate to `/mr-draft` if installed); `move ticket` transitions the Jira issue. `nothing` leaves the work uncommitted for the user to inspect.
 
 Refactoring belongs to the **Review** phase, not the build loop (per `/tdd`).
@@ -84,6 +84,9 @@ If Review surfaced findings, list them before the close-out so the user decides 
 - **Don't fabricate a phase's tooling.** Verify off means there's nothing to run; don't invent a test command. Track = nothing means don't commit.
 - **One preset is a starting point, not a cage.** The user can tune any single line without leaving the preset.
 - **Reuse, don't reimplement.** Test-first is `/tdd`; review is `/code-review`; MR drafting is `/mr-draft`. This skill orchestrates them.
+- **Confirm the work item back before building.** A bare `#2` or `PRJ-2` resolves against whatever numbered list is in view — a todo file, a checklist, the wrong project — and it resolves confidently, so the mistake only surfaces once work has started. Echo the resolved key *and its title* in the run plan.
+- **One work item per run, one run per checkout.** Parallel `/implement` sessions in the same working directory share one index, one HEAD, and one stash: commits land on the wrong branch and stashes disappear. Use separate worktrees for parallelism, and clear context between tickets rather than batching them.
+- **Committing is not completing.** The run ends at the commit (plus whatever Track is tuned to). It does not tick acceptance criteria, and it does not act on `code-review` findings — those are reported for the user to decide on. When Track doesn't include `move ticket`, say plainly that the ticket is still open.
 
 > **Host portability:** tool names follow Claude Code conventions; on other hosts map by intent — see [PORTABILITY.md](../PORTABILITY.md).
 

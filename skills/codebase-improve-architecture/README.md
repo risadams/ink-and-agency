@@ -36,7 +36,8 @@ The skill explores the codebase looking for shallow modules, friction points, an
 ### External systems used
 
 - Local filesystem (read/write — codebase, `CONTEXT.md`, `docs/adr/`)
-- Subagent: `Explore` (used for the codebase walk in step 1)
+- Git history (read — the scan is weighted toward paths that change often)
+- Parallel read-only exploration agents where the host provides them; the walk falls back to direct reads where it doesn't
 
 ## How to use it
 
@@ -86,6 +87,16 @@ Skill: [Grilling loop on candidate 2]
 - **Start with a scope.** "Improve the architecture" against a 200-file repo produces too many candidates. Scope to a subsystem you've been frustrated by.
 - **Engage the grilling loop honestly.** The grilling conversation is where good designs are pressure-tested. Skipping it gets you a list of vague proposals; engaging produces an actual design.
 - **Capture the rejections.** When you reject a candidate with a real reason, accept the ADR offer. Future runs of the skill won't re-suggest the same thing.
+
+## It's working if
+
+- The candidates name your domain's concepts — "the Order intake module", not "the FooBarHandler".
+- The candidates cluster in files that have changed recently, not in dormant corners of the repo.
+- No code changed during the run. The deliverable is the list and the conversation.
+- **It stops after the list and asks which candidate you want**, instead of interrogating you about the first idea it had.
+- Each candidate carries a strength label, and a report that's all `Speculative` is stated as "this area looks healthy" rather than dressed up.
+- Each card explains the payoff as locality or leverage and says which tests get simpler — not just "this is cleaner".
+- Rejecting a candidate for a durable reason gets you an offer to record an ADR, so the next run doesn't re-suggest it.
 
 ## Anti-patterns
 

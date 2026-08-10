@@ -59,6 +59,21 @@ Agent: Context: you asked why the same order was created twice.
 - **Pair it with `CONTEXT.md`.** The more the project's real vocabulary is written down, the better the re-pitch lands.
 - **Use it on your own drafts too.** It works on any message in the conversation, not just the agent's.
 
+## The name is the mechanism
+
+The leading word is **wait**. "Be concise" is an instruction about the agent's *output*, and a model obeys it by clipping words — which loses you further. **Wait** is about *your* state: it says comprehension failed here. An agent that hears "be brief" writes telegrams; an agent that hears "wait, you lost me" backs up and explains.
+
+That's the whole skill, and it's why the file is short. Every popular fix for verbosity names the output — `/tldr`, `/no-fluff`, `/talk-normal` — and gets a caveman register that's shorter and no clearer. Naming the *listener* asks for both halves at once: fewer words **and** the premise you were missing. A four-hundred-line concision skill leaves the model verbose anyway, because the model reads the volume, not the plea.
+
+The instruction says re-pitch **that**, not "that last message" — what lost you is usually bigger than one paragraph, so the agent decides how far back to go.
+
+## It's working if
+
+- The re-pitch is **shorter and clearer**, not shorter and blunter.
+- It adds the premise you were missing, instead of only deleting words.
+- Project nouns replace invented ones — the terms from your `CONTEXT.md` come back.
+- You can fire it twice in a row and it doesn't degrade into terseness.
+
 ## Anti-patterns
 
 - ❌ **Using it to ask for more detail.** This is the same message, simpler — not a deeper one. Ask a normal question for depth.

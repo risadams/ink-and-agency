@@ -68,6 +68,16 @@ Skill: That's the bug in the idea. Two options for the expiry rule: ...
 
 Both branches assume a human drives the artifact. When there's no TTY and no browser — a background agent, a scheduled run, a sandboxed host — the skill still builds the artifact, then drives it itself and saves a **transcript** (a scripted action sequence with state dumps for logic; screenshots or written walkthroughs per variant for UI). It reports observations, never a verdict — the judgement call stays with you.
 
+## It's working if
+
+- You can say in one sentence what question the prototype exists to answer — and it's written at the top of the artifact, not just in your head.
+- Someone who doesn't read code can drive it and describe what they see in their own words.
+- Someone says "wait, that shouldn't be possible" or "huh, I assumed X". That's a bug in the *idea*, which is the entire point.
+- The UI variants disagree about layout and information hierarchy, not just colour and copy — and the feedback is "the header from B with the sidebar from C".
+- It's answered in one sitting. Still building it a day later means the question was too big.
+- It refused the job when the design was already settled, or when "prototype the whole app" was the ask.
+- When it's over, main holds the decision and none of the prototype, and the issue points at the branch that still has it.
+
 ## Anti-patterns
 
 - ❌ **Adding tests.** A prototype that needs tests is no longer a prototype.

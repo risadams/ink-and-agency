@@ -83,6 +83,15 @@ Skill: [Updates CONTEXT.md with the Partial Reversal definition]
 - **Accept the ADR offer when it appears.** ADRs are offered sparingly — only when the decision meets all three criteria (hard to reverse, surprising without context, real tradeoff). When you see the offer, the documentation is worth the 5 minutes.
 - **Cross-reference with code is free.** When the skill says "your code does X but you just said Y — which is right?", treat it as a gift. Better to surface that contradiction now than in code review.
 
+## It's working if
+
+- `CONTEXT.md` changes **during** the session, term by term, rather than appearing in one lump at the end.
+- The glossary reads as pure vocabulary — your project's words, tightly defined — with no implementation detail or spec-like prose in it.
+- Questions the codebase can answer get answered by reading the codebase, not asked of you.
+- It challenges a word you used because your existing glossary defines it differently.
+- You get few or no ADRs, and the ones you get are decisions you'd be annoyed to re-litigate.
+- It closes by naming what landed on disk, what was settled but written nowhere, and the next step in this same conversation.
+
 ## Anti-patterns
 
 What this skill will NOT do, or what to avoid:
