@@ -5,9 +5,9 @@
 An **[Agent Plugins](https://agent-plugins.org) 1.0.0** plugin — one installable unit, one primitive (skills), readable by any conformant host: Claude Code, OpenAI Codex, Cursor, GitHub Copilot, Kiro, VS Code.
 
 - **Ink** — workflow skills: writing, sprint/Scrum, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all.
-- **Agency** — ~138 specialist skills (language/framework experts, infra, data/AI, security, product, and more — formerly subagents), plus the `clarity-council` skill and its library of 46 advisory personas for multi-perspective decisions (single / multi / iterative modes).
+- **Agency** — ~216 specialist skills (language/framework experts, infra, data/AI, security, product, and more — formerly subagents, plus a red-team/blue-team security pack), plus the `clarity-council` skill and its library of 46 advisory personas for multi-perspective decisions (single / multi / iterative modes).
 
-**204 skills total**, one folder each directly under `skills/` — the flat layout Agent Plugins fixes for skill discovery, so every host finds the same set without host-specific configuration. Each skill declares its browsing category in frontmatter; [CATEGORIES.md](skills/CATEGORIES.md) is the index. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so the whole library ships in the one bundle.)
+**289 skills total**, one folder each directly under `skills/` — the flat layout Agent Plugins fixes for skill discovery, so every host finds the same set without host-specific configuration. Each skill declares its browsing category in frontmatter; [CATEGORIES.md](skills/CATEGORIES.md) is the index. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so the whole library ships in the one bundle.)
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
 
@@ -24,14 +24,14 @@ ink-and-agency/
 ├── plugin.json                  # Agent Plugins 1.0.0 manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
 ├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
-├── skills/                      # 204 skills, flat — one folder each (shared by every host)
+├── skills/                      # 289 skills, flat — one folder each (shared by every host)
 │   ├── <name>/SKILL.md          # canonical skill; `category:` frontmatter is the browsing bucket
 │   ├── <name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
 │   ├── python-pro/              #   e.g. language-specialists
 │   ├── kubernetes-specialist/   #   e.g. infrastructure
 │   ├── clarity-council/         # the persona council — featured skill w/ bundled personas
 │   ├── persona/                 # shared council persona contracts (reference docs, not skills)
-│   ├── ... (see CATEGORIES.md for all 204 grouped by category)
+│   ├── ... (see CATEGORIES.md for all 289 grouped by category)
 │   ├── CATEGORIES.md            # Browsable index of all skills by category
 │   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)
 │   ├── PORTABILITY.md           # How to interpret Claude tool names on other hosts
@@ -57,6 +57,7 @@ ink-and-agency/
 | Focus & state | `task-initiation`, `hyperfocus-recovery`, `idea-decision-maker`, `energy-budget`, `meeting-decompression` | Defeating stalls, recovering context, calibrating load — built with ND-friendly defaults |
 | Git & workflow | `branch-rebase`, `branch-resolve-conflicts` | Clean rebases with trivial conflict auto-resolution, complex conflict resolution with intent preservation |
 | Specialists | `python-pro`, `backend-developer`, `security-auditor`, `terraform-engineer` | Deep domain judgment across language, infra, data/AI, security, and product |
+| Security (offense & defense) | `security-audit`, `penetration-tester`, `offensive-sqli`, `ad-security-reviewer`, `security-engineer` | Source-first vulnerability audits, authorized red-team methodology (78 `offensive-*` skills), and the detection/hardening counterparts to harden against it |
 | Workspace tools | `obsidian-vault`, `obsidian-markdown`, `obsidian-canvas` | Managing notes, structure, and visual knowledge maps |
 
 ![Skill Map](docs/assets/skill-map.svg)
@@ -74,7 +75,7 @@ Add the marketplace once, then install the plugin:
 /plugin install ink-and-agency
 ```
 
-This installs all 204 skills. Or load locally for development (no marketplace, picks up your working copy):
+This installs all 289 skills. Or load locally for development (no marketplace, picks up your working copy):
 
 ```sh
 claude --plugin-dir /path/to/ink-and-agency
