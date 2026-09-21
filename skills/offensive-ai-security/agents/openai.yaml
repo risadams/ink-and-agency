@@ -1,0 +1,4 @@
+# Generated from skills/offensive-ai-security/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive AI Security"
+  short_description: "AI/LLM security offensive checklist: prompt injection, jailbreaking, model extraction,…"

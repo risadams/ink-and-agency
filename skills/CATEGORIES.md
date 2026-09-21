@@ -5,7 +5,7 @@ fixes skill discovery at the immediate children of `skills/`. Categories are a b
 declared in each skill's `category:` frontmatter field, not a folder path, so recategorizing
 a skill moves nothing and breaks no links.
 
-**210 skills across 15 categories**, plus the featured [`clarity-council`](clarity-council/) skill.
+**289 skills across 15 categories**, plus the featured [`clarity-council`](clarity-council/) skill.
 
 > **Featured:** [`clarity-council`](clarity-council/) carries `category: featured` rather than one of
 > the 15 below — it's the persona-consultation engine that many other skills delegate to, and it ships
@@ -224,7 +224,7 @@ Read/write and structure an Obsidian vault.
 - [`obsidian-markdown`](obsidian-markdown/) — Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax.
 - [`obsidian-vault`](obsidian-vault/) — Search, create, and manage notes in the Obsidian vault with wikilinks and index notes.
 
-## Quality & Security &nbsp;`quality-security` (13)
+## Quality & Security &nbsp;`quality-security` (92)
 
 Testing, security auditing, compliance, and performance.
 
@@ -236,9 +236,88 @@ Testing, security auditing, compliance, and performance.
 - [`debugger`](debugger/) — Use when you need to diagnose and fix bugs, identify root causes of failures, or analyze error logs and stack traces to resolve issues.
 - [`error-detective`](error-detective/) — Use when you need to diagnose why errors are occurring in your system, correlate errors across services, identify root causes, and prevent f
 - [`gdpr-ccpa-compliance`](gdpr-ccpa-compliance/) — Use when the user needs to understand GDPR or CCPA compliance, review data practices, or assess privacy requirements.
+- [`offensive-active-directory`](offensive-active-directory/) — Active Directory attack methodology for internal network red team engagements. Covers reconnaissance (BloodHound, PowerView, ADExplorer),
+- [`offensive-advanced-redteam`](offensive-advanced-redteam/) — Comprehensive red team operations methodology covering full engagement lifecycle from planning through reporting. Addresses engagement scoping
+- [`offensive-ai-security`](offensive-ai-security/) — AI/LLM security offensive checklist: prompt injection, jailbreaking, model extraction, training data poisoning, adversarial inputs, LLM-assisted
+- [`offensive-anti-forensics`](offensive-anti-forensics/) — Anti-forensics and evidence destruction techniques for red team operators conducting authorized engagements. Covers log clearing on Windows
+- [`offensive-api-abuse`](offensive-api-abuse/) — Advanced API exploitation methodology focused on business logic abuse and sophisticated attack patterns that bypass traditional security
+- [`offensive-api-security`](offensive-api-security/) — Comprehensive API security testing methodology covering REST, gRPC, and WebSocket attack surfaces. Addresses the full OWASP API Security Top 10
+- [`offensive-basic-exploitation`](offensive-basic-exploitation/) — Week 5 exploit development curriculum. Foundational exploitation techniques: controlling EIP/RIP, ROP chain construction, ret2libc, shellcode
+- [`offensive-bluetooth-ble`](offensive-bluetooth-ble/) — Bluetooth Low Energy (BLE) attack methodology — GATT enumeration, characteristic read/write without auth, pairing downgrade (Just Works forced),
+- [`offensive-bluetooth-classic`](offensive-bluetooth-classic/) — Bluetooth Classic (BR/EDR) attack methodology — device discovery, service enumeration via SDP, LMP/L2CAP layer attacks, legacy PIN cracking
+- [`offensive-bug-identification`](offensive-bug-identification/) — Systematic bug identification methodology: source code review patterns, black-box testing strategies, taint analysis, dangerous function
+- [`offensive-business-logic`](offensive-business-logic/) — Business logic vulnerability testing for web/mobile/API engagements. Covers workflow bypass, state machine violations, multi-step process abuse,
+- [`offensive-c2-frameworks`](offensive-c2-frameworks/) — Command and Control framework deployment, configuration, and operational tradecraft for red team engagements. Covers Cobalt Strike (malleable C2
+- [`offensive-cicd-pipeline`](offensive-cicd-pipeline/) — Comprehensive CI/CD pipeline exploitation methodology covering GitHub Actions injection vectors (expression injection via PR titles and issue
+- [`offensive-cicd-secrets`](offensive-cicd-secrets/) — Comprehensive secrets extraction methodology targeting CI/CD environments across all major platforms. Covers environment variable extraction
+- [`offensive-cloud`](offensive-cloud/) — Cloud security attack methodology covering AWS, Azure, and GCP. Includes credential harvesting (IMDS, ~/.aws, env vars, leaked CI secrets,
+- [`offensive-container-escape`](offensive-container-escape/) — Container escape and breakout techniques targeting Docker, containerd, and Podman runtimes. Covers privileged container breakout via host
+- [`offensive-crash-analysis`](offensive-crash-analysis/) — Week 4 exploit development curriculum. Crash triage and analysis methodology: WinDbg/GDB analysis, ASAN/MSAN output interpretation,
+- [`offensive-crypto-attacks`](offensive-crypto-attacks/) — Systematic methodology for identifying and exploiting cryptographic implementation weaknesses in real-world applications. Covers padding oracle
+- [`offensive-data-exfiltration`](offensive-data-exfiltration/) — Dense methodology covering DNS exfiltration (dnscat2, iodine, dns2tcp), HTTPS tunneling (domain fronting, CDN abuse, legitimate service
+- [`offensive-deauth-disassoc`](offensive-deauth-disassoc/) — Deauthentication and disassociation attacks against 802.11 networks — targeted single-client deauth for handshake capture, broadcast deauth for
+- [`offensive-dependency-confusion`](offensive-dependency-confusion/) — Deep-dive offensive methodology for dependency confusion and namespace attacks across all major package ecosystems. Covers npm scope confusion
+- [`offensive-deserialization`](offensive-deserialization/) — Insecure deserialization exploitation across Java, PHP, .NET, Python, Node.js, and Ruby. Covers gadget chain construction with
+- [`offensive-edr-evasion`](offensive-edr-evasion/) — EDR evasion offensive checklist: hook unhooking (user/kernel), direct syscalls, PPID spoofing, process injection variants, AMSI bypass, ETW
+- [`offensive-evil-twin`](offensive-evil-twin/) — Evil Twin / KARMA / Mana access point methodology — rogue AP construction with hostapd-mana / wifiphisher / airgeddon, KARMA universal probe
+- [`offensive-exploit-dev-course`](offensive-exploit-dev-course/) — Full exploit development course roadmap and syllabus: weekly topics, recommended reading, lab setup, and learning path from vulnerability
+- [`offensive-exploit-development`](offensive-exploit-development/) — Exploit development operational guide: environment setup, debugging workflow, PoC development lifecycle, writing reliable exploits, using
+- [`offensive-fast-checking`](offensive-fast-checking/) — Speed-optimized offensive checklist for rapid assessment: quick-win vulnerability patterns, fast recon shortcuts, automated scanner
+- [`offensive-file-upload`](offensive-file-upload/) — File upload vulnerability checklist: MIME type bypass, extension bypass, magic byte manipulation, path traversal in filenames, stored XSS via
+- [`offensive-fuzzing`](offensive-fuzzing/) — Practical offensive fuzzing methodology covering target identification, fuzzer selection (AFL++, libFuzzer, Honggfuzz, Boofuzz, syzkaller),
+- [`offensive-fuzzing-course`](offensive-fuzzing-course/) — Week 2 of the exploit development curriculum. Covers fuzzing methodology: target selection, corpus generation, coverage-guided fuzzing with
+- [`offensive-graphql`](offensive-graphql/) — Offensive methodology for attacking GraphQL APIs during penetration tests and bug bounty engagements. Covers the full attack lifecycle: endpoint
+- [`offensive-idor`](offensive-idor/) — IDOR (Insecure Direct Object Reference) testing checklist: object ID enumeration, horizontal/vertical privilege escalation, GUID predictability,
+- [`offensive-initial-access`](offensive-initial-access/) — Initial access techniques checklist: phishing (spear/smishing), credential stuffing, exposed service exploitation, supply chain attacks,
+- [`offensive-iot`](offensive-iot/) — IoT and embedded device security testing methodology. Covers hardware reconnaissance (UART, JTAG, SWD, SPI flash, I2C EEPROM, eMMC chip-off),
+- [`offensive-jwt`](offensive-jwt/) — JWT attack methodology for penetration testers. Covers algorithm confusion (alg:none, RS256→HS256), weak HMAC secret brute force, kid parameter
+- [`offensive-k8s-attacks`](offensive-k8s-attacks/) — Kubernetes cluster attack techniques covering the full attack lifecycle from initial foothold in a pod to cluster-wide compromise. Covers
+- [`offensive-keylogger-arch`](offensive-keylogger-arch/) — Low-level keylogger architecture design: kernel driver hooks (WH_KEYBOARD_LL, SetWindowsHookEx), ETW-based input capture, user-mode vs
+- [`offensive-krack-fragattacks`](offensive-krack-fragattacks/) — KRACK (CVE-2017-13077..082) and FragAttacks (CVE-2020-24586..588 + 26139-26147) — key reinstallation, fragmentation, and aggregation attacks
+- [`offensive-lateral-movement`](offensive-lateral-movement/) — Comprehensive lateral movement tradecraft for authorized red team engagements covering credential-based movement (pass-the-hash,
+- [`offensive-linux-privesc`](offensive-linux-privesc/) — Comprehensive Linux privilege escalation methodology for offensive security engagements. Covers the full attack surface from a low-privilege
+- [`offensive-lorawan-sub-ghz`](offensive-lorawan-sub-ghz/) — LoRaWAN and sub-GHz (433 / 868 / 915 MHz) attack methodology — LoRaWAN ABP/OTAA join attack, network/session key reuse, frame counter replay,
+- [`offensive-mitigations`](offensive-mitigations/) — Security mitigation reference and bypass catalog: ASLR, DEP/NX, RELRO, stack canaries, CFI, sandboxing, seccomp. Covers both detection of
+- [`offensive-mobile`](offensive-mobile/) — Mobile (Android + iOS) application penetration testing methodology. Covers static analysis (apktool/jadx for Android, class-dump/Hopper/IDA for
+- [`offensive-network-attacks`](offensive-network-attacks/) — Dense description covering ARP spoofing, LLMNR/NBT-NS/mDNS poisoning, DNS poisoning, MITM attacks, VLAN hopping, DHCP attacks, 802.1X/NAC
+- [`offensive-oauth`](offensive-oauth/) — OAuth 2.0 attack checklist: authorization code interception, redirect_uri bypass, CSRF on OAuth flow, state parameter abuse, open redirector
+- [`offensive-open-redirect`](offensive-open-redirect/) — Open redirect vulnerability checklist: parameter identification, bypass techniques (URL encoding, double slashes, CRLF injection, protocol
+- [`offensive-osint`](offensive-osint/) — Comprehensive OSINT methodology skill for offensive security, red team intelligence gathering, and bug bounty reconnaissance. Covers domain
+- [`offensive-osint-methodology`](offensive-osint-methodology/) — Structured OSINT methodology framework: target definition, source selection, collection workflows, data correlation, timeline reconstruction,
+- [`offensive-parameter-pollution`](offensive-parameter-pollution/) — HTTP parameter pollution (HPP) checklist: duplicate parameter injection, backend vs frontend parsing differences, WAF bypass via HPP,
+- [`offensive-persistence`](offensive-persistence/) — Comprehensive persistence tradecraft for authorized red team engagements covering Windows and Linux mechanisms. Windows techniques include
+- [`offensive-phishing`](offensive-phishing/) — Phishing campaign execution methodology for authorized red team engagements. Covers end-to-end campaign lifecycle: infrastructure provisioning
+- [`offensive-race-condition`](offensive-race-condition/) — Race condition (TOCTOU) testing checklist: identifying timing windows, Burp Suite Turbo Intruder, Last-Byte sync technique, rate limit bypass,
+- [`offensive-rce`](offensive-rce/) — Remote Code Execution testing checklist: OS command injection, SSTI-to-RCE, deserialization RCE, file upload RCE, XXE with SSRF to RCE, RCE via
+- [`offensive-reporting`](offensive-reporting/) — Penetration test and red team report writing methodology. Covers executive summary structuring (risk-led narrative for non-technical readers),
+- [`offensive-request-smuggling`](offensive-request-smuggling/) — HTTP request smuggling checklist: CL.TE, TE.CL, TE.TE variants, detection with timing and differential responses, WAF bypass, cache poisoning,
+- [`offensive-shellcode`](offensive-shellcode/) — Shellcode development reference for offensive security engagements. Use when writing custom x86/x64 shellcode, implementing position-independent
+- [`offensive-social-engineering`](offensive-social-engineering/) — Social engineering attack techniques beyond email phishing for authorized red team and physical penetration testing engagements. Covers
+- [`offensive-sqli`](offensive-sqli/) — SQL injection testing skill for offensive security assessments and bug bounty hunting. Covers error-based, UNION-based, boolean/time-based
+- [`offensive-ssrf`](offensive-ssrf/) — Server-Side Request Forgery testing checklist: SSRF discovery, blind SSRF with out-of-band, cloud metadata endpoints (AWS/GCP/Azure), SSRF
+- [`offensive-ssti`](offensive-ssti/) — Dense description covering Server-Side Template Injection across Jinja2, Twig, Freemarker, Velocity, Pebble, Smarty, Mako, Handlebars, ERB,
+- [`offensive-supply-chain`](offensive-supply-chain/) — Comprehensive offensive methodology for software supply chain attacks covering the full kill chain from reconnaissance through exploitation.
+- [`offensive-tls-attacks`](offensive-tls-attacks/) — Comprehensive methodology for auditing and exploiting TLS/SSL implementations and misconfigurations across network services and mobile
+- [`offensive-toctou`](offensive-toctou/) — Time-of-Check / Time-of-Use (TOCTOU) race condition exploitation methodology across binary, kernel, filesystem, web, and container layers.
+- [`offensive-vuln-classes`](offensive-vuln-classes/) — Exploit development curriculum covering core vulnerability classes with real-world CVE case studies: stack/heap buffer overflows,
+- [`offensive-waf-bypass`](offensive-waf-bypass/) — WAF bypass techniques checklist: encoding bypass (URL/HTML/Unicode/double encoding), case variation, comment injection, HTTP header
+- [`offensive-wifi`](offensive-wifi/) — Wireless / 802.11 attack methodology for red team engagements and wireless security assessments. Covers monitor-mode setup, WPA/WPA2-PSK
+- [`offensive-wifi-recon`](offensive-wifi-recon/) — Wi-Fi reconnaissance methodology — adapter selection, monitor mode and packet injection setup, regulatory domain handling, multi-band airspace
+- [`offensive-windows-boundaries`](offensive-windows-boundaries/) — Windows security boundary taxonomy and attack surface enumeration: kernel/user boundary, sandbox boundaries (LPAC, AppContainer), COM/RPC
+- [`offensive-windows-mitigations`](offensive-windows-mitigations/) — Deep-dive on Windows exploit mitigations: ASLR, DEP/NX, CFG, CET/Shadow Stack, SEHOP, Heap Guard, ACG, Arbitrary Code Guard. Covers both the
+- [`offensive-windows-privesc`](offensive-windows-privesc/) — Comprehensive Windows privilege escalation methodology for offensive security engagements. Covers the full attack surface from a standard user
+- [`offensive-wpa-enterprise`](offensive-wpa-enterprise/) — WPA/WPA2/WPA3-Enterprise (802.1X / EAP) attack methodology — EAP method identification (PEAP-MSCHAPv2, EAP-TTLS, EAP-TLS, EAP-GTC, EAP-PWD,
+- [`offensive-wpa2-psk`](offensive-wpa2-psk/) — WPA/WPA2-PSK attack methodology — four-way handshake capture via targeted deauthentication, PMKID attacks (no client required), hcxdumptool /
+- [`offensive-wpa3-sae`](offensive-wpa3-sae/) — WPA3 / SAE (Simultaneous Authentication of Equals) attack methodology — transition-mode (mixed WPA2/WPA3) downgrade, Dragonblood side-channel
+- [`offensive-wps`](offensive-wps/) — WPS (Wi-Fi Protected Setup) PIN attack methodology — Pixie Dust offline attack against vulnerable chipsets (Ralink, Realtek, Broadcom,
+- [`offensive-xss`](offensive-xss/) — Cross-Site Scripting testing checklist: stored/reflected/DOM/blind XSS discovery, polyglot payloads, CSP bypass, XSS filter bypass, event
+- [`offensive-xxe`](offensive-xxe/) — XML External Entity injection testing checklist: classic XXE, blind XXE (out-of-band), XXE via file upload (SVG/docx), XXE in SOAP/REST,
+- [`offensive-z-wave`](offensive-z-wave/) — Z-Wave attack methodology — sniffing with Z-Force / EZ-Wave / RTL-SDR + ZniffMobile, S0 (legacy) network-key derivation flaw and key reuse, S2
+- [`offensive-zigbee-thread-matter`](offensive-zigbee-thread-matter/) — Zigbee, Thread, and Matter mesh-protocol attack methodology — IEEE 802.15.4 sniffing with TI CC2531 / CC2540 / Sonoff Zigbee Dongle E, KillerBee
 - [`penetration-tester`](penetration-tester/) — Use when you need to conduct authorized security penetration tests to identify real vulnerabilities through active exploitation and validati
 - [`performance-engineer`](performance-engineer/) — Use when you need to identify and eliminate performance bottlenecks in applications, databases, or infrastructure systems, and when baseline
 - [`powershell-security-hardening`](powershell-security-hardening/) — Use when you need to harden PowerShell automation, secure remoting configuration, enforce least-privilege design, or align scripts with ente
+- [`security-audit`](security-audit/) — Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, foc
 - [`test-automator`](test-automator/) — Use when you need to build, implement, or enhance automated test frameworks, create test scripts, or integrate testing into CI/CD pipelines.
 - [`ui-ux-tester`](ui-ux-tester/) — Use when you need exhaustive UI and UX functionality testing driven by documented user flows, with browser or desktop interaction tooling an
 

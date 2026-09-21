@@ -1,0 +1,9 @@
+# Windows Privesc
+
+Comprehensive Windows privilege escalation methodology for offensive security engagements. Covers the full attack surface from a standard user shell to NT AUTHORITY\\SYSTEM: token impersonation via SeImpersonate and SeAssignPrimaryToken privileges using JuicyPotato, PrintSpoofer, GodPotato, SweetPotato, and RoguePotato; service misconfigurations including unquoted service paths, weak service DACLs, writable service binaries, and insecure service creation permissions; AlwaysInstallElevated MSI exploitation; DLL hijacking through search order abuse, phantom DLL loading, and writable PATH directory injection; UAC bypass techniques via fodhelper.exe, eventvwr.exe, CMSTP, and environment variable manipulation; scheduled task abuse for writable task actions and new task creation; registry autorun exploitation for persistence and escalation; PrintNightmare (CVE-2021-34527) for remote and local privilege escalation; and credential harvesting from SAM database extraction, DPAPI blob decryption, LSA secret dumping, and Credential Manager enumeration. Integrates automated enumeration with WinPEAS, PowerUp, SharpUp, Seatbelt, and BeRoot. Each technique includes detection signatures and defender-side visibility for purple team operations. Maps to MITRE ATT&CK T1548 (Abuse Elevation Control Mechanism) and T1574 (Hijack Execution Flow). Designed for authorized penetration testing, red team engagements, and CTF competitions where you hold a standard user shell and need to escalate to SYSTEM or local Administrator. Use when performing authorized red-team, pentest, or research work involving windows privesc.
+
+## When to use
+
+Use when performing authorized red-team, pentest, or research work involving windows privesc.
+
+Vendored from [risadams/Claude-Red](https://github.com/risadams/Claude-Red) (MIT — see `LICENSE`), originally published as [SnailSploit/claude-red](https://github.com/SnailSploit/claude-red).

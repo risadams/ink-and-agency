@@ -1,0 +1,4 @@
+# Generated from skills/security-audit/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Security Audit"
+  short_description: "Source-first security audit: trust boundaries, verified findings, structured report"

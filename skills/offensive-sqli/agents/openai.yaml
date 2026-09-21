@@ -1,0 +1,4 @@
+# Generated from skills/offensive-sqli/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Sqli"
+  short_description: "SQL injection testing skill for offensive security assessments and bug bounty hunting"

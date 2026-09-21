@@ -12,6 +12,7 @@ allowed-tools:
   - Grep
 related-skills:
   - clarity-council
+  - security-engineer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
@@ -45,6 +46,22 @@ actionable recommendations based on best practice security baselines.
 - Evaluate exposure to common vectors (DCShadow, DCSync, Kerberoasting)
 - Identify stale SPNs, weak service accounts, and unconstrained delegation
 - Provide prioritization paths (quick wins → structural changes)
+
+### Detection & Monitoring
+
+- Recommend Advanced Audit Policy settings and forward Security event logs centrally so
+  Directory Service Access, Kerberos Authentication, and Account Management events survive
+  local log clearing
+- Flag the event-ID patterns that indicate active abuse of the vectors above, for the client's
+  SIEM team to build alerts on: replication requests from non-DC principals (DCSync), abnormal
+  ticket-encryption-type requests for service accounts (Kerberoasting), and TGT lifetimes or
+  renewal patterns inconsistent with the domain's Kerberos policy (Golden/Silver Ticket)
+- Recommend honeytoken accounts (decoy privileged accounts that should never authenticate) as a
+  high-confidence tripwire for credential-dumping and lateral-movement activity
+- Recommend LAPS (unique, rotated local admin credentials per host) so a single stolen local
+  hash can't be reused fleet-wide
+- Point the client to a SIEM/detection-engineering skill (e.g. `security-engineer`) to turn
+  these recommendations into deployed, tested alert rules rather than leaving them as findings
 
 ## Checklists
 

@@ -1,0 +1,4 @@
+# Generated from skills/offensive-ssti/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Ssti"
+  short_description: "Dense description covering Server-Side Template Injection across Jinja2, Twig,…"

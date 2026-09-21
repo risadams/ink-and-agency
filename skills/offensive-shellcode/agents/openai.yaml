@@ -1,0 +1,4 @@
+# Generated from skills/offensive-shellcode/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Shellcode"
+  short_description: "Shellcode development reference for offensive security engagements"

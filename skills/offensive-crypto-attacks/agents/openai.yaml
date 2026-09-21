@@ -1,0 +1,4 @@
+# Generated from skills/offensive-crypto-attacks/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Crypto Attacks"
+  short_description: "Systematic methodology for identifying and exploiting cryptographic implementation…"

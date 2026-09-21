@@ -1,0 +1,4 @@
+# Generated from skills/offensive-wpa2-psk/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Wpa2 Psk"
+  short_description: "WPA/WPA2-PSK attack methodology — four-way handshake capture via targeted…"

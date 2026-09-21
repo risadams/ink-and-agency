@@ -1,0 +1,4 @@
+# Generated from skills/offensive-lorawan-sub-ghz/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Lorawan Sub Ghz"
+  short_description: "LoRaWAN and sub-GHz (433 / 868 / 915 MHz) attack methodology — LoRaWAN ABP/OTAA join…"

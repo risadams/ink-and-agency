@@ -1,0 +1,4 @@
+# Generated from skills/offensive-business-logic/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Business Logic"
+  short_description: "Business logic vulnerability testing for web/mobile/API engagements"

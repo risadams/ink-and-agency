@@ -1,0 +1,4 @@
+# Generated from skills/offensive-windows-privesc/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Windows Privesc"
+  short_description: "Comprehensive Windows privilege escalation methodology for offensive security engagements"

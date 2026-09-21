@@ -1,0 +1,4 @@
+# Generated from skills/offensive-wpa3-sae/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Wpa3 Sae"
+  short_description: "WPA3 / SAE (Simultaneous Authentication of Equals) attack methodology —…"

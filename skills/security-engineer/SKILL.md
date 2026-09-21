@@ -17,6 +17,8 @@ related-skills:
   - clarity-council
   - grill-me
   - terraform-engineer
+  - security-audit
+  - penetration-tester
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
@@ -63,6 +65,14 @@ relying on for each risk, so a single failure does not silently remove your only
 Log security-relevant events centrally and immutably, and alert on the specific patterns that
 indicate compromise. Undetected breaches persist for months; that dwell time is the difference
 between an incident and a catastrophe.
+
+Track detection coverage against a framework (MITRE ATT&CK or D3FEND) instead of writing rules
+ad hoc — it's the only way to see which tactics you have no telemetry for at all. Validate
+coverage with periodic purple-team exercises rather than trusting the rule exists and assuming it
+fires; a rule with no underlying telemetry, or one that silently stopped matching after a log
+schema change, is indistinguishable from no rule until it's tested. Feed findings from
+`security-audit` and `penetration-tester` engagements back into the detection backlog with an
+owner and a re-test date — a written recommendation that nobody owns doesn't become a control.
 
 ## Reporting
 

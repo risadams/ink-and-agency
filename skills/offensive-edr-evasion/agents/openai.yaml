@@ -1,0 +1,4 @@
+# Generated from skills/offensive-edr-evasion/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Edr Evasion"
+  short_description: "EDR evasion offensive checklist: hook unhooking (user/kernel), direct syscalls, PPID…"

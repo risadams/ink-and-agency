@@ -1,0 +1,4 @@
+# Generated from skills/offensive-network-attacks/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Network Attacks"
+  short_description: "Dense description covering ARP spoofing, LLMNR/NBT-NS/mDNS poisoning, DNS poisoning,…"

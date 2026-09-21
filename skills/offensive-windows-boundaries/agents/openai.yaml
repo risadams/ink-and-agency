@@ -1,0 +1,4 @@
+# Generated from skills/offensive-windows-boundaries/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Windows Boundaries"
+  short_description: "Windows security boundary taxonomy and attack surface enumeration: kernel/user…"

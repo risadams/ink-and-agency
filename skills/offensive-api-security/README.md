@@ -1,0 +1,9 @@
+# API Security
+
+Comprehensive API security testing methodology covering REST, gRPC, and WebSocket attack surfaces. Addresses the full OWASP API Security Top 10 2023 including BOLA/IDOR, broken authentication, excessive data exposure, rate limiting bypass, BFLA, mass assignment, SSRF, and security misconfiguration. Includes REST-specific attacks such as HTTP verb tampering, content-type switching, and parameter pollution. Covers gRPC exploitation through protobuf interception, reflection API enumeration, and metadata injection. Addresses WebSocket vulnerabilities including origin bypass, message injection, and cross-site WebSocket hijacking. Provides tooling guidance for Burp Suite, Postman, grpcurl, websocat, and mitmproxy. Each technique includes detection signatures and defensive indicators so you understand what artifacts your testing leaves behind. Designed for authorized penetration testing engagements against API-driven architectures. Use when performing authorized red-team, pentest, or research work involving api security.
+
+## When to use
+
+Use when performing authorized red-team, pentest, or research work involving api security.
+
+Vendored from [risadams/Claude-Red](https://github.com/risadams/Claude-Red) (MIT — see `LICENSE`), originally published as [SnailSploit/claude-red](https://github.com/SnailSploit/claude-red).

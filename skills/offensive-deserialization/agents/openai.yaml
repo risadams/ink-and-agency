@@ -1,0 +1,4 @@
+# Generated from skills/offensive-deserialization/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
+interface:
+  display_name: "Offensive Deserialization"
+  short_description: "Insecure deserialization exploitation across Java, PHP, .NET, Python, Node.js, and Ruby"
