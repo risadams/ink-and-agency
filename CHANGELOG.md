@@ -5,6 +5,12 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.0] - 2026-09-21
+
+### Changed
+- Updates the README to reflect the introduction of a comprehensive security pack, comprising offensive and defensive capabilities. This updates the total skill count from 204 to 289 and Agency skills from 138 to 216.
+- Added security auditing, and red-team/blue-team skill sets
+
 ## [1.7.0] - 2026-08-10
 
 ### Added
