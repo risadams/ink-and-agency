@@ -48,7 +48,7 @@ I'll iterate" (iterative).
 **Resolving a persona name** (two steps, see [`skills/persona/PERSONAS.md`](../persona/PERSONAS.md)):
 first look for `skills/persona/<name>.md` and use its **Decision Lens**, **Preferred Frameworks**,
 and **Blind Spots** (most personas live here). If there's no such file, the name is a hands-on
-specialist skill that doubles as a voice (`data-engineer`, `devops-engineer`, `technical-writer`) —
+specialist skill that doubles as a voice (e.g. `technical-writer`) —
 read its **## Council Persona Lens** section, which is the persona contract (the rest of that skill is
 implementation guidance). Keep terminology consistent with the names in
 [`skills/persona/PERSONAS.md`](../persona/PERSONAS.md).
@@ -100,11 +100,11 @@ do not just list opinions.
 
 **Default panels** (if no personas named; ask if the panel doesn't fit):
 
-- **Architecture** — senior-architect, senior-developer, qa-engineer, tech-lead, devops-engineer, devils-advocate
+- **Architecture** — senior-architect, senior-developer, qa-engineer, tech-lead, ops-architect, devils-advocate
 - **Feature/product** — product-owner, senior-developer, ux-designer, customer-advocate, tech-lead, devils-advocate
 - **Hiring/people** — culture-lead, product-owner, senior-architect, devils-advocate
-- **Risk/security** — security-expert, compliance-officer, senior-architect, devops-engineer, devils-advocate
-- **Financial/business** — financial-officer, product-owner, business-owner, devops-engineer, devils-advocate
+- **Risk/security** — security-expert, compliance-officer, senior-architect, ops-architect, devils-advocate
+- **Financial/business** — financial-officer, product-owner, business-owner, ops-architect, devils-advocate
 - **Estimation** — scrum-master, tech-lead, senior-developer, qa-engineer
 
 Pre-made groups also live in [`skills/persona/GROUPS.md`](../persona/GROUPS.md) — domain panels

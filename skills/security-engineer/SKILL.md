@@ -68,7 +68,7 @@ ad hoc — it's the only way to see which tactics you have no telemetry for at a
 coverage with periodic purple-team exercises rather than trusting the rule exists and assuming it
 fires; a rule with no underlying telemetry, or one that silently stopped matching after a log
 schema change, is indistinguishable from no rule until it's tested. Feed findings from
-`security-audit` and `penetration-tester` engagements back into the detection backlog with an
+external security assessments and penetration tests back into the detection backlog with an
 owner and a re-test date — a written recommendation that nobody owns doesn't become a control.
 
 ## Reporting

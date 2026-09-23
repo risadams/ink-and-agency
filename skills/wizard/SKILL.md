@@ -67,9 +67,9 @@ If two or more fail, fix and re-check. Cap at two passes.
 
 | User need | Delegate via | Notes |
 | :--- | :--- | :--- |
-| The script needs non-trivial shell logic beyond the helpers | Invoke `shell-expert` | Keep the added logic below the `STAGES` marker |
-| The wizard should graduate into a real CLI | Invoke `cli-developer` | A wizard is a one-off; a CLI is a product |
-| The procedure should become CI automation instead | Invoke `deployment-engineer` | If no human judgement is required, automate it rather than wizard it |
+| The script needs non-trivial shell logic beyond the helpers | Write the shell directly | Keep the added logic below the `STAGES` marker |
+| The wizard should graduate into a real CLI | Build a proper CLI instead | A wizard is a one-off; a CLI is a product |
+| The procedure should become CI automation instead | Move it into the CI pipeline | If no human judgement is required, automate it rather than wizard it |
 | The committed wizard needs a front-door mention | Invoke `readme-generator` | So the next person runs the script instead of asking an AI |
 
 **Loop eligibility:** false — a wizard encodes one procedure and is run by a human on demand.

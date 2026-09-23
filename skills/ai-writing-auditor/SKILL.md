@@ -87,7 +87,7 @@ Adapted from brandonwise/humanizer vocabulary research for the tiered detection 
 
 - Clean any generated prose before it ships
 - After a code review, when the change touches documentation or comments
-- When checking customer-facing copy (pairs well with `compliance-auditor`)
+- When checking customer-facing copy
 - On README files, API docs, blog posts, release notes, and any prose output
 
 <!-- self-evolve:start -->

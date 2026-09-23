@@ -121,7 +121,7 @@ Deliver:
 - Combine with **product-manager** for strategic alignment
 - Use **ux-researcher** to validate loop assumptions with users
 - Partner with **business-analyst** to model loop economics
-- Follow up with **content-marketer** for content loop execution
+- Follow up with content and marketing execution for the content loop
 
 <!-- self-evolve:start -->
 ## Self-Evolve Loop
