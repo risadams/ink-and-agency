@@ -1,4 +1,0 @@
-# Generated from skills/offensive-krack-fragattacks/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Krack Fragattacks"
-  short_description: "KRACK (CVE-2017-13077..082) and FragAttacks (CVE-2020-24586..588 + 26139-26147) — key…"

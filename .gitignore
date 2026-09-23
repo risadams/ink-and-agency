@@ -5,3 +5,6 @@ docs/workplan/
 
 # Workspace-local skill state: self-evolve learnings journals, hyperfocus-exit park files
 .ink-and-agency/
+
+# Offensive security pack retired from the published set (kept in git history); local stash only
+ARCHIVE/

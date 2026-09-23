@@ -17,7 +17,6 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - sprint-plan
-  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -126,75 +125,7 @@ Output path: `{{output_root}}\reports\sos-<to-phase>.md`. Phase label is preserv
 
 Template:
 
-```markdown
----
-team: {{team}}
-increment: {{inc}}
-sprint: {{sprint}}
-report_type: scrum-of-scrums
-generated: {{YYYY-MM-DD HH:mm}}
-from_snapshot: "[[{{from_phase}}.canvas]]"
-to_snapshot: "[[{{to_phase}}.canvas]]"
-sprint_config: "[[_sprint]]"
-team_rules: "[[../../_team-rules]]"
-period_velocity: {{n}}
-avg_velocity: {{n}}
-scope_creep: {{true|false}}
-scope_creep_delta: {{n}}
-council_personas: [{{persona list or "none"}}]
----
-# Scrum-of-Scrums — {{team}} Sprint {{sprint}} ({{to_phase}})
-
-> Comparing `{{from_phase}}` ({{from_snapshot_at}}) → `{{to_phase}}` ({{to_snapshot_at}}). Generated {{generated}}.
-
-{{new_info_callout_if_provided}}
-
-## Period at a glance
-
-| Metric | From | To | Δ |
-| :--- | --: | --: | --: |
-| Total tickets | {{n}} | {{n}} | {{±n}} |
-| Total points | {{n}} | {{n}} | {{±n}} |
-| Done points (raw) | {{n}} | {{n}} | {{±n}} |
-| Done points (velocity-relevant, excl. overhead) | {{n}} | {{n}} | {{±n}} |
-| In-review points | {{n}} | {{n}} | {{±n}} |
-| In-progress points | {{n}} | {{n}} | {{±n}} |
-| To-do points | {{n}} | {{n}} | {{±n}} |
-| Wedge points remaining | {{n}} | {{n}} | {{±n}} |
-
-## Scope changes
-
-- **Added this period:** {{n}} tickets ({{n}} pts) — {{list with JIRA:KEYs}}
-- **Removed this period:** {{n}} tickets ({{n}} pts) — {{list}}
-- **Wedge consumed:** {{n}} pts
-- **Verdict:** {{"Scope balanced via wedge ✅" | "⚠️ Scope creep — Δ{{n}} pts beyond wedge"}}
-
-## Status transitions
-
-| Ticket | From | To | Pts |
-| :--- | :--- | :--- | --: |
-| JIRA:PROJ-1234 | TO DO | IN PROGRESS | 3 |
-…
-
-## Per-member workload delta
-
-| Member | Tickets Δ | Points Δ | Notes |
-| :--- | --: | --: | :--- |
-| [[@First Last]] | +2 | +5 | … |
-…
-*(Overhead members shown with both nominal and effective load.)*
-
-{{Phase 5 Key Findings}}
-{{Phase 5 Observations}}
-{{Phase 5 Possible Trouble Areas}}
-{{Phase 5 Trends}}
-{{Phase 5 Knowledge to Capture}}
-
-## Embedded snapshots
-
-- ![[{{from_phase}}.canvas]]
-- ![[{{to_phase}}.canvas]]
-```
+The scrum-of-scrums report: [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md) — fill every placeholder, keep section order and frontmatter keys.
 
 If extending with callouts, dataview, or trend charts, delegate to `obsidian-markdown`.
 
@@ -245,25 +176,16 @@ Saved:        [sos-week 2.md](Scrum Teams/Aurora/Scrum 📅/INC 28/Sprint 2/repo
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - The two compared snapshots are named with their capture dates
-   - Scope changes and status transitions are quantified, not just described
-   - Per-member workload delta is shown
-   - Findings/trends come from the council pass and reconcile with the raw deltas
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- The two compared snapshots are named with their capture dates
+- Scope changes and status transitions are quantified, not just described
+- Per-member workload delta is shown
+- Findings/trends come from the council pass and reconcile with the raw deltas
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/sprint-sos-report.md` (workspace-local
-`.ink-and-agency/learnings/sprint-sos-report.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/sprint-sos-report.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

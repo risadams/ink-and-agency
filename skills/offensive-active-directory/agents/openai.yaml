@@ -1,4 +1,0 @@
-# Generated from skills/offensive-active-directory/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Active Directory"
-  short_description: "Active Directory attack methodology for internal network red team engagements"

@@ -1,4 +1,0 @@
-# Generated from skills/offensive-bug-identification/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Bug Identification"
-  short_description: "Systematic bug identification methodology: source code review patterns, black-box…"

@@ -6,8 +6,6 @@ codex-short-description: "Write Obsidian Flavored Markdown: wikilinks, embeds, c
 related-skills:
   - obsidian-vault
   - obsidian-canvas
-  - documentation-engineer
-  - technical-writer
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -163,38 +161,7 @@ Inline footnote.^[This is inline.]
 
 ## Complete Example
 
-````markdown
----
-title: Project Alpha
-date: 2024-01-15
-tags:
-  - project
-  - active
-status: in-progress
----
-
-# Project Alpha
-
-This project aims to [[improve workflow]] using modern techniques.
-
-> [!important] Key Deadline
-> The first milestone is due on ==January 30th==.
-
-## Tasks
-
-- [x] Initial planning
-- [ ] Development phase
-  - [ ] Backend implementation
-  - [ ] Frontend design
-
-## Notes
-
-The algorithm uses $O(n \log n)$ sorting. See [[Algorithm Notes#Sorting]] for details.
-
-![[Architecture Diagram.png|600]]
-
-Reviewed in [[Meeting Notes 2024-01-10#Decisions]].
-````
+A note combining every construct: [references/COMPLETE-EXAMPLE.md](references/COMPLETE-EXAMPLE.md).
 
 ## References
 
@@ -207,11 +174,6 @@ Reviewed in [[Meeting Notes 2024-01-10#Decisions]].
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/obsidian-markdown.md` (workspace-local
-`.ink-and-agency/learnings/obsidian-markdown.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/obsidian-markdown.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

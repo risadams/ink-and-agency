@@ -53,13 +53,8 @@ function Get-FooterBlock {
     param([string]$Name, [string]$RelPrefix)
     $lines = @(
         $startMark,
-        '',
         '## Self-Evolve Loop',
-        '',
-        "Journal: ``~/.ink-and-agency/learnings/$Name.md`` (workspace-local",
-        "``.ink-and-agency/learnings/$Name.md`` where the sandbox confines writes). Read it",
-        "first, append what the run taught last — [SELF-EVOLVE.md](${RelPrefix}SELF-EVOLVE.md).",
-        '',
+        "Journal ``~/.ink-and-agency/learnings/$Name.md`` (or workspace-local ``.ink-and-agency/`` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](${RelPrefix}SELF-EVOLVE.md).",
         $endMark
     )
     return ($lines -join "`n")

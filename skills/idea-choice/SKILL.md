@@ -10,7 +10,6 @@ codex-short-description: "Weigh ideas with a structured pros-and-cons analysis a
 related-skills:
   - clarity-council
   - idea-generate
-  - business-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -106,11 +105,6 @@ For multiple ideas, append:
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/idea-choice.md` (workspace-local
-`.ink-and-agency/learnings/idea-choice.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/idea-choice.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

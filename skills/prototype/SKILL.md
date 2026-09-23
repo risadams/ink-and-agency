@@ -8,7 +8,6 @@ related-skills:
   - implement
   - plan-to-spec
   - tdd
-  - ui-designer
 loop-eligible: false
 ---
 
@@ -77,16 +76,11 @@ If two or more fail, cut back and re-check. Cap at two passes — a prototype th
 | The prototype answered its question — now build it properly | Invoke `implement` | Fold the validated decision in; the prototype's constraints (no tests, no error handling) don't survive the promotion |
 | The validated logic module needs real tests around it | Invoke `tdd` | Lift the reducer / state machine out first, then build behaviour tests at the agreed seam |
 | The decision should become a written spec | Invoke `plan-to-spec` | Inline the decision-rich prototype snippet (state machine, schema, type shape) into the spec |
-| The UI branch needs stronger visual direction than "three different layouts" | Invoke `ui-designer` | For design-system, hierarchy, and accessibility judgement on the winning variant |
+| The UI branch needs stronger visual direction than "three different layouts" | Give it a design pass directly | Apply design-system, hierarchy, and accessibility judgement to the winning variant |
 
 **Loop eligibility:** false — a prototype answers one question once; there is nothing to re-run on a schedule.
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/prototype.md` (workspace-local
-`.ink-and-agency/learnings/prototype.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/prototype.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

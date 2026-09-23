@@ -18,7 +18,6 @@ See [SKILL.md](SKILL.md) for the full checklists and patterns under each area.
 ## Related skills
 
 - [codebase-plan-refactor](../codebase-plan-refactor/)
-- [refactoring-specialist](../refactoring-specialist/)
 
 ## Tools
 

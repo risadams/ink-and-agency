@@ -1,4 +1,0 @@
-# Generated from skills/offensive-lateral-movement/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Lateral Movement"
-  short_description: "Comprehensive lateral movement tradecraft for authorized red team engagements covering…"

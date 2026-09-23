@@ -4,8 +4,8 @@ category: codebase-build
 description: Analyze a git repository's history and produce an SVG treemap of file churn — area = lines changed, color = commit frequency. Use when user wants to find unstable areas of a codebase, predict bug-prone files, see "where do we change the most", spot refactor candidates, or invokes /codebase-churn.
 codex-short-description: "SVG treemap of git churn to find unstable, bug-prone files"
 related-skills:
-  - performance-engineer
-  - refactoring-specialist
+  - debug
+  - codebase-improve-architecture
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -67,11 +67,6 @@ Open `churn-treemap.svg` in a browser. Hover any tile for path, commit count, li
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/codebase-churn.md` (workspace-local
-`.ink-and-agency/learnings/codebase-churn.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/codebase-churn.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

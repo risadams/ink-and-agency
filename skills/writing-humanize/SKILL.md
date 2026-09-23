@@ -19,8 +19,6 @@ allowed-tools:
 related-skills:
   - writing-tone-check
   - writing-shape
-  - content-quality-editor
-  - ai-writing-auditor
 loop-eligible: false
 recurrence-hint: on-demand
 ---
@@ -192,11 +190,6 @@ Key insight from Wikipedia: "LLMs use statistical algorithms to guess what shoul
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/writing-humanize.md` (workspace-local
-`.ink-and-agency/learnings/writing-humanize.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/writing-humanize.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

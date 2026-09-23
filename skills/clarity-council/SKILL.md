@@ -16,21 +16,11 @@ Structured persona-based consultation for decisions that benefit from expert per
 council runs entirely inline in one of three **modes** — nothing depends on a separate subagent, so
 it behaves identically on every host.
 
-Persona contracts live in the shared [`skills/persona/`](../persona/) category — the index is
-[`skills/persona/PERSONAS.md`](../persona/PERSONAS.md) and pre-made panels are in
-[`skills/persona/GROUPS.md`](../persona/GROUPS.md). Links below are relative to this skill's
-folder.
+Every perspective is a **lens** defined in [LENSES.md](LENSES.md) — one file holding each lens's
+decision lens, output requirements, and blind spot, plus aliases and pre-made panels. Callers still
+say "persona"; a persona name is a lens name.
 
-## When to use
-
-Use this skill when you need any of:
-
-- Quick expert opinion from one persona
-- Multiple expert viewpoints with synthesis
-- Iterative decision-making with clarifications
-- Structured tradeoff analysis
-
-Do not use for pure factual lookup with no decision component.
+Use it for expert opinion, synthesized viewpoints, iterative decision-making, or tradeoff analysis — not for pure factual lookup with no decision component.
 
 ## Which mode?
 
@@ -49,18 +39,13 @@ I'll iterate" (iterative).
 
 - **Decision/problem** — required.
 - **Personas** — optional; which experts to consult (defaults apply per mode).
-- **Persona groups** — optional; pre-made panels from [`skills/persona/GROUPS.md`](../persona/GROUPS.md).
+- **Panels** — optional; pre-made groups from [LENSES.md](LENSES.md#panels).
 - **Depth** — optional: `brief` / `standard` / `deep`.
 - **Context / constraints / desired outcome** — optional but strongly recommended.
 - **Iterative state** — for multi-turn sessions (sessionId, turn, history).
 
-**Resolving a persona name** (two steps, see [`skills/persona/PERSONAS.md`](../persona/PERSONAS.md)):
-first look for `skills/persona/<name>.md` and use its **Decision Lens**, **Preferred Frameworks**,
-and **Blind Spots** (most personas live here). If there's no such file, the name is a hands-on
-specialist skill that doubles as a voice (`data-engineer`, `devops-engineer`, `technical-writer`) —
-read its **## Council Persona Lens** section, which is the persona contract (the rest of that skill is
-implementation guidance). Keep terminology consistent with the names in
-[`skills/persona/PERSONAS.md`](../persona/PERSONAS.md).
+**Resolving a name:** look it up in [LENSES.md](LENSES.md); if it's in the alias table, use the lens
+it maps to. An unknown name → say so and pick the closest lens rather than inventing one.
 
 ---
 
@@ -71,12 +56,11 @@ perspective would help most.
 
 **Workflow**
 
-1. **Confirm the persona.** Resolve its lens per the two-step rule above (local file, else the
-   top-level specialist skill of that name).
+1. **Confirm the lens.** Resolve the name in [LENSES.md](LENSES.md).
 2. **Understand the problem.** Ask a clarifying question only if a hard constraint (state, decision,
    budget/timeline/compliance, definition of success) is ambiguous.
-3. **Apply the lens.** Frame the analysis through the persona's Decision Lens and Preferred
-   Frameworks (e.g. senior-architect → structural/scalability impact; security-expert → attack
+3. **Apply the lens.** Frame the analysis through its decision lens and satisfy its output
+   requirements (e.g. senior-architect → structural/scalability impact; security-expert → attack
    surface/compliance; devils-advocate → challenge the obvious).
 4. **Produce structured advice** (template below).
 5. **Quality checks:** advice tied to the persona's focus (not generic); assumptions separated from
@@ -109,18 +93,15 @@ do not just list opinions.
 
 **Default panels** (if no personas named; ask if the panel doesn't fit):
 
-- **Architecture** — senior-architect, senior-developer, qa-engineer, tech-lead, devops-engineer, devils-advocate
+- **Architecture** — senior-architect, senior-developer, qa-engineer, tech-lead, ops-architect, devils-advocate
 - **Feature/product** — product-owner, senior-developer, ux-designer, customer-advocate, tech-lead, devils-advocate
 - **Hiring/people** — culture-lead, product-owner, senior-architect, devils-advocate
-- **Risk/security** — security-expert, compliance-officer, senior-architect, devops-engineer, devils-advocate
-- **Financial/business** — financial-officer, product-owner, business-owner, devops-engineer, devils-advocate
+- **Risk/security** — security-expert, compliance-officer, senior-architect, ops-architect, devils-advocate
+- **Financial/business** — financial-officer, product-owner, business-owner, ops-architect, devils-advocate
 - **Estimation** — scrum-master, tech-lead, senior-developer, qa-engineer
 
-Pre-made groups also live in [`skills/persona/GROUPS.md`](../persona/GROUPS.md) — domain panels
-(`product-delivery-core`, `platform-and-reliability`, `investigation-and-diagnosis`,
-`stakeholder-reporting`, …) plus convenience archetypes (`technical-focus`, `stakeholder-focus`,
-`full-council`, `quick-pulse`, `estimation`). Reference a group by its slug; expand it into its listed
-personas before consulting.
+More panels (`product-delivery-core`, `investigation-and-diagnosis`, `stakeholder-reporting`,
+`quick-pulse`, …) are in [LENSES.md](LENSES.md#panels); expand a slug into its lenses before consulting.
 
 **Workflow**
 
@@ -229,24 +210,17 @@ Before finalizing:
 - assumptions separated from facts
 - at least one concrete next step
 - at least one explicit risk or tradeoff for non-trivial decisions
-- terminology consistent with the persona names in [`skills/persona/PERSONAS.md`](../persona/PERSONAS.md)
+- every lens named exists in [LENSES.md](LENSES.md)
 
 ## Reference files
 
-- [`skills/persona/PERSONAS.md`](../persona/PERSONAS.md) — full persona index
-- [`skills/persona/GROUPS.md`](../persona/GROUPS.md) — pre-made persona panels
-- [`skills/persona/`](../persona/) — individual persona contracts (30 total)
+- [LENSES.md](LENSES.md) — every lens, aliases, and panels
 - [EXAMPLES.md](EXAMPLES.md) — worked invocations for all three modes
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts
 > (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/clarity-council.md` (workspace-local
-`.ink-and-agency/learnings/clarity-council.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/clarity-council.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

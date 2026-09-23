@@ -30,8 +30,7 @@ allowed-tools:
 related-skills:
   - codebase-explain
   - clarity-council
-  - project-manager
-  - debugger
+  - debug
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -216,15 +215,7 @@ After presenting the report, ask the user — using `AskUserQuestion` — exactl
 
 **If "No":** the skill ends. Confirm with a single sentence: *"Report kept local. No comment posted."*
 
-**If "Yes":**
-
-1. Read the template at `jira-comment-template.md` (sibling file to this SKILL.md).
-2. Convert the Phase 6 report into **Jira wiki markup** (the template shows the exact mapping). Note that Jira comments use Jira's wiki/text-formatting syntax, not GitHub-flavored markdown — headings are `h2.`, bold is `*text*`, code blocks are `{code}...{code}`, panels are `{panel}...{panel}`, etc.
-3. Append the AI disclaimer panel from the template verbatim — it must always appear at the bottom.
-4. Post the comment via `mcp__atlassian__jira_add_comment` with `page_id` = the ticket key (the tool also accepts issue keys for Jira comments) and `body` = the rendered comment.
-5. Confirm to the user with the comment URL or ticket key, e.g. *"Posted triage report as a comment on `{TICKET-KEY}`."*
-
-If the comment fails to post (permissions, network, etc.), surface the error and offer to retry or save the rendered comment locally — do **not** silently swallow the failure.
+**If "Yes":** follow the posting steps in [jira-comment-template.md](jira-comment-template.md) — Jira wiki markup, the mandatory disclaimer panel, and error handling.
 
 ## Constraints
 
@@ -238,25 +229,16 @@ If the comment fails to post (permissions, network, etc.), surface the error and
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Root-cause candidates are ranked and each is falsifiable (states what would confirm/refute it)
-   - Each hypothesis names the suspected code area with evidence (commit, file, or sibling ticket)
-   - At least one concrete next step / solution path per top candidate
-   - Read-only respected — no files written unless the user asked
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Root-cause candidates are ranked and each is falsifiable (states what would confirm/refute it)
+- Each hypothesis names the suspected code area with evidence (commit, file, or sibling ticket)
+- At least one concrete next step / solution path per top candidate
+- Read-only respected — no files written unless the user asked
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/issue-triage.md` (workspace-local
-`.ink-and-agency/learnings/issue-triage.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/issue-triage.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

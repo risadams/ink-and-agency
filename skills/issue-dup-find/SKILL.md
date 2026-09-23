@@ -13,8 +13,6 @@ allowed-tools:
   - AskUserQuestion
   - mcp__atlassian__jira_search
   - mcp__atlassian__jira_get_issue
-related-skills:
-  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -141,25 +139,16 @@ After the report is delivered (and any user-requested file write is confirmed co
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Each suspected pair has a probability score and a one-line reason
-   - Pairs are ordered by descending probability
-   - Read-only respected — no tickets linked, transitioned, or edited
-   - Obvious non-duplicates are not padded into the report
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Each suspected pair has a probability score and a one-line reason
+- Pairs are ordered by descending probability
+- Read-only respected — no tickets linked, transitioned, or edited
+- Obvious non-duplicates are not padded into the report
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/issue-dup-find.md` (workspace-local
-`.ink-and-agency/learnings/issue-dup-find.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/issue-dup-find.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

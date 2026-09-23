@@ -1,4 +1,0 @@
-# Generated from skills/offensive-ssrf/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Ssrf"
-  short_description: "Server-Side Request Forgery testing checklist: SSRF discovery, blind SSRF with…"

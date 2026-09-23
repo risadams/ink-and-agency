@@ -16,9 +16,6 @@ allowed-tools:
   - WebFetch
   - WebSearch
 related-skills:
-  - documentation-engineer
-  - technical-writer
-  - content-quality-editor
   - writing-humanize
 loop-eligible: false
 compatibility: claude-code codex opencode
@@ -100,21 +97,13 @@ only on an explicit instruction.
 
 | User need | Delegate via |
 | :--- | :--- |
-| Docs beyond the repo root — sites, tutorials, information architecture | Invoke `documentation-engineer` |
-| API reference, SDK guides, long-form user documentation | Invoke `technical-writer` |
 | Standard pre-ship prose pass | Invoke `writing-humanize` on the draft — step 5, always |
-| Draft still reads as AI-generated after humanizing | Invoke `content-quality-editor` for a deeper edit |
 
 **Loop eligibility:** false — a README is written when the project changes, not on a schedule.
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/readme-generator.md` (workspace-local
-`.ink-and-agency/learnings/readme-generator.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/readme-generator.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

@@ -1,4 +1,0 @@
-# Generated from skills/offensive-social-engineering/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Social Engineering"
-  short_description: "Social engineering attack techniques beyond email phishing for authorized red team and…"

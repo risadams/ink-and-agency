@@ -118,17 +118,10 @@ Deliver:
 
 ## Works well with
 
-- Combine with **product-manager** for strategic alignment
-- Use **ux-researcher** to validate loop assumptions with users
-- Partner with **business-analyst** to model loop economics
-- Follow up with **content-marketer** for content loop execution
+- Run `assumption-mapping` on the loop's riskiest step before building it
+- Measure the loop with `cohort-analysis` once it ships
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/growth-loops.md` (workspace-local
-`.ink-and-agency/learnings/growth-loops.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/growth-loops.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

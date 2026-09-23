@@ -107,9 +107,6 @@ Nowhere fixed. It's a standalone, not a chain step — the trigger is a manual p
 
 ## Related skills
 
-- **[shell-expert](../shell-expert/)** — for non-trivial shell logic added below the marker.
-- **[cli-developer](../cli-developer/)** — when the one-off wizard deserves to become a real CLI.
-- **[deployment-engineer](../deployment-engineer/)** — when the procedure should become CI automation instead of a human script.
 - **[readme-generator](../readme-generator/)** — to give a committed wizard a front-door mention.
 
 ## Files

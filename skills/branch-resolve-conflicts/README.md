@@ -290,7 +290,7 @@ This skill handles conflict resolution during an active merge/rebase. Sometimes,
 
 - **Code Review After Merge** — If the conflict resolution involved significant logic changes, invoke the [code-reviewer agent](https://github.com/risadams/claude-agents) to validate the merged code for quality and correctness.
 
-- **Coordinated Refactoring** — If two branches are both heavily refactoring overlapping code and conflicts are severe, the [refactoring-specialist agent](https://github.com/risadams/claude-agents) can assess whether a coordinated refactor (instead of merging) would be cleaner. Useful when conflicts expose deeper architectural issues.
+- **Coordinated Refactoring** — If two branches are both heavily refactoring overlapping code and conflicts are severe, [codebase-improve-architecture](../codebase-improve-architecture/) can assess whether a coordinated refactor (instead of merging) would be cleaner. Useful when conflicts expose deeper architectural issues.
 
 - **Git Workflow Strategy** — If merges are consistently painful or branching strategy needs rethinking, the [git-workflow-manager agent](https://github.com/risadams/claude-agents) can design better workflows to prevent future conflicts.
 

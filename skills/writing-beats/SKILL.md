@@ -9,8 +9,7 @@ codex-short-description: "Shape an article as a journey of beats, choose-your-ow
 related-skills:
   - writing-shape
   - writing-fragments
-  - content-quality-editor
-  - technical-writer
+  - writing-humanize
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -116,11 +115,6 @@ When you sense an ending is near, say so: "we could end on the last beat, or add
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/writing-beats.md` (workspace-local
-`.ink-and-agency/learnings/writing-beats.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/writing-beats.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

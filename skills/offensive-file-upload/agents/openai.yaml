@@ -1,4 +1,0 @@
-# Generated from skills/offensive-file-upload/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive File Upload"
-  short_description: "File upload vulnerability checklist: MIME type bypass, extension bypass, magic byte…"

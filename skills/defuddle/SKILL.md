@@ -6,9 +6,6 @@ description: >
   to save tokens. Use instead of WebFetch for any standard web page, documentation, article,
   or blog post — but not for URLs ending in .md, which WebFetch handles directly.
 codex-short-description: "Extract clean markdown from web pages via Defuddle CLI, stripping clutter"
-related-skills:
-  - technical-writer
-  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -53,11 +50,6 @@ defuddle parse <url> -p domain
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/defuddle.md` (workspace-local
-`.ink-and-agency/learnings/defuddle.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/defuddle.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

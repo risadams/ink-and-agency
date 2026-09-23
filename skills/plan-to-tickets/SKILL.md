@@ -123,25 +123,16 @@ Write the `T00N -> KEY` mapping back into the local `tasks.md` **Jira mapping** 
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Tickets are tracer-bullet vertical slices with explicit dependencies and [P] markers
-   - The local tasks.md is the artifact; Jira push happens only on opt-in
-   - Wide refactors use expand-contract sequencing where relevant
-   - Every ticket maps to something in the source spec/plan — none invented
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Tickets are tracer-bullet vertical slices with explicit dependencies and [P] markers
+- The local tasks.md is the artifact; Jira push happens only on opt-in
+- Wide refactors use expand-contract sequencing where relevant
+- Every ticket maps to something in the source spec/plan — none invented
 
 > **Host portability:** tool names follow Claude Code conventions; on other hosts map by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/plan-to-tickets.md` (workspace-local
-`.ink-and-agency/learnings/plan-to-tickets.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/plan-to-tickets.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

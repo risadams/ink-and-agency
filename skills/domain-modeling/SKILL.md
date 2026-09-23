@@ -7,7 +7,6 @@ related-skills:
   - grill-with-docs
   - codebase-design
   - codebase-improve-architecture
-  - documentation-engineer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
@@ -117,11 +116,6 @@ If two or more fail, fix the artifacts and re-check. Cap at two passes.
 > **Host portability:** this skill only reads the repo and writes markdown — no host-specific tools. See [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/domain-modeling.md` (workspace-local
-`.ink-and-agency/learnings/domain-modeling.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/domain-modeling.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

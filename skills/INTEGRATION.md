@@ -4,22 +4,17 @@ The pack is **skills-only** — every capability is a `skills/<name>/SKILL.md`. 
 skills reference and compose with each other. (There is no separate agent layer; the former subagents
 were folded into skills.)
 
-## Two kinds of skill
+## One kind of skill
 
-The pack mixes two shapes under one primitive:
-
-- **Workflow skills** — triggered procedures ("do X, then Y"): `sprint-plan`, `code-review`,
-  `issue-triage`, the writing and Obsidian skills, etc.
-- **Specialist skills** — persona experts you lean on for judgment ("act as a senior Python
-  engineer"): `python-pro`, `security-auditor`, `terraform-engineer`, etc. (formerly subagents).
-
-Both are invoked the same way; the distinction is only about how you use the output.
+Every skill is a triggered procedure ("do X, then Y"): `sprint-plan`, `code-review`, `issue-triage`,
+the writing and Obsidian skills. When a procedure needs judgment from a particular angle, it asks
+`clarity-council` to apply a named lens from [clarity-council/LENSES.md](clarity-council/LENSES.md).
 
 ## How skills compose
 
 ### Pattern 1: a skill invokes another skill
 
-A workflow skill calls a specialist or utility skill mid-run. Example: `issue-triage` invokes
+A workflow skill calls another skill mid-run. Example: `issue-triage` invokes
 `codebase-explain` to map the suspected code area, then `clarity-council` (multi mode) to hypothesize
 root causes. On Claude Code this is the `Skill` tool; describe it by intent so it ports to Codex.
 
@@ -73,11 +68,11 @@ skill and that no tool/MCP names leak into the field.
 - **Find a skill's neighbours:** read its `related-skills` frontmatter.
 - **Find the right skill for a task:** run [`which-skill`](which-skill/) — it routes over the whole
   pack using [FLOWS.md](FLOWS.md).
-- **Browse specialists:** the ~154 persona-expert skills aren't individually catalogued; they're found
-  by their trigger `description`. Browse `skills/` or ask `which-skill`.
+- **Browse everything:** [CATEGORIES.md](CATEGORIES.md) lists all skills by category.
+- **Find a lens:** [clarity-council/LENSES.md](clarity-council/LENSES.md) lists every council lens and alias.
 
 ## See Also
 
 - **[FLOWS.md](FLOWS.md)** — named flows that chain skills end-to-end
 - **[CLAUDE.md](CLAUDE.md)** — skill format spec and the workflow-skill inventory
-- **[README.md](README.md)** — skill discovery and usage
+- **[README.md](../README.md)** — skill discovery and usage

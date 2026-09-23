@@ -1,4 +1,0 @@
-# Generated from skills/offensive-open-redirect/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Open Redirect"
-  short_description: "Open redirect vulnerability checklist: parameter identification, bypass techniques…"

@@ -1,4 +1,0 @@
-# Generated from skills/offensive-api-security/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Api Security"
-  short_description: "Comprehensive API security testing methodology covering REST, gRPC, and WebSocket…"

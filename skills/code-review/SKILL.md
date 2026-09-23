@@ -76,25 +76,16 @@ A change can pass one and fail the other — code that follows every standard bu
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Both axes reported separately — Standards findings never merged into Spec findings, or vice versa
-   - Every finding cites a concrete location (file:line) and the rule or spec clause it violates
-   - Spec axis actually references the originating ticket/spec, not just inferred intent
-   - No finding is a false positive from unreviewed generated or vendored code
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Both axes reported separately — Standards findings never merged into Spec findings, or vice versa
+- Every finding cites a concrete location (file:line) and the rule or spec clause it violates
+- Spec axis actually references the originating ticket/spec, not just inferred intent
+- No finding is a false positive from unreviewed generated or vendored code
 
 > **Host portability:** tool names follow Claude Code conventions; on other hosts map by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/code-review.md` (workspace-local
-`.ink-and-agency/learnings/code-review.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/code-review.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

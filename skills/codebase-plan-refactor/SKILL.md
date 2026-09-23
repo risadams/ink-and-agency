@@ -5,8 +5,6 @@ description: Create a detailed refactor plan with tiny commits via user intervie
 codex-short-description: "Plan a refactor as tiny commits via interview, then file it as an issue"
 related-skills:
   - codebase-improve-architecture
-  - refactoring-specialist
-  - legacy-modernizer
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -78,11 +76,6 @@ Any further notes about the refactor.
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/codebase-plan-refactor.md` (workspace-local
-`.ink-and-agency/learnings/codebase-plan-refactor.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/codebase-plan-refactor.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

@@ -94,7 +94,6 @@ Both branches assume a human drives the artifact. When there's no TTY and no bro
 - **[implement](../implement/)** — builds the real thing once the question is answered (its `prototype` preset is a *pipeline* setting, not this skill).
 - **[tdd](../tdd/)** — puts real behaviour tests around the validated logic module after it's lifted out.
 - **[plan-to-spec](../plan-to-spec/)** — inlines decision-rich prototype snippets (state machine, schema, type shape) into a written spec.
-- **[ui-designer](../ui-designer/)** — design-system, hierarchy, and accessibility judgement on the winning variant.
 
 ## Files
 

@@ -7,7 +7,6 @@ related-skills:
   - grill-me
   - domain-modeling
   - clarity-council
-  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -53,11 +52,6 @@ Clearing this conversation without doing one of those loses the decisions.
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/grill-with-docs.md` (workspace-local
-`.ink-and-agency/learnings/grill-with-docs.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/grill-with-docs.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

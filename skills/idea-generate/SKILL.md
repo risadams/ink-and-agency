@@ -5,7 +5,6 @@ description: Helps users generate, refine, and stress-test ideas from loose topi
 related-skills:
   - clarity-council
   - grill-me
-  - business-analyst
 loop-eligible: false
 recurrence-hint: on-demand
 compatibility: claude-code codex opencode
@@ -53,11 +52,6 @@ Turn raw ideas into robust plans by attempting to break them.
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/idea-generate.md` (workspace-local
-`.ink-and-agency/learnings/idea-generate.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/idea-generate.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

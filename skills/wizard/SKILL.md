@@ -4,9 +4,6 @@ category: developer-experience
 description: Generate an interactive bash wizard that walks a human step by step through a manual procedure. Use when provisioning infrastructure, setting up credentials or CI secrets, walking someone through an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke it for steps the agent can perform itself.
 codex-short-description: "Generate a bash wizard that walks a human through a manual procedure"
 related-skills:
-  - shell-expert
-  - cli-developer
-  - deployment-engineer
   - readme-generator
 loop-eligible: false
 compatibility: claude-code codex opencode
@@ -70,9 +67,9 @@ If two or more fail, fix and re-check. Cap at two passes.
 
 | User need | Delegate via | Notes |
 | :--- | :--- | :--- |
-| The script needs non-trivial shell logic beyond the helpers | Invoke `shell-expert` | Keep the added logic below the `STAGES` marker |
-| The wizard should graduate into a real CLI | Invoke `cli-developer` | A wizard is a one-off; a CLI is a product |
-| The procedure should become CI automation instead | Invoke `deployment-engineer` | If no human judgement is required, automate it rather than wizard it |
+| The script needs non-trivial shell logic beyond the helpers | Write the shell directly | Keep the added logic below the `STAGES` marker |
+| The wizard should graduate into a real CLI | Build a proper CLI instead | A wizard is a one-off; a CLI is a product |
+| The procedure should become CI automation instead | Move it into the CI pipeline | If no human judgement is required, automate it rather than wizard it |
 | The committed wizard needs a front-door mention | Invoke `readme-generator` | So the next person runs the script instead of asking an AI |
 
 **Loop eligibility:** false — a wizard encodes one procedure and is run by a human on demand.
@@ -80,11 +77,6 @@ If two or more fail, fix and re-check. Cap at two passes.
 > **Host portability:** this skill writes a bash script and asks the user questions — no host-specific tools. See [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/wizard.md` (workspace-local
-`.ink-and-agency/learnings/wizard.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/wizard.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

@@ -1,4 +1,0 @@
-# Generated from skills/offensive-fuzzing-course/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Fuzzing Course"
-  short_description: "Week 2 of the exploit development curriculum"

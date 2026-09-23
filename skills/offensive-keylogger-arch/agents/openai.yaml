@@ -1,4 +1,0 @@
-# Generated from skills/offensive-keylogger-arch/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Keylogger Arch"
-  short_description: "Low-level keylogger architecture design: kernel driver hooks (WH_KEYBOARD_LL,…"

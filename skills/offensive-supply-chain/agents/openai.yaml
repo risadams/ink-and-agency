@@ -1,4 +1,0 @@
-# Generated from skills/offensive-supply-chain/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Supply Chain"
-  short_description: "Comprehensive offensive methodology for software supply chain attacks covering the…"

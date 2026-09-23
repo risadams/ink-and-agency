@@ -1,4 +1,0 @@
-# Generated from skills/offensive-c2-frameworks/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive C2 Frameworks"
-  short_description: "Command and Control framework deployment, configuration, and operational tradecraft…"

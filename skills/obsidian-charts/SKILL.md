@@ -9,7 +9,6 @@ description: >
 codex-short-description: "Build Chart.js charts in Obsidian notes from inline series, tables, or Dataview"
 related-skills:
   - obsidian-bases
-  - data-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -136,11 +135,6 @@ See [REFERENCE.md](REFERENCE.md) for the full parameter list, `renderChart` API,
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/obsidian-charts.md` (workspace-local
-`.ink-and-agency/learnings/obsidian-charts.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/obsidian-charts.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

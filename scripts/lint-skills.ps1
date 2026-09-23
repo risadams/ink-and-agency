@@ -52,15 +52,13 @@ $ErrorActionPreference = 'Stop'
 
 $ValidTools = @('Read', 'Write', 'Edit', 'Bash', 'Glob', 'Grep', 'WebFetch', 'WebSearch', 'AskUserQuestion', 'Agent', 'Skill', 'TodoWrite', 'NotebookEdit', 'WebFetch')
 $ValidRecurrence = @('daily', 'weekly', 'on-demand', 'none')
-# The 15 browsability categories from skills/CATEGORIES.md, plus 'featured' for
+# The 9 browsability categories from skills/CATEGORIES.md, plus 'featured' for
 # skills promoted out of a category (clarity-council). Categories used to be
 # folders; the flat Agent Plugins layout makes them frontmatter instead.
 $ValidCategories = @(
-    'business-product', 'codebase-build', 'core-development', 'data-ai',
-    'developer-experience', 'exec-function', 'infrastructure',
-    'language-specialists', 'meta-orchestration', 'obsidian',
-    'quality-security', 'research-analysis', 'scrum-sprint',
-    'specialized-domains', 'writing', 'featured'
+    'business-product', 'codebase-build', 'developer-experience',
+    'exec-function', 'meta-orchestration', 'obsidian',
+    'research-analysis', 'scrum-sprint', 'writing', 'featured'
 )
 
 $errors = @()

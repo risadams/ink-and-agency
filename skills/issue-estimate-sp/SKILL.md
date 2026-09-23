@@ -19,7 +19,6 @@ allowed-tools:
   - mcp__atlassian__jira_get_epic_issues
 related-skills:
   - clarity-council
-  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -60,20 +59,7 @@ Use the Atlassian MCP (read-only) to collect:
 3. **Confluence context** — if the ticket references Confluence pages or has remote links, fetch up to 2 pages for additional design/requirements context using `confluence_get_page`.
 4. **Similar completed tickets** — search for recently closed tickets with similar labels (components are rarely populated — only 8% of tickets have them). Use team labels (`emerald`, `pyrite`, `obsidian`) and category labels (`POAM`, `sp-candidate`, `spTooling`, `documentation`) for matching. Example JQL: `project = {PROJECT} AND labels in ({TEAM_LABEL}) AND status in (Done) AND "Story Points" is not EMPTY ORDER BY resolutiondate DESC` (limit 5). Also check for keyword-similar tickets using a text search on the summary.
 
-### Step 3: Load reference data
-
-Read [REFERENCE_DATA.md](REFERENCE_DATA.md) to calibrate the estimate against historical actuals. This file contains:
-- Representative tickets at each Fibonacci level with actual flow times
-- Known estimation biases in the project (8 documented biases)
-- Summary keyword anchors (e.g. "smoke" = always 1, "STIG" = typically 3-5)
-- Team estimation profiles by label
-- Guidance on when to adjust estimates up or down
-
-**Quick-check the keyword anchors first.** If the ticket summary contains a strong keyword signal (e.g. "smoke test", "upgrade", "investigate"), use the keyword table as a starting point before the full council session.
-
-Use this data to ground the council's discussion in empirical reality, not just gut feel.
-
-### Step 4: Run scrum-poker council session
+### Step 3: Run scrum-poker council session
 
 Invoke the **clarity-council** skill with the following configuration:
 
@@ -120,7 +106,7 @@ depth: standard
 - **senior-developer**: Focus on implementation effort — lines of code, number of files, testing complexity, review burden. Be concrete about what "done" looks like.
 - **qa-engineer**: Focus on test coverage needed, edge cases, regression risk, and validation effort. Flag if testing requires a deployed environment or special access.
 
-### Step 5: Present estimate
+### Step 4: Present estimate
 
 Format the output as:
 
@@ -159,25 +145,16 @@ comparable ticket from REFERENCE_DATA.md if one exists.}
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Estimate cites comparable historical tickets, not just a bare number
-   - The scrum-poker spread (low/mode/high) is shown, not only the final point value
-   - Key uncertainty drivers that would move the estimate are named
-   - Read-only respected — the ticket is not modified
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Estimate cites comparable historical tickets, not just a bare number
+- The scrum-poker spread (low/mode/high) is shown, not only the final point value
+- Key uncertainty drivers that would move the estimate are named
+- Read-only respected — the ticket is not modified
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/issue-estimate-sp.md` (workspace-local
-`.ink-and-agency/learnings/issue-estimate-sp.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/issue-estimate-sp.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

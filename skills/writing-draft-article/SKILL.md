@@ -10,9 +10,7 @@ related-skills:
   - writing-shape
   - writing-beats
   - clarity-council
-  - content-quality-editor
-  - technical-writer
-  - documentation-engineer
+  - writing-humanize
 loop-eligible: false
 
 compatibility: claude-code codex opencode
@@ -252,25 +250,16 @@ The final file should be publication-ready — no placeholders, no "[TBD]", no "
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - The draft delivers on the idea the user actually brought, not a generic take
-   - Structure holds — each paragraph bridges to the next, no orphaned sections
-   - Voice is consistent and free of AI-writing tells
-   - Open threads from the interview are resolved or explicitly flagged
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- The draft delivers on the idea the user actually brought, not a generic take
+- Structure holds — each paragraph bridges to the next, no orphaned sections
+- Voice is consistent and free of AI-writing tells
+- Open threads from the interview are resolved or explicitly flagged
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/writing-draft-article.md` (workspace-local
-`.ink-and-agency/learnings/writing-draft-article.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/writing-draft-article.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

@@ -108,17 +108,10 @@ Deliver:
 
 ## Works well with
 
-- Work with **scrum-master** for ceremony facilitation
-- Collaborate with **product-manager** for priority decisions
-- Partner with **business-analyst** for story definition
-- Coordinate with **project-manager** for timeline alignment
+- Run `clarity-council` with the scrum-master + product-owner lenses when priorities conflict
+- Hand refined stories to `issue-estimate-sp` for sizing
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/backlog-grooming.md` (workspace-local
-`.ink-and-agency/learnings/backlog-grooming.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/backlog-grooming.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

@@ -1,4 +1,0 @@
-# Generated from skills/offensive-bluetooth-classic/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Bluetooth Classic"
-  short_description: "Bluetooth Classic (BR/EDR) attack methodology — device discovery, service enumeration…"

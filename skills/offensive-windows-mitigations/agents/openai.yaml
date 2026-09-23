@@ -1,4 +1,0 @@
-# Generated from skills/offensive-windows-mitigations/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Windows Mitigations"
-  short_description: "Deep-dive on Windows exploit mitigations: ASLR, DEP/NX, CFG, CET/Shadow Stack, SEHOP,…"
