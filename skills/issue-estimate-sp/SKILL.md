@@ -59,20 +59,7 @@ Use the Atlassian MCP (read-only) to collect:
 3. **Confluence context** — if the ticket references Confluence pages or has remote links, fetch up to 2 pages for additional design/requirements context using `confluence_get_page`.
 4. **Similar completed tickets** — search for recently closed tickets with similar labels (components are rarely populated — only 8% of tickets have them). Use team labels (`emerald`, `pyrite`, `obsidian`) and category labels (`POAM`, `sp-candidate`, `spTooling`, `documentation`) for matching. Example JQL: `project = {PROJECT} AND labels in ({TEAM_LABEL}) AND status in (Done) AND "Story Points" is not EMPTY ORDER BY resolutiondate DESC` (limit 5). Also check for keyword-similar tickets using a text search on the summary.
 
-### Step 3: Load reference data
-
-Read [REFERENCE_DATA.md](REFERENCE_DATA.md) to calibrate the estimate against historical actuals. This file contains:
-- Representative tickets at each Fibonacci level with actual flow times
-- Known estimation biases in the project (8 documented biases)
-- Summary keyword anchors (e.g. "smoke" = always 1, "STIG" = typically 3-5)
-- Team estimation profiles by label
-- Guidance on when to adjust estimates up or down
-
-**Quick-check the keyword anchors first.** If the ticket summary contains a strong keyword signal (e.g. "smoke test", "upgrade", "investigate"), use the keyword table as a starting point before the full council session.
-
-Use this data to ground the council's discussion in empirical reality, not just gut feel.
-
-### Step 4: Run scrum-poker council session
+### Step 3: Run scrum-poker council session
 
 Invoke the **clarity-council** skill with the following configuration:
 
@@ -119,7 +106,7 @@ depth: standard
 - **senior-developer**: Focus on implementation effort — lines of code, number of files, testing complexity, review burden. Be concrete about what "done" looks like.
 - **qa-engineer**: Focus on test coverage needed, edge cases, regression risk, and validation effort. Flag if testing requires a deployed environment or special access.
 
-### Step 5: Present estimate
+### Step 4: Present estimate
 
 Format the output as:
 
