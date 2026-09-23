@@ -21,16 +21,7 @@ Persona contracts live in the shared [`skills/persona/`](../persona/) category �
 [`skills/persona/GROUPS.md`](../persona/GROUPS.md). Links below are relative to this skill's
 folder.
 
-## When to use
-
-Use this skill when you need any of:
-
-- Quick expert opinion from one persona
-- Multiple expert viewpoints with synthesis
-- Iterative decision-making with clarifications
-- Structured tradeoff analysis
-
-Do not use for pure factual lookup with no decision component.
+Use it for expert opinion, synthesized viewpoints, iterative decision-making, or tradeoff analysis — not for pure factual lookup with no decision component.
 
 ## Which mode?
 
@@ -235,7 +226,7 @@ Before finalizing:
 
 - [`skills/persona/PERSONAS.md`](../persona/PERSONAS.md) — full persona index
 - [`skills/persona/GROUPS.md`](../persona/GROUPS.md) — pre-made persona panels
-- [`skills/persona/`](../persona/) — individual persona contracts (30 total)
+- [`skills/persona/`](../persona/) — individual persona contracts (46 total)
 - [EXAMPLES.md](EXAMPLES.md) — worked invocations for all three modes
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts
