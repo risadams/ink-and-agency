@@ -12,7 +12,6 @@ compatibility: claude-code codex opencode
 allowed-tools:
   - AskUserQuestion
 related-skills:
-  - project-manager
   - i-have-adhd
 loop-eligible: false
 ---

@@ -41,11 +41,7 @@ without rewriting the file.
 
 ## Related skills
 
-- [documentation-engineer](../documentation-engineer/) — docs beyond the repo root
-- [technical-writer](../technical-writer/) — API references, SDK guides
 - [writing-humanize](../writing-humanize/) — the step 5 prose pass
-- [content-quality-editor](../content-quality-editor/) — deeper edit when
-  humanizing isn't enough
 
 ## Tools
 

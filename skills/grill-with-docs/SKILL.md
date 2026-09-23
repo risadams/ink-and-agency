@@ -7,7 +7,6 @@ related-skills:
   - grill-me
   - domain-modeling
   - clarity-council
-  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

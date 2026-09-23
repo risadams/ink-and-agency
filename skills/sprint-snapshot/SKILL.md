@@ -10,7 +10,6 @@ related-skills:
   - sprint-plan
   - sprint-review
   - daily-standup-prep
-  - project-manager
 loop-eligible: true
 recurrence-hint: weekly
 allowed-tools:

@@ -5,7 +5,6 @@ description: Search, create, and manage notes in the Obsidian vault with wikilin
 related-skills:
   - obsidian-markdown
   - obsidian-canvas
-  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

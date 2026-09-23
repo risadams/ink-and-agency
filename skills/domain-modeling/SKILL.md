@@ -7,7 +7,6 @@ related-skills:
   - grill-with-docs
   - codebase-design
   - codebase-improve-architecture
-  - documentation-engineer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

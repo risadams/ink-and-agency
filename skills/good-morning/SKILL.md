@@ -10,7 +10,6 @@ related-skills:
   - sprint-snapshot
   - daily-standup-prep
   - daily-briefing
-  - project-manager
 loop-eligible: false
 recurrence-hint: daily
 allowed-tools:

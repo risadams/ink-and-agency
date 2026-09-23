@@ -6,8 +6,6 @@ codex-short-description: "Write Obsidian Flavored Markdown: wikilinks, embeds, c
 related-skills:
   - obsidian-vault
   - obsidian-canvas
-  - documentation-engineer
-  - technical-writer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

@@ -6,7 +6,6 @@ codex-short-description: "Deep-module design vocabulary: interfaces, seams, adap
 related-skills:
   - codebase-improve-architecture
   - codebase-plan-refactor
-  - refactoring-specialist
   - tdd
 loop-eligible: false
 compatibility: claude-code codex opencode

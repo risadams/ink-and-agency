@@ -9,8 +9,7 @@ codex-short-description: "Shape an article as a journey of beats, choose-your-ow
 related-skills:
   - writing-shape
   - writing-fragments
-  - content-quality-editor
-  - technical-writer
+  - writing-humanize
 loop-eligible: false
 
 compatibility: claude-code codex opencode

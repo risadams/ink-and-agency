@@ -17,7 +17,6 @@ allowed-tools:
   - Bash
 related-skills:
   - task-initiation
-  - project-manager
 loop-eligible: false
 ---
 

@@ -10,7 +10,7 @@ allowed-tools:
   - mcp__prompt-to-asset
 related-skills:
   - codebase-plan-refactor
-  - refactoring-specialist
+  - codebase-improve-architecture
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

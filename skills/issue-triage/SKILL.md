@@ -30,8 +30,7 @@ allowed-tools:
 related-skills:
   - codebase-explain
   - clarity-council
-  - project-manager
-  - debugger
+  - debug
 loop-eligible: false
 
 compatibility: claude-code codex opencode

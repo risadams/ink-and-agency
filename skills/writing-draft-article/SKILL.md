@@ -10,9 +10,7 @@ related-skills:
   - writing-shape
   - writing-beats
   - clarity-council
-  - content-quality-editor
-  - technical-writer
-  - documentation-engineer
+  - writing-humanize
 loop-eligible: false
 
 compatibility: claude-code codex opencode

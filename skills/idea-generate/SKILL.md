@@ -5,7 +5,6 @@ description: Helps users generate, refine, and stress-test ideas from loose topi
 related-skills:
   - clarity-council
   - grill-me
-  - business-analyst
 loop-eligible: false
 recurrence-hint: on-demand
 compatibility: claude-code codex opencode

@@ -19,7 +19,6 @@ allowed-tools:
   - mcp__atlassian__jira_get_epic_issues
 related-skills:
   - clarity-council
-  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode

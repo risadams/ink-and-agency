@@ -6,8 +6,6 @@ codex-short-description: "How to write documents agents consume: skills, AGENTS.
 related-skills:
   - skill-create
   - which-skill
-  - documentation-engineer
-  - technical-writer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---
@@ -109,7 +107,7 @@ If two or more fail, revise and re-check. Cap at two passes.
 | :--- | :--- | :--- |
 | Scaffold a brand-new skill in this pack | Invoke `skill-create` | That skill builds the structure; this one governs the prose |
 | Cognitive load has piled up past what the human can remember | Invoke `which-skill` | The pack's router — the cure for remembering the whole catalogue |
-| The document is for humans, not agents | Invoke `technical-writer` or `documentation-engineer` | Different reader, different levers |
+| The document is for humans, not agents | Invoke `writing-humanize` (prose) or `readme-generator` (a README) | Different reader, different levers |
 
 **Loop eligibility:** false — reference, consulted while authoring.
 

@@ -9,7 +9,7 @@ codex-short-description: "Shape raw notes into an article, paragraph by paragrap
 related-skills:
   - writing-draft-article
   - writing-beats
-  - content-quality-editor
+  - writing-humanize
 loop-eligible: false
 
 compatibility: claude-code codex opencode

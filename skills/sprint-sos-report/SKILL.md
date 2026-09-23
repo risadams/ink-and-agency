@@ -17,7 +17,6 @@ allowed-tools:
 related-skills:
   - sprint-snapshot
   - sprint-plan
-  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode

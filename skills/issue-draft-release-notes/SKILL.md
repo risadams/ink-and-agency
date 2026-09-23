@@ -27,7 +27,6 @@ allowed-tools:
 related-skills:
   - clarity-council
   - writing-humanize
-  - technical-writer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

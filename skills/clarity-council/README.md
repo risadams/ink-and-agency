@@ -58,7 +58,7 @@ Skill: clarity-council (mode: multi)
 
 ## How it works
 
-The skill loads persona contracts from its own [`skills/persona/`](../persona/) library,
+The skill applies lenses from its own [LENSES.md](LENSES.md) (one short entry per lens),
 generates perspective-specific responses with explicit assumptions, and (in multi/iterative modes)
 synthesizes across viewpoints. Output is structured markdown so downstream consumers (other skills,
 dashboards) can parse it reliably.
@@ -72,7 +72,7 @@ dashboards) can parse it reliably.
 - **Decision/problem** — required.
 - **Context** — background, constraints, prior decisions.
 - **Personas** — which experts to consult (defaults apply per mode).
-- **Persona groups** — pre-made panels from [`skills/persona/GROUPS.md`](../persona/GROUPS.md).
+- **Panels** — pre-made groups from [LENSES.md](LENSES.md#panels).
 - **Depth** — `brief` / `standard` / `deep`.
 - **Iterative state** — sessionId, turn, history (iterative mode only).
 
@@ -117,8 +117,8 @@ Every response includes:
 A: single if you want one expert; multi if you need synthesis; iterative if constraints evolve.
 
 **Q: Can I add custom personas?**
-A: Yes. Add a persona contract file to [`skills/persona/`](../persona/) and reference it
-(e.g. "convene with my-custom-persona and senior-architect").
+A: Yes. Add an entry to [LENSES.md](LENSES.md) — a decision lens, output requirements, and a blind
+spot — and reference it by name (e.g. "convene with my-custom-lens and senior-architect").
 
 **Q: How is this different from grill-me?**
 A: `grill-me` interrogates *you* one question at a time. This skill collects multiple expert opinions
@@ -140,6 +140,4 @@ don't break.
 
 - **[SKILL.md](SKILL.md)** — skill entry point (all three modes)
 - **[EXAMPLES.md](EXAMPLES.md)** — worked invocations
-- **[skills/persona/PERSONAS.md](../persona/PERSONAS.md)** — full persona index
-- **[skills/persona/GROUPS.md](../persona/GROUPS.md)** — pre-made persona panels
-- **[skills/persona/](../persona/)** — individual persona contracts (30 personas)
+- **[LENSES.md](LENSES.md)** — every lens, aliases, and panels

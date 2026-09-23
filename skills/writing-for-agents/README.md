@@ -100,8 +100,7 @@ Mostly no — and over-fitting to one model is its own trap. A new model usually
 
 - **[skill-create](../skill-create/)** — scaffolds a new skill in this pack; this skill governs its prose.
 - **[which-skill](../which-skill/)** — the pack's router, and the worked example of the cognitive-load cure in `SKILL-MECHANICS.md`.
-- **[content-quality-editor](../content-quality-editor/)** / **[writing-humanize](../writing-humanize/)** — for human-facing prose. Different reader, different levers.
-- **[documentation-engineer](../documentation-engineer/)** — documentation systems for people.
+- **[writing-humanize](../writing-humanize/)** — for human-facing prose. Different reader, different levers.
 
 ## Files
 

@@ -16,7 +16,6 @@ allowed-tools:
   - Glob
 related-skills:
   - task-initiation
-  - project-manager
   - i-have-adhd
   - hyperfocus-exit
 loop-eligible: false

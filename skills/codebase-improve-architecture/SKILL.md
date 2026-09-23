@@ -8,7 +8,6 @@ related-skills:
   - domain-modeling
   - codebase-plan-refactor
   - grill-with-docs
-  - refactoring-specialist
 loop-eligible: false
 
 compatibility: claude-code codex opencode

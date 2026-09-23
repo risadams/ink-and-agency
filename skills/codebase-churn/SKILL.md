@@ -4,8 +4,8 @@ category: codebase-build
 description: Analyze a git repository's history and produce an SVG treemap of file churn — area = lines changed, color = commit frequency. Use when user wants to find unstable areas of a codebase, predict bug-prone files, see "where do we change the most", spot refactor candidates, or invokes /codebase-churn.
 codex-short-description: "SVG treemap of git churn to find unstable, bug-prone files"
 related-skills:
-  - performance-engineer
-  - refactoring-specialist
+  - debug
+  - codebase-improve-architecture
 loop-eligible: false
 
 compatibility: claude-code codex opencode

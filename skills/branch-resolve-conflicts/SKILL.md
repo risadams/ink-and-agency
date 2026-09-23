@@ -14,7 +14,7 @@ allowed-tools:
   - Glob
 related-skills:
   - branch-rebase
-  - refactoring-specialist
+  - codebase-improve-architecture
 loop-eligible: false
 
 compatibility: claude-code codex opencode

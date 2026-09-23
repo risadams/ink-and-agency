@@ -5,7 +5,6 @@ description: Create a detailed refactor plan with tiny commits via user intervie
 codex-short-description: "Plan a refactor as tiny commits via interview, then file it as an issue"
 related-skills:
   - codebase-improve-architecture
-  - refactoring-specialist
 loop-eligible: false
 
 compatibility: claude-code codex opencode

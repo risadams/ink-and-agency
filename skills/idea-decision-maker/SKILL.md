@@ -15,7 +15,6 @@ allowed-tools:
   - Skill
 related-skills:
   - clarity-council
-  - business-analyst
 loop-eligible: false
 ---
 

@@ -16,9 +16,6 @@ allowed-tools:
   - WebFetch
   - WebSearch
 related-skills:
-  - documentation-engineer
-  - technical-writer
-  - content-quality-editor
   - writing-humanize
 loop-eligible: false
 compatibility: claude-code codex opencode
@@ -100,10 +97,7 @@ only on an explicit instruction.
 
 | User need | Delegate via |
 | :--- | :--- |
-| Docs beyond the repo root — sites, tutorials, information architecture | Invoke `documentation-engineer` |
-| API reference, SDK guides, long-form user documentation | Invoke `technical-writer` |
 | Standard pre-ship prose pass | Invoke `writing-humanize` on the draft — step 5, always |
-| Draft still reads as AI-generated after humanizing | Invoke `content-quality-editor` for a deeper edit |
 
 **Loop eligibility:** false — a README is written when the project changes, not on a schedule.
 

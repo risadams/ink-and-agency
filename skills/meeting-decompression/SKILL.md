@@ -16,7 +16,6 @@ allowed-tools:
   - Skill
 related-skills:
   - clarity-council
-  - project-manager
 loop-eligible: false
 ---
 

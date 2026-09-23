@@ -9,7 +9,6 @@ description: >
   ticket key for analysis.
 related-skills:
   - clarity-council
-  - business-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode

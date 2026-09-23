@@ -6,7 +6,6 @@ codex-short-description: "Create and edit Obsidian .canvas files: nodes, edges, 
 related-skills:
   - obsidian-markdown
   - obsidian-bases
-  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

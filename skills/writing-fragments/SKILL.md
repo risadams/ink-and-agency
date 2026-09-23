@@ -9,7 +9,7 @@ description: >
 codex-short-description: "Mine raw writing fragments into one document as material for a future article"
 related-skills:
   - writing-shape
-  - content-quality-editor
+  - writing-humanize
 loop-eligible: false
 
 compatibility: claude-code codex opencode

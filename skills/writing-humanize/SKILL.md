@@ -19,8 +19,6 @@ allowed-tools:
 related-skills:
   - writing-tone-check
   - writing-shape
-  - content-quality-editor
-  - ai-writing-auditor
 loop-eligible: false
 recurrence-hint: on-demand
 ---

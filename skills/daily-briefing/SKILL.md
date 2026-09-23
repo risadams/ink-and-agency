@@ -20,7 +20,6 @@ allowed-tools:
   - Skill
 related-skills:
   - energy-budget
-  - project-manager
 loop-eligible: true
 recurrence-hint: daily
 

@@ -5,7 +5,6 @@ description: Create and edit Obsidian Bases (.base files) with views, filters, f
 related-skills:
   - obsidian-canvas
   - obsidian-charts
-  - data-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode

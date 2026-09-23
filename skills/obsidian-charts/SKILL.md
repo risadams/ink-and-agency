@@ -9,7 +9,6 @@ description: >
 codex-short-description: "Build Chart.js charts in Obsidian notes from inline series, tables, or Dataview"
 related-skills:
   - obsidian-bases
-  - data-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode

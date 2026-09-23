@@ -13,8 +13,6 @@ allowed-tools:
   - AskUserQuestion
   - mcp__atlassian__jira_search
   - mcp__atlassian__jira_get_issue
-related-skills:
-  - project-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode

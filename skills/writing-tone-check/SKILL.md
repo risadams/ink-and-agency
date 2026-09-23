@@ -17,7 +17,6 @@ allowed-tools:
   - Skill
 related-skills:
   - writing-humanize
-  - content-quality-editor
 loop-eligible: false
 ---
 

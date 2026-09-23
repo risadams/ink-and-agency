@@ -108,10 +108,8 @@ Deliver:
 
 ## Works well with
 
-- Work with **scrum-master** for ceremony facilitation
-- Collaborate with **product-manager** for priority decisions
-- Partner with **business-analyst** for story definition
-- Coordinate with **project-manager** for timeline alignment
+- Run `clarity-council` with the scrum-master + product-owner lenses when priorities conflict
+- Hand refined stories to `issue-estimate-sp` for sizing
 
 <!-- self-evolve:start -->
 ## Self-Evolve Loop

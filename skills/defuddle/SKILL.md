@@ -6,9 +6,6 @@ description: >
   to save tokens. Use instead of WebFetch for any standard web page, documentation, article,
   or blog post — but not for URLs ending in .md, which WebFetch handles directly.
 codex-short-description: "Extract clean markdown from web pages via Defuddle CLI, stripping clutter"
-related-skills:
-  - technical-writer
-  - documentation-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

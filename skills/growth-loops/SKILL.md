@@ -118,10 +118,8 @@ Deliver:
 
 ## Works well with
 
-- Combine with **product-manager** for strategic alignment
-- Use **ux-researcher** to validate loop assumptions with users
-- Partner with **business-analyst** to model loop economics
-- Follow up with content and marketing execution for the content loop
+- Run `assumption-mapping` on the loop's riskiest step before building it
+- Measure the loop with `cohort-analysis` once it ships
 
 <!-- self-evolve:start -->
 ## Self-Evolve Loop

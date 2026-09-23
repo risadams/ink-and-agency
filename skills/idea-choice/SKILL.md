@@ -10,7 +10,6 @@ codex-short-description: "Weigh ideas with a structured pros-and-cons analysis a
 related-skills:
   - clarity-council
   - idea-generate
-  - business-analyst
 loop-eligible: false
 
 compatibility: claude-code codex opencode
