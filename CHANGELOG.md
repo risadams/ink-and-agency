@@ -5,6 +5,22 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-09-23
+
+### Changed
+- Remove pre-council reference data step
+- Align plugin metadata and category taxonomy with the 80-skill pack
+- Load conditional material on demand; sync docs to 80 skills
+- Cull 14 more skills; replace 46 persona files with one lens table
+- Trim redundant intro, fix stale persona count (30->46)
+- Condense the 8 oversized persona contracts (~45% each)
+- Condense scrum-master (~43%), set the tight persona structure
+- Compress the self-evolve footer across all 94 skills
+- Re-master to a lean, focused pack (289 -> 94)
+
+### Fixed
+- Repoint 6 skills' cross-references off culled skills
+
 ## [1.8.0] - 2026-09-21
 
 ### Changed
