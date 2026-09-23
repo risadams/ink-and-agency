@@ -21,9 +21,8 @@ also reads the `skills` array in `.claude-plugin/plugin.json`, generated from th
 <name>/SKILL.md                   # Skill entry point (YAML frontmatter + instructions)
 <name>/*.md                       # Supporting docs, formats, or deep-dive modules
 <name>/agents/openai.yaml         # Codex picker metadata (GENERATED)
-clarity-council/                  # featured skill (reads persona/)
-persona/                          # shared council persona contracts (reference docs, not skills)
-persona/PERSONAS.md               #   persona index; persona/GROUPS.md = pre-made panels
+clarity-council/                  # featured skill
+clarity-council/LENSES.md         #   every council lens, aliases for retired persona names, pre-made panels
 ```
 
 The skill **name** (invocation id) is the folder name and is independent of its category —
@@ -133,7 +132,7 @@ loop-eligible: false  # Orchestrator doesn't recur alone; components do
 ```yaml
 ---
 name: sprint-snapshot
-related-skills: [sprint-plan, sprint-review, daily-standup-prep, scrum-master, project-manager]
+related-skills: [sprint-plan, sprint-review, daily-standup-prep]
 loop-eligible: true
 recurrence-hint: weekly  # Usually run once per sprint, or on-demand
 ---
@@ -173,14 +172,14 @@ never hand-edit a footer.
 
 > **Public skills only.** Private skills live in `_private/` and surface as junctions in the root (e.g. `cpf`, `mr-*`, `setup-*`). They are gitignored and **must not** be listed here. To check what's private: `cmd //c "dir /AL"` lists junctions, and `.gitignore` is the canonical list.
 >
-> **Scope of this table.** The rows below are the *workflow* skills (the "Ink" set). A small set of **reference specialists** (former subagents kept because they carry non-obvious, opinionated judgment — e.g. `refactoring-specialist`, `performance-engineer`, `documentation-engineer`, `security-engineer`) are not enumerated here; they are discovered by their trigger `description`. Browse `skills/` for the full set.
+> **Scope of this table.** The rows below are the *workflow* skills (the "Ink" set). Method skills (`ab-test-analysis`, `cohort-analysis`, `assumption-mapping`, `growth-loops`, `backlog-grooming`, `first-principles-thinking`, `readme-generator`, `visual-asset-generator`) are not enumerated here; browse [CATEGORIES.md](CATEGORIES.md) for all of them.
 
 | Skill | Purpose |
 | :--- | :--- |
 | branch-rebase | Safely rebase the current branch onto its upstream target; auto-resolves trivial conflicts |
 | branch-resolve-conflicts | Resolve complex merge/rebase conflicts by reconstructing intent, preserving both branches' goals when possible, running full automated checks (typecheck, tests, format) |
 | break-it-down | Decode messages into plain language with tone/intent analysis |
-| clarity-council | Persona-based consultation (single/multi-persona, iterative) |
+| clarity-council | Multi-perspective consultation through 31 decision lenses (single / multi / iterative); lenses, aliases, and panels in LENSES.md |
 | code-review | Two-axis review of the working diff since a fixed point — Standards (repo conventions + Fowler code-smell baseline) and Spec (matches the originating ticket) — run as parallel sub-agents, reported side by side, never merged. Pre-MR counterpart to mr-review |
 | codebase-churn | Git-history treemap (SVG): area = lines changed, color = commit frequency — find unstable, bug-prone files |
 | codebase-design | Deep-module design vocabulary — module, interface, depth, seam, adapter, leverage, locality — plus DEEPENING.md (dependency categories, seam discipline) and INTERFACE-DESIGN.md (design-it-twice). Reference skill: the single source of the language codebase-improve-architecture, codebase-plan-refactor, and tdd all speak |
@@ -282,7 +281,7 @@ Every skill ships a sibling `README.md` (lint warns without one). It is the huma
 ## Editing an existing skill
 
 - The `SKILL.md` at the folder root is the entry point. Never move it.
-- Supporting files (formats, deep-dive modules, persona contracts) stay in the same folder.
+- Supporting files (formats, templates, deep-dive modules, optional modes) stay in the same folder. Put material only some runs need there, not in `SKILL.md`.
 - Update the skill's README if the workflow or reference files change.
 - **Loop Method:** If you add related-skills or a Delegation Map, update the frontmatter + add the section to SKILL.md.
 - If the skill can now run recurring, add `loop-eligible: true` and `recurrence-hint: [frequency]`.

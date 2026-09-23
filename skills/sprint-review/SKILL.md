@@ -127,94 +127,7 @@ If `--no-council`, degrade to direct-LLM and flag in console + frontmatter.
 
 Output path: `{{output_root}}\reports\sprint-review.md`. Same overwrite-prompt rule. The report **must** match the SM's standard template (from the user's "Sprint Review" prompt template) so it can be pasted directly into Confluence:
 
-```markdown
----
-team: {{team}}
-increment: {{inc}}
-sprint: {{sprint}}
-report_type: sprint-review
-generated: {{YYYY-MM-DD HH:mm}}
-start_snapshot: "[[start.canvas]]"
-end_snapshot: "[[end.canvas]]"
-sprint_config: "[[_sprint]]"
-team_rules: "[[../../_team-rules]]"
-committed_points: {{n}}
-delivered_points_velocity_relevant: {{n}}
-commitment_met: {{true|false}}
-commitment_ratio_vr: {{0.xx}}
-sprint_velocity_raw: {{n}}
-sprint_velocity_velocity_relevant: {{n}}
-avg_velocity_last_3: {{n}}
-scope_creep: {{true|false}}
-scope_creep_delta: {{n}}
-carry_over_tickets: {{n}}
-carry_over_points: {{n}}
-council_personas: [{{persona list or "none"}}]
----
-
-> Generated {{generated}} from `start.canvas` ({{start_snapshot_at}}) → `end.canvas` ({{end_snapshot_at}}).
-
-### **Scrum Master**
-
-[{{scrum_master_name}}]({{scrum_master_confluence_url}})
-
-### Summary of Sprint Accomplishments
-
-{{Phase 5 — Summary of Sprint Accomplishments}}
-
-### Feature Demos
-
-{{auto-extracted: list of completed tickets whose issuetype is "Feature" or whose labels include "demo". If none detected, leave a placeholder line: "_No Feature-type tickets completed this sprint — confirm with PO before publishing._"}}
-
-### Significant customer meetings
-
-_To be filled in by the Scrum Master before publishing._
-
-### Status
-
-{{Phase 5 — Status}}
-
-### Did team meet their Sprint Commitment?
-
-{{Phase 5 — Did team meet their Sprint Commitment?}}
-
-Confidence level in team meeting their PI Commitment
-
-{{Phase 5 — Confidence level in team meeting their PI Commitment}}
-
-### Impediments
-
-{{Phase 5 — Impediments}}
-
-### Retro learnings (durable)
-
-{{Phase 5 — Retro learnings (durable)}}
----
-
-## Appendix — Quantitative summary
-
-| Metric | Value |
-| :--- | --: |
-| Committed (raw / velocity-relevant) | {{n}} / {{n}} pts |
-| Delivered (raw / velocity-relevant) | {{n}} / {{n}} pts |
-| Sprint velocity (raw / velocity-relevant) | {{n}} / {{n}} pts |
-| 3-sprint avg velocity | {{n}} pts |
-| Commitment ratio (velocity-relevant) | {{0.xx}} ({{commitment_threshold}} threshold → {{met/missed}}) |
-| Wedge consumed | {{n}} pts (verdict: {{balanced/creep}}) |
-| Scope added | {{n}} pts ({{n}} tickets) |
-| Carry-over | {{n}} tickets ({{n}} pts) |
-
-## Appendix — Carry-over candidates
-
-| Ticket | Owner | Points | Status at sprint end | Suggested action |
-| :--- | :--- | --: | :--- | :--- |
-| JIRA:PROJ-1234 | [[@First Last]] | 3 | IN PROGRESS | Carry to next sprint |
-
-## Appendix — Embedded snapshots
-
-- ![[start.canvas]]
-- ![[end.canvas]]
-```
+The sprint review report (the SM's standard template — keep its shape so it pastes into Confluence): [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md) — fill every placeholder, keep section order and frontmatter keys.
 
 The four placeholders that the SM is expected to refine before publishing — `Significant customer meetings`, and any council output the SM disagrees with — are clearly marked with `_italics_` placeholders so the SM doesn't accidentally publish them as-is.
 
@@ -275,16 +188,12 @@ Saved:            [sprint-review.md](Scrum Teams/Aurora/Scrum 📅/INC 28/Sprint
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Every template section is present (Accomplishments / Status / Sprint Commitment / PI Confidence / Impediments)
-   - Accomplishments are traced to start.canvas vs end.canvas deltas, not narrated from memory
-   - Team-specific overhead and wedge-balancing rules were applied
-   - Impediments are concrete and actionable, not vague
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Every template section is present (Accomplishments / Status / Sprint Commitment / PI Confidence / Impediments)
+- Accomplishments are traced to start.canvas vs end.canvas deltas, not narrated from memory
+- Team-specific overhead and wedge-balancing rules were applied
+- Impediments are concrete and actionable, not vague
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 

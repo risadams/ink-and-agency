@@ -145,7 +145,7 @@ hyperfocus-exit ──> .ink-and-agency/park/<ts>.md ──> hyperfocus-recovery
 
 Not entry points; other skills invoke them.
 
-- **`/clarity-council`** — multi-persona consultation; the engine behind `idea-generate`, sprint pulses, many others.
+- **`/clarity-council`** — multi-lens consultation; the engine behind `idea-generate`, sprint pulses, many others.
 - **`/grill-me`**, **`/grill-with-docs`** — the interview primitive.
 - **`/research`** — background primary-source investigation; fired by `work-plan`.
 - **`/handoff`** — compact a session for a fresh agent to pick up (crosses between any flows).

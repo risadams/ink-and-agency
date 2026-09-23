@@ -2,6 +2,15 @@
 
 Use this template to render the Phase 6 triage report as a Jira comment in **Jira wiki markup** (not GitHub-flavored markdown). Replace every `{placeholder}` with content from the report. Keep the AI disclaimer panel at the bottom verbatim.
 
+## Posting steps (Phase 7, after the user opts in)
+
+1. Convert the Phase 6 report into **Jira wiki markup** (the template shows the exact mapping). Note that Jira comments use Jira's wiki/text-formatting syntax, not GitHub-flavored markdown — headings are `h2.`, bold is `*text*`, code blocks are `{code}...{code}`, panels are `{panel}...{panel}`, etc.
+2. Append the AI disclaimer panel from the template verbatim — it must always appear at the bottom.
+3. Post the comment via `mcp__atlassian__jira_add_comment` with `page_id` = the ticket key (the tool also accepts issue keys for Jira comments) and `body` = the rendered comment.
+4. Confirm to the user with the comment URL or ticket key, e.g. *"Posted triage report as a comment on `{TICKET-KEY}`."*
+
+If the comment fails to post (permissions, network, etc.), surface the error and offer to retry or save the rendered comment locally — do **not** silently swallow the failure.
+
 ---
 
 ## Format reference (markdown → Jira wiki markup)

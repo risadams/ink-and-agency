@@ -140,16 +140,12 @@ If a write fails (permissions, network), surface the error and offer to retry or
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Note is written for the target audience (customer-facing, not internal jargon)
-   - Content is grounded in the ticket + linked MR changes, not invented
-   - Fix version and issue type are reflected correctly
-   - Read-only respected — nothing posted unless the user opts in
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Note is written for the target audience (customer-facing, not internal jargon)
+- Content is grounded in the ticket + linked MR changes, not invented
+- Fix version and issue type are reflected correctly
+- Read-only respected — nothing posted unless the user opts in
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 

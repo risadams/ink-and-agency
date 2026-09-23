@@ -190,52 +190,7 @@ Output path: `{{output_root}}\<phase>.canvas` — e.g. `…\Sprint 2\week 1.canv
 
 Write `{{output_root}}\<phase>.md` next to the canvas. Schema is the Sprint Summary table from the PS script (lines 973-996) plus a small header. **Delegate to `obsidian-markdown`** if extending with callouts, dataview, or new constructs. Template:
 
-```markdown
----
-team: {{team}}
-increment: {{inc}}
-sprint: {{sprint}}
-phase: {{phase}}
-snapshot_date: {{YYYY-MM-DD HH:mm}}
-as_of: {{as_of_or_blank}}
-total_tickets: {{n}}
-total_story_points: {{n}}
-percent_done_tickets: {{n}}
-percent_done_points: {{n}}
-canvas: "[[{{phase}}.canvas]]"
----
-# Sprint {{sprint}} — {{phase}} snapshot
-
-> Captured {{YYYY-MM-DD HH:mm}} (Pittsburgh){{ as_of? " — as-of " + as_of : "" }}
-
-## Sprint Summary
-
-| Metric | Value |
-| :--- | --: |
-| Total Tickets | … |
-| Total Story Points | … |
-| Tickets Done / Open / In Review / In Progress / To Do | … |
-| Unassigned Tickets / Points | … |
-| % Tickets Done / % Points Done | … |
-| Tickets With Points / Without Points | … |
-| Points Done / In Review / In Progress / To Do | … |
-| Capacity / Committed / Remaining | … |
-| Last sprint velocity / 3-sprint avg | … |
-
-## Per-member workload
-
-| Member | Tickets | Points | % of capacity |
-| :--- | --: | --: | --: |
-| [[@First Last]] | … | … | … |
-
-## Off-team workload
-
-(only rendered if non-empty)
-
-## Velocity trend
-
-(↗️ Increasing / ↘️ Decreasing / → Stable — port of PS lines 305-317)
-```
+The companion markdown summary: [SUMMARY_TEMPLATE.md](SUMMARY_TEMPLATE.md) — fill every placeholder, keep section order and frontmatter keys.
 
 Same overwrite-prompt rule as Phase 5.
 
@@ -310,16 +265,12 @@ This skill writes into the user's Obsidian vault and reads from Jira. Delegate t
 
 ## Quality Loop
 
-Before returning the artifact, evaluate it and refine if it falls short.
+Before returning, check the output against these criteria. If two or more fail, revise and re-check — at most two passes, then note what still falls short.
 
-1. **Generate** the artifact via the workflow above.
-2. **Self-evaluate** against these criteria:
-   - Canvas, companion markdown, and JSONL trend log are all written
-   - Sprint phase was auto-detected (or honored --as-of) correctly
-   - Every board issue is represented as a card with its status column
-   - Team workload totals reconcile with the per-member card sums
-3. **Loop** — if two or more criteria fail, revise and re-check.
-4. **Exit** when all criteria pass, or after two refinement passes (then note which criteria still fall short).
+- Canvas, companion markdown, and JSONL trend log are all written
+- Sprint phase was auto-detected (or honored --as-of) correctly
+- Every board issue is represented as a card with its status column
+- Team workload totals reconcile with the per-member card sums
 
 > **Host portability:** tool names in this skill follow Claude Code conventions; on other hosts (Codex, opencode) map them by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
