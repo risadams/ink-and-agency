@@ -13,7 +13,7 @@ This is a **Claude Skills Pack** — a collection of prompt-based skill definiti
 The layout is **flat** — one folder per skill, directly under `skills/`. Agent Plugins 1.0.0
 requires it: conformant hosts look at the immediate children of `skills/` and must not search
 deeper, so a nested `SKILL.md` would simply never be found. Category is a `category:` frontmatter
-field instead; see [CATEGORIES.md](CATEGORIES.md) for the 15 buckets and the full index. Claude Code
+field instead; see [CATEGORIES.md](CATEGORIES.md) for the 9 buckets and the full index. Claude Code
 also reads the `skills` array in `.claude-plugin/plugin.json`, generated from the tree by
 `convert-agents-to-codex.ps1` — do not hand-edit it.
 
