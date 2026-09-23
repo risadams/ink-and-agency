@@ -91,11 +91,6 @@ If Review surfaced findings, list them before the close-out so the user decides 
 > **Host portability:** tool names follow Claude Code conventions; on other hosts map by intent — see [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/implement.md` (workspace-local
-`.ink-and-agency/learnings/implement.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/implement.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

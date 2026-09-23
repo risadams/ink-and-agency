@@ -19,11 +19,6 @@ Its job:
 4. Report the path back, and say what the file now lets the user decide. Nothing reloads it automatically — a research note that isn't deliberately fed into the next step is a dead file, and a stale one is worse than none.
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/research.md` (workspace-local
-`.ink-and-agency/learnings/research.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/research.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

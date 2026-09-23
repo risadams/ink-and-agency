@@ -74,11 +74,6 @@ stakeholders who disagree and about what, the estimated value with its basis, an
 you considered including doing nothing.
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/business-analyst.md` (workspace-local
-`.ink-and-agency/learnings/business-analyst.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/business-analyst.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

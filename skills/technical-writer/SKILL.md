@@ -136,11 +136,6 @@ Documentation is a product, not a byproduct. Evaluate every proposal by its docu
 - When critical documentation is known to be outdated and no remediation is planned
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/technical-writer.md` (workspace-local
-`.ink-and-agency/learnings/technical-writer.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/technical-writer.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

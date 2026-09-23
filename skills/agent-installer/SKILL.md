@@ -105,11 +105,6 @@ Found 3 PHP-related agents in the repository:
 Would you like me to install any of these agents?
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/agent-installer.md` (workspace-local
-`.ink-and-agency/learnings/agent-installer.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/agent-installer.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

@@ -81,11 +81,6 @@ If two or more fail, cut back and re-check. Cap at two passes — a prototype th
 **Loop eligibility:** false — a prototype answers one question once; there is nothing to re-run on a schedule.
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/prototype.md` (workspace-local
-`.ink-and-agency/learnings/prototype.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/prototype.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

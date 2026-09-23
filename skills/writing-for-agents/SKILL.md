@@ -116,11 +116,6 @@ If two or more fail, revise and re-check. Cap at two passes.
 > **Host portability:** this skill is pure reference — no host-specific tools. See [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/writing-for-agents.md` (workspace-local
-`.ink-and-agency/learnings/writing-for-agents.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/writing-for-agents.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

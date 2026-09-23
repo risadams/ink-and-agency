@@ -82,11 +82,6 @@ revised range with what drives it, risks that fired or moved, dependencies and t
 the decisions you need from the sponsor, and what you would cut if the date is fixed.
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/project-manager.md` (workspace-local
-`.ink-and-agency/learnings/project-manager.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/project-manager.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

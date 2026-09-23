@@ -27,11 +27,6 @@ Not "that last message": what lost me is usually bigger than one paragraph, so d
 > **Host portability:** this skill is a re-explanation prompt — no host-specific tools. See [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/wait-what.md` (workspace-local
-`.ink-and-agency/learnings/wait-what.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/wait-what.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

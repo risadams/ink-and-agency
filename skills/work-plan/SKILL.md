@@ -130,11 +130,6 @@ User invokes with a map (URL or number). A ticket is **optional** — without on
 The user may run unblocked tickets in parallel, so expect other sessions to be editing the tracker concurrently.
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/work-plan.md` (workspace-local
-`.ink-and-agency/learnings/work-plan.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/work-plan.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

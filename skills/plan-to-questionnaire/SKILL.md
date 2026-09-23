@@ -109,11 +109,6 @@ If two or more fail, revise and re-check. Cap at two passes.
 > **Host portability:** this skill asks the user questions and writes one Markdown file — no host-specific tools. See [PORTABILITY.md](../PORTABILITY.md).
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/plan-to-questionnaire.md` (workspace-local
-`.ink-and-agency/learnings/plan-to-questionnaire.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/plan-to-questionnaire.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

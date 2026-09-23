@@ -47,11 +47,6 @@ npm install -g prompt-to-asset
 Fallback: if MCP is unavailable, output a detailed prompt the user can paste into any image generation interface.
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/visual-asset-generator.md` (workspace-local
-`.ink-and-agency/learnings/visual-asset-generator.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/visual-asset-generator.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->

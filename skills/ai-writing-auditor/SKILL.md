@@ -91,11 +91,6 @@ Adapted from brandonwise/humanizer vocabulary research for the tiered detection 
 - On README files, API docs, blog posts, release notes, and any prose output
 
 <!-- self-evolve:start -->
-
 ## Self-Evolve Loop
-
-Journal: `~/.ink-and-agency/learnings/ai-writing-auditor.md` (workspace-local
-`.ink-and-agency/learnings/ai-writing-auditor.md` where the sandbox confines writes). Read it
-first, append what the run taught last — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
-
+Journal `~/.ink-and-agency/learnings/ai-writing-auditor.md` (or workspace-local `.ink-and-agency/` where the sandbox confines writes). Read it first; append what the run taught — [SELF-EVOLVE.md](../SELF-EVOLVE.md).
 <!-- self-evolve:end -->
