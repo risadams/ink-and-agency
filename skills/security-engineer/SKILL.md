@@ -16,9 +16,6 @@ allowed-tools:
 related-skills:
   - clarity-council
   - grill-me
-  - terraform-engineer
-  - security-audit
-  - penetration-tester
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

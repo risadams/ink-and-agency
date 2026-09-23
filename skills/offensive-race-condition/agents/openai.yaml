@@ -1,4 +1,0 @@
-# Generated from skills/offensive-race-condition/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Race Condition"
-  short_description: "Race condition (TOCTOU) testing checklist: identifying timing windows, Burp Suite…"

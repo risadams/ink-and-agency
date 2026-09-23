@@ -4,9 +4,6 @@ category: developer-experience
 description: Generate an interactive bash wizard that walks a human step by step through a manual procedure. Use when provisioning infrastructure, setting up credentials or CI secrets, walking someone through an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke it for steps the agent can perform itself.
 codex-short-description: "Generate a bash wizard that walks a human through a manual procedure"
 related-skills:
-  - shell-expert
-  - cli-developer
-  - deployment-engineer
   - readme-generator
 loop-eligible: false
 compatibility: claude-code codex opencode

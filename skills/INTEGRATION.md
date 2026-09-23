@@ -10,8 +10,8 @@ The pack mixes two shapes under one primitive:
 
 - **Workflow skills** — triggered procedures ("do X, then Y"): `sprint-plan`, `code-review`,
   `issue-triage`, the writing and Obsidian skills, etc.
-- **Specialist skills** — persona experts you lean on for judgment ("act as a senior Python
-  engineer"): `python-pro`, `security-auditor`, `terraform-engineer`, etc. (formerly subagents).
+- **Reference specialists** — persona experts you lean on for judgment: `refactoring-specialist`,
+  `performance-engineer`, `documentation-engineer`, `security-engineer`, etc. (formerly subagents).
 
 Both are invoked the same way; the distinction is only about how you use the output.
 

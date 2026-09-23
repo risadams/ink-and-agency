@@ -25,9 +25,6 @@ allowed-tools:
   - mcp__gitlab-mcp__get_merge_request
   - mcp__gitlab-mcp__list_commits
   - mcp__gitlab-mcp__search_project_code
-related-skills:
-  - backend-developer
-  - frontend-developer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

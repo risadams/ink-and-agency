@@ -1,4 +1,0 @@
-# Generated from skills/offensive-wifi-recon/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Wifi Recon"
-  short_description: "Wi-Fi reconnaissance methodology — adapter selection, monitor mode and packet…"

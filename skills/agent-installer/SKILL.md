@@ -11,7 +11,6 @@ allowed-tools:
   - Glob
 related-skills:
   - idea-generate
-  - agent-organizer
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

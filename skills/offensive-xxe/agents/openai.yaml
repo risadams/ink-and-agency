@@ -1,4 +1,0 @@
-# Generated from skills/offensive-xxe/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Xxe"
-  short_description: "XML External Entity injection testing checklist: classic XXE, blind XXE (out-of-band),…"

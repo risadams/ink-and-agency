@@ -8,7 +8,6 @@ related-skills:
   - implement
   - plan-to-spec
   - tdd
-  - ui-designer
 loop-eligible: false
 ---
 

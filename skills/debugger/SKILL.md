@@ -12,7 +12,6 @@ allowed-tools:
   - Grep
 related-skills:
   - codebase-explain
-  - error-detective
 loop-eligible: false
 compatibility: claude-code codex opencode
 ---

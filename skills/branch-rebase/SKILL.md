@@ -9,8 +9,6 @@ description: >
 codex-short-description: "Safely rebase the current branch onto its upstream target, auto-resolving trivial conflicts"
 related-skills:
   - branch-resolve-conflicts
-  - devops-engineer
-  - git-workflow-manager
 loop-eligible: false
 
 compatibility: claude-code codex opencode

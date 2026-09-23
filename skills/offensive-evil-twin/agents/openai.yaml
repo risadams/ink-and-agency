@@ -1,4 +1,0 @@
-# Generated from skills/offensive-evil-twin/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Evil Twin"
-  short_description: "Evil Twin / KARMA / Mana access point methodology — rogue AP construction with…"

@@ -1,4 +1,0 @@
-# Generated from skills/offensive-wpa-enterprise/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Wpa Enterprise"
-  short_description: "WPA/WPA2/WPA3-Enterprise (802.1X / EAP) attack methodology — EAP method identification…"

@@ -9,7 +9,6 @@ related-skills:
   - codebase-plan-refactor
   - grill-with-docs
   - refactoring-specialist
-  - legacy-modernizer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

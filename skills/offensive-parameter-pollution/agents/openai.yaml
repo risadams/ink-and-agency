@@ -1,4 +1,0 @@
-# Generated from skills/offensive-parameter-pollution/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Parameter Pollution"
-  short_description: "HTTP parameter pollution (HPP) checklist: duplicate parameter injection, backend vs…"

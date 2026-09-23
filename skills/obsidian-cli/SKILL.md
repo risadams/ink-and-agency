@@ -8,8 +8,6 @@ description: >
 codex-short-description: "Manage Obsidian vault notes, tasks, and properties from the command line"
 related-skills:
   - obsidian-vault
-  - cli-developer
-  - tooling-engineer
 loop-eligible: false
 
 compatibility: claude-code codex opencode

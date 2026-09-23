@@ -5,9 +5,9 @@
 An **[Agent Plugins](https://agent-plugins.org) 1.0.0** plugin — one installable unit, one primitive (skills), readable by any conformant host: Claude Code, OpenAI Codex, Cursor, GitHub Copilot, Kiro, VS Code.
 
 - **Ink** — workflow skills: writing, sprint/Scrum, issue management, Obsidian tooling, codebase analysis, debugging, research, teaching, an end-to-end build loop (plan→spec→tickets→implement→tdd→review), and neurodivergent-friendly executive-function support, with a `which-skill` router over them all.
-- **Agency** — ~216 specialist skills (language/framework experts, infra, data/AI, security, product, and more — formerly subagents, plus a red-team/blue-team security pack), plus the `clarity-council` skill and its library of 46 advisory personas for multi-perspective decisions (single / multi / iterative modes).
+- **Agency** — a lean set of reference specialists the workflows lean on (`refactoring-specialist`, `technical-writer`, `documentation-engineer`, `performance-engineer`, `debugger`, `test-automator`, `security-engineer`, …), plus the `clarity-council` skill and its library of 46 advisory personas for multi-perspective decisions (single / multi / iterative modes).
 
-**289 skills total**, one folder each directly under `skills/` — the flat layout Agent Plugins fixes for skill discovery, so every host finds the same set without host-specific configuration. Each skill declares its browsing category in frontmatter; [CATEGORIES.md](skills/CATEGORIES.md) is the index. (The pack previously shipped a separate `agents/` subagent library; those were folded into skills so the whole library ships in the one bundle.)
+**94 skills total**, one folder each directly under `skills/` — the flat layout Agent Plugins fixes for skill discovery, so every host finds the same set without host-specific configuration. Each skill declares its browsing category in frontmatter; [CATEGORIES.md](skills/CATEGORIES.md) is the index. (The pack once carried a broad library of generic language/framework/domain specialists; those were retired in favour of a focused set — capable models cover the generic cases, and the pack keeps only the specialists that carry non-obvious, opinionated judgment.)
 
 Formerly two repositories: [risadams/skills](https://github.com/risadams/skills) and [risadams/claude-subagent](https://github.com/risadams/claude-subagent). Both histories are preserved via `git subtree`.
 
@@ -24,14 +24,14 @@ ink-and-agency/
 ├── plugin.json                  # Agent Plugins 1.0.0 manifest (GENERATED — do not edit)
 ├── AGENTS.md                    # Maintainer guidance (canonical; Codex auto-loads it)
 ├── CLAUDE.md                    # Mirror of AGENTS.md (GENERATED — do not edit)
-├── skills/                      # 289 skills, flat — one folder each (shared by every host)
+├── skills/                      # 94 skills, flat — one folder each (shared by every host)
 │   ├── <name>/SKILL.md          # canonical skill; `category:` frontmatter is the browsing bucket
 │   ├── <name>/agents/openai.yaml  # Codex picker metadata (GENERATED — do not edit)
-│   ├── python-pro/              #   e.g. language-specialists
-│   ├── kubernetes-specialist/   #   e.g. infrastructure
+│   ├── sprint-plan/             #   e.g. scrum-sprint
+│   ├── refactoring-specialist/  #   e.g. developer-experience (reference specialist)
 │   ├── clarity-council/         # the persona council — featured skill w/ bundled personas
 │   ├── persona/                 # shared council persona contracts (reference docs, not skills)
-│   ├── ... (see CATEGORIES.md for all 289 grouped by category)
+│   ├── ... (see CATEGORIES.md for all 94 grouped by category)
 │   ├── CATEGORIES.md            # Browsable index of all skills by category
 │   ├── FLOWS.md                 # How skills chain into flows (which-skill routes on this)
 │   ├── PORTABILITY.md           # How to interpret Claude tool names on other hosts
@@ -56,8 +56,7 @@ ink-and-agency/
 | Planning | `sprint-plan`, `sprint-review`, `daily-briefing`, `handoff` | Organizing work, progress, reporting, and context continuity |
 | Focus & state | `task-initiation`, `hyperfocus-recovery`, `idea-decision-maker`, `energy-budget`, `meeting-decompression` | Defeating stalls, recovering context, calibrating load — built with ND-friendly defaults |
 | Git & workflow | `branch-rebase`, `branch-resolve-conflicts` | Clean rebases with trivial conflict auto-resolution, complex conflict resolution with intent preservation |
-| Specialists | `python-pro`, `backend-developer`, `security-auditor`, `terraform-engineer` | Deep domain judgment across language, infra, data/AI, security, and product |
-| Security (offense & defense) | `security-audit`, `penetration-tester`, `offensive-sqli`, `ad-security-reviewer`, `security-engineer` | Source-first vulnerability audits, authorized red-team methodology (78 `offensive-*` skills), and the detection/hardening counterparts to harden against it |
+| Reference specialists | `refactoring-specialist`, `documentation-engineer`, `performance-engineer`, `security-engineer` | Opinionated domain judgment the workflow skills delegate to |
 | Workspace tools | `obsidian-vault`, `obsidian-markdown`, `obsidian-canvas` | Managing notes, structure, and visual knowledge maps |
 
 ![Skill Map](docs/assets/skill-map.svg)
@@ -75,7 +74,7 @@ Add the marketplace once, then install the plugin:
 /plugin install ink-and-agency
 ```
 
-This installs all 289 skills. Or load locally for development (no marketplace, picks up your working copy):
+This installs all 94 skills. Or load locally for development (no marketplace, picks up your working copy):
 
 ```sh
 claude --plugin-dir /path/to/ink-and-agency
@@ -119,7 +118,7 @@ codex plugin update ink-and-agency
 
 ## Invoking skills
 
-Everything is a **skill** — a prompt-driven capability. Specialist skills (former subagents like `python-pro`, `security-auditor`) run inline like any other skill.
+Everything is a **skill** — a prompt-driven capability. Reference specialists (former subagents like `refactoring-specialist`, `performance-engineer`) run inline like any other skill.
 
 ### Invoking on Claude Code
 
@@ -141,15 +140,16 @@ A skill's invocation mode is identical on both hosts — it's authored once in `
 
 ## How skills compose
 
-This pack is **skills-only** — one primitive covering both quick workflow techniques and deep domain
-specialists (the latter, like `backend-developer` and `security-auditor`, were formerly subagents).
+This pack is **skills-only** — one primitive covering both quick workflow techniques and the
+reference specialists those workflows delegate to (the latter, like `refactoring-specialist` and
+`performance-engineer`, were formerly subagents).
 
 ### Two kinds of skill
 
-| | Workflow skill | Specialist skill |
+| | Workflow skill | Reference specialist |
 | --- | --- | --- |
 | **Shape** | A triggered procedure | A persona expert |
-| **Examples** | `code-review`, `writing-humanize`, `sprint-plan` | `backend-developer`, `security-auditor`, `python-pro` |
+| **Examples** | `code-review`, `writing-humanize`, `sprint-plan` | `refactoring-specialist`, `performance-engineer`, `documentation-engineer` |
 | **Use when** | You want a structured technique | You want domain judgment |
 
 ### Common patterns

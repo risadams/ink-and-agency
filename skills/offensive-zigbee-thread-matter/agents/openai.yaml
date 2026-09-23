@@ -1,4 +1,0 @@
-# Generated from skills/offensive-zigbee-thread-matter/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Zigbee Thread Matter"
-  short_description: "Zigbee, Thread, and Matter mesh-protocol attack methodology — IEEE 802.15.4 sniffing…"

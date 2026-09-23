@@ -1,4 +1,0 @@
-# Generated from skills/offensive-advanced-redteam/SKILL.md by scripts/convert-agents-to-codex.ps1 -- do not edit by hand.
-interface:
-  display_name: "Offensive Advanced Redteam"
-  short_description: "Comprehensive red team operations methodology covering full engagement lifecycle from…"
